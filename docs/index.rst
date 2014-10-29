@@ -26,7 +26,8 @@ Invenio documentation
    :class: pull-right
 
 
-Welcome to Invenio's documentation.  This documentation is divided into
+Welcome to TIND`s documentation on Invenio software. To enter the original documentation, please go to http://invenio.readthedocs.org/en/latest/ 
+This documentation is divided into
 different parts.  We recommend that you get started with
 :ref:`first-steps` and then head over to the :ref:`quickstart`.
 Besides the quickstart, there is also a more detailed :ref:`tutorial` that
