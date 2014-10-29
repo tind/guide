@@ -21,12 +21,10 @@
 Invenio documentation
 =====================
 
-.. image:: _static/logo-full.png
-   :alt: Invenio: digital repository software
-   :class: pull-right
+..
 
 
-Welcome to Invenio's documentation.  This documentation is divided into
+Welcome to TIND Technologies's documentation.  This documentation is divided into
 different parts.  We recommend that you get started with
 :ref:`first-steps` and then head over to the :ref:`quickstart`.
 Besides the quickstart, there is also a more detailed :ref:`tutorial` that
