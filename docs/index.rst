@@ -23,7 +23,7 @@ Invenio documentation
 
 .. 
 
-Welcome to TIND Technologies documentation on Invenio software. To enter the original documentation, please go to http://invenio.readthedocs.org/en/latest/ 
+Welcome to TIND Technologies` documentation on Invenio software. To enter the original documentation, please go to http://invenio.readthedocs.org/en/latest/ 
 
 This documentation is divided into
 different parts.  We recommend that you get started with
