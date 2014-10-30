@@ -4,7 +4,6 @@
    contain the root `toctree` directive.
 
 
-<<<<<<< HEAD
 Welcome to TIND Technologies` administration guide
 ###################################################
 
@@ -57,53 +56,6 @@ Create documentation properly
 
 
 
-=======
 
 
 
-General Guide for Administrators
-==============
-
-.. toctree::
-
-   admin/index
-
-* :ref:`websearch-admin-guide`
-* :ref:`websubmit-admin-guide`
-
-Guide for tool.tind.io
-=================
-
-The guide for use of tools.tind.io. This site will be filled with several nice to have tools for librarians and administrators.  
-
-.. toctree::
-   :maxdepth: 2
-
-   tools/index
-
-
-:ref:`Link title <Doc>`
-
-Doc
-====================================
-
-Contents:
-
-* :ref:`use-of-marc`
-
-.. toctree::
-   :maxdepth: 2
-   
-   intro
-   use-of-marc
-   ...
-   
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-* :ref:`tasty`
->>>>>>> FETCH_HEAD
