@@ -34,10 +34,6 @@ the :ref:`api` documentation.  Common patterns are described in the
 :ref:`patterns` section.
 
 
-.. tind-doc documentation master file, created by
-   sphinx-quickstart on Wed Oct 29 14:11:41 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
    
 
 General Guide for Administrators
