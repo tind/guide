@@ -1,0 +1,759 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WebSearch Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Guide for Librarian</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tool.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../howto/index.html">How to create documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../howto/docguide.html">Blablabla</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>WebSearch Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/websearch-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="websearch-admin-guide">
+<span id="id1"></span><h1>WebSearch Admin Guide<a class="headerlink" href="#websearch-admin-guide" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">WARNING: THIS ADMIN GUIDE IS NOT FULLY COMPLETED</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>This Admin Guide is not yet completed. Moreover, some admin-level
+functionality for this module exists only in the form of manual recipes.
+We are in the process of developing both the guide as well as the web
+admin interface. If you are interested in seeing some specific things
+implemented with high priority, please contact us at
+<a class="reference external" href="mailto:info&#37;&#52;&#48;invenio-software&#46;org">info<span>&#64;</span>invenio-software<span>&#46;</span>org</a>. Thanks for your interest!</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>WebSearch Admin interface will help you to configure the search
+collections that the end-users see. The WebSearch Admin functionality
+can be basically separated into several parts: (i) how to organize
+collections into <a class="reference external" href="#2">collection tree</a>; (ii) how to define and edit
+<a class="reference external" href="#3">collection parameters</a>; (iii) how to update collection cache via
+the <a class="reference external" href="#4">webcoll daemon</a>; and (iv) how to influence the search engine
+behaviour and set various <a class="reference external" href="#5">search engine parameters</a>. These
+issues will be subsequently described in the rest of this guide.</p>
+</div>
+<div class="section" id="edit-collection-tree">
+<h2>2. Edit Collection Tree<a class="headerlink" href="#edit-collection-tree" title="Permalink to this headline">¶</a></h2>
+<p>Metadata corpus in Invenio is organized into collections. The
+collections are organized in a tree. The collection tree is what the
+end-users see when they start to navigate at <a class="reference external" href="http://localhost:4000">Atlantis Institute of
+Fictive Science</a>. The collection tree is
+similar to what other sites call Web Directories that organize Web into
+topical categories, such as <a class="reference external" href="http://www.google.com/dirhp">Google
+Directory</a>.</p>
+<p>Note that Invenio permits every collection in the tree to have either
+&#8220;regular&#8221; or &#8220;virtual&#8221; sons. In other words, every node in the
+collection tree may see either regular or virtual branches growing out
+of it. This permits to create a tree with very complex, multi-level,
+nested structures of regular and virtual branches, if needed, with the
+aim to ease navigation to end-users from one branch to another. The
+difference between a regular and a virtual branch will be explained in
+detail further below in the <a class="reference external" href="#2.2">section 2.2</a>.</p>
+<div class="section" id="add-new-collection">
+<h3>2.1 Add new collection<a class="headerlink" href="#add-new-collection" title="Permalink to this headline">¶</a></h3>
+<p>To add a new collection, enter its default name in the default language
+of the installation and click on the ADD button to add it. There are two
+important actions that you have to perform after adding a collection:</p>
+<ul class="simple">
+<li>You have to define the set of records that belong to this collection.
+This is done by defining a search engine query that would return all
+records belonging to this collection. See hints on <a class="reference external" href="#3.1">modify collection
+query</a> below.</li>
+<li>In order for the collection to appear in the collection navigation
+tree, you will have to attach it to some existing collection in the
+tree. See hints on <a class="reference external" href="#2.2">add collection to tree</a> below.</li>
+</ul>
+<p>After you edit these two things, the collection is fully usable for the
+search interface. It will appear in the search interface after the next
+run of the <a class="reference external" href="#4">WebColl Daemon</a>.</p>
+<p>However, you will probably want to customize further things, like define
+collection name translation in various languages, define collection web
+page portalboxes, define search options, etc, as explained in this guide
+under the section <a class="reference external" href="#3">Edit Collection Parameters</a>.</p>
+</div>
+<div class="section" id="add-collection-to-tree">
+<h3>2.2 Add collection to tree<a class="headerlink" href="#add-collection-to-tree" title="Permalink to this headline">¶</a></h3>
+<p>To attach a collection to the tree, choose first which collection do you
+want to attach, then choose the father collection to attach to, and then
+choose the fathership relation type between them (regular, virtual).</p>
+<p>The difference between the regular and the virtual relationship goes as
+follows:</p>
+<ul class="simple">
+<li><strong>regular relationship</strong>: If collection A is composed of B and C, in
+a way that every document belonging to A is either B or C, then this
+schema corresponds to the regular type of relationship. For example,
+let A equals to &#8220;Multimedia&#8221; and B and C to &#8220;Photos&#8221; and &#8220;Videos&#8221;,
+respectively. The latter collections would then be declared as
+regular sons of &#8220;Multimedia&#8221; and they would appear in the
+left-hand-side regular navigation tree entitled &#8220;Narrow by
+Collection&#8221; in the collection tree.</li>
+<li><strong>virtual relationship</strong>: In addition to the regular decomposition of
+&#8220;Multimedia&#8221; into &#8220;Photos&#8221; and &#8220;Videos&#8221;, it may be advantageous to
+present a different, orthogonal point of view on &#8220;Multimedia&#8221;, based
+not on the document type as seen above, but rather on the document
+creator information. Let us consider that some (large) part of the
+multimedia material was created by the &#8220;University Multimedia
+Service&#8221; and some (small) part by an external TV company such as BBC.
+It may be advantageous to advertize this point of view to the end
+users too, so they they would be able to easily navigate down to the
+kind of multimedia material they are looking for. We can create two
+more collections named &#8220;University Multimedia Service&#8221; and &#8220;BBC
+Pictures and Videos&#8221; and declare them as virtual sons of the
+&#8220;Multimedia&#8221; collection. These collections would then appear in the
+right-hand-side virtual navigation tree entitled &#8220;Focus on&#8221; in the
+collection tree.</li>
+</ul>
+<p>The example presented above would then give us the following picture:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>M u l t i m e d i a
+
+Narrow by Collection:        Focus on:
+--------------------         ---------
+[ ] Photos                   University Multimedia Service
+[ ] Videos                   BBC Pictures and Videos
+</pre></div>
+</div>
+</div></blockquote>
+<p>It is important to note that if a collection A is composed of B and C as
+its regular sons, and offers X and Y as its virtual sons, then every
+document belonging to A must also belong to either B or C. This
+requirement does not apply for X and Y, because X and Y offer only a
+&#8220;focus-on&#8221; orthogonal view on a (possibly small) part of the document
+corpus of A. If end-users search the collection A, then they are
+actually searching inside B and C, not X and Y. If they want to search
+inside X or Y, they have to click upon X or Y first. One can consider
+virtual branches as a sort of non-essential searching aid to the
+end-user that is activated only when users are interested in a
+particular &#8220;focus-on&#8221; relationship, provided that this &#8220;virtual&#8221; point
+of view on A interests her.</p>
+</div>
+<div class="section" id="modify-existing-tree">
+<h3>2.3 Modify existing tree<a class="headerlink" href="#modify-existing-tree" title="Permalink to this headline">¶</a></h3>
+<p>To modify existing tree by WebSearch Admin Interface, click on icons
+displayed next to collections. The meaning of icons is as follows:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image0" src="_static/iconcross.gif" />
+Remove chosen collection with its
+subcollections from the collection
+tree, but do not delete the
+collection itself. (For full
+deletion of a collection, see
+<a class="reference external" href="#3.4">section 3.4</a>.)</td>
+<td><img alt="image1" src="_static/arrow_up.gif" />   <img alt="image2" src="_static/arrow_down.gif" />
+Move chosen collection up or down
+among its brothers and sisters, i.e.
+change the order of collections
+inside the same level of the tree.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="edit-collection-parameters">
+<h2>3. Edit Collection Parameters<a class="headerlink" href="#edit-collection-parameters" title="Permalink to this headline">¶</a></h2>
+<p>To finalize setting up of a collection, you could and should edit many
+parameters, such as define list of records belonging to a collection,
+define search fields, define search interface page portalboxes, etc. In
+this section we will subsequently describe all the various possibilities
+as they are presented in the <a class="reference external" href="/admin/websearch/websearchadmin.py/editcollection?colID=1">Edit
+Collection</a>
+pages of the WebSearch Admin Interface.</p>
+<div class="section" id="modify-collection-query">
+<h3>3.1 Modify collection query<a class="headerlink" href="#modify-collection-query" title="Permalink to this headline">¶</a></h3>
+<p>The <em>collection query</em> defines which documents belong to the given
+collection. It is equal to the search term that retrieves all documents
+belonging to the given collection, exactly as you would have typed it
+into the search interface. For example, to define a collection of all
+papers written by Ellis, you could set up your collection query to be
+<tt class="docutils literal"><span class="pre">author:Ellis</span></tt>.</p>
+<p>Usually, the collection query is chosen on the basis of the collection
+identifier that we store in MARC tag 980. This tag is indexed in a
+logical field called <tt class="docutils literal"><span class="pre">collection</span></tt> so that a collection of Theses could
+be defined via <tt class="docutils literal"><span class="pre">collection:THESIS</span></tt>, supposing that every thesis
+metadata record has got the text <tt class="docutils literal"><span class="pre">THESIS</span></tt> in MARC tag 980. (Nitpick:
+we use the term `collection&#8217; in two contexts here: once as a collection
+of metadata documents, but also and as a logical field name. We should
+have probably called the latter <tt class="docutils literal"><span class="pre">collectionidentifier</span></tt> or somesuch
+instead, but we hope the difference is clear from... the context.)</p>
+<p>If a collection does not have any collection query defined, then its
+content is defined by means of the content of its descendants
+(subcollections). This is the case for composed collections. For
+example, the composed collection <em>Articles &amp; Preprints</em> (no query
+defined) will be defined as a father of <em>Articles</em> (query:
+<tt class="docutils literal"><span class="pre">collection:ARTICLE</span></tt>) and <em>Preprints</em> (query:
+<tt class="docutils literal"><span class="pre">collection:PREPRINT</span></tt>). In this case the collection query for
+<em>Articles &amp; Preprints</em> can stay empty.</p>
+<p>Note that you should avoid defining non-empty collection query in cases
+the collection has descendants, since it will prevail and the
+descendants may not be taken into account. In the same way, if a
+collection doesn&#8217;t have any query nor any descendants defined, then its
+contents will be empty.</p>
+<p>To define an external hosted collection set up the query to begin with
+<tt class="docutils literal"><span class="pre">hostedcollection:</span></tt> (for more detailed information see <a class="reference external" href="#4">section
+4</a>)</p>
+<p>To remove the collection query, set the parameter empty.</p>
+</div>
+<div class="section" id="modify-access-restrictions">
+<h3>3.2 Modify access restrictions<a class="headerlink" href="#modify-access-restrictions" title="Permalink to this headline">¶</a></h3>
+<p>Until <em>Invenio-0.92.1</em> there was the possibility to directly restrict a
+collection by specifying an Apache group. Users who had an Apache user
+and password belonging to the given group would have been able to access
+the restricted collection.</p>
+<p>Collection restriction managament is now integrated with the wider <a class="reference external" href="webaccess-admin-guide">Role
+Based Access Control</a> facility of Invenio.</p>
+<p>In order to restrict access to a collection you just have to create at
+least an authorization for the action <tt class="docutils literal"><span class="pre">viewrestrcoll</span></tt> specifying the
+name of the collection as the parameter</p>
+<p>If you have just upgraded your installation from <em>CDS Invenio-0.92.1</em>
+you probably have run <tt class="docutils literal"><span class="pre">collection_restrictions_migration_kit.py</span></tt> tool
+in order to migrate to the new framework. For every Apache Group with
+access to a restricted collection a <em>role</em> will be created, with proper
+authorization to access the restricted collections. Each role will have
+a <em>FireRole</em> definition that specifies to allow for the given Apache
+group. Trough the WebAccess admin interface you will then be able to
+change these definition in order to softly migrate your restriction to
+whatever is your need.</p>
+</div>
+<div class="section" id="modify-translations">
+<h3>3.3 Modify translations<a class="headerlink" href="#modify-translations" title="Permalink to this headline">¶</a></h3>
+<p>You may define translations of collection names into the languages of
+your Invenio installation. Moreover, a collection name may be different
+in different contexts (e.g. long name, short name, etc), so that prior
+to modifying translations you will be asked to select which name type
+you want to change.</p>
+<p>The translations aren&#8217;t mandatory to define. If a translation does not
+exist in a language chosen by the end user, the end user will be shown
+the collection name in the default language of this installation.</p>
+<p>Note also that the list of available languages depends on the
+compile-time configuration (see the general <tt class="docutils literal"><span class="pre">invenio.conf</span></tt> file).</p>
+</div>
+<div class="section" id="delete-collection">
+<h3>3.4 Delete collection<a class="headerlink" href="#delete-collection" title="Permalink to this headline">¶</a></h3>
+<p>The collection to be deleted must be first removed from the collection
+tree. Any metametadata associated with the collection (such as
+association to portalboxes, association to records belonging to this
+collection, etc) will be lost, but the metadata itself will be preserved
+(such as portalboxes themselves, records themselves, etc). In total,
+association to records, output formats, translations, search options,
+sort options, search fields, ranking method, and access restriction will
+be lost. Use with care!</p>
+<p>It may be a good idea only to remove the collection from the end users
+interface, but to keep it &#8220;hidden&#8221; in a corner they don&#8217;t see and that
+they can&#8217;t search when they search from Home. To achieve this, do not
+delete the collection but simply remove it from the collection tree so
+that it won&#8217;t be attached to any father collection. In this case the
+search interface page for this collection will stay updated, but won&#8217;t
+be neither shown in the tree nor searchable from Home page. It will only
+be accessible via bookmarked URL, for example.</p>
+</div>
+<div class="section" id="modify-portalboxes">
+<h3>3.5 Modify portalboxes<a class="headerlink" href="#modify-portalboxes" title="Permalink to this headline">¶</a></h3>
+<p>The search interface HTML page for a given collection may be customized
+by what we call <em>portalboxes</em>. Portalboxes are used to show various
+kinds of information to the end user, such as a text box with some
+inline help information about the given collection, an illustrative
+picture, etc.</p>
+<p>To create a new portalbox, a title and a body must be given, where the
+body can contain HTML if necessary.</p>
+<p>To add a portalbox to the collection, you must choose an existing
+portalbox, the language for which the portalbox should be shown, the
+position of the portalbox on the screen, and the ordering score of
+portalboxes.</p>
+<ul class="simple">
+<li>The <em>language</em> could be chosen depending on the language used in the
+portalbox body. Since a portalbox is not necessarily bound to one
+particular language, one portalbox may be reused for several
+languages, which is particularly suitable for portalboxes containing
+language-independent content such as images.</li>
+<li>The <em>position</em> of the portalbox on the screen is chosen from several
+predefined positions, such as right-top, before-title, after-title,
+before-narrow-by-collection-box, etc. You may present several
+portalboxes on the same position in the same language, in which case
+they will be shown by the order of decreasing score.</li>
+<li>The <em>score</em> defines the order of portalboxes that are to be presented
+in the same position and in the same language context.</li>
+</ul>
+</div>
+<div class="section" id="modify-search-fields">
+<h3>3.6 Modify search fields<a class="headerlink" href="#modify-search-fields" title="Permalink to this headline">¶</a></h3>
+<p>The <em>search field</em> is a logical field (such as author, title, etc) that
+will be proposed to the end users in Simple and Advanced Search
+interface pages. If you do not set any search fields for a collection,
+then a default list (author, title, year, etc) will be shown.</p>
+<p>Note that if you want to add a new logical field or modify existing
+physical MARC tags for a logical field, you have to use the <a class="reference external" href="/admin/bibindex/bibindexadmin.py">BibIndex
+Admin</a>
+interface.</p>
+</div>
+<div class="section" id="modify-search-options">
+<h3>3.7 Modify search options<a class="headerlink" href="#modify-search-options" title="Permalink to this headline">¶</a></h3>
+<p>The <em>search option</em> is like <a class="reference external" href="#3.6">search field</a> in a way that it
+permits the end user to narrow down his search to some logical field
+such as &#8220;subject&#8221;, but unlike with the search field the user is not
+required to type his query in a free text form; rather, the search
+interface proposes to the end user several interesting predefined values
+prepared by the administrators that the end user may choose from. For
+example, an &#8220;author search&#8221; concept is a good example of search field
+usage, since there is plenty of author names to be matched, so that the
+end users would usually type the name they wish to find in free text
+form; while a &#8220;subject search&#8221; concept is a good example for search
+option usage, since usually there is a limited number of subjects in the
+system given by local subject classification scheme, that the end users
+do not necessarily know about and that they are free to choose from a
+list. As a rule of thumb, the search field concept denotes the case of
+unlimited number possibilites of distinct values to be matched in a
+given field (e.g. author, title, keyword); while the search option
+concept denotes the case of only a handful or so distinct values to be
+matched in a given field (e.g. subject, division, year).</p>
+<p>Search options are shown in the &#8220;Advanced Search&#8221; interfaces only, while
+search fields are shown both in &#8220;Simple Search&#8221; and &#8220;Advanced Search&#8221;
+interface. (Although if you want to add a search option to the &#8220;Simple
+Search&#8221; interface, you can achieve it by creating appropriate HTML code
+in a <a class="reference external" href="#3.5">portalbox</a>.) The search options order, as well as the
+order of search option values, may be defined by means of &#8216;move&#8217; arrows
+in the WebSearch Admin interface.</p>
+<p>To add a new search option, a field name must first be chosen (for
+example &#8220;subject&#8221;) and then a list of possible field values must be
+entered (for example &#8220;Mathematics&#8221;, &#8220;Physics&#8221;, &#8220;Chemistry&#8221;, &#8220;Biology&#8221;,
+etc). Note that if you want to add a new logical field or modify
+existing physical MARC tags for a logical field, you have to use the
+<a class="reference external" href="/admin/bibindex/bibindexadmin.py">BibIndex
+Admin</a>
+interface.</p>
+</div>
+<div class="section" id="modify-sort-options">
+<h3>3.8 Modify sort options<a class="headerlink" href="#modify-sort-options" title="Permalink to this headline">¶</a></h3>
+<p>You may define a list of logical fields that the end users will be able
+to choose for the sorting purposes. For example, &#8220;first author&#8221; or
+&#8220;year&#8221;. If you don&#8217;t select anything, a default list (author, title,
+year, etc) will be shown.</p>
+<p>Note that if you want to add a new logical field or modify existing
+physical MARC tags for a logical field, you have to use the <a class="reference external" href="/admin/bibindex/bibindexadmin.py">BibIndex
+Admin</a>
+interface.</p>
+</div>
+<div class="section" id="modify-rank-options">
+<h3>3.9 Modify rank options<a class="headerlink" href="#modify-rank-options" title="Permalink to this headline">¶</a></h3>
+<p>To enable a certain rank method for a collection, select the method from
+the &#8220;enable rank method&#8221; box and add it. The documents in this
+collection will then be included in the ranking sets the next time the
+BibRank daemon will run. To disable a method the process is the same,
+but select the method from the &#8216;disable rank method&#8217; box.</p>
+<p>Note that if you want to add new ranking method or modify existing
+ranking method, you have to use the <a class="reference external" href="/admin/bibrank/bibrankadmin.py">BibRank
+Admin</a>
+interface.</p>
+</div>
+<div class="section" id="modify-output-formats">
+<h3>3.10 Modify output formats<a class="headerlink" href="#modify-output-formats" title="Permalink to this headline">¶</a></h3>
+<p>Each collection may have several output formats defined. The end users
+will be able to choose a format they want to see their search results
+list in. Most formats like HTML brief or XML Dublin Core are interesting
+for each collection, but some formats like HTML portfolio are only
+interesting for Photographs collection, not for Articles collection. The
+interface will permit you to choose the formats appropriate for a given
+collection. The order of formats can be changed using the &#8216;move&#8217; arrows.</p>
+<p>Note that if you want to add new output format (&#8216;behaviour&#8217;) or modify
+existing output format, you have to use the <a class="reference external" href="/admin/bibformat/bibformatadmin.py">BibFormat
+Admin</a>
+interface.</p>
+</div>
+<div class="section" id="configuration-of-related-external-collections">
+<h3>3.11 Configuration of related external collections<a class="headerlink" href="#configuration-of-related-external-collections" title="Permalink to this headline">¶</a></h3>
+<p>You can customize each collection to provide your users an additional
+source of information external to your repository: in a <em>book</em>
+collection you might want for example to provide a link to <em>Amazon</em>
+items corresponding to the user&#8217;s query. Futhermore, for some external
+services only, you can set the collection to display the results
+directly in Invenio search results page.</p>
+<p>The following settings are available:</p>
+<p>Disabled</p>
+<p>The external collection is not shown to the user.</p>
+<p>See also</p>
+<p>A link to the external collection listing the items corresponding to
+user&#8217;s query is displayed (only once a query has been performed).</p>
+<p>External search</p>
+<p>User can ask to perform a search in parallel on your repository and on
+the external collection. Results are shown in the Invenio search results
+page. Not available for all external collections.</p>
+<p>External search checked</p>
+<p>Same as above, but the external collection is searched by default. Not
+available for all external collections.</p>
+<p>You can also apply the settings to sub-collections, by checking the
+&#8220;<em>Apply also to daughter collections</em>&#8221; checkboxes when you apply your
+modifications.</p>
+<p>Note that in case you have defined an external hosted collection and you
+are in fact configuring its related external collections there is no
+restriction on setting even itself as &#8220;<em>See also</em>&#8221;, &#8220;<em>External
+search</em>&#8221; or &#8220;<em>External search checked</em>&#8221;; directly or recursively via
+the &#8220;<em>Apply also to daughter collections</em>&#8221; option. It is up entirely
+to the admin to keep a clean and consistent installation (for more
+detailed information see <a class="reference external" href="#4">section 4</a>).</p>
+</div>
+<div class="section" id="detailed-record-page-options">
+<h3>3.12 Detailed record page options<a class="headerlink" href="#detailed-record-page-options" title="Permalink to this headline">¶</a></h3>
+<p>These settings let you define how the detailed view (such as
+/record/1) of records in this collection will look
+like. More details are available in the <a class="reference external" href="/help/admin/webstyle-admin-guide#det_page">WebStyle admin
+guide</a>.</p>
+<p>Please note that since a record might belong to several collections,
+conflicts between collection settings might occur. This is especially
+true in the case of <em>virtual</em> collections. It is therefore the settings
+of the <em>primary collection</em> of the record which are applied.</p>
+</div>
+</div>
+<div class="section" id="external-and-hosted-collections">
+<h2>4. External and Hosted Collections<a class="headerlink" href="#external-and-hosted-collections" title="Permalink to this headline">¶</a></h2>
+<p>External and hosted collections are a way to provide your users with
+additional sources of information. The simplest option is the &#8220;<em>See
+also</em>&#8221; one: it provides a link to the external collection listing the
+items corresponding to the user&#8217;s query. Another option is to set up the
+external collection an &#8220;<em>External search [checked]</em>&#8221;. This option
+implies a parser implemented for that external collection and allows the
+user to perform a parallel search on your repository and on that of the
+external collection. Read more on how to set up the above options in
+section <a class="reference external" href="#3.11">section 3.11</a>. Also please note that some external
+resourses might be under copyright restrictions.</p>
+<p>Another, more advanced option, are the external hosted collections. The
+purpose of these collections is to behave just as if they were local
+ones. That means the admin should set them up as local collections and
+attach them to the tree. These collections however are not meant to
+store their records locally but rather to produce them on the fly when
+asked to. Once attached to the tree an external hosted collection
+appears in the search home page along with its number of records and a
+small graphic (arrow in this case) to indicate their being external.</p>
+<p>The admin should define a new external collection (any of the above
+options) starting with the <tt class="docutils literal"><span class="pre">websearch_external_collections_config.py</span></tt>
+file, which consists basically of a python dictionary. Let us go through
+the process of defining a new external collection, starting from the
+dictionary:</p>
+<ul class="simple">
+<li>add a new <tt class="docutils literal"><span class="pre">key:value</span></tt> pair to the dictionary. The key is the name
+of the external collection (eg. Amazon Books). The value is another
+python dictionary with the parameters of the external collection.
+Let&#8217;s go through these parameters in <tt class="docutils literal"><span class="pre">key:value</span></tt> pairs:</li>
+<li><tt class="docutils literal"><span class="pre">'engine':the_name_of_engine</span></tt>
+The name of the search engine (no spaces or special characters
+allowed and its implemented python class (eg. for the
+&#8216;AmazonBooks&#8217; engine the corresponding class should be named
+AmazonBooksSearchEngine). If not defined the default
+ExternalSearchEngine class will be used.</li>
+<li><tt class="docutils literal"><span class="pre">'base_url':the_base_url_of_the_external_collection</span></tt>
+The base url of the external collection, used to create actual
+hyper references to the external collection (eg.
+&#8216;<a class="reference external" href="http://books.amazon.com/">http://books.amazon.com/</a>&#8216; , &#8216;<a class="reference external" href="http://www.amazon.com/books/">http://www.amazon.com/books/</a>&#8216;).</li>
+<li><tt class="docutils literal"><span class="pre">'search_url':the_search_url_of_the_external_collection</span></tt>
+The search url of the external collection, to which the search
+terms will be later appended and therefore looked up (eg.
+&#8216;<a class="reference external" href="http://books.amazon.com/search.php?title=">http://books.amazon.com/search.php?title=</a>&#8216; ,
+&#8216;<a class="reference external" href="http://www.amazon.com/books/lookup.asp?book=">http://www.amazon.com/books/lookup.asp?book=</a>&#8216;).</li>
+<li><tt class="docutils literal"><span class="pre">'parser_params':dictionary_of_the_parameters_of_the_parser</span></tt>
+The parameters to be passed to the parser. This way a parser can
+be dynamically reused for different external collections upon
+defining different settings. Let&#8217;s go through the various
+parameters:</li>
+<li><tt class="docutils literal"><span class="pre">'host':the_host_of_the_external_collection</span></tt>
+The host of the external collection is used to correct the
+urls when printing out its results (eg. &#8216;books.amazon.com&#8217;,
+&#8216;www.amazon.com&#8217;).</li>
+<li><tt class="docutils literal"><span class="pre">'path':the_path_on_the_host_of_the_external_collection</span></tt>
+The path, along with the host of the external collection, is
+used to correct the urls when printing out its results (eg. &#8216;&#8217;,
+&#8216;books/&#8217;).</li>
+<li><tt class="docutils literal"><span class="pre">'parser':the_actual_parser_class</span></tt>
+The actual parser class to be used by the external collection
+engine. It should be imported at the beggining of this
+configuration file (eg.
+AmazonBooksExternalCollectionResultsParser,
+AmazonExternalCollectionResultsParser).</li>
+<li><tt class="docutils literal"><span class="pre">'fetch_format':the_format_to_be_used_to_fetch_data</span></tt>
+Usually an abbreviated string that defines the format in which
+the data should be fetched. The parser must be able to parse
+this format (eg. &#8216;hb&#8217;, &#8216;xm&#8217;).</li>
+<li><tt class="docutils literal"><span class="pre">'num_results_regex_str':the_regular_expression_for_the_number_of_results</span></tt>
+The regular expression used to calculate the returned number
+of results when the external collection is queried (eg.
+r&#8217;<strong>([0-9,]+?)</strong> records found&#8217;). Should preferably be a
+python raw string.</li>
+<li><tt class="docutils literal"><span class="pre">'num_results_regex_str':the_regular_expression_for_the_total_number_of_records</span></tt>
+The regular expression used to calculate the total number of
+records of an external collection (eg. r&#8217;Searching
+<strong>([0-9,]+?)</strong> records in total&#8217;). This is to be used by
+external hosted collections that present their total number of
+records in the search home page. Should preferably be a python
+raw string.</li>
+<li><tt class="docutils literal"><span class="pre">'nbrecs_url':the_url_that_provides_the_total_number_of_records</span></tt>
+The url that provides information on the total number of
+records of an external collection (eg.
+&#8216;<a class="reference external" href="http://books.amazon.com/search.php?show_all=yes">http://books.amazon.com/search.php?show_all=yes</a>&#8216;). The
+regular expression defined above will be used on the contents
+of this url. Again, this is to be used by external hosted
+collections that present their total number of records in the
+search home page.</li>
+</ul>
+<p>Once the dictionary <tt class="docutils literal"><span class="pre">key:value</span></tt> pair has been added for the new
+external collection the admin should implement (or simply use if already
+implemented) the search engine python class defined for this external
+collection. For the &#8220;<em>See also</em>&#8221; option the above steps are
+sufficient. If the admin wants to enable the &#8220;<em>External search
+[checked]</em>&#8221; option as well a parser must be (or have been)
+implemented. Finally to set up an external hosted collection the admin
+also has to create a new local collection named exactly as the key of
+the external hosted collection&#8217;s <tt class="docutils literal"><span class="pre">key:value</span></tt> pair in the python
+dictionary. The new local collection&#8217;s query has to begin with
+<tt class="docutils literal"><span class="pre">hostedcollection:</span></tt> (under the current configuration it is sufficient
+for the query of any external hosted collection to just be defined as
+<tt class="docutils literal"><span class="pre">hostedcollection:</span></tt>) and the collection itself has to be attached to
+the tree to be visible in the search home page. Note that due to the
+nature of external hosted collections their corresponding local
+collections cannot have any other collections as sons; in other words
+they shouldn&#8217;t have any other branches growing from them.</p>
+</div>
+<div class="section" id="webcoll-status">
+<h2>5. Webcoll Status<a class="headerlink" href="#webcoll-status" title="Permalink to this headline">¶</a></h2>
+<p>WebColl is the daemon that normally periodically runs via
+<a class="reference external" href="/help/admin/bibsched-admin-guide">BibSched</a> and
+that updates the collection cache with the collection parameters
+configured in the previous section. Alternatively to running webcoll via
+BibSched, you can also run it any time you want from the command line,
+either for all collections or for selected collection only. See the
+&#8211;help option.</p>
+<p>The WebSearch Admin interface has got a WebColl Status menu that shows
+when the collection cache was last updated and when the next update is
+scheduled. It warns in case something suspicious was discovered.</p>
+</div>
+<div class="section" id="collections-status">
+<h2>6. Collections Status<a class="headerlink" href="#collections-status" title="Permalink to this headline">¶</a></h2>
+<p>The Collection Status menu of the WebSearch Admin interface shows the
+list of all collections and checks if there is anything wrong regarding
+configuration of collections, together with the languages the collection
+name has been translated into, etc. Here is the detailed explanation of
+the functionality:</p>
+<dl class="docutils">
+<dt><strong>ID</strong></dt>
+<dd>ID of the collection.</dd>
+<dt><strong>Name</strong></dt>
+<dd>Name of the collection.</dd>
+<dt><strong>Query</strong></dt>
+<dd>The collection definition query. Note that it should be empty if a
+collection got subcollections. If not, then a query is needed.</dd>
+<dt><strong>Subcollections</strong></dt>
+<dd>The subcollections that the collection is composed of. Note that a
+collection which got defined by a query should not have any
+subcollections.</dd>
+<dt><strong>Restricted</strong></dt>
+<dd>A restricted collection can only be accessed by users belonging to
+the Apache groups mentioned in this column.</dd>
+<dt><strong>Hosted</strong></dt>
+<dd>A hosted collection is practicly an external one behaving just as if
+it were local.</dd>
+<dt><strong>I18N</strong></dt>
+<dd>Show which languages the collection name has been translated into.</dd>
+<dt><strong>Status</strong></dt>
+<dd>If no errors was found, <em>OK</em> is displayed for each collection. If an
+error was found, then an error number and short message are shown.
+The meaning of the error messages is the following: <em>1:Conflict</em>
+means that the collection was defined via a query but also via
+subcollections too; <em>2:Empty</em> means that the collection wasn&#8217;t
+defined neither via query nor via subcollections.</dd>
+</dl>
+</div>
+<div class="section" id="check-external-collections">
+<h2>7. Check External Collections<a class="headerlink" href="#check-external-collections" title="Permalink to this headline">¶</a></h2>
+<p>The Check External Collections menu of the WebSearch Admin interface is
+a simple tool to check and control the consistency of the external
+collections the user has defined. External collections exist both in
+their own database table as well in a user defined configuration file.
+This tool will check the consistency between the two and report back to
+the user giving them the option to fix any potential inconsistencies.</p>
+</div>
+<div class="section" id="edit-search-engine-parameters">
+<h2>8. Edit Search Engine Parameters<a class="headerlink" href="#edit-search-engine-parameters" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="search-engine-cache">
+<h2>9. Search Engine Cache<a class="headerlink" href="#search-engine-cache" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="additional-information">
+<h2>10. Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="/help/hacking/search-engine-internals">WebSearch
+Internals</a></p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
