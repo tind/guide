@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>General Guide for Administrators &mdash; tind-doc 1.0.0 documentation</title>
+  <title>Welcome to TIND Technologies` administration guide &mdash; tind-doc 1.0.0 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
 
   
     <link rel="top" title="tind-doc 1.0.0 documentation" href="#"/>
-        <link rel="next" title="Admin’s Guide" href="admin/index.html"/> 
+        <link rel="next" title="Guide for Librarian" href="admin/index.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -57,14 +57,30 @@
         
         
             <ul>
-<li class="toctree-l1"><a class="reference internal" href="admin/index.html">Admin&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin/index.html">Guide for Librarian</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admin/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin/websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
 </ul>
-<ul class="simple">
+</li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">MARC intro</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#overview">1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#default-marc-field-used-by-tind">2. Default marc field used by TIND</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/index.html">Guide for tool.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">How to create documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto/docguide.html">Blablabla</a></li>
 </ul>
 </li>
 </ul>
@@ -90,7 +106,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="#">Docs</a> &raquo;</li>
       
-    <li>General Guide for Administrators</li>
+    <li>Welcome to TIND Technologies` administration guide</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="_sources/index.txt" rel="nofollow"> View page source</a>
@@ -101,51 +117,291 @@
 </div>
           <div role="main">
             
-  <div class="section" id="general-guide-for-administrators">
-<h1>General Guide for Administrators<a class="headerlink" href="#general-guide-for-administrators" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="welcome-to-tind-technologies-administration-guide">
+<h1>Welcome to TIND Technologies` administration guide<a class="headerlink" href="#welcome-to-tind-technologies-administration-guide" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to Invenio’s documentation. This documentation is divided into different parts. We recommend that you get started with First Steps with Invenio and then head over to the Quickstart.
+Besides the quickstart, there is also a more detailed Tutorial that shows how to create a complete application with Invenio. If you’d rather dive into the internals of Invenio, check out the
+API documentation. Common patterns are described in the Patterns section.</p>
+<div class="section" id="general-guide-for-administrators">
+<h2>General Guide for Administrators<a class="headerlink" href="#general-guide-for-administrators" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="admin/index.html">Admin&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin/index.html">Guide for Librarian</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admin/create-collection.html">Creation of Collections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#edit-collection-tree">2. Edit Collection Tree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#add-new-collection">2.1 Add new collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#add-collection-to-tree">2.2 Add collection to tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-existing-tree">2.3 Modify existing tree</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#edit-collection-parameters">3. Edit Collection Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-collection-query">3.1 Modify collection query</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-access-restrictions">3.2 Modify access restrictions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-translations">3.3 Modify translations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#delete-collection">3.4 Delete collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-portalboxes">3.5 Modify portalboxes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-search-fields">3.6 Modify search fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-search-options">3.7 Modify search options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-sort-options">3.8 Modify sort options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-rank-options">3.9 Modify rank options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#modify-output-formats">3.10 Modify output formats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#configuration-of-related-external-collections">3.11 Configuration of related external collections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/create-collection.html#detailed-record-page-options">3.12 Detailed record page options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#external-and-hosted-collections">4. External and Hosted Collections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#webcoll-status">5. Webcoll Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#collections-status">6. Collections Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#check-external-collections">7. Check External Collections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#edit-search-engine-parameters">8. Edit Search Engine Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#search-engine-cache">9. Search Engine Cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/create-collection.html#additional-information">10. Additional Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="admin/websubmit-admin-guide.html">WebSubmit Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#contents">Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#how-websubmit-works">1.1 How WebSubmit Works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#behind-the-scenes">1.2 Behind the scenes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#configure-submissions-a-tutorial">2. Configure Submissions: a Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#creating-the-submission">2.1 Creating the submission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#building-the-interface">2.2 Building the interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#adding-the-functions">2.3 Adding the functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#restricting-the-submission">2.4 Restricting the submission</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#websubmit-elements">3. WebSubmit Elements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#existing-elements">3.1 Existing elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#creating-a-new-element">3.2 Creating a new element</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#user-defined-input-elements">3.2.1 User Defined Input Elements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#file-input-elements">3.2.2 File Input Elements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#hidden-input-elements">3.2.3 Hidden Input Elements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#text-input-elements">3.2.4 Text Input Elements</a></li>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#response-elements">3.2.5 Response Elements</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="admin/websubmit-admin-guide.html#select-box-elements">3.2.6 Select Box Elements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#creating-a-new-check">3.3 Creating a new check</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#websubmit-functions">4. WebSubmit Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#existing-functions">4.1 Existing functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#creating-a-new-function">4.2 Creating a new function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#file-management-with-websubmit">5. File Management with WebSubmit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#file-input-fft-technique">5.1 File Input + FFT Technique</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#revising-deleting-files">Revising/deleting files</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#file-input-element-move-files-to-storage-function">5.2 File Input element + Move_Files_To_Storage function</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#id2">Revising/deleting files</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#create-upload-files-interface-move-uploaded-files-to-storage-functions">5.3 Create_Upload_Files_Interface + Move_Uploaded_Files_To_Storage functions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#id3">Revising/deleting files</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#upload-file-element-instance-move-uploaded-files-to-storage-function">5.4 Upload_File element instance + Move_Uploaded_Files_To_Storage function</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#id4">Revising/deleting files</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#fckeditor-element-instance-move-fckeditor-files-to-storage-function">5.5 FCKeditor element instance + Move_FCKeditor_Files_To_Storage function</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#id5">Revising/deleting files</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#upload-photo-interface-element-instance-move-photos-to-storage-function">5.6 Upload_Photo_interface element instance + Move_Photos_To_Storage function</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#id6">Revising/deleting files</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#alternatives-bibdocfile-cli-or-bibdocfile-web-interface">5.7 Alternatives: BibDocFile CLI or BibDocFile Web Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#access-restrictions">6. Access restrictions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#admin-level">6.1 Admin-level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#user-level">6.2 User-level</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#linking-to-submissions">7. Linking to submissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#adding-a-link-from-the-submissions-page">7.1 Adding a link from the submissions page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#linking-to-a-submission-with-direct-url-in-email-formats-etc">7.2 Linking to a submission with direct URL (in email, formats, etc.)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#url-to-main-submission-page">7.2.1 URL to main submission page</a></li>
+<li class="toctree-l5"><a class="reference internal" href="admin/websubmit-admin-guide.html#url-to-jump-straight-into-the-submission">7.2.2 URL to jump straight into the submission</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#terminology">8. Terminology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#the-document-type-of-a-file-doctype">8.1 The document type of a file (<tt class="docutils literal"><span class="pre">doctype</span></tt>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#the-submission-directory-curdir">8.2 The submission directory (<tt class="docutils literal"><span class="pre">curdir</span></tt>)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#load-dump-submissions">9. Load/dump Submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#general-overview-of-the-manager-tool">General Overview of the Manager Tool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#things-to-know-before-using-the-manager">Things to know before using the Manager:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#see-also">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#using-the-manager-through-an-example">Using the manager through an example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#what-is-this">what is this?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#the-user-reaches-websubmit-main-page">The user reaches WebSubmit main page.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#the-user-can-then-click-on-the-document-type-he-is-interested-in">The user can then click on the document type he is interested in.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#the-submission-starts-the-first-page-of-the-web-form-appears">The submission starts, the first page of the web form appears.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#on-the-last-page-of-the-submission-there-should-be-a-button-like-in-the-following-image-which-will-trigger-the-end-script">On the last page of the submission, there should be a button like in the following image which will trigger the end script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id7">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#philosophy-behind-the-document-submission-system">Philosophy behind the document submission system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#on-the-relation-between-a-search-collection-and-a-submission-doctype">On the relation between a search collection and a submission doctype:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#interface-description">Interface Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#welcome-to-websubmit-management-tool">Welcome to webSubmit Management tool:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id8">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#document-types">Document Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id9">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#ading-new-type-of-document">Ading new type of document</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#how-to-get-there">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#how-to-do-this">How to do this?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id10">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#removing-a-document-type">Removing a Document Type</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id11">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id12">How to do this?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id13">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#modifying-a-document-type">Modifying a Document Type</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#what-is-it">What is it?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id14">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id15">How to do this?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id16">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#actions">Actions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id17">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#adding-a-new-action">Adding a New Action</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id18">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id19">How to do this?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id20">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#removing-an-action">Removing an Action</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id21">What is it?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id22">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id23">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#modifying-an-action">Modifying an Action</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id24">What is it?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id25">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id26">How to do this?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id27">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#implement-an-action-over-a-document-type">Implement an action over a document type</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id28">What is it?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id29">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id30">How to do this?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id31">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#create-and-maintain-the-web-form">Create and maintain the web form</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id32">What is it?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id33">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#list-of-the-form-pages">List of the form pages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#edit-one-form-page">Edit one form page</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#edit-the-html-template-of-one-form-element">Edit the html template of one form element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#edit-one-form-element">Edit one form element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#add-one-form-element">Add one form element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#create-a-new-html-template">Create a new html template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#create-and-edit-a-checking-function">Create and edit a checking function.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id34">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#setup-the-data-treatment">Setup the Data Treatment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id35">What is it?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id36">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#list-of-functions">List of functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id37">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#description">Description:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id38">See also:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="admin/websubmit-admin-guide.html#id39">Creating a New Function</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id40">How to get there?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id41">How to do this?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin/websubmit-admin-guide.html#id42">See also:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
-<ul class="simple">
-<li><a class="reference internal" href="admin/websearch-admin-guide.html#websearch-admin-guide"><em>WebSearch Admin Guide</em></a></li>
-<li><a class="reference internal" href="admin/websubmit-admin-guide.html#websubmit-admin-guide"><em>WebSubmit Admin Guide</em></a></li>
-</ul>
 </div>
 <div class="section" id="guide-for-tool-tind-io">
-<h1>Guide for tool.tind.io<a class="headerlink" href="#guide-for-tool-tind-io" title="Permalink to this headline">¶</a></h1>
+<h2>Guide for tool.tind.io<a class="headerlink" href="#guide-for-tool-tind-io" title="Permalink to this headline">¶</a></h2>
 <p>The guide for use of tools.tind.io. This site will be filled with several nice to have tools for librarians and administrators.</p>
 <div class="toctree-wrapper compound">
-<ul class="simple">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools/index.html">Guide for tool.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<p><em class="xref std std-ref">Link title</em></p>
 </div>
 <div class="section" id="doc">
-<h1>Doc<a class="headerlink" href="#doc" title="Permalink to this headline">¶</a></h1>
+<h2>Doc<a class="headerlink" href="#doc" title="Permalink to this headline">¶</a></h2>
 <p>Contents:</p>
 <ul class="simple">
 <li><a class="reference internal" href="doc/use-of-marc.html#use-of-marc"><em>MARC Fields</em></a></li>
 </ul>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">MARC intro</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#overview">1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#default-marc-field-used-by-tind">2. Default marc field used by TIND</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc/use-of-marc.html">MARC Fields</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
-<li><em class="xref std std-ref">tasty</em></li>
+<div class="section" id="create-documentation-properly">
+<h2>Create documentation properly<a class="headerlink" href="#create-documentation-properly" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">How to create documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto/docguide.html">Blablabla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="howto/docguide.html#overview">1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="howto/docguide.html#default-marc-field-used-by-tind">2. Default marc field used by TIND</a></li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 </div>
 
 
@@ -154,7 +410,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="admin/index.html" class="btn btn-neutral float-right" title="Admin’s Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="admin/index.html" class="btn btn-neutral float-right" title="Guide for Librarian"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

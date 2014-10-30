@@ -1,24 +1,7 @@
-..  This file is part of Invenio
-    Copyright (C) 2014 CERN.
+.. _create-collection:
 
-    Invenio is free software; you can redistribute it and/or
-    modify it under the terms of the GNU General Public License as
-    published by the Free Software Foundation; either version 2 of the
-    License, or (at your option) any later version.
-
-    Invenio is distributed in the hope that it will be useful, but
-    WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with Invenio; if not, write to the Free Software Foundation, Inc.,
-    59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
-
-.. _websearch-admin-guide:
-
-WebSearch Admin Guide
-=====================
+Creation of Collections
+=======================
 
 +---------------------------------------------------------------------------+
 | WARNING: THIS ADMIN GUIDE IS NOT FULLY COMPLETED                          |
@@ -152,7 +135,7 @@ To modify existing tree by WebSearch Admin Interface, click on icons
 displayed next to collections. The meaning of icons is as follows:
 
 +--------------------------------------+--------------------------------------+
-| |image0|                             | |image1|   |image2|                  |
+| |A   |                               | |B |            |C  |                |
 | Remove chosen collection with its    | Move chosen collection up or down    |
 | subcollections from the collection   | among its brothers and sisters, i.e. |
 | tree, but do not delete the          | change the order of collections      |
@@ -658,8 +641,3 @@ the user giving them the option to fix any potential inconsistencies.
 `WebSearch
 Internals </help/hacking/search-engine-internals>`__
 
-.. |image0| image:: /_static/iconcross.gif
-.. |image1| image:: /_static/arrow_up.gif
-.. |image2| image:: /_static/arrow_down.gif
-.. |image3| image:: /_static/move_from.gif
-.. |image4| image:: /_static/move_to.gif

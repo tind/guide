@@ -3833,25 +3833,3 @@ See also:
             See also:
 
                     notes
-
-
-
-.. |image0| image:: /_static/admin/websubmit-admin-guide-workflow1.png
-.. |image1| image:: /_static/admin/websubmit-admin-guide-workflow2.png
-.. |image2| image:: /_static/admin/websubmit-admin-guide-workflow3.png
-.. |image3| image:: /_static/admin/websubmit-admin-guide-screenshot1-small.png
-.. |image4| image:: /_static/admin/websubmit-admin-guide-screenshot2-small.png
-.. |image5| image:: /_static/admin/websubmit-admin-guide-screenshot3-small.png
-.. |image6| image:: /_static/admin/websubmit-admin-guide-screenshot4-small.png
-.. |image7| image:: /_static/admin/websubmit-admin-guide-workflow4b.png
-.. |image8| image:: /_static/admin/websubmit-admin-guide-page0.jpg
-.. |main_menu| image:: /_static/admin/websubmit-admin-guide-main_menu.png
-.. |menu_doc| image:: /_static/admin/websubmit-admin-guide-menu_doc.png
-.. |form| image:: /_static/admin/websubmit-admin-guide-form.png
-.. |end_action| image:: /_static/admin/websubmit-admin-guide-end_action.png
-.. |image13| image:: /_static/admin/websubmit-admin-guide-main_page.png
-.. |image14| image:: /_static/admin/websubmit-admin-guide-implement.png
-.. |image15| image:: /_static/admin/websubmit-admin-guide-menu_page.png
-.. |image16| image:: /_static/admin/websubmit-admin-guide-preview.png
-.. |image17| image:: /_static/admin/websubmit-admin-guide-elements.png
-.. |image18| image:: /_static/admin/websubmit-admin-guide-list_functions.png

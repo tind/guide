@@ -1,7 +1,7 @@
-.. _websearch-admin-guide:
+.. _create-collection:
 
-WebSearch Admin Guide
-=====================
+Creation of Collections
+=======================
 
 +---------------------------------------------------------------------------+
 | WARNING: THIS ADMIN GUIDE IS NOT FULLY COMPLETED                          |
@@ -135,7 +135,7 @@ To modify existing tree by WebSearch Admin Interface, click on icons
 displayed next to collections. The meaning of icons is as follows:
 
 +--------------------------------------+--------------------------------------+
-| |image0|                             | |image1|   |image2|                  |
+| |A   |                               | |B |            |C  |                |
 | Remove chosen collection with its    | Move chosen collection up or down    |
 | subcollections from the collection   | among its brothers and sisters, i.e. |
 | tree, but do not delete the          | change the order of collections      |
@@ -641,8 +641,3 @@ the user giving them the option to fix any potential inconsistencies.
 `WebSearch
 Internals </help/hacking/search-engine-internals>`__
 
-.. |image0| image:: /_static/iconcross.gif
-.. |image1| image:: /_static/arrow_up.gif
-.. |image2| image:: /_static/arrow_down.gif
-.. |image3| image:: /_static/move_from.gif
-.. |image4| image:: /_static/move_to.gif

@@ -2,5 +2,8 @@
 Documentation
 *************
 
-Contents: MARC
+.. toctree::
+   :maxdepth: 1
 
+   intro
+   use-of-marc

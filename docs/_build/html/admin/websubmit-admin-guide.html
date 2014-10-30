@@ -28,7 +28,10 @@
   
 
   
-    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/> 
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for Librarian" href="index.html"/>
+        <link rel="next" title="Guide for tool.tind.io" href="../tools/index.html"/>
+        <link rel="prev" title="Creation of Collections" href="create-collection.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -55,15 +58,31 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
-            <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Admin&#8217;s Guide</a></li>
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarian</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">WebSubmit Admin Guide</a></li>
 </ul>
-<ul class="simple">
+</li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">MARC intro</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#overview">1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#default-marc-field-used-by-tind">2. Default marc field used by TIND</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tool.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../howto/index.html">How to create documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../howto/docguide.html">Blablabla</a></li>
 </ul>
 </li>
 </ul>
@@ -88,6 +107,8 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for Librarian</a> &raquo;</li>
       
     <li>WebSubmit Admin Guide</li>
       <li class="wy-breadcrumbs-aside">
@@ -198,7 +219,7 @@ all pages, a series of <a class="reference external" href="#4">WebSubmit functio
 functions will typically (1) post-process the data, (2) create a
 MARCXML, (3) upload the created MARCXML file, and (4) send confirmation
 email(s).</p>
-<p><img alt="image0" src="_static/admin/websubmit-admin-guide-workflow1.png" /> Figure 1</p>
+<p><a href="#id43"><span class="problematic" id="id44">|image0|</span></a> Figure 1</p>
 <p>One thing worth learning from this simple workflow is that (1) functions
 are executed one after each other, (2) that each function can have side
 effects, such as sending email, and that (3) the output of these
@@ -208,14 +229,14 @@ the user (in the form of a web page). Also most submissions usually need
 only a single page.</p>
 <p>Finally, note that you can plug a check for each field of a page, so that
 the user cannot proceed further if some invalid text has been entered.</p>
-<p><img alt="image1" src="_static/admin/websubmit-admin-guide-workflow2.png" /> Figure 2</p>
+<p><a href="#id45"><span class="problematic" id="id46">|image1|</span></a> Figure 2</p>
 <p>Functions are also organized in steps (Figure 2). By default, WebSubmit
 runs the &#8220;step 1 block&#8221; and then stops: to run the next steps one must
 have a function at the end of step 1 that jump to another block (for eg.
 CaseEDS function) or have a WebSubmit element that set the input form
 &#8220;step&#8221; to the value of the block number (such as
 &#8220;<tt class="docutils literal"><span class="pre">Create_Modify_Interface</span></tt>&#8221; function).</p>
-<p><img alt="image2" src="_static/admin/websubmit-admin-guide-workflow3.png" /> Figure 3</p>
+<p><a href="#id47"><span class="problematic" id="id48">|image2|</span></a> Figure 3</p>
 <p>A set of WebSubmit functions comes installed by default in Invenio, to
 provide all the necessary functionality to create your own workflow.
 The behaviour of these functions can be customized through their
@@ -235,13 +256,13 @@ WebSubmit. It can be customized to 1) display a description of the
 submission, 2) show the available &#8220;actions&#8221; (described further below)
 and 3) let the users choose among the available &#8220;categories&#8221; (described
 further below).</p>
-<p><img alt="image3" src="_static/admin/websubmit-admin-guide-screenshot1-small.png" /></p>
+<p><a href="#id49"><span class="problematic" id="id50">|image3|</span></a></p>
 <p>→</p>
-<p><img alt="image4" src="_static/admin/websubmit-admin-guide-screenshot2-small.png" /></p>
+<p><a href="#id51"><span class="problematic" id="id52">|image4|</span></a></p>
 <p>→</p>
-<p><img alt="image5" src="_static/admin/websubmit-admin-guide-screenshot3-small.png" /></p>
+<p><a href="#id53"><span class="problematic" id="id54">|image5|</span></a></p>
 <p>→</p>
-<p><img alt="image6" src="_static/admin/websubmit-admin-guide-screenshot4-small.png" /></p>
+<p><a href="#id55"><span class="problematic" id="id56">|image6|</span></a></p>
 <p>Page &#8220;0&#8221;</p>
 <p>Page 1</p>
 <p>Page 2</p>
@@ -261,10 +282,10 @@ For example:</p>
 <li><strong>MBI</strong>: modify the metadata of a record</li>
 <li><strong>SRV</strong>: submit a revised file</li>
 </ul>
-<p><img alt="image7" src="_static/admin/websubmit-admin-guide-workflow4b.png" /> Figure 5</p>
+<p><a href="#id57"><span class="problematic" id="id58">|image7|</span></a> Figure 5</p>
 <p>Actions are displayed as several buttons (blue by default) for users to
 choose from to start a new submission (Figure 6):</p>
-<p><img alt="image8" src="_static/admin/websubmit-admin-guide-page0.jpg" /> Figure 6</p>
+<p><a href="#id59"><span class="problematic" id="id60">|image8|</span></a> Figure 6</p>
 <p>Figure 6 also shows the possibility to select among various categories
 prior to jumping into one of the available actions. These categories
 usually don&#8217;t have a direct impact on the chosen workflow. Think of them
@@ -1649,7 +1670,7 @@ action, edit the existing functions, and reorder the functions.</li>
 </div>
 <div class="section" id="the-user-reaches-websubmit-main-page">
 <h3>The user reaches WebSubmit main page.<a class="headerlink" href="#the-user-reaches-websubmit-main-page" title="Permalink to this headline">¶</a></h3>
-<p><img alt="main_menu" src="_static/admin/websubmit-admin-guide-main_menu.png" />  To add a document type to WebSubmit, you should go to the
+<p><a href="#id61"><span class="problematic" id="id62">|main_menu|</span></a>  To add a document type to WebSubmit, you should go to the
 <a class="reference external" href="/admin/websubmit/index.php">main page</a> and
 click on &#8220;New Doctype&#8221; in the left blue panel.</p>
 <p>Even once created, a document type will not appear automatically on
@@ -1660,7 +1681,7 @@ page. (see the <a class="reference external" href="#catalogues">guide section</a
 </div>
 <div class="section" id="the-user-can-then-click-on-the-document-type-he-is-interested-in">
 <h3>The user can then click on the document type he is interested in.<a class="headerlink" href="#the-user-can-then-click-on-the-document-type-he-is-interested-in" title="Permalink to this headline">¶</a></h3>
-<p><img alt="menu_doc" src="_static/admin/websubmit-admin-guide-menu_doc.png" />  The text appearing under the header containing
+<p><a href="#id63"><span class="problematic" id="id64">|menu_doc|</span></a>  The text appearing under the header containing
 the name of the document can be configured by going to the <a class="reference external" href="websubmit-admin">main
 page</a>, click on the title of the document type then
 on the &#8220;Edit Document Types Details&#8221; button.</p>
@@ -1686,7 +1707,7 @@ desired action. There you can set the &#8220;buttonorder&#8221; form field.</p>
 </div>
 <div class="section" id="the-submission-starts-the-first-page-of-the-web-form-appears">
 <h3>The submission starts, the first page of the web form appears.<a class="headerlink" href="#the-submission-starts-the-first-page-of-the-web-form-appears" title="Permalink to this headline">¶</a></h3>
-<p><img alt="form" src="_static/admin/websubmit-admin-guide-form.png" />  This web form is composed of several pages, on
+<p><a href="#id65"><span class="problematic" id="id66">|form|</span></a>  This web form is composed of several pages, on
 each of these pages form fields can be found. To modify the number of
 pages, add or withdraw form fields and modify the texts before each form
 field, you shall go to the <a class="reference external" href="websubmit-admin">main page</a>, click on the
@@ -1696,7 +1717,7 @@ section</a>)</p>
 </div>
 <div class="section" id="on-the-last-page-of-the-submission-there-should-be-a-button-like-in-the-following-image-which-will-trigger-the-end-script">
 <h3>On the last page of the submission, there should be a button like in the following image which will trigger the end script<a class="headerlink" href="#on-the-last-page-of-the-submission-there-should-be-a-button-like-in-the-following-image-which-will-trigger-the-end-script" title="Permalink to this headline">¶</a></h3>
-<p><img alt="end_action" src="_static/admin/websubmit-admin-guide-end_action.png" />  This button is defined like any other form
+<p><a href="#id67"><span class="problematic" id="id68">|end_action|</span></a>  This button is defined like any other form
 field. Its definition should include a <em>onclick=&#8221;finish();&#8221;</em> javascript
 attribute.</p>
 <p>After clicking this button, WebSubmit will apply the end script
@@ -1728,7 +1749,7 @@ submission system.</p>
 <div class="section" id="welcome-to-websubmit-management-tool">
 <h3>Welcome to webSubmit Management tool:<a class="headerlink" href="#welcome-to-websubmit-management-tool" title="Permalink to this headline">¶</a></h3>
 <p>on the websubmit admin <a class="reference external" href="websubmit-admin">main page</a> you will find:
-<img alt="image13" src="_static/admin/websubmit-admin-guide-main_page.png" /></p>
+<a href="#id69"><span class="problematic" id="id70">|image13|</span></a></p>
 <ul class="simple">
 <li>The list of all existing document type in the middle of the page.
 Click on one line in the list to have access to the main document
@@ -2029,7 +2050,7 @@ Submission&#8221; button.</p>
 <p>You then go back to the document type manager page where you can
 see that in the bottom array your newly implemented action appears
 (check the acronym in the first column).
-<img alt="image14" src="_static/admin/websubmit-admin-guide-implement.png" /></p>
+<a href="#id71"><span class="problematic" id="id72">|image14|</span></a></p>
 <ul class="simple">
 <li>Clicking on the action acronym will allow you to modify the general
 data about the action (remember in this case that all the other
@@ -2107,7 +2128,7 @@ saved. If he wants to stop then come back later (or if the browser
 crashes!) he will be able to get back to the submission at the exact
 moment he left it.</p>
 <p>Once here:
-<img alt="image15" src="_static/admin/websubmit-admin-guide-menu_page.png" /></p>
+<a href="#id73"><span class="problematic" id="id74">|image15|</span></a></p>
 <p>you can see the ordered list of already existing pages in the web
 form. In this example there are 4 pages. You can then:</p>
 <ul class="simple">
@@ -2129,10 +2150,10 @@ these form elements is roughly made of an html template and a text
 displayed before the form field.</p>
 <p>In the first part of the page, you have a preview of what the
 form will look like to the user:
-<img alt="image16" src="_static/admin/websubmit-admin-guide-preview.png" /></p>
+<a href="#id75"><span class="problematic" id="id76">|image16|</span></a></p>
 <p>Then the second table shows you the list of the form elements
 present on the page:
-<img alt="image17" src="_static/admin/websubmit-admin-guide-elements.png" /></p>
+<a href="#id77"><span class="problematic" id="id78">|image17|</span></a></p>
 <p>You can then:</p>
 <ul class="simple">
 <li>Move one element from one place to another using the drop-down
@@ -2270,7 +2291,7 @@ relevant line.</p>
 <p>Here is what you may see then (this is the end script list of
 functions for a document type named &#8220;TEST&#8221; and action &#8220;FTT&#8221; -
 Fulltext Transfer):
-<img alt="image18" src="_static/admin/websubmit-admin-guide-list_functions.png" /></p>
+<a href="#id79"><span class="problematic" id="id80">|image18|</span></a></p>
 <p>You can see the ordered list of all the functions in the end
 script. This end script is composed of 2 steps (see the &#8220;step&#8221;
 column). The functions composing the first step are called, then
@@ -3206,6 +3227,15 @@ Please see the HOWTO Manage Fulltext Files for more information on the administr
 
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tools/index.html" class="btn btn-neutral float-right" title="Guide for tool.tind.io"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="create-collection.html" class="btn btn-neutral" title="Creation of Collections"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -1,14 +1,10 @@
-..  This file is part of Invenio
-    Copyright (C) 2014 CERN.
 
-.. _admins-guide:
+Guide for Librarian
+*******************
 
-=============
-Admin's Guide
-=============
-
-toctree::
+.. toctree::
    :maxdepth: 1
 
-   websearch-admin-guide
+   create-collection
    websubmit-admin-guide
+   
