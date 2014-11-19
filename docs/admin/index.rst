@@ -7,4 +7,5 @@ Guide for Librarian
 
    create-collection
    websubmit-admin-guide
+   bibexport-admin-guide.rst
    
