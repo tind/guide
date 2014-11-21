@@ -17,7 +17,7 @@
 
 .. _create-collection:
 
-Creation of Collections
+Create Collections
 =======================
 
 1. Overview
