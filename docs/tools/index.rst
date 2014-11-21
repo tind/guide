@@ -1,6 +1,6 @@
  
-Guide for tool.tind.io
-**********************
+Guide for tools.tind.io
+***********************
 
 
 1. Overview

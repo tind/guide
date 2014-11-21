@@ -1,5 +1,5 @@
 
-Guide for system administrators
+Guide for System Administrators
 *******************************
 
 .. toctree::

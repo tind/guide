@@ -7,7 +7,7 @@
 Welcome to TIND Technologies` administration guide
 ###################################################
 
-Welcome to Invenio’s documentation on Invenio. This documentation is divided into three different parts:
+Welcome to TIND Technologies’ documentation on Invenio. This documentation is divided into three different parts:
 
 - The first guide is meant for librarians and repository managers. This guide is developed by TIND. 
 
@@ -17,8 +17,8 @@ Welcome to Invenio’s documentation on Invenio. This documentation is divided i
 
 
 
-General Guide for Librarians and Repository Managers
-====================================================
+Guide for Librarians and Repository Managers
+============================================
 
 .. toctree::
    :maxdepth: 2
@@ -26,8 +26,8 @@ General Guide for Librarians and Repository Managers
    librarian/index
 
 
-General Guide for Administrators
-================================
+Guide for System Administrators
+===============================
 
 .. toctree::
    :maxdepth: 2
@@ -35,8 +35,8 @@ General Guide for Administrators
    admin/index
 
 
-Guide for tool.tind.io
-======================
+Guide for tools.tind.io
+=======================
 
 The guide for use of tools.tind.io. This site will be filled with several nice to have tools for librarians and administrators.  
 

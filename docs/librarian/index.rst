@@ -1,6 +1,6 @@
 
-Guide for Librarian
-*******************
+Guide for Librarians
+********************
 
 .. toctree::
    :maxdepth: 1
