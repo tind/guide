@@ -1,5 +1,5 @@
 ..  This file is part of Invenio
-    Copyright (C) 2014 CERN.
+    Copyright (C) 2014 TIND Technologies AS.
 
     Invenio is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License as
@@ -22,41 +22,28 @@ BibExport Admin Guide
 
 Introduction
 ------------
+BibExport is a module to easily export data. One of the main tools is to export xml files. 
 
 
 
-BibEdit
--------
 
-As admin of an INVENIO instance, you have the possibility of configuring
+Configurate and run commands
+----------------------------
 
-
-Configuration File Overview
----------------------------
-
-configure the parameters for BibAuthority. The details of how this works
-were explained in the paragraphs above.
+Below is a commented example configuration to show how one would typically configure the parameters, run the command and retriew the files. 
+The details of how this works were explained in the paragraphs above.
 
 ::
 
-    # CFG_BIBAUTHORITY_RECORD_CONTROL_NUMBER_FIELD
-    # the authority record field containing the authority record control number
-    CFG_BIBAUTHORITY_RECORD_CONTROL_NUMBER_FIELD = '035__a'
+    # Define what you would like to export in ``/opt/invenio/etc/bibexport/marcxml.cfg``.
+    # Default setting are given below. This job would have exported all records from the Book collection into one xml.-file and all articles with the author "Polyakov, A M" into another.  
+    [export_job]
+    export_method = marcxml
+    [export_criterias]
+    books = 980__a:BOOK
+    polyakov_articles = 980__a:ARTICLE and author:"Polyakov, A M"
+    
 
-    # Separator to be used in control numbers to separate the authority type
-    # PREFIX (e.g. "INSTITUTION") from the control_no (e.g. "(CERN)abc123"
-    CFG_BIBAUTHORITY_PREFIX_SEP = '|'
-
-    # the ('980__a') string that identifies an authority record
-    CFG_BIBAUTHORITY_AUTHORITY_COLLECTION_IDENTIFIER = 'AUTHORITY'
-
-    # the name of the authority collection.
-    # This is needed for searching within the authority record collection.
-    CFG_BIBAUTHORITY_AUTHORITY_COLLECTION_NAME = 'Authority Records'
-
-    # used in log file and regression tests
-    CFG_BIBAUTHORITY_BIBINDEX_UPDATE_MESSAGE = \
-        "Indexing records dependent on modified authority records"
 
     # CFG_BIBAUTHORITY_TYPE_NAMES
     # Some administrators may want to be able to change the names used for the
