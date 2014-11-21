@@ -7,17 +7,30 @@
 Welcome to TIND Technologies` administration guide
 ###################################################
 
-Welcome to Invenio’s documentation. This documentation is divided into different parts. We recommend that you get started with First Steps with Invenio and then head over to the Quickstart. 
-Besides the quickstart, there is also a more detailed Tutorial that shows how to create a complete application with Invenio. If you’d rather dive into the internals of Invenio, check out the
-API documentation. Common patterns are described in the Patterns section.
+Welcome to Invenio’s documentation on Invenio. This documentation is divided into three different parts:
+
+- The first guide is meant for librarians and repository managers. This guide is developed by TIND. 
+
+- The second guide is meant for system administrators who are gonna configure the system and the subjects are categorized after the different modules in Invenio. This guide is cloned from the "Admin`s Guide" at invenio.readthedocs.org. All credit goes to the Invenio community. We strive to keep this guide up-to-date with the current version at invenio.readthedocs.org to all times.
+
+- The third guide describes tools developed by TIND to provide extra value to the users of Invenio.  
 
 
+
+General Guide for Librarians and Repository Managers
+====================================================
+
+.. toctree::
+   :maxdepth: 2
+
+   librarian/index
 
 
 General Guide for Administrators
 ================================
 
 .. toctree::
+   :maxdepth: 2
 
    admin/index
 
@@ -39,20 +52,11 @@ Doc
 
 Contents:
 
-* :ref:`use-of-marc`
-
 .. toctree::
    :maxdepth: 2
    
    doc/index
 
-
-Create documentation properly
-================================
-
-.. toctree::
-
-   howto/index
 
 
 

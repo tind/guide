@@ -1,10 +1,11 @@
 
-Guide for Librarian
-*******************
+Guide for system administrators
+*******************************
 
 .. toctree::
    :maxdepth: 1
 
-   create-collection
+
    websubmit-admin-guide
+   bibexport-admin-guide
    

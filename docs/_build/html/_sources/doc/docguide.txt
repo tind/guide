@@ -17,7 +17,7 @@
 
 .. _docguide:
 
-Blablabla
+Site template
 =====================
 
 
