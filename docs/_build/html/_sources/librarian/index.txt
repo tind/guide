@@ -7,4 +7,4 @@ Guide for Librarians
 
 
    create-collection
-
+   export-xml
