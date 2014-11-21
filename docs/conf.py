@@ -15,7 +15,11 @@
 import sys
 import os
 
-#import sphinx_rtd_theme
+# TIND documentation: This configuration file has to be set differently from a local instance and on github. See comments starting with TIND to set for the different places.
+
+
+# TIND: If used on GitHub, have a hashtag before the line below. If run locally, remove the hashtag.
+import sphinx_rtd_theme
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -103,10 +107,14 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ----------------------------------------------
 
+
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#html_theme = "sphinx_rtd_theme"
-html_theme = "default"
+# TIND: If used on GitHub, have a hashtag before the line below. If run loccaly, remove the hashtag.
+html_theme = "sphinx_rtd_theme"
+
+# TIND: If used on GitHub, do NOT have a hashtag before the line below. If run loccaly, add a hashtag.
+#html_theme = "default"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -114,7 +122,8 @@ html_theme = "default"
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# TIND: If used on GitHub, have a hashtag before the line below. If run loccaly, remove the hashtag.
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
