@@ -1,0 +1,1684 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibFormat Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="BibIndex Admin Guide" href="bibindex-admin-guide.html"/>
+        <link rel="prev" title="BibEdit Admin Guide" href="bibedit-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibFormat Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibformat-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibformat-admin-guide">
+<span id="id1"></span><h1>BibFormat Admin Guide<a class="headerlink" href="#bibformat-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>1. `Overview &lt;#shortIntro&gt;`__</strong><ul>
+<li>1.1&nbsp;&nbsp;<a class="reference external" href="#philosophy">How BibFormat works</a></li>
+<li>1.2&nbsp;&nbsp;<a class="reference external" href="#tutorial">Short Tutorial</a></li>
+<li>1.3&nbsp;&nbsp;<a class="reference external" href="#administerWebFile">Administer Through the Web Interface or Through the
+Configuration files</a></li>
+</ul>
+</li>
+<li><strong>2. `Configure Output Formats &lt;#outputFormats&gt;`__</strong><ul>
+<li>2.1&nbsp;&nbsp;<a class="reference external" href="#addOutputFormat">Add an Output Format</a></li>
+<li>2.2&nbsp;&nbsp;<a class="reference external" href="#removeOutputFormat">Remove an Output Format</a></li>
+<li>2.3&nbsp;&nbsp;<a class="reference external" href="#rulesOutputFormat">Edit the Rules of an Output Format</a></li>
+<li>2.4&nbsp;&nbsp;<a class="reference external" href="#attrsOutputFormat">Edit the Attributes of an Output
+Format</a></li>
+<li>2.5&nbsp;&nbsp;<a class="reference external" href="#dependenciesOutputFormat">Check the Dependencies an Output
+Format</a></li>
+<li>2.6&nbsp;&nbsp;<a class="reference external" href="#validityOutputFormat">Check the Validity an Output
+Format</a></li>
+</ul>
+</li>
+<li><strong>3. `Configure Format Templates &lt;#formatTemplates&gt;`__</strong><ul>
+<li>3.1&nbsp;&nbsp;<a class="reference external" href="#addFormatTemplate">Add a Format Template</a></li>
+<li>3.2&nbsp;&nbsp;<a class="reference external" href="#removeFormatTemplate">Remove a Format Template</a></li>
+<li>3.3&nbsp;&nbsp;<a class="reference external" href="#codeFormatTemplate">Edit the Code of a Format
+Template</a></li>
+<li>3.4&nbsp;&nbsp;<a class="reference external" href="#editFormatTemplate">Basic Editing</a></li>
+<li>3.5&nbsp;&nbsp;<a class="reference external" href="#elementsInFormatTemplate">Use Format Elements</a></li>
+<li>3.6&nbsp;&nbsp;<a class="reference external" href="#previewFormatTemplate">Preview a Format Template</a></li>
+<li>3.7&nbsp;&nbsp;<a class="reference external" href="#internationalizationTemplate">Internationalization
+(i18n)</a></li>
+<li>3.8&nbsp;&nbsp;<a class="reference external" href="#escapeFormatTemplate">Escaping special HTML/XML
+characters</a></li>
+<li>3.9&nbsp;&nbsp;<a class="reference external" href="#attrsFormatTemplate">Edit the Attributes of a Format
+Template</a></li>
+<li>3.10&nbsp;<a class="reference external" href="#dependenciesFormatTemplate">Check the Dependencies of a Format
+Template</a></li>
+<li>3.11&nbsp;<a class="reference external" href="#validityFormatTemplate">Check the Validity a Format
+Template</a></li>
+<li>3.12&nbsp;<a class="reference external" href="#xslFormatTemplate">XSL Format Templates</a></li>
+</ul>
+</li>
+<li><strong>4. `Configure Format Elements &lt;#FormatElements&gt;`__</strong><ul>
+<li>4.1&nbsp;&nbsp;<a class="reference external" href="#addFormatElement">Add a Format Element</a></li>
+<li>4.2&nbsp;&nbsp;<a class="reference external" href="#removeFormatElement">Remove a Format Element</a></li>
+<li>4.3&nbsp;&nbsp;<a class="reference external" href="#codeFormatElement">Edit the Code of a Format Element</a></li>
+<li>4.4&nbsp;&nbsp;<a class="reference external" href="#previewFormatElement">Preview a Format Element</a></li>
+<li>4.5&nbsp;&nbsp;<a class="reference external" href="#internationalizationFormatElement">Internationalization
+(i18n)</a></li>
+<li>4.6&nbsp;&nbsp;<a class="reference external" href="#escapeFormatElement">Escaping special HTML/XML
+characters</a></li>
+<li>4.7&nbsp;&nbsp;<a class="reference external" href="#attrsFormatElement">Edit the Attributes of a Format
+Element</a></li>
+<li>4.8&nbsp;&nbsp;<a class="reference external" href="#dependenciesFormatElement">Check the Dependencies of a Format
+Element</a></li>
+<li>4.9&nbsp;&nbsp;<a class="reference external" href="#validityFormatElement">Check the Validity of a Format
+Element</a></li>
+<li>4.10&nbsp;<a class="reference external" href="#browseDocFormatElement">Browse the Format Elements
+Documentation</a></li>
+</ul>
+</li>
+<li><strong>5. `Run BibReformat &lt;#BibReformat&gt;`__</strong><ul>
+<li>5.1&nbsp;&nbsp;<a class="reference external" href="#runBibReformat">Run BibReformat</a></li>
+</ul>
+</li>
+<li><strong>6. `Appendix &lt;#Appendix&gt;`__</strong><ul>
+<li>6.1&nbsp;&nbsp;<a class="reference external" href="#marcNotation">MARC Notation in Formats</a></li>
+<li>6.2&nbsp;&nbsp;<a class="reference external" href="#migration">Migrating from Previous BibFormat</a></li>
+<li>6.3&nbsp;&nbsp;<a class="reference external" href="#integrationDreamweaver">Integrating BibFormat into Dreamweaver
+MX</a></li>
+<li>6.4&nbsp;&nbsp;<a class="reference external" href="#faq">FAQ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-bibformat-works">
+<h3>1.1 How BibFormat Works<a class="headerlink" href="#how-bibformat-works" title="Permalink to this headline">¶</a></h3>
+<p>BibFormat is in charge of formatting the bibliographic records that are
+displayed to your users. It is called by the search engine when it has
+to format a record.</p>
+<p>As you might need different kind of formatting depending on the type
+of record, but potentially have a huge amount of records in your
+database, you cannot specify for each of them how they should look.
+Instead BibFormat uses a rule-based decision process to decide how to
+format a record.</p>
+<p>The best way to understand how BibFormat works is to have a look at a
+typical workflow:</p>
+<p>Step 1:</p>
+<p><img alt="Use output format HD" src="_static/admin/bibformat-guide-url_bar.png" /></p>
+<p>When Invenio has to display a record, it asks BibFormat to format the
+record with the given output format and language. For example here the
+requested output format is hd, which is a short code for &#8220;HTML
+Detailed&#8221;. This means that somehow a user arrived on the page of the
+record and asked for a detailed view of the record.</p>
+<hr class="docutils" />
+<p>Step 2:</p>
+<ol class="arabic simple">
+<li>Use Template [Picture HTML Detailed] if tag [980__a] is equal to [PICTURE]</li>
+<li>Use Template [Thesis HTML detailed] if tag [980__a] is equal to [THESIS]</li>
+<li>By default use [Default HTML Detailed]|</li>
+</ol>
+<p><img alt="BibFormat Guide BFO HD rules" src="_static/admin/bibformat-guide-bfo_hd_rules.png" /></p>
+<p>Beside is a screenshot of the &#8220;hd&#8221; or &#8220;HTML Detailed&#8221; output format.
+You can see that the output format does not specify how to format the
+record, but contains a set of rules which define which template must be
+used.</p>
+<p>The rules are evaluated from top to bottom. Each rule defines a
+condition on a field of the record, and a format template to use to
+format the record if the condition matches. Let&#8217;s say that the field
+980__a of the record is equal to &#8220;Picture&#8221;. Then first rules matches,
+and format template Picture HTML Detailed is used for formatting by
+BibFormat.</p>
+<p>You can add, remove or edit output formats
+<a class="reference external" href="/admin/bibformat/bibformatadmin.py/output_formats_manage">here</a></p>
+<hr class="docutils" />
+<p>Step 3:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;h1 align=&quot;center&quot;&gt;&lt;BFE_MAIN_TITLE/&gt;&lt;/h1&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;BFE_AUTHORS separator=&quot;; &quot;  link=&quot;yes&quot;/&gt;&lt;br/&gt;
+    &lt;BFE_DATE format=&quot;%d %B %Y&quot;&gt; .- &lt;BFE_NB_PAGES suffix=&quot;p&quot;&gt;
+&lt;/p&gt;
+</pre></div>
+</div>
+<p>We see an extract of the Picture HTML Detailed format on the right, as
+it is shown in the template editor. As you can see it is mainly written
+using HTML. There are however some tags that are not part of standard
+HTML. Those tags that starts with <em>&lt;BFE_</em> are placeholders for the
+record values. For example &lt;BFE_MAIN_TITLE/&gt; tells BibFormat to write
+the title of the record. We call these tags &#8220;elements&#8221;. Some elements
+have parameters. This is the case of the &lt;BFE_AUTHORS&gt; element, which
+can take <em>separator</em> and <em>link</em> as parameters. The value of separator
+will be used to separate authors&#8217; names and the link parameter tells if
+links to authors&#8217; websites have to be created. All elements are
+described in the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_elements_doc">elements
+documentation</a>.</p>
+<p>You can add, remove or edit format templates
+<a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_templates_manage">here</a>.</p>
+<p>In addition to this modified HTML language, BibFormat also supports XSL
+stylesheets as format templates. Read the <a class="reference external" href="#xslFormatTemplate">XSL Format
+Templates</a> section to learn more about XSLT
+support for your format templates.</p>
+<hr class="docutils" />
+<p>Step 4:</p>
+<div class="highlight-python"><div class="highlight"><pre>def format_element(bfo, separator=&#39;; &#39;, link=&#39;no&#39;):
+    &quot;&quot;&quot;Prints the list of authors for the record
+
+    @param separator a character to separate the authors
+    @param link if &#39;yes&#39; print HTML links to authors
+    &quot;&quot;&quot;
+    authors = bfo.fields(&quot;100__a&quot;)
+    if link == &#39;yes&#39;:
+    authors = map(lambda x: &#39;&lt;a href=&quot;&#39;+CFG_SITE_URL+&#39;/search?f=author&amp;p=&#39;
+                  + quote(x) +&#39;&quot;&gt;&#39; + x + &#39;&lt;/a&gt;&#39;, authors)
+    return authors.split(separator)
+</pre></div>
+</div>
+<p>A format element is written in Python. It acts as a bridge between the
+record in the database and the format template. Typically you will not
+have to write or read format elements, just call them from the
+templates. Each element outputs some text that is written in the
+template where it is called.</p>
+<p>Developers can add new elements by creating a new file, naming it
+with the name of element, and write a Python <tt class="docutils literal"><span class="pre">format_element</span></tt> function
+that takes as parameters the parameters of the elements plus a special
+one <tt class="docutils literal"><span class="pre">bfo</span></tt>. Regular Python code can be used, including import of other
+modules.</p>
+<p>In summary BibFormat is called by specifying a record and an output
+format, which relies on different templates to do the formatting, and
+which themselves rely on different format elements. Only developers need
+to modify the format elements layer.</p>
+<p>Output Format</p>
+<p>Template</p>
+<p>Template</p>
+<p>Format Element</p>
+<p>Format Element</p>
+<p>Format Element</p>
+<p>Format Element</p>
+<p>You should now understand the philosophy behind BibFormat.</p>
+</div>
+<div class="section" id="short-tutorial">
+<h3>1.2 Short Tutorial<a class="headerlink" href="#short-tutorial" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s try to create our own format. This format will just print the
+title of a record.</p>
+<p>First go to the main <a class="reference external" href="/admin/bibformat/bibformatadmin.py">BibFormat admin
+page</a>. Then
+click on the &#8220;Manage Ouput Format&#8221; links. You will see the list of all
+output formats:</p>
+<p><img alt="Output formats management page" src="_static/admin/bibformat-guide-bfo_manage.png" /></p>
+<p>This is were you can delete, create or check output formats. The menu
+at the top of the page let you go to other admininistration pages.</p>
+<p>Click on the &#8220;Add New Output Format&#8221; button at the bottom of the
+page. You can then fill in some attributes for the output format. Choose
+&#8220;title&#8221; as code, &#8220;Only Title&#8221; as name and &#8220;Prints only title&#8221; as
+description:</p>
+<p><img alt="Screenshot of the Update Output Format Attributes page" src="_static/admin/bibformat-guide-bfo_attributes.png" /></p>
+<p>Leave other fields blank, and click on the button &#8220;Update Output
+format Attributes&#8221;.</p>
+<p>You are then redirected to the rules editor. Notice the menu at the
+top which let you close the editor, change the attributes again and
+check the output format. However do not click on these links before
+saving your modification of rules!</p>
+<p><img alt="Output format menu" src="_static/admin/bibformat-guide-bfo_rules.png" /></p>
+<p>As our format does not need to have a different behaviour depending on
+the record, we do not need to add new rules to the format. You just need
+to select a format template in the &#8220;By default use&#8221; list. However we
+first have to create our special format template that only print titles.
+So close the editor using the menu at the top of the page, and in the
+menu that just appeared instead, click on &#8220;Manage Format Templates&#8221;. In
+a similar way to output formats, you see the list of format templates.</p>
+<p><img alt="Format template management page" src="_static/admin/bibformat-guide-bft_manage.png" /></p>
+<p>Click on the &#8220;Add New Format Template&#8221; button at the bottom of the page.
+As for the output format, fill in the attributes of the template with
+name &#8220;Title&#8221; and any relevant description.</p>
+<p><img alt="update format template attributes" src="_static/admin/bibformat-guide-bft_attributes.png" /></p>
+<p>Click on the &#8220;Update Output Format Attributes&#8221; button. You are
+redirected to the template editor. The editor is divided in three parts.
+The upper left part contains the code of the template. The bottom part
+is a preview of the template. The part on the right side is a short
+remainder of the format elements you can use in you template. You can
+hide this documentation by clicking on &#8220;Hide Documentation&#8221;.</p>
+<p><img alt="Format template editor" src="_static/admin/bibformat-guide-bft_editor2.png" /></p>
+<p>The above screenshot shows the template code already filled in. It calls
+the <tt class="docutils literal"><span class="pre">BFE_TITLE</span></tt> element. If you do not know the name of the element
+you want to call, you can search for it using the embedded documentation
+search. You can try to add other elements into your template, or write
+some HTML formatting.</p>
+<p>When you are satisfied with your template, click on the save button,
+close the editor and go back to the &#8220;Only titles&#8221; output format rules
+editor. There select the template you have just created in the &#8220;Use by
+default&#8221; menu and save the ouput format and you are done.</p>
+<p>This tutorial does not cover all aspects of the management of formats.
+It also does not show all the power of output formats, as the one we
+have created simply call a template. However you have seen enough to
+configure BibFormat trough the web interface. Read the sections below to
+learn more about it.</p>
+</div>
+<div class="section" id="administer-through-the-web-interface-or-through-the-configuration-files">
+<h3>1.3 Administer Through the Web Interface or Through the Configuration files<a class="headerlink" href="#administer-through-the-web-interface-or-through-the-configuration-files" title="Permalink to this headline">¶</a></h3>
+<p>BibFormat can be administered in two ways. The first way is to use the
+provided web interface. It should be the most convenient way of doing
+for most users. The web interface is simple to use and provides great
+tools to manage your formats. Its only limitation concerns the format
+elements, which cannot be modified using it (But the web interface
+provide a dynamically generated documentation of your elements).</p>
+<p>The other way to administer BibFormat is to directly modify the
+configuration files using your preferred text editor. This way of doing
+can bring much power to advanced users, but requires an access to the
+server&#8217;s files. It also requires that the user double-check his
+modifications, or use the web interface to ensure the validity and
+correctness of his formats.</p>
+<p>In this manual we will show both ways of doing. For each explication we
+show first how to do it through the web interface, then how to do it by
+manipulating the configuration files. Non-power users can stop reading
+as soon as they encounter the text &#8220;For developers and adventurers
+only&#8221;.</p>
+<p>We generally recommend to use the web interface, excepted for writing
+format elements.</p>
+</div>
+</div>
+<div class="section" id="output-formats">
+<h2>2. Output Formats<a class="headerlink" href="#output-formats" title="Permalink to this headline">¶</a></h2>
+<p>As you potentially have a huge amount of bibliographic records, you
+cannot specify manually for each of them how it should be formatted.
+This is why you can define rules that will allow BibFormat to understand
+which kind of formatting to apply to a given record. You define this set
+of rules in what is called an &#8220;output format&#8221;.</p>
+<p>You can have different output formats, each with its own
+characteristics. For example you certainly want that when multiple
+bibliographic records are displayed at the same time (as it happens in
+search results), only short versions are shown to the user , while a
+detailed record is preferable when a single record is displayed,
+whatever the type of the record.</p>
+<p>You might also want to let your users decide which kind of output
+they want. For example you might need to display HTML for regular web
+browsing, but would also give a BibTeX version of the bibliographic
+reference for direct inclusion in a LaTeX document.</p>
+<p>To summarize, an output format groups similar kind of formats,
+specifying which kind of formatting has to be done, but not how it has
+to be done.</p>
+<div class="section" id="add-an-output-format">
+<h3>2.1 Add an Output Format<a class="headerlink" href="#add-an-output-format" title="Permalink to this headline">¶</a></h3>
+<p>To add a new output format, go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/output_formats_manage">Manage Output
+Formats</a>
+page and click on the &#8220;Add New Output Format&#8221; button at the bottom of
+the page. The format has been created. You can then specify the
+attributes of the output format. See <a class="reference external" href="#attrsOutputFormat">Edit the Attributes of an Output
+Format</a> to learn more about it.</p>
+<p><strong>For developers and adventurers only:</strong></p>
+<p>Alternatively you can directly add a new output format file into the
+/etc/bibformat/outputs/ directory of your Invenio installation, if you
+have access to the server&#8217;s files. Use the format extension .bfo for
+your file.</p>
+<p>You should also check that user <tt class="docutils literal"><span class="pre">www-data</span></tt> has read/write access to
+the file, if you want to be able to modify the rules through the web
+interface.</p>
+</div>
+<div class="section" id="remove-an-output-format">
+<h3>2.2 Remove an Output Format<a class="headerlink" href="#remove-an-output-format" title="Permalink to this headline">¶</a></h3>
+<p>To remove an output format, go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/output_formats_manage">Manage Output
+Formats</a>
+page and click on the &#8220;Delete&#8221; button facing the output format you want
+to delete. If you cannot click on the button (the button is not
+enabled), this means that you do not have sufficent priviledge to do so
+(Format is protected. Contact the administrator of the system).</p>
+<p><strong>For developers and adventurers only:</strong></p>
+<p>You can directly remove an output format from the
+/etc/bibformat/outputs/ directory of your Invenio installation. However
+you must make sure that it is removed from the tables <tt class="docutils literal"><span class="pre">format</span></tt> and
+<tt class="docutils literal"><span class="pre">formatname</span></tt> in the database, so that other modules know that it is
+not longer available.</p>
+</div>
+<div class="section" id="edit-the-rules-of-an-output-format">
+<h3>2.3 Edit the Rules of an Output Format<a class="headerlink" href="#edit-the-rules-of-an-output-format" title="Permalink to this headline">¶</a></h3>
+<p>When you create a new output format, you can at first only specify the
+default template, that is the one which is used when all rules fail. In
+the case of a basic output format, this is enough. You can however add
+other rules, by clicking on the &#8220;Add New Rule&#8221; button.</p>
+<p>Once you have added a rule, you can fill it with a condition, and a
+template that should be used if the condition is true. For example the
+rule</p>
+<p><img alt="Rule: Use template Picture HTML Detailed if field 980__a is equal to PICTURE" src="_static/admin/bibformat-guide-bfo_edit_rule.png" /></p>
+<p>will use template named &#8220;Picture HTML Detailed&#8221; if the field
+<tt class="docutils literal"><span class="pre">980__a</span></tt> of the record to format is equal to &#8220;Picture&#8221;. Note that text
+&#8220;PICTURE&#8221; will match any letter case like &#8220;picture&#8221; or &#8220;Picture&#8221;.
+Leading and trailing spaces are ignored too (&#8221; Picture &#8221; will match
+&#8220;PICTURE&#8221;).</p>
+<p><strong>Tips:</strong> you can use a regular expression as text. For example
+&#8220;PICT.*&#8221; will match &#8220;pictures&#8221; and &#8220;PICTURE&#8221;.</p>
+<p><img alt="Reorder rules using arrows" src="_static/admin/bibformat-guide-bfo_edit_rule2.png" /></p>
+<p>The above configuration will use format template &#8220;Default HTML Detailed&#8221;
+if all above rules fail (in that case if field 980__a is different
+from &#8220;PICTURE&#8221;). If you have more rules, you decide in which order the
+conditions are evaluated. You can reorder rules by clicking on the small
+arrows on the left of the rules.</p>
+<p>Note that when you are migrating your output formats from the old PHP
+BibFormat, you might not have translated all the formats to which your
+output formats refers. In that case you should use
+<tt class="docutils literal"><span class="pre">defined</span> <span class="pre">in</span> <span class="pre">old</span> <span class="pre">BibFormat</span></tt> option in the format templates menu, to
+make BibFormat understand that a match for this rule must trigger a call
+to the <em>Behaviour</em> of the old BibFormat. See section on <a class="reference external" href="#runSideBySide">Run old and new
+formats side by side</a> for more details on this.</p>
+<p><strong>For developers and adventurers only:</strong></p>
+<p>To write an output format, use the following syntax:</p>
+<p>First you define which field code you put as the conditon for the
+rule. You suffix it with a column. Then on next lines, define the values
+of the condition, followed by &#8212; and then the filename of the template
+to use:</p>
+<div class="highlight-python"><div class="highlight"><pre>tag 980__a:
+PICTURE --- PICTURE_HTML_BRIEF.bft
+PREPRINT --- PREPRINT_HTML_BRIEF.bft
+PUBLICATION --- PUBLICATION_HTML_BRIEF.bft
+</pre></div>
+</div>
+<p>This means that if value of field 980__a is equal to PICTURE, then we
+will use format template PICTURE_HTML_BRIEF.bft. Note that you must
+use the filename of the template, not the name. Also note that spaces at
+the end or beginning are not considered. On the following lines, you can
+either put other conditions on tag 980__a, or add another tag on which
+you want to put conditions.</p>
+<p>At the end you can add a default condition:</p>
+<div class="highlight-python"><div class="highlight"><pre>default: PREPRINT_HTML_BRIEF.bft
+</pre></div>
+</div>
+<p>which means that if no condition is matched, a format suitable for
+Preprints will be used to format the current record.</p>
+<p>The output format file could then look like this:</p>
+<div class="highlight-python"><div class="highlight"><pre>tag 980__a:
+PICTURE --- PICTURE_HTML_BRIEF.bft
+PREPRINT --- PREPRINT_HTML_BRIEF.bft
+PUBLICATION --- PUBLICATION_HTML_BRIEF.bft
+
+tag 8560_f:
+.*@cern.ch --- SPECIAL_MEMBER_FORMATTING.bft
+
+default: PREPRINT_HTML_BRIEF.bft
+</pre></div>
+</div>
+<p>You can add as many rules as you want. Keep in mind that they are read
+in the order they are defined, and that only first rule that matches
+will be used. Notice the condition on tag 8560_f: it uses a regular
+expression to match any email address that ends with &#64;cern.ch (the
+regular expression must be understandable by Python)</p>
+</div>
+<div class="section" id="edit-the-attributes-of-an-output-format">
+<h3>2.4 Edit the Attributes of an Output Format<a class="headerlink" href="#edit-the-attributes-of-an-output-format" title="Permalink to this headline">¶</a></h3>
+<p>An output format has the following attributes:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">code</span></tt>: a short identifier that is used to identify the output
+format. It must be unique and contain a maximum of 6 letters. Note
+that the <strong>code is not case sensitive</strong> (&#8220;HB&#8221; is equal to &#8220;hb&#8221;).</li>
+<li><tt class="docutils literal"><span class="pre">content</span> <span class="pre">type</span></tt>: this is the content type of the format, specified
+in Mime. For example if you were to produce an Excel output, you
+could use <tt class="docutils literal"><span class="pre">application/ms-excel</span></tt> as content type. If a content type
+is specified, Invenio will not print the usual header and footerfor
+the page, but will trigger a download in the client&#8217;s browser when
+viewing the page (Unless the browser handles this content type).</li>
+<li><tt class="docutils literal"><span class="pre">name</span></tt>: a generic name to display in the interface for this output
+format.</li>
+<li>(*) <tt class="docutils literal"><span class="pre">name</span></tt>: internationalized names for the output format, used
+for displaying localized name in the search interface.</li>
+<li><tt class="docutils literal"><span class="pre">description</span></tt>: an optional description for the output format.</li>
+</ul>
+<p><strong>Please read this information regarding output format codes:</strong> There
+are some reserved codes that you should not use, or at least be aware of
+when choosing a code for your output format. The table below summarizes
+these special words:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code Purpose</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>HB
+Used for displaying list of results
+of a search.</td>
+<td>HD
+Used when no format is specified
+when viewing a record.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>For developers and adventurers only:</strong></p>
+<p>Excepted for the code, output format attributes cannot be changed in the
+output format file. These attributes are saved in the database. As for
+the <tt class="docutils literal"><span class="pre">code</span></tt>, it is the name of the output format file, without its
+<tt class="docutils literal"><span class="pre">.bfo</span></tt> extension. If you change this name, do not forget to propagate
+the modification in the database.</p>
+</div>
+<div class="section" id="check-the-dependencies-an-output-format">
+<h3>2.5 Check the Dependencies an Output Format<a class="headerlink" href="#check-the-dependencies-an-output-format" title="Permalink to this headline">¶</a></h3>
+<p>To check the dependencies of an output format on format templates,
+format elements and tags, go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/output_formats_manage">Manage Output
+Formats</a>
+page, click on the output format you want to check, and then in the menu
+click on &#8220;Check Dependencies&#8221;.</p>
+<p><img alt="Check Dependencies menu" src="_static/admin/bibformat-guide-bfo_check_deps.png" /></p>
+<p>The next page shows you:</p>
+<ul class="simple">
+<li>the format templates which might be called by the rules of the output format</li>
+<li>the elements used in each of these templates</li>
+<li>the Marc tags involved in these elements</li>
+</ul>
+<p>Note that some Marc tags might be omitted.</p>
+</div>
+<div class="section" id="check-the-validity-an-output-format">
+<h3>2.6 Check the Validity an Output Format<a class="headerlink" href="#check-the-validity-an-output-format" title="Permalink to this headline">¶</a></h3>
+<p>To check the validity of an output format, simply go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/output_formats_manage">Manage Output
+Formats</a>
+page, and look at the column &#8216;status&#8217; for the output format you want to
+check. If message &#8220;Ok&#8221; is there, then no problem was found with the
+output format. If message &#8216;Not Ok&#8217; is in the column, click on it to see
+the problems that have been found for the output format.</p>
+</div>
+</div>
+<div class="section" id="format-templates">
+<h2>3. Format Templates<a class="headerlink" href="#format-templates" title="Permalink to this headline">¶</a></h2>
+<p>A format template defines how a record should be formatted. For example
+it specifies which fields of the record are to be displayed, in which
+order and with which visual attributes. Basically the format template is
+written in HTML, so that it is easy for anyone to edit it. BibFormat
+also has support for XSLT for formatting. Read more <a class="reference external" href="#xslFormatTemplate">about XSL format
+templates here</a>.</p>
+<div class="section" id="add-a-format-template">
+<h3>3.1 Add a Format Template<a class="headerlink" href="#add-a-format-template" title="Permalink to this headline">¶</a></h3>
+<p>To add a new format template, go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_templates_manage">Manage Format
+Templates</a>
+page and click on the &#8220;Add New Format Template&#8221; button at the bottom of
+the page. The format has been created. You can then specify the
+attributes of the format template, or ask to make a copy of an existing
+format. See <a class="reference external" href="#attrsFormatTemplate">Edit the Attributes of a Format
+Template</a> to learn more about editing the
+attributes.</p>
+<p><strong>For developers and adventurers only:</strong></p>
+<p>Alternatively you can directly add a new format template file into the
+/etc/bibformat/format_templates/ directory of your Invenio
+installation, if you have access to the server&#8217;s files. Use the format
+extension .bft for your file.</p>
+<p>You should also check that user <tt class="docutils literal"><span class="pre">www-data</span></tt> has read/write access to
+the file, if you want to be able to modify the code and the attributes
+of the template through the web interface.</p>
+</div>
+<div class="section" id="remove-a-format-template">
+<h3>3.2 Remove a Format Template<a class="headerlink" href="#remove-a-format-template" title="Permalink to this headline">¶</a></h3>
+<p>To remove a format template, go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_templates_manage">Manage Format
+Templates</a>
+page and click on the &#8220;Delete&#8221; button facing the format template you
+want to delete. If you cannot click on the button (the button is not
+enabled), this means that you do not have sufficent priviledge to do so
+(Format is protected. Contact the administrator of the system).</p>
+<p><strong>For developers and adventurers only:</strong></p>
+<p>You can directly remove the format template from the
+/etc/bibformat/format_templates/ directory of your Invenio
+installation.</p>
+</div>
+<div class="section" id="edit-the-code-of-a-format-template">
+<h3>3.3 Edit the Code of a Format Template<a class="headerlink" href="#edit-the-code-of-a-format-template" title="Permalink to this headline">¶</a></h3>
+<p>You can change the formatting of records by modifying the code of a
+template.</p>
+<p>To edit the code of a format template go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_templates_manage">Manage Format
+Templates</a>
+page. Click on the format template you want to edit to load the template
+editor.</p>
+<p>The format template editor contains three panels. The left upper panel
+is the code editor. This is were you write the code that specifies the
+formatting of a template. The right-most panel is a short documentation
+on the &#8220;bricks&#8221; you can use in your format template code. The panel at
+the bottom of the page allows you to preview the template.</p>
+<p><img alt="Template Editor Page" src="_static/admin/bibformat-guide-bft_editor.png" /></p>
+<p>The following sections explain how to write the code that specifies the
+formatting.</p>
+<div class="section" id="basic-editing">
+<h4>3.4 Basic Editing<a class="headerlink" href="#basic-editing" title="Permalink to this headline">¶</a></h4>
+<p>The first thing you have to know before editing the code is that
+everything you write in the code editor is printed as such by BibFormat.
+Well almost everything (as you will discover later).</p>
+<p>For example if you write &#8220;My Text&#8221;, then for every record the output
+will be &#8220;My Text&#8221;. Now let&#8217;s say you write &#8220;&lt;b&gt;My Text&lt;/b&gt;&#8221;: the output
+will still be &#8220;&lt;b&gt;My Text&lt;/b&gt;&#8221;, but as we display in a web browser, it
+will look like &#8220;<strong>My Text</strong>&#8221; (The browser interprets the text inside
+tags &lt;b&gt;&lt;/b&gt; as &#8220;bold&#8221;. Also note that the look may depend on the CSS
+style of your page).</p>
+<p>Basically it means that you can write HTML to do the formatting. If you
+are not experienced with HTML you can use an HTML editor to create your
+layout, and the copy-paste the HTML code inside the template.</p>
+<p>Do not forget to save your work by clicking on the save button before
+you leave the editor!</p>
+<p><strong>For developers and adventurers only:</strong></p>
+<p>You can edit the code of a template using exactly the same syntax as in
+the web interface. The code of the template is in the template file
+located in the /etc/bibformat/format_templates/ directory of your
+Invenio installation. You just have to take care of the attributes of
+the template, which are saved in the same file as the code. See <a class="reference external" href="#attrsFormatTemplate">Edit
+the Attributes of a Format Template</a> to learn
+more about it.</p>
+</div>
+<div class="section" id="use-format-elements">
+<h4>3.5 Use Format Elements<a class="headerlink" href="#use-format-elements" title="Permalink to this headline">¶</a></h4>
+<p>To add a dynamic behaviour to your format templates, that is display for
+example a different title for each record or a different background
+color depending on the type of record, you can use the format elements.</p>
+<p>Format elements are the smart bricks you can copy-paste in your code to
+get the attributes of template that change depending on the record. A
+format element looks like a regular HTML tag.</p>
+<p>For example, to print the title of a record, you can write
+<tt class="docutils literal"><span class="pre">&lt;BFE_TITLE</span> <span class="pre">/&gt;</span></tt> in your template code where you want to diplay the
+title</p>
+<p>Format elements can take values as parameters. This allows to customize
+the behaviour of an element. For example you can write
+<tt class="docutils literal"><span class="pre">&lt;BFE_TITLE</span> <span class="pre">prefix=&quot;Title:</span> <span class="pre">&quot;</span> <span class="pre">/&gt;</span></tt>, and BibFormat will take care of
+printing the title for you, with prefix &#8220;Title: &#8221;. The difference
+between <tt class="docutils literal"><span class="pre">Title:</span> <span class="pre">&lt;BFE_TITLE</span> <span class="pre">/&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;BFE_TITLE</span> <span class="pre">prefix=&quot;Title:</span> <span class="pre">&quot;</span> <span class="pre">/&gt;</span></tt>
+is that the first option will always write &#8220;Title: &#8221; while the second
+one will only print &#8220;Title: &#8221; if there exist a title for the record in
+the database. Of course there are chances that there is always a title
+for each record, but this can be useful for less common fields.</p>
+<p>Some parameters are available for all elements. This is the case for the
+following ones:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">prefix</span></tt>: a prefix printed only if the record has a value for the
+element.</li>
+<li><tt class="docutils literal"><span class="pre">suffix</span></tt>: a suffix printed only if the record has a value for the
+element.</li>
+<li><tt class="docutils literal"><span class="pre">default</span></tt>: a default value printed if the record has no value for
+the element. In that case <tt class="docutils literal"><span class="pre">prefix</span></tt> and <tt class="docutils literal"><span class="pre">suffix</span></tt> are not printed.</li>
+</ul>
+<p>Some parameters are specific to elements. To get information on all
+available format elements you can read the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_elements_doc">Format Elements
+Documentation</a>,
+which is generated dynamically for all existing elements. it will show
+you what the element do and what parameters it can take.</p>
+<p>While format elements looks like HTML tags, they differ in the
+followings ways from traditional ones:</p>
+<ul class="simple">
+<li>A format element is a single tag: you cannot have
+<tt class="docutils literal"><span class="pre">&lt;BFE_TITLE</span> <span class="pre">&gt;some</span> <span class="pre">text&lt;BFE_TITLE</span> <span class="pre">/&gt;</span></tt> but only <tt class="docutils literal"><span class="pre">&lt;BFE_TITLE</span> <span class="pre">/&gt;</span></tt>.</li>
+<li>The values of the parameters accept any characters, including &lt; and
+&gt;. The only limitation is that you cannot use the type of quotes that
+delimit that value: you can have for example
+<tt class="docutils literal"><span class="pre">&lt;BFE_TITLE</span> <span class="pre">someParam=&quot;a</span> <span class="pre">lot</span> <span class="pre">of</span> <span class="pre">single</span> <span class="pre">quotes</span> <span class="pre">'</span> <span class="pre">'</span> <span class="pre">'</span> <span class="pre">'</span> <span class="pre">&quot;/&gt;</span></tt> or
+<tt class="docutils literal"><span class="pre">&lt;BFE_TITLE</span> <span class="pre">someParam='a</span> <span class="pre">lot</span> <span class="pre">of</span> <span class="pre">double</span> <span class="pre">quotes</span> <span class="pre">&quot;</span> <span class="pre">&quot;</span> <span class="pre">&quot;</span> <span class="pre">'/&gt;</span></tt>, but not
+<tt class="docutils literal"><span class="pre">&lt;BFE_TITLE</span> <span class="pre">someParam=&quot;a</span> <span class="pre">lot</span> <span class="pre">of</span> <span class="pre">same</span> <span class="pre">quotes</span> <span class="pre">as</span> <span class="pre">delimiter</span> <span class="pre">&quot;</span> <span class="pre">&quot;</span> <span class="pre">&quot;</span> <span class="pre">&quot;/&gt;</span></tt>.</li>
+<li>Format elements names always start with <tt class="docutils literal"><span class="pre">BFE_</span></tt>.</li>
+<li>Format element can expand on multiple lines.</li>
+</ul>
+<p><strong>Tips:</strong> you can use the special element <tt class="docutils literal"><span class="pre">&lt;BFE_FIELD</span> <span class="pre">tag=&quot;&quot;</span> <span class="pre">/&gt;</span></tt> to
+print the value of any field of a record in your templates. This
+practice is however not recommended because it would necessitate to
+revise all format templates if you did change the meaning of the MARC
+code schema.</p>
+</div>
+<div class="section" id="preview-a-format-template">
+<h4>3.6 Preview a Format Template<a class="headerlink" href="#preview-a-format-template" title="Permalink to this headline">¶</a></h4>
+<p>To preview a format template go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_templates_manage">Manage Format
+Templates</a>
+page and click on the format template you want to preview to open the
+template editor. The editor contains a preview panel at the bottom of
+the page.</p>
+<p><img alt="Preview Panel" src="_static/admin/bibformat-guide-bft_preview.png" /></p>
+<p>Simply click on &#8221; Reload Preview&#8221; button to preview the template (you
+do not need to save the code before previewing).</p>
+<p>Use the &#8220;Language&#8221; menu to preview the template in a given language</p>
+<p>You can fill in the &#8220;Search Pattern&#8221; field to preview a specific record.
+The search pattern uses exactly the same syntax as the one used in the
+web interface. The only difference with the regular search engine is
+that only the first matching record is shown.</p>
+<p><strong>For developers and adventurers only:</strong></p>
+<p>If you do not want to use the web interface to edit the templates but
+still would like to get previews, you can open the preview frame of any
+format in a new window/tab. In this mode you get a preview of the
+template (if it is placed in the /etc/bibformat/format_templates/
+directory of your Invenio installation). The parameters of the preview
+are specified in the url:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">bft</span></tt>: the filename of the format template to preview</li>
+<li><tt class="docutils literal"><span class="pre">ln</span></tt>: the language to use for the preview</li>
+<li><tt class="docutils literal"><span class="pre">pattern_for_preview</span></tt>: the search pattern to use for the preview</li>
+</ul>
+</div>
+<div class="section" id="internationalization-i18n">
+<h4>3.7 Internationalization (i18n)<a class="headerlink" href="#internationalization-i18n" title="Permalink to this headline">¶</a></h4>
+<p>You can add translations to your format templates. To do so enclose the
+text you want to localize with tags corresponding to the two letters of
+the language. For example if we want to localize &#8220;title&#8221;, write
+<tt class="docutils literal"><span class="pre">&lt;en&gt;Title&lt;/en&gt;</span></tt>. Repeat this for each language in which you want to
+make &#8220;title&#8221; available: <tt class="docutils literal"><span class="pre">&lt;en&gt;Title&lt;/en&gt;&lt;fr&gt;Titre&lt;/fr&gt;&lt;de&gt;Titel&lt;/de&gt;</span></tt>.
+Finally enclose everything with <tt class="docutils literal"><span class="pre">&lt;lang&gt;</span> <span class="pre">&lt;/lang&gt;</span></tt> tags:
+<tt class="docutils literal"><span class="pre">&lt;lang&gt;&lt;en&gt;Title&lt;/en&gt;&lt;fr&gt;Titre&lt;/fr&gt;&lt;de&gt;Titel&lt;/de&gt;&lt;/lang&gt;</span></tt></p>
+<p>For each &lt;lang&gt; group only the text in the user&#8217;s language is displayed.
+If user&#8217;s language is not available in the &lt;lang&gt; group, your default
+Invenio language is used.</p>
+</div>
+<div class="section" id="escaping-special-html-xml-characters">
+<h4>3.8 Escaping special HTML/XML characters<a class="headerlink" href="#escaping-special-html-xml-characters" title="Permalink to this headline">¶</a></h4>
+<p>By default, BibFormat escapes all values returned by format elements. As
+a format template designer, you can assume in almost all cases that the
+values you get from a format element will be escaped for you. For
+special cases, you can set the parameter <tt class="docutils literal"><span class="pre">escape</span></tt> of the element to
+&#8216;0&#8217; when calling it, to make BibFormat understand that it must not
+escape the values of the element, or to &#8216;1&#8217; to force the escaping.</p>
+<p>See the <a class="reference external" href="#listofescapingmodes">complete list of escaping modes</a>.</p>
+<p>For example <tt class="docutils literal"><span class="pre">&lt;bfe_abstract</span> <span class="pre">/&gt;</span></tt> will return:</p>
+<div class="highlight-python"><div class="highlight"><pre>[...]We find that for spatially-flat cosmologies, background lensing
+clusters with reasonable mass-to-light ratios lying in the
+redshift range 0&amp;lt;1 are strongly excluded, [...]
+</pre></div>
+</div>
+<p>while <tt class="docutils literal"><span class="pre">&lt;bfe_abstract</span> <span class="pre">escape=&quot;0&quot;/&gt;</span></tt> will return:</p>
+<div class="highlight-python"><div class="highlight"><pre>[...]We find that for spatially-flat cosmologies, background lensing
+clusters with reasonable mass-to-light ratios lying in the
+redshift range 0&lt;1 are strongly excluded, [...]
+</pre></div>
+</div>
+<p>In most cases, you will not set <tt class="docutils literal"><span class="pre">escape</span></tt> to 1, nor 0, but just let the
+developer of the element take care of that for you.</p>
+<p>Please note that values given in special parameters <tt class="docutils literal"><span class="pre">prefix</span></tt>,
+<tt class="docutils literal"><span class="pre">suffix</span></tt>, <tt class="docutils literal"><span class="pre">default</span></tt> and <tt class="docutils literal"><span class="pre">nbMax</span></tt> are never escaped, whatever the
+value of <tt class="docutils literal"><span class="pre">escape</span></tt> is (but other parameters will). You have to take
+care of that in your format template, as well as of all other values
+that are not returned by the format elements.</p>
+</div>
+</div>
+<div class="section" id="edit-the-attributes-of-a-format-template">
+<h3>3.9 Edit the Attributes of a Format Template<a class="headerlink" href="#edit-the-attributes-of-a-format-template" title="Permalink to this headline">¶</a></h3>
+<p>To edit the attributes of a format template go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_templates_manage">Manage Format
+Templates</a>
+page, click on the format template you want to edit, and then in the
+menu click on &#8220;Modify Template Attributes&#8221;.</p>
+<p>A format template contains two attributes:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">Name</span></tt>: the name of the template</li>
+<li><tt class="docutils literal"><span class="pre">Description</span></tt>: a short description of the template</li>
+</ul>
+<p>Note that changing these parameters has no impact on the formatting.
+Their purpose in only to document the template.</p>
+<p>If the name you have chosen already exists for another template, you
+name will be suffixed with an integer so that the name is unique.</p>
+<p>You should also be aware that if you change the name of a format
+template, all output formats that were linking to this template will be
+changed to match the new name.</p>
+<p><strong>For developers and adventurers only:</strong></p>
+<p>You can change the attributes of a template by editing its file in the
+/etc/bibformat/format_templates/ directory of your Invenio
+installation. The attributes must be enclosed with tags
+<tt class="docutils literal"><span class="pre">&lt;name&gt;</span> <span class="pre">&lt;/name&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;description&gt;</span> <span class="pre">&lt;/description&gt;</span></tt> and should
+ideally be placed at the beginning of the file.</p>
+<p>Also note that the admin web interface tries to keep the name of the
+template in sync with the filename of the template. If the name is
+changed through the web interface, the filename of the template is
+changed, and all output formats that use this template are updated. You
+have to do update output formats manually if you change the filename of
+the template without the web interface.</p>
+</div>
+<div class="section" id="check-the-dependencies-of-a-format-template">
+<h3>3.10 Check the Dependencies of a Format Template<a class="headerlink" href="#check-the-dependencies-of-a-format-template" title="Permalink to this headline">¶</a></h3>
+<p>To check the dependencies of a format template go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_templates_manage">Manage Format
+Template</a>
+page, click on the format template you want to check, and then in the
+menu click on &#8220;Check Dependencies&#8221;.</p>
+<p><img alt="Check Dependencies menu" src="_static/admin/bibformat-guide-bfo_check_deps.png" /></p>
+<p>The next page shows you:</p>
+<ul class="simple">
+<li>The output formats that use this format template</li>
+<li>the elements used in the template (and Marc tags use in these
+elements in parentheses)</li>
+<li>A summary of all the Marc tags involved in the elements of the
+template</li>
+</ul>
+<p>Note that some Marc tags might be omitted.</p>
+</div>
+<div class="section" id="check-the-validity-a-format-template">
+<h3>3.11 Check the Validity a Format Template<a class="headerlink" href="#check-the-validity-a-format-template" title="Permalink to this headline">¶</a></h3>
+<p>To check the validity of a format template, simply go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_templates_manage">Manage
+Format
+Templates</a>
+page, and look at the column &#8216;status&#8217; for the format template you want
+to check. If message &#8220;Ok&#8221; is there, then no problem was found with the
+template. If message &#8216;Not Ok&#8217; is in the column, click on it to see the
+problems that have been found for the template.</p>
+</div>
+<div class="section" id="xsl-format-templates">
+<h3>3.12 XSL Format Templates<a class="headerlink" href="#xsl-format-templates" title="Permalink to this headline">¶</a></h3>
+<p>In addition to the HTML-like syntax introduced in previous sections,
+BibFormat also has support for server-side XSL transformation. Although
+you can do all the formatting using this custom HTML syntax, there are
+cases where an XSL stylesheet might be preferred. XSLT is for example a
+natural choice when you need to output complex XML, especially when your
+XML has a deep tree structure. You might also prefer using XSLT if you
+already feel comfortable with XSL syntax.</p>
+<p>XSL format templates are written using regular XSL. The template file
+has to be placed in the same folder as regular format template files,
+and its file extension must be <tt class="docutils literal"><span class="pre">.xsl</span></tt>. The XSL template are also
+visible through the web interface, as any regular format template file.
+However, some functions like the &#8220;Dependencies checker&#8221; or the
+possibility to create a template or edit its attributes are not
+available for the XSL templates.</p>
+<p>In BibFormat XSL you have access to the following functions, provided
+you have declared <tt class="docutils literal"><span class="pre">xmlns:fn=&quot;http://cdsweb.cern.ch/bibformat/fn&quot;</span></tt> in
+your stylesheet:</p>
+<dl class="docutils">
+<dt><strong>``fn:modification_date(recID)``</strong></dt>
+<dd>Returns the record modification date. Eg:
+<tt class="docutils literal"><span class="pre">&lt;xsl:value-of</span> <span class="pre">select=&quot;fn:modification_date(445)&quot;/&gt;</span></tt> returns
+modification date of record 445</dd>
+<dt><strong>``fn:creation_date(recID)``</strong></dt>
+<dd>Returns the record creation date. Eg:
+<tt class="docutils literal"><span class="pre">&lt;xsl:value-of</span> <span class="pre">select=&quot;fn:creation_date(445)&quot;/&gt;</span></tt> returns creation
+date of record 445</dd>
+<dt><strong>``fn:eval_bibformat(recID, bibformat_template_code)``</strong></dt>
+<dd>Returns the results of the evaluation of the format template code.
+Eg:
+<tt class="docutils literal"><span class="pre">&lt;xsl:value-of</span> <span class="pre">select=&quot;fn:eval_bibformat(marc:controlfield[&#64;tag='001'],'&amp;lt;BFE_SERVER_INFO</span> <span class="pre">var=&amp;quot;recurl&amp;quot;&gt;')&quot;</span> <span class="pre">/&gt;</span></tt>
+returns the url of the current record. The parameter
+<tt class="docutils literal"><span class="pre">bibformat_template_code</span></tt> is regular code used inside BibFormat
+format templates, with <tt class="docutils literal"><span class="pre">&lt;</span></tt> escaped as <tt class="docutils literal"><span class="pre">&amp;lt;</span></tt> and <tt class="docutils literal"><span class="pre">&quot;</span></tt>(quotes)
+escaped as <tt class="docutils literal"><span class="pre">&amp;quot;</span></tt></dd>
+</dl>
+<p>Finally, please note that you will need to install a supported XSLT
+parser in order to format using XSL stylesheets.</p>
+</div>
+</div>
+<div class="section" id="format-elements">
+<h2>4. Format Elements<a class="headerlink" href="#format-elements" title="Permalink to this headline">¶</a></h2>
+<p>Format elements are the bricks used in format templates to provide
+dynamic content to the formatting process. Their purpose is to allow non
+computer literate persons to easily integrate data from the records in
+the database into their templates.</p>
+<p>Format elements are typically written in Python (there is an exception
+to that point which is dicussed in <a class="reference external" href="#addFormatElement">Add a Format
+Element</a>). This brings great flexibily and power
+to the formatting process. This however restricts the creation of format
+elements to developers.</p>
+<div class="section" id="add-a-format-element">
+<h3>4.1 Add a Format Element<a class="headerlink" href="#add-a-format-element" title="Permalink to this headline">¶</a></h3>
+<p>The most typical way of adding a format element is to drop a <tt class="docutils literal"><span class="pre">.py</span></tt>
+file in the lib/python/invenio/bibformat_elements directory of your
+Invenio installation. See <a class="reference external" href="#codeFormatElement">Edit the Code of a Format
+Element</a> to learn how to implement an element.</p>
+<p>The most simple way to add a format element is to add a en entry in the
+&#8220;<a class="reference external" href="/admin/bibindex/bibindexadmin.py/field">Logical
+Fields</a>&#8221;
+management interface of the BibIndex module. When BibFormat cannot find
+the Python format element corresponding to a given name, it looks into
+this table for the name and prints the value of the field declared for
+this name. This lightweight way of doing is straightforward but does not
+allow complex handling of the data (it limits to printing the value of
+the field, or the values of the fields if multiple fields are declared
+under the same label).</p>
+</div>
+<div class="section" id="remove-a-format-element">
+<h3>4.2 Remove a Format Element<a class="headerlink" href="#remove-a-format-element" title="Permalink to this headline">¶</a></h3>
+<p>To remove a Python format element simply remove the corresponding file
+from the lib/python/invenio/bibformat_elements directory of your
+Invenio installation.</p>
+<p>To remove a format element declared in the &#8220;<a class="reference external" href="/admin/bibindex/bibindexadmin.py/field">Logical
+Fields</a>&#8221;
+management interface of the BibIndex module simply remove the entry from
+the table.</p>
+</div>
+<div class="section" id="edit-the-code-of-a-format-element">
+<h3>4.3 Edit the Code of a Format Element<a class="headerlink" href="#edit-the-code-of-a-format-element" title="Permalink to this headline">¶</a></h3>
+<p>This section only applies to Python format elements. Basic format
+elements declared in &#8220;<a class="reference external" href="/admin/bibindex/bibindexadmin.py/field">Logical
+Fields</a>&#8221;
+have non configurable behaviour.</p>
+<p>A format element file is like any regular Python program. It has to
+implement a <tt class="docutils literal"><span class="pre">format_element</span></tt> function, which returns a <tt class="docutils literal"><span class="pre">string</span></tt> and
+takes at least <tt class="docutils literal"><span class="pre">bfo</span></tt> as first parameter (but can take as many others
+as needed).</p>
+<p>Here is for example the code of the &#8220;bfe_title.py&#8221; element:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">format_element</span><span class="p">(</span><span class="n">bfo</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Prints the title of a record.</span>
+
+<span class="sd">    @param separator separator between the different titles</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">titles</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">title</span> <span class="o">=</span> <span class="n">bfo</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s">&#39;245__a&#39;</span><span class="p">)</span>
+    <span class="n">title_remainder</span> <span class="o">=</span> <span class="n">bfo</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s">&#39;245__b&#39;</span><span class="p">)</span>
+
+    <span class="n">titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">title</span> <span class="o">+</span> <span class="n">title_remainder</span> <span class="p">)</span>
+
+    <span class="n">title</span> <span class="o">=</span> <span class="n">bfo</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s">&#39;246__a&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">title</span> <span class="p">)</span>
+
+    <span class="n">title</span> <span class="o">=</span> <span class="n">bfo</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s">&#39;246_1a&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">title</span> <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">separator</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">titles</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In format templates this element can be called like a function, using
+HTML syntax: <tt class="docutils literal"><span class="pre">&lt;BFE_TITLE</span> <span class="pre">separator=&quot;;</span> <span class="pre">&quot;/&gt;</span></tt></p>
+<p>Notice that the call uses (almost) the filename of your element. To
+find out which element to use, BibFormat tries different filenames until
+the element is found: it tries to</p>
+<ol class="arabic simple">
+<li>ignore the letter case</li>
+<li>replace underscore with spaces</li>
+<li>remove the BFE_ from the name</li>
+</ol>
+<p>This means that even if the filename of your element is &#8220;my element.py&#8221;,
+BibFormat can resolve the call &lt;BFE_MY_ELEMENT /&gt; in a format
+template. This also means that you must take care no to have two format
+elements filenames that only differ in term of the above parameters.</p>
+<p>The <tt class="docutils literal"><span class="pre">string</span></tt> returned by the <tt class="docutils literal"><span class="pre">format_element</span></tt> function corresponds
+to the value that is printed instead of the format element name in the
+format template.</p>
+<p>The <tt class="docutils literal"><span class="pre">bfo</span></tt> object taken as parameter by <tt class="docutils literal"><span class="pre">format_element</span></tt> function
+stands for BibFormatObject: it is an object that represents the context
+in which the formatting takes place. For example it allows to retrieve
+the value of a given field for the record that is being formatted, or
+the language of the user. We see the details of the BibFormatObject
+further below.</p>
+<p>The <tt class="docutils literal"><span class="pre">format_element</span></tt> function of an element can take other parameters,
+as well as default values for these parameters. The idea is that these
+parameters are accessible from the format template when calling the
+elements, and allow to parametrize the behaviour of the format element.</p>
+<p>It is very important to document your element: this allows to generate a
+documentation for the elements accessible to people writing format
+templates. It is the only way for them to know what your element do. The
+key points are:</p>
+<ul class="simple">
+<li>Provide a docstring for the <tt class="docutils literal"><span class="pre">format_element</span></tt> function</li>
+<li>For each of the parameters of the <tt class="docutils literal"><span class="pre">format_element</span></tt> function (except
+for <tt class="docutils literal"><span class="pre">bfo</span></tt>) as provide a description using a Java-like doc syntax in
+the doc string: <tt class="docutils literal"><span class="pre">&#64;param</span> <span class="pre">my_param:</span> <span class="pre">description</span> <span class="pre">for</span> <span class="pre">my</span> <span class="pre">param</span></tt> (one line per
+parameter)</li>
+<li>You can use one <tt class="docutils literal"><span class="pre">&#64;see</span></tt> followed by a comma separated list of
+elements filenames to provide a reference to other elements of
+interests related to this one: <tt class="docutils literal"><span class="pre">&#64;see</span> <span class="pre">my_element1.py,</span> <span class="pre">my</span> <span class="pre">element2.py</span></tt></li>
+</ul>
+<p>Typically you will need to get access to some fields of a record to
+display as output. There are two ways to this: you can access the
+<tt class="docutils literal"><span class="pre">bfo</span></tt> object given as parameter and use the provided (basic)
+accessors, or import a dedicated module and use its advanced
+functionalities.</p>
+<p><strong>Method 1: Use accessors of ``bfo``</strong>:</p>
+<p><tt class="docutils literal"><span class="pre">bfo</span></tt> is an instance of the <tt class="docutils literal"><span class="pre">BibFormatObject</span></tt> class. The
+following methods are available:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">get_record()</span></tt>: Returns the record of this BibFormatObject instance
+as a BibRecord structure. Allows advanced access on the structure
+using <tt class="docutils literal"><span class="pre">BibRecord</span></tt>.</li>
+<li><tt class="docutils literal"><span class="pre">control_field(tag)</span></tt>: Returns the value of control field given by
+MARC <tt class="docutils literal"><span class="pre">tag</span></tt>.</li>
+<li><tt class="docutils literal"><span class="pre">field(tag)</span></tt>:Returns the value of the field corresponding to MARC
+<tt class="docutils literal"><span class="pre">tag</span></tt>. If the value does not exist, return empty string.</li>
+<li><tt class="docutils literal"><span class="pre">fields(tag)</span></tt>: Returns the list of values corresonding to MARC
+<tt class="docutils literal"><span class="pre">tag</span></tt>.If tag has an undefined subcode (such as 999C5), the function
+returns a list of dictionaries, whoose keys are the subcodes and the
+values are the values of tag.subcode. If the tag has a subcode,
+simply returns list of values corresponding to tag.</li>
+<li><tt class="docutils literal"><span class="pre">kb(kb,</span> <span class="pre">string,</span> <span class="pre">default=&quot;&quot;)</span></tt>: Returns the value of the <tt class="docutils literal"><span class="pre">string</span></tt>
+in the knowledge base <tt class="docutils literal"><span class="pre">kb</span></tt>. If kb does not exist or string does not
+exist in kb, returns <tt class="docutils literal"><span class="pre">default</span></tt> string.</li>
+</ul>
+<p>You can also get access to other information through <tt class="docutils literal"><span class="pre">bfo</span></tt>, such as
+the language in which the formatting should occur with <tt class="docutils literal"><span class="pre">bfo.lang</span></tt>. To
+learn more about the possibilities offered by the <tt class="docutils literal"><span class="pre">bfo</span></tt>, read the
+<a class="reference external" href="/help/hacking/bibformat-api">BibFormat APIs</a></p>
+<p><strong>Method 2: Use module ``BibRecord``</strong>:</p>
+<p>BibRecord is a module that provides advanced functionalities
+regarding access to the field of a record <tt class="docutils literal"><span class="pre">bfo.get_record()</span></tt> returns a
+structure that can be understood by BibRecord&#8217;s functions. Therefore you
+can import the module&#8217;s functions to get access to the fields you want.</p>
+</div>
+<div class="section" id="preview-a-format-element">
+<h3>4.4 Preview a Format Element<a class="headerlink" href="#preview-a-format-element" title="Permalink to this headline">¶</a></h3>
+<p>You can play with a format element parameters and see the result of the
+element directly in the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_elements_doc">format elements
+documentation</a>:
+for each element, under the section &#8220;See also&#8221;, click on &#8220;Test this
+element&#8221;. You are redirected to a page where you can enter a value for
+the parameters. A description is associated with each parameter as well
+as an indication of the default value of the parameter if you do not
+provide a custom value. Click on the &#8220;Test!&#8221; button to see the result of
+the element with your parameters.</p>
+</div>
+<div class="section" id="id2">
+<h3>4.5 Internationalization (i18n)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>You can follow the standard internationalization procedure in use
+accross Invenio sources. For example the following code will get you the
+translation for &#8220;Welcome&#8221; (assuming &#8220;Welcome&#8221; has been translated):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">invenio.base.i18n</span> <span class="kn">import</span> <span class="n">gettext_set_language</span>
+
+<span class="n">ln</span> <span class="o">=</span> <span class="n">bfo</span><span class="o">.</span><span class="n">ln</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">gettext_set_language</span><span class="p">(</span><span class="n">ln</span><span class="p">)</span>
+
+<span class="n">translated_welcome</span> <span class="o">=</span>  <span class="n">_</span><span class="p">(</span><span class="s">&quot;Welcome&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Notice the access to <tt class="docutils literal"><span class="pre">bfo.ln</span></tt> to get access to the current language of
+the user. For simpler translations or behaviour depending on the
+language you can simply check the value <tt class="docutils literal"><span class="pre">bfo.ln</span></tt> to return your custom
+text.</p>
+</div>
+<div class="section" id="id3">
+<h3>4.6 Escaping special HTML/XML characters<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>In most cases, that is cases where your element does not return HTML
+output, you do not have to take any particular action in order to escape
+values that you output: the BibFormat engine will take care of escaping
+the returned value of the element for you. In cases where you want to
+return text that should not be escaped (for example when you return HTML
+links), you can make the formatting engine know that it should not
+escape your value. This is done by implementing the
+<tt class="docutils literal"><span class="pre">escape_values(bfo)</span></tt> function in your element, that will return (int)
+0 when escape should not be done (or 1 when escaping should be done):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">escape_values</span><span class="p">(</span><span class="n">bfo</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Called by BibFormat in order to check if output of this element</span>
+<span class="sd">    should be escaped.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Note that the function is given a <tt class="docutils literal"><span class="pre">bfo</span></tt> object as parameter, such
+that you can do additional testing if your element should really return
+1 or 0 (for very special cases).</p>
+<p>Also note that the behavior defined by the <tt class="docutils literal"><span class="pre">escape_values()</span></tt>
+function will be overriden by the <tt class="docutils literal"><span class="pre">escape</span></tt> parameter used in the
+format template if it is specified.</p>
+<p>Finally, be cautious when you disable escaping: you will have to take
+care of escaping values &#8220;manually&#8221; in your format element code, in order
+to avoid non valid outputs or XSS vulnerabilities. This can be done
+easily when using the <tt class="docutils literal"><span class="pre">field</span></tt>, <tt class="docutils literal"><span class="pre">fields</span></tt> and <tt class="docutils literal"><span class="pre">controlfield</span></tt>
+functions of bfo with <tt class="docutils literal"><span class="pre">escape</span></tt> parameter:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">title</span> <span class="o">=</span> <span class="n">bfo</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s">&#39;245__a&#39;</span><span class="p">,</span> <span class="n">escape</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">)</span>
+<span class="n">abstract</span> <span class="o">=</span> <span class="n">bfo</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s">&#39;520__a&#39;</span><span class="p">,</span> <span class="n">escape</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">escape</span></tt> parameter can be one of the following values:</p>
+<ul class="simple">
+<li>0 - no escaping</li>
+<li>1 - escape all HTML characters (escaped chars are shown as escaped)</li>
+<li>2 - remove unsafe HTML tags to avoid XSS, but keep basic one (such as
+&lt;br /&gt;) This is particularly useful if you want to store HTML text in
+your metadata but still want to escape some tags to prevent XSS
+vulnerabilities. Note that this method is slower than basic escaping
+of mode 1.
+Escaped tags are removed.</li>
+<li>3 - mix of mode 1 and mode 2. If field_value starts with
+&lt;!&#8211;HTML&#8211;&gt;, then use mode 2. Else use mode 1.</li>
+<li>4 - remove all HTML/XML tags</li>
+<li>5 - same as 2, but allows more tags, like &lt;img&gt;</li>
+<li>6 - same as 3, but allows more tags, like &lt;img&gt;</li>
+<li>7 - mix of mode 0 and mode 1. If field_value starts with
+&lt;!&#8211;HTML&#8211;&gt;, then use mode mode 0. Else use mode 1.</li>
+<li>8 - same as mode 1, but also escape double-quotes</li>
+<li>9 - same as mode 4, but also escape double-quotes</li>
+</ul>
+<p>These modes are the same for <tt class="docutils literal"><span class="pre">escape_values(bfo)</span></tt> function.</p>
+<p>You can also decide not to use the <tt class="docutils literal"><span class="pre">escape</span></tt> parameter and escape
+values using any other Python function/library you want to use (such as
+<tt class="docutils literal"><span class="pre">cgi.escape()</span></tt>).</p>
+<p>As a BibFormat element developer you can also override the default
+<tt class="docutils literal"><span class="pre">escape</span></tt> parameter of your format elements: that is especially useful
+if you want to provide a way for format templates editors to call your
+element with a custom escaping mode that should not escape the whole
+output of your element. The <tt class="docutils literal"><span class="pre">bfe_abstract.py</span></tt> element is an example of
+code that overrides the <tt class="docutils literal"><span class="pre">escape</span></tt> parameter.</p>
+</div>
+<div class="section" id="edit-the-attributes-of-a-format-element">
+<h3>4.7 Edit the Attributes of a Format Element<a class="headerlink" href="#edit-the-attributes-of-a-format-element" title="Permalink to this headline">¶</a></h3>
+<p>A format element has mainly four kinds of attributes:</p>
+<ul class="simple">
+<li>Name: it corresponds to the filename of the element.</li>
+<li>Description: the description is in the <tt class="docutils literal"><span class="pre">docstring</span></tt> of the
+<tt class="docutils literal"><span class="pre">format_element</span></tt> function (excepted lines prefixed with <tt class="docutils literal"><span class="pre">&#64;param</span></tt>
+and <tt class="docutils literal"><span class="pre">&#64;see</span></tt>).</li>
+<li>Parameters descriptions: for each parameter of the <tt class="docutils literal"><span class="pre">format_element</span></tt>
+function, a line beginning with <tt class="docutils literal"><span class="pre">&#64;param</span></tt> <em>parameter_name</em> and
+followed by the description of the parameter is present in the
+<tt class="docutils literal"><span class="pre">docstring</span></tt> of the <tt class="docutils literal"><span class="pre">format_element</span></tt> function.</li>
+<li>Reference to other elements: one line beginning with <tt class="docutils literal"><span class="pre">&#64;see</span></tt> and
+followed by a list of comma-separated format elements filenames in
+the in the <tt class="docutils literal"><span class="pre">docstring</span></tt> of the <tt class="docutils literal"><span class="pre">format_element</span></tt> function provides
+a link to related elements.</li>
+</ul>
+</div>
+<div class="section" id="check-the-dependencies-of-a-format-element">
+<h3>4.8 Check the Dependencies of a Format Element<a class="headerlink" href="#check-the-dependencies-of-a-format-element" title="Permalink to this headline">¶</a></h3>
+<p>There are two ways to check the dependencies of a format element. The
+simplest way is to go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_elements_doc">format elements
+documentation</a>
+and click on &#8220;Dependencies of this element&#8221; for the element you want to
+check.</p>
+<p>The second method to check the dependencies of an element is through
+regular unix tools: for example
+<tt class="docutils literal"><span class="pre">$</span> <span class="pre">grep</span> <span class="pre">-r</span> <span class="pre">-i</span> <span class="pre">'bfe_your_element_name'</span> <span class="pre">.</span></tt> inside the format templates
+directory will tell you which templates call your element.</p>
+</div>
+<div class="section" id="check-the-validity-of-a-format-element">
+<h3>4.9 Check the Validity of a Format Element<a class="headerlink" href="#check-the-validity-of-a-format-element" title="Permalink to this headline">¶</a></h3>
+<p>There are two ways to check the validity of an element. The simplest one
+is to go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_elements_doc">format elements
+documentation</a>
+and click on &#8220;Correctness of this element&#8221; for the element you want to
+check.</p>
+<p>The second method to check the validity of an element is through regular
+Python methods: you can for example import the element in the
+interactive interpreter and feed it with test parameters. Notice that
+you will need to build a BibFormatObject instance to pass as <tt class="docutils literal"><span class="pre">bfo</span></tt>
+parameter to the <tt class="docutils literal"><span class="pre">format_element</span></tt> function of your element.</p>
+</div>
+<div class="section" id="browse-the-format-elements-documentation">
+<h3>4.10 Browse the Format Elements Documentation<a class="headerlink" href="#browse-the-format-elements-documentation" title="Permalink to this headline">¶</a></h3>
+<p>Go to the <a class="reference external" href="/admin/bibformat/bibformatadmin.py/format_elements_doc">format elements
+documentation</a>.
+There is a summary of all available format elements at the top of the
+page. You can click on an element to go to its detailed description in
+the second part of the page.</p>
+<p>Each detailed documentation shows you:</p>
+<ul class="simple">
+<li>A description of what the element does.</li>
+<li>A list of all parameters you can use for this element.</li>
+<li>For each parameter, a description and the default value when
+parameter is ommitted.</li>
+<li>A link to a tool to track the dependencies of your element.</li>
+<li>A link to a tool to check the correctness of your element.</li>
+<li>A link to a tool to test your element with custom parameters.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="run-bibreformat">
+<h2>5. Run BibReformat<a class="headerlink" href="#run-bibreformat" title="Permalink to this headline">¶</a></h2>
+<p>While records can be formatted on-the-fly using BibFormat, it is usually
+necessary to preformat the records in order to decrease the load of your
+server. To do so, use the <tt class="docutils literal"><span class="pre">bibreformat</span></tt> command line tool.</p>
+<div class="section" id="id4">
+<h3>5.1 Run BibReformat<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>The following options are available for running <tt class="docutils literal"><span class="pre">bibreformat</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>Usage: bibreformat [options]
+-u, --user=USER         User name to submit the task as, password needed.
+-h, --help              Print this help.
+-V, --version           Print version information.
+-v, --verbose=LEVEL     Verbose level (0=min,1=normal,9=max).
+-s, --sleeptime=SLEEP   Time after which to repeat tasks (no)
+-t, --time=DATE         Moment for the task to be active (now).
+-a, --all               All records
+-c, --collection        Select records by collection
+-f, --field             Select records by field.
+-p, --pattern           Select records by pattern.
+-o, --format            Specify output format to be (re-)created. (default HB)
+-n, --noprocess         Count records to be processed only (no processing done)
+Example: bibreformat -n Show how many records are to be bibreformated.
+</pre></div>
+</div>
+<p>For example, to reformat all records in HB (=HTML brief) format, you&#8217;d
+launch:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibreformat -a -oHB
+</pre></div>
+</div>
+<p>and you watch the progress of the process via <tt class="docutils literal"><span class="pre">bibsched</span></tt>.</p>
+<p>Note that BibReformat understands <tt class="docutils literal"><span class="pre">-p</span></tt>, <tt class="docutils literal"><span class="pre">-f</span></tt>, and <tt class="docutils literal"><span class="pre">-c</span></tt> arguments
+that enable you to easily reformat only the records you need. For
+example, to reformat the Pictures collection, launch:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibreformat -cPictures -oHB
+</pre></div>
+</div>
+<p>or to reformat HD (=HTML detailed) format for records #10 to #20, you
+launch:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibreformat -p&quot;recid:10-&gt;20&quot; -oHD
+</pre></div>
+</div>
+<p>Last but not least, if you launch bibreformat without arguments:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibreformat
+</pre></div>
+</div>
+<p>it will process all the records that have been modified since the last
+run of BibReformat, as well as all newly inputted records. This is
+suitable for running BibReformat in a periodical daemon mode via
+BibSched. See our <a class="reference external" href="/help/admin/howto-run">HOWTO Run Your Invenio
+Installation</a> guide for
+more information.</p>
+</div>
+</div>
+<div class="section" id="appendix">
+<h2>6. Appendix<a class="headerlink" href="#appendix" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="marc-notation-in-formats">
+<h3>6.1 MARC Notation in Formats<a class="headerlink" href="#marc-notation-in-formats" title="Permalink to this headline">¶</a></h3>
+<p>The notation for accessing fields of a record are quite flexible. You
+can use a syntax strict regarding MARC 21, but also a shortcut syntax,
+or a syntax that can have a special meaning.</p>
+<p>The MARC syntax is the following one:
+<tt class="docutils literal"><span class="pre">tag[indicator1][indicator2]</span> <span class="pre">[$</span> <span class="pre">subfield]</span></tt> where <tt class="docutils literal"><span class="pre">tag</span></tt> is 3 digits,
+<tt class="docutils literal"><span class="pre">indicator1</span></tt> and <tt class="docutils literal"><span class="pre">indicator2</span></tt> are 1 character each, and <tt class="docutils literal"><span class="pre">subfield</span></tt>
+is 1 letter.</p>
+<p>For example to get access to an abstract you can use the MARC notation
+<tt class="docutils literal"><span class="pre">520</span> <span class="pre">$a</span></tt>. You can use this syntax in BibFormat. However you can also:</p>
+<ul class="simple">
+<li>Omit any whitespace character (or use as many as you want)</li>
+<li>Omit the <tt class="docutils literal"><span class="pre">$</span></tt> character (or use as many as you want)</li>
+<li>Omit or use both indicators. You cannot specify only one indicator.
+If you need to use only one, use underscore <tt class="docutils literal"><span class="pre">_</span></tt> character for the
+other indicator.</li>
+<li>Use percent &#8216;<tt class="docutils literal"><span class="pre">%</span></tt>&#8216; instead of any character to specify all (&#8220;don&#8217;t
+care&#8221; or wildcard character) for that character.</li>
+</ul>
+</div>
+<div class="section" id="migrating-from-previous-bibformat">
+<h3>6.2 Migrating from Previous BibFormat<a class="headerlink" href="#migrating-from-previous-bibformat" title="Permalink to this headline">¶</a></h3>
+<p>The new Python BibFormat formats are not backward compatible with the
+previous formats. New concepts and capabilities have been introduced and
+some have been dropped. If you have not modified the &#8220;Formats&#8221; or
+modified only a little bit the &#8220;Behaviours&#8221; (or modified &#8220;Knowledge
+Bases&#8221;), then the transition will be painless and automatic. Otherwise
+you will have to manually rewrite some of the formats. This should
+however not be a big problem.</p>
+<p>The first thing you should do is to read the <a class="reference external" href="#shortIntro">Five Minutes Introduction
+to BibFormat</a> to understand how the new BibFormat works.
+We also assume that you are familiar with the concepts of the old
+BibFormat. As the new formats separate the presentation from the
+business logic (i.e. the bindings to the database), it is not possible
+to automatically handle the translation. This is why you should at least
+be able to read and understand the formats that you want to migrate.</p>
+<div class="section" id="differences-between-old-and-new-bibformat">
+<h4>Differences between old and new BibFormat<a class="headerlink" href="#differences-between-old-and-new-bibformat" title="Permalink to this headline">¶</a></h4>
+<p>The most noticeable differences are:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>&#8220;Behaviours&#8221; have been renamed &#8220;Output formats&#8221;.</li>
+<li>&#8220;Formats&#8221; have been renamed &#8220;Format templates&#8221;. They are now written in HTML.</li>
+<li>&#8220;User defined functions&#8221; have been dropped.</li>
+<li>&#8220;Extraction rules&#8221; have been dropped.</li>
+<li>&#8220;Link rules&#8221; have been dropped.</li>
+<li>&#8220;File formats&#8221; have been dropped.</li>
+<li>&#8220;Format elements&#8221; have been introduced. They are written in
+Python, and can simulate c), d) and e).</li>
+<li>Formats can be managed through web interface or through
+human-readable config files.</li>
+<li>Introduction of tools like validator and dependencies checker.</li>
+<li>Better support for multi-language formatting.</li>
+</ol>
+</div></blockquote>
+<dl class="docutils">
+<dt>Some of the advantages are:</dt>
+<dd><ul class="first last simple">
+<li>Management of formats is much clearer and easier (less concepts, more tools).</li>
+<li>Writing formats is easier to learn : less concepts to learn,
+redesigned work-flow, use of existing well known and well documented
+languages.</li>
+<li>Editing formats is easier: You can use your preferred HTML editor
+such as Emacs, Dreamweaver or Frontpage to modify templates, or any text
+editor for output formats and format elements. You can also use the
+simplified web administration interface.</li>
+<li>Faster and more powerful templating system.</li>
+<li>Separation of business logic (output formats, format elements) and
+presentation layer (format templates). This makes the management of
+formats simpler.</li>
+</ul>
+</dd>
+<dt>The disadvantages are:</dt>
+<dd><ul class="first last simple">
+<li>No backward compatibility with old formats.</li>
+<li>Stricter separation of business logic and presentation layer:
+no more use of statements such as if(), forall() inside templates,
+and this requires more work to put logic inside format elements.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="migrating-behaviours-to-output-formats">
+<h4>Migrating <em>behaviours</em> to <em>output formats</em><a class="headerlink" href="#migrating-behaviours-to-output-formats" title="Permalink to this headline">¶</a></h4>
+<p>Behaviours were previously stored in the database and did require to use
+the evaluation language to provide the logic that choose which format to
+use for a record. They also let you enrich records with some custom
+data. Now their use has been simplified and rectricted to equivalence
+tests on the value of a field of the record to define the format
+template to use.</p>
+<p>For example, the following behaviour:</p>
+<p><strong>CONDITIONS</strong></p>
+<p><strong>0</strong></p>
+<p><strong>$980.a=&#8221;PICTURE&#8221;</strong></p>
+<p><strong>Action (0)</strong></p>
+<div class="line-block">
+<div class="line">&#8220;&lt;record&gt;</div>
+<div class="line">&nbsp;&lt;controlfield&nbsp;tag=\&#8221;001\&#8221;&gt;&#8221;&nbsp;$001&nbsp;&#8221;&lt;/controlfield&gt;</div>
+<div class="line">&nbsp;&lt;datafield&nbsp;tag=\&#8221;FMT\&#8221;&nbsp;ind1=\&#8221;\&#8221;&nbsp;ind2=\&#8221;\&#8221;&gt;</div>
+<div class="line">&nbsp;&lt;subfield&nbsp;code=\&#8221;f\&#8221;&gt;hb&lt;/subfield&gt;</div>
+<div class="line">&nbsp;&lt;subfield&nbsp;code=\&#8221;g\&#8221;&gt;&#8221;</div>
+<div class="line">xml_text(format(&#8220;PICTURE_HTML_BRIEF&#8221;))</div>
+<div class="line">&#8220;&nbsp;&lt;/subfield&gt;</div>
+<div class="line">&nbsp;&lt;/datafield&gt;</div>
+<div class="line">&lt;/record&gt;&#8221;</div>
+</div>
+<p><strong>100</strong></p>
+<p><strong>&#8220;&#8221;=&#8221;&#8220;</strong></p>
+<p><strong>Action (0)</strong></p>
+<div class="line-block">
+<div class="line">&#8220;&lt;record&gt;</div>
+<div class="line">&nbsp;&lt;controlfield&nbsp;tag=\&#8221;001\&#8221;&gt;&#8221;&nbsp;$001&nbsp;&#8221;&lt;/controlfield&gt;</div>
+<div class="line">&nbsp;&lt;datafield&nbsp;tag=\&#8221;FMT\&#8221;&nbsp;ind1=\&#8221;\&#8221;&nbsp;ind2=\&#8221;\&#8221;&gt;</div>
+<div class="line">&nbsp;&lt;subfield&nbsp;code=\&#8221;f\&#8221;&gt;hb&lt;/subfield&gt;</div>
+<div class="line">&nbsp;&lt;subfield&nbsp;code=\&#8221;g\&#8221;&gt;&#8221;</div>
+<div class="line">xml_text(format(&#8220;DEFAULT_HTML_BRIEF&#8221;))</div>
+<div class="line">&#8220;&nbsp;&lt;/subfield&gt;</div>
+<div class="line">&nbsp;&lt;/datafield&gt;</div>
+<div class="line">&lt;/record&gt;&#8221;</div>
+</div>
+<p>translates to the following output format (in textual configuration
+file):</p>
+<p>`` tag 980__a: PICTURE &#8212; Picture_HTML_brief.bft default: Default_HTML_brief.bft``</p>
+<div class="line-block">
+<div class="line">or visual representation through web interface:</div>
+<div class="line-block">
+<div class="line"><img alt="Image representation of HB output format" src="_static/admin/bibformat-guide-bfo_hb_migrate.png" /></div>
+</div>
+</div>
+</div>
+<div class="section" id="migrating-formats-to-format-templates-and-format-elements">
+<h4>Migrating <em>formats</em> to <em>format templates</em> and <em>format elements</em><a class="headerlink" href="#migrating-formats-to-format-templates-and-format-elements" title="Permalink to this headline">¶</a></h4>
+<p>The migration of formats is the most difficult part of the migration.
+You will need to separate the presentation code (HTML) from the business
+code (iterations, tests and calls to the database). Here are some tips
+on how you can do this:</p>
+<ul class="simple">
+<li>If you want to save the time of unescaping all HTML characters and
+understanding how the layout should look like, just go with your web
+browser to a formatted version of the format in your Invenio
+installation, and copy the source of the web page. Identify the parts
+of the HTML code which are specific to the current record, and
+replace them with a call to the corresponding format element.</li>
+<li>If you have made small modifications to the old default provided
+formats, we suggest that you use the new provided ones and modify
+them according to your needs.</li>
+</ul>
+</div>
+<div class="section" id="migrating-udfs-and-link-rules">
+<h4>Migrating <em>UDFs</em> and <em>Link rules</em><a class="headerlink" href="#migrating-udfs-and-link-rules" title="Permalink to this headline">¶</a></h4>
+<p><em>User Defined Functions</em> and <em>Link rules</em> have been dropped in the new
+BibFormat. These concepts have no reasons to be as they can be fully
+implemented in the <em>format elements</em>. For example the <tt class="docutils literal"><span class="pre">AUTHOR_SEARCH</span></tt>
+link rule can directly be implemented in the <tt class="docutils literal"><span class="pre">Authors.bfe</span></tt> element.</p>
+<p>As for the UDFs, most of them are directly built-in functions of Python.
+Whenever a special function as to be implemented, it can be defined in a
+regular Python file and used in any element.</p>
+</div>
+<div class="section" id="the-migration-kit">
+<h4>The Migration Kit<a class="headerlink" href="#the-migration-kit" title="Permalink to this headline">¶</a></h4>
+<p>The migration kit is only available in older versions of Invenio.</p>
+<p>To enable the migration kit in this release, you need to copy the
+required files from an older release.</p>
+</div>
+<div class="section" id="run-old-and-new-formats-side-by-side">
+<h4>Run old and new formats side by side<a class="headerlink" href="#run-old-and-new-formats-side-by-side" title="Permalink to this headline">¶</a></h4>
+<p>This was possible by default only in older versions of Invenio.</p>
+<p>To enable this functionality in this release, you need to copy the
+required files from an older release.</p>
+</div>
+</div>
+<div class="section" id="integrating-bibformat-into-dreamweaver-mx">
+<h3>6.3 Integrating BibFormat into Dreamweaver MX<a class="headerlink" href="#integrating-bibformat-into-dreamweaver-mx" title="Permalink to this headline">¶</a></h3>
+<p>BibFormat templates have been thought to be editable in custom HTML
+editors. We propose in this section a way to extend one particular
+editor, Dreamweaver.</p>
+<div class="section" id="make-dreamweaver-recognize-format-elements-in-layout-view">
+<h4>Make Dreamweaver Recognize Format Elements in Layout View<a class="headerlink" href="#make-dreamweaver-recognize-format-elements-in-layout-view" title="Permalink to this headline">¶</a></h4>
+<p>To make Dreamweaver understand the format elements and display an icon
+for each of them in the layout editor, you must edit a Dreamweaver
+configuration file named <tt class="docutils literal"><span class="pre">Tags.xml</span></tt> located inside
+/Configuration/ThirdPartyTags directory of your Dreamweaver installation
+folder. At the end of this file, copy-paste the following lines:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;!-- BibFormat (Invenio) --&gt;
+&lt;tagspec tag_name=&quot;BIBFORMAT&quot; start_string=&quot;&lt;BFE_&quot; end_string=&quot;/&gt;&quot; parse_attributes=&quot;false&quot; detect_in_attribute=&quot;true&quot; icon=&quot;bibformat.gif&quot; icon_width=&quot;25&quot; icon_height=&quot;16&quot;&gt;&lt;/tagspec &gt;
+&lt;tagspec tag_name=&quot;BIBFORMAT&quot; start_string=&quot;&lt;bfe_&quot; end_string=&quot;/&gt;&quot; parse_attributes=&quot;false&quot; detect_in_attribute=&quot;true&quot; icon=&quot;bibformat.gif&quot; icon_width=&quot;25&quot; icon_height=&quot;16&quot;&gt;&lt;/tagspec &gt;
+</pre></div>
+</div>
+<p>Also copy this icon <img alt="bibformat.gif" src="_static/admin/bibformat-guide-bfe.gif" /> in the same directory as
+<tt class="docutils literal"><span class="pre">Tags.xml</span></tt> (right-click on icon, or ctrl-click on one-button mouse,
+and &#8220;Save Image As...&#8221;). Make sure the downloaded image is named
+&#8220;<tt class="docutils literal"><span class="pre">bibformat.gif</span></tt>&#8221;.</p>
+<p>Note that Dreamweaver might not recognize Format Elements when complex
+formatting is involved due to these elements.</p>
+</div>
+<div class="section" id="add-a-format-elements-floating-panel">
+<h4>Add a Format Elements Floating Panel<a class="headerlink" href="#add-a-format-elements-floating-panel" title="Permalink to this headline">¶</a></h4>
+<p>You can add a floating panel that will you to insert Format Elements in
+your document and read the documentation of all available Format
+Elements.</p>
+<p>The first step is to declare in which menu of Dreamweaver this floating
+panel is going to be available. To do so, edit file &#8220;<tt class="docutils literal"><span class="pre">Menu.xml</span></tt>&#8221;
+located inside /Configuration/Menus of your Dreamweaver application
+directory and copy-paste the following line in the menu you want
+(typically inside tag <tt class="docutils literal"><span class="pre">'menu'</span></tt> with attribute
+<tt class="docutils literal"><span class="pre">id='DWMenu_Window_Others')</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;menuitem name=&quot;BibFormat Elements&quot; enabled=&quot;true&quot; command=&quot;dw.toggleFloater(&#39;BibFormat_floater.html&#39;)&quot; checked=&quot;dw.getFloaterVisibility(&#39;BibFormat_floater.html&#39;)&quot; /&gt;
+</pre></div>
+</div>
+<p>Once this is done, you can <a class="reference external" href="/admin/bibformat/bibformatadmin.py/download_dreamweaver_floater">download the floating
+palette</a>
+(if file opens in your browser instead of downloading, right-click on
+icon, or ctrl-click on one-button mouse, and &#8220;Save Target As...&#8221;) and
+move the dowloaded file &#8220;<tt class="docutils literal"><span class="pre">BibFormat_floater.html</span></tt>&#8221; (do not rename
+it) into /Configuration/Floaters directory of your Dreamweaver
+application folder.</p>
+<p>To use the BibFormat floating panel, open Dreamweaver, and choose
+<tt class="docutils literal"><span class="pre">Window</span> <span class="pre">&gt;</span> <span class="pre">Others</span> <span class="pre">&gt;</span> <span class="pre">BibFormat</span> <span class="pre">Elements</span></tt>.</p>
+<p>Whenever a new version of the palette is available, you can skip the
+edition of file &#8220;<tt class="docutils literal"><span class="pre">Menu.xml</span></tt>&#8221; and just replace the old
+&#8220;<tt class="docutils literal"><span class="pre">BibFormat_floater</span></tt>&#8221; file with the new one.</p>
+</div>
+</div>
+<div class="section" id="faq">
+<h3>6.4 FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="why-do-we-need-output-formats-wouldn-t-format-templates-be-sufficient">
+<h4>Why do we need output formats? Wouldn&#8217;t format templates be sufficient?<a class="headerlink" href="#why-do-we-need-output-formats-wouldn-t-format-templates-be-sufficient" title="Permalink to this headline">¶</a></h4>
+<p>As you potentially have a lot of records, it is not conceivable to
+specify for each of them which format template they should use. This is
+why this rule-based decision layer has been introduced.</p>
+</div>
+<div class="section" id="how-can-i-protect-a-format">
+<h4>How can I protect a format?<a class="headerlink" href="#how-can-i-protect-a-format" title="Permalink to this headline">¶</a></h4>
+<p>As a web user, you cannot protect a format. If you are administrator of
+the system and have access to the format files, you can simply use the
+permission rights of your system, as BibFormat is aware of it.</p>
+</div>
+<div class="section" id="why-cannot-i-edit-delete-a-format">
+<h4>Why cannot I edit/delete a format?<a class="headerlink" href="#why-cannot-i-edit-delete-a-format" title="Permalink to this headline">¶</a></h4>
+<p>The format file has certainly been protected by the administrator of the
+server. You must ask the administrator to unprotect the file if you want
+to edit it.</p>
+</div>
+<div class="section" id="how-can-i-add-a-format-element-from-the-web-interface">
+<h4>How can I add a format element from the web interface?<a class="headerlink" href="#how-can-i-add-a-format-element-from-the-web-interface" title="Permalink to this headline">¶</a></h4>
+<p>Format elements cannot be added, removed or edited through the web
+interface. This limitation has been introduced to limit the security
+risks caused by the upload of Pythonic files on the server. The only
+possibility to add a basic format element from the web interface is to
+add a en entry in the &#8220;<a class="reference external" href="/admin/bibindex/bibindexadmin.py/field">Logical
+Fields</a>&#8221;
+management interface of the BibIndex module (see <a class="reference external" href="#addFormatElement">Add a Format
+Element</a>)</p>
+</div>
+<div class="section" id="why-are-some-marc-codes-omitted-in-the-check-dependencies-pages">
+<h4>Why are some Marc codes omitted in the &#8220;Check Dependencies&#8221; pages?<a class="headerlink" href="#why-are-some-marc-codes-omitted-in-the-check-dependencies-pages" title="Permalink to this headline">¶</a></h4>
+<p>When you check the dependencies of a format, the page reminds you that
+some use of Marc codes might not be indicated. This is because it is not
+possible (or at least not trivial) to guess that the call to
+<tt class="docutils literal"><span class="pre">field(str(5+4)+&quot;80&quot;+&quot;__a&quot;)</span></tt> is equal to a call to
+<tt class="docutils literal"><span class="pre">field(&quot;980__a&quot;)</span></tt>. You should then not completely rely on this
+indication.</p>
+</div>
+<div class="section" id="how-are-displayed-deleted-record">
+<h4>How are displayed deleted record?<a class="headerlink" href="#how-are-displayed-deleted-record" title="Permalink to this headline">¶</a></h4>
+<p>By default, Invenio displays a standard &#8220;The record has been deleted.&#8221;
+message for all output formats with a &#8216;text/html&#8217; content type. Your
+output format, format templates and format elements are bypassed by the
+engine. However, for more advanced output formats, Invenio goes through
+the regular formatting process and let your formats do the job. This
+allows you to customize how a record should be displayed once it has
+been deleted.</p>
+</div>
+<div class="section" id="why-are-some-format-elements-omitted-in-the-knowledge-base-dependencies-page">
+<h4>Why are some format elements omitted in the &#8220;Knowledge Base Dependencies&#8221; page?<a class="headerlink" href="#why-are-some-format-elements-omitted-in-the-knowledge-base-dependencies-page" title="Permalink to this headline">¶</a></h4>
+<p>When you check the dependencies of a knowledge base, the page reminds
+you that format elements using this knowledge base might not be
+indicated. This is because it is not possible (or at least not trivial)
+to guess that the call to <tt class="docutils literal"><span class="pre">kb(e.upper()+&quot;journal&quot;+&quot;s&quot;)</span></tt> in a format
+element is equal to a call to <tt class="docutils literal"><span class="pre">kb(&quot;Ejournals&quot;)</span></tt>. You should then not
+completely rely on this indication.</p>
+</div>
+<div class="section" id="why-are-some-format-elements-defined-in-field-table-omitted-in-the-format-element-documentation">
+<h4>Why are some format elements defined in field table omitted in the format element documentation?<a class="headerlink" href="#why-are-some-format-elements-defined-in-field-table-omitted-in-the-format-element-documentation" title="Permalink to this headline">¶</a></h4>
+<p>Some format elements defined in the &#8220;Logical Fields&#8221; management
+interface of the BibIndex module (the basic format elements) are not
+shown in the format elements documentation pages. We do not show such an
+element if its name starts with a number. This is to reduce the number
+of elements shown in the documentation as the logical fields table
+contains a lot of not so useful fields to be used in templates.</p>
+</div>
+<div class="section" id="how-can-i-get-access-to-repeatable-subfields-from-inside-a-format-element">
+<h4>How can I get access to repeatable subfields from inside a format element?<a class="headerlink" href="#how-can-i-get-access-to-repeatable-subfields-from-inside-a-format-element" title="Permalink to this headline">¶</a></h4>
+<p>Given that repeatable subfields are not frequent, the <tt class="docutils literal"><span class="pre">bfo.fields(..)</span></tt>
+function has been implemented to return the most convenient structure
+for most cases, that is a &#8216;<em>list of strings</em>&#8216; (<strong>Case 1</strong> below) or
+&#8216;<em>list of dict of strings</em>&#8216; (<strong>Case 2</strong> below). For eg. with the
+following metadata:</p>
+<div class="highlight-python"><div class="highlight"><pre>999C5 $a value_1a $b value_1b
+999C5 $b value_2b
+999C5 $b value_3b $b value_3b_bis
+
+&gt;&gt; bfo.fields(&#39;999C5b&#39;)                                   (1)
+&gt;&gt; [&#39;value_1b&#39;, &#39;value_2b&#39;, &#39;value_3b&#39;, &#39;value_3b_bis&#39;]
+&gt;&gt; bfo.fields(&#39;999C5&#39;)                                    (2)
+&gt;&gt; [{&#39;a&#39;:&#39;value_1a&#39;, &#39;b&#39;:&#39;value_1b&#39;},
+    {&#39;b&#39;:&#39;value_2b&#39;},
+    {&#39;b&#39;:&#39;value_3b&#39;}]
+</pre></div>
+</div>
+<p>In this example <tt class="docutils literal"><span class="pre">value3b_bis</span></tt> is not shown for
+<tt class="docutils literal"><span class="pre">bfo.fields('999C5')</span></tt> (<strong>Case 2</strong>). If it were to be taken into
+account, the returned structure would have to be a &#8216;<em>list of dict of
+list of strings</em>&#8216;, thus making for most cases the access to the data a
+bit more complex.</p>
+<p>In order to consider the repeatable subfields, use the additional
+<tt class="docutils literal"><span class="pre">repeatable_subfields_p</span></tt> parameter:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt; bfo.fields(&#39;999C5b&#39;, repeatable_subfields_p=True)      (1 bis)
+&gt;&gt; [&#39;value_1b&#39;, &#39;value_2b&#39;, &#39;value_3b&#39;]
+&gt;&gt; bfo.fields(&#39;999C5&#39;, repeatable_subfields_p=True)       (2 bis)
+&gt;&gt; [{&#39;a&#39;:[&#39;value_1a&#39;], &#39;b&#39;:[&#39;value_1b&#39;]},
+    {&#39;b&#39;:[&#39;value_2b&#39;]},
+    {&#39;b&#39;:[&#39;value_3b&#39;, &#39;value3b_bis&#39;]}]
+</pre></div>
+</div>
+<p>Another solution would be to access the BibRecord structure with
+<tt class="docutils literal"><span class="pre">bfo.getRecord()</span></tt> and use the lower-level BibRecord module with this
+structure.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibindex-admin-guide.html" class="btn btn-neutral float-right" title="BibIndex Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibedit-admin-guide.html" class="btn btn-neutral" title="BibEdit Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

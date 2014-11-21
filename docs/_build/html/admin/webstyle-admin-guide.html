@@ -1,0 +1,716 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WebStyle Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="WebSubmit Admin Guide" href="websubmit-admin-guide.html"/>
+        <link rel="prev" title="WebStat Admin Guide" href="webstat-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>WebStyle Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/webstyle-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="webstyle-admin-guide">
+<span id="id1"></span><h1>WebStyle Admin Guide<a class="headerlink" href="#webstyle-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>1. `Overview &lt;#overview_page_layout&gt;`__</strong><ul>
+<li>1.1&nbsp;&nbsp;<a class="reference external" href="#overview_css">CSS Style Sheet and Images</a></li>
+<li>1.2&nbsp;&nbsp;<a class="reference external" href="#overview_page_layout">HTML Page Layout</a><ul>
+<li>1.2.1&nbsp;&nbsp;&nbsp;&nbsp;<a class="reference external" href="#overview_page_layout_stat">Layout of HTML Static
+Pages</a></li>
+<li>1.2.2&nbsp;&nbsp;&nbsp;&nbsp;<a class="reference external" href="#overview_page_layout_dyn">Layout of Python Dynamic
+Pages</a></li>
+</ul>
+</li>
+<li>1.3&nbsp;&nbsp;<a class="reference external" href="#overview_bib">Look of Bibliographic References</a></li>
+<li>1.4&nbsp;&nbsp;<a class="reference external" href="#overview_spec_conf">Specific Configurations</a></li>
+</ul>
+</li>
+<li><strong>2. `Detailed Record Pages &lt;#det_page&gt;`__</strong><ul>
+<li>2.1&nbsp;&nbsp;<a class="reference external" href="#det_page">Available tabs</a></li>
+<li>2.2&nbsp;&nbsp;<a class="reference external" href="#det_show_hide_tabs">Showing/Hiding tabs</a></li>
+<li>2.3&nbsp;&nbsp;<a class="reference external" href="#det_page_cust_cont_tabs">Customizing content of tabs</a></li>
+<li>2.4&nbsp;&nbsp;<a class="reference external" href="#det_page_cust_look_tabs">Customizing look of tabs</a></li>
+</ul>
+</li>
+<li><strong>3. `Custom Redirections &lt;#red&gt;`__</strong><ul>
+<li>3.1&nbsp;&nbsp;<a class="reference external" href="#red_cli">Command Line Interface</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This document describes how to change the look and feel of your CDS
+Invenio installation.</p>
+<div class="section" id="css-style-sheet-and-images">
+<h3>1.1 CSS Style Sheet and Images<a class="headerlink" href="#css-style-sheet-and-images" title="Permalink to this headline">¶</a></h3>
+<p>The most obvious modification you may want to do is the modification of
+<a class="reference external" href="/img/invenio.css">CSS style sheet</a>. You may
+also customize default <a class="reference external" href="/img/">images</a>.</p>
+</div>
+<div class="section" id="html-page-layout">
+<h3>1.2 HTML Page Layout<a class="headerlink" href="#html-page-layout" title="Permalink to this headline">¶</a></h3>
+<p>The customization of the general page look and feel is currently
+different depending on whether you customize HTML-like static pages or
+dynamic Python pages.</p>
+<p>Dynamic HTML pages are used to build the &#8216;interactive&#8217; parts of the
+website, such as the search and browse pages, as well as the admin
+pages. The content of these pages is defined at run time, depending on
+the users parameters. You can modify them to provide a totally different
+experience to your users when browsing Atlantis Institute of Fictive
+Science. Most probably, you will only want to customize
+&#8216;webstyle_templates.py&#8217;, which define the headers and footer of a page.</p>
+<p>Static HTML pages are used for basic pages that do not embed dynamic
+content, such as this guide. They help reducing the load of the server
+and speed up pages serving. As you will see, even HTML static pages can
+still contain some values defined at run time, but these are reduced to
+the minimum compared to dynamic pages. Most probably you will not want
+to modify these pages, since the small amount of dynamic content they
+have allow these pages to inherit from the customizations you have made
+elsewhere, such as in the CSS, and the page header and footer.</p>
+<div class="section" id="layout-of-html-static-pages">
+<h4>1.2.1 Layout of HTML Static Pages<a class="headerlink" href="#layout-of-html-static-pages" title="Permalink to this headline">¶</a></h4>
+<p>Static HTML pages are all located in the /opt/invenio/lib/webdoc/
+installation directory. These files are organized in 3 directories:</p>
+<ul class="simple">
+<li><strong>help:</strong> Help pages available to users of your website</li>
+<li><strong>admin:</strong> Mostly guides for admin users</li>
+<li><strong>hacking:</strong> Mostly guides for administrators and developers</li>
+</ul>
+<p>These directories do not contain the <tt class="docutils literal"><span class="pre">.html</span></tt> files, but <tt class="docutils literal"><span class="pre">.webdoc</span></tt>
+files. These &#8216;<em>WebDoc</em>&#8216; files are basically HTML with the following
+main differences:</p>
+<ul>
+<li><p class="first">They only contain the body of your page (only content of the
+<tt class="docutils literal"><span class="pre">&lt;body&gt;</span></tt> tag)</p>
+</li>
+<li><p class="first">You can make use of special tags such as <tt class="docutils literal"><span class="pre">&lt;CFG_SITE_URL&gt;</span></tt> and
+<tt class="docutils literal"><span class="pre">&lt;CFG_SITE_SUPPORT_EMAIL&gt;</span></tt>, that will be replaced by
+<a class="reference external" href="http://localhost:4000">http://localhost:4000</a> and <a class="reference external" href="mailto:info&#37;&#52;&#48;invenio-software&#46;org">info<span>&#64;</span>invenio-software<span>&#46;</span>org</a>, the values that
+you should have configured in your <tt class="docutils literal"><span class="pre">config.py</span></tt> file.</p>
+</li>
+<li><p class="first">You can internationalize the content. For example:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;lang&gt;
+    &lt;en&gt;Book&lt;/en&gt;
+    &lt;fr&gt;Livre&lt;/fr&gt;
+    &lt;de&gt;Buch&lt;/de&gt;
+&lt;/lang&gt;
+</pre></div>
+</div>
+<p>will be replaced by &#8220;Book&#8221; if the user has chosen to display the
+English version of your site, &#8220;Livre&#8221; in French or &#8220;Buch&#8221; in German.</p>
+</li>
+</ul>
+<p>Read the <a class="reference external" href="/help/hacking/webstyle-webdoc-syntax">WebDoc syntax
+guide</a> to
+learn more about details of the WebDoc syntax.</p>
+<p>The advantage of not using raw HTML for these static pages is that they
+can for example reuse the header and footer that you have defined for
+dynamic pages, and make use of the variables you have defined in your
+invenio.conf file. In that way you should not need to adapt them to your
+needs: <strong>they</strong> will adapt themselves to your needs.</p>
+<p>Any modification should be immediatly visible when looking at the pages
+from the web: the pages are built &#8220;dynamically&#8221; and then cached. If you
+want to force the cache of the pages, use the WebDoc CLI (type
+<tt class="docutils literal"><span class="pre">/opt/invenio/bin/webdoc</span> <span class="pre">--help</span></tt> to learn more about it).</p>
+</div>
+<div class="section" id="layout-of-python-dynamic-pages">
+<h4>1.2.2 Layout of Python Dynamic Pages<a class="headerlink" href="#layout-of-python-dynamic-pages" title="Permalink to this headline">¶</a></h4>
+<p>The dynamic Python-powered pages can be customized by making use of
+Invenio templating system that uses a notion of a template skin. How
+this works?</p>
+<p>When you edit <tt class="docutils literal"><span class="pre">invenio-local.conf</span></tt> during installation or later during
+runtime (when during runtime, you have to run
+<tt class="docutils literal"><span class="pre">inveniocfg</span> <span class="pre">--update-config-py</span></tt> after editing the conf file), you may
+choose to use your own templates instead of the provided default ones by
+editing <tt class="docutils literal"><span class="pre">CFG_WEBSTYLE_TEMPLATE_SKIN</span></tt> variable. Let us say you put
+<tt class="docutils literal"><span class="pre">ithaca</span></tt> there in order to use your own <tt class="docutils literal"><span class="pre">ithaca</span></tt> style. Now, when
+you start Apache, then instead of Invenio&#8217;s usual template files such as
+<tt class="docutils literal"><span class="pre">webbasket_templates.py</span></tt> the system will look for file named
+<tt class="docutils literal"><span class="pre">webbasket_templates_ithaca.py</span></tt> and will load the template functions
+from there instead, provided that they exist. (Otherwise it would fall
+back to the default ones.)</p>
+<p>How do you create such an <tt class="docutils literal"><span class="pre">ithaca</span></tt> style templates file? We do not use
+one of many existing templating frameworks in Python but a very simple
+programmer-friendly templating system that enables you to use the full
+power of Python to inherit from the default templates the output
+generating functions you want to reuse and to write anew only the
+functions you would like to modify.</p>
+<p>Let&#8217;s show an example of how to modify the page footer. Create a file
+named <tt class="docutils literal"><span class="pre">webstyle_templates_ithaca.py</span></tt> with the following content:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">invenio.config</span> <span class="kn">import</span> <span class="n">CFG_SITE_LANG</span>
+<span class="kn">from</span> <span class="nn">invenio.legacy.webstyle.templates</span> <span class="kn">import</span> <span class="n">Template</span> <span class="k">as</span> <span class="n">DefaultTemplate</span>
+
+<span class="k">class</span> <span class="nc">Template</span><span class="p">(</span><span class="n">DefaultTemplate</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Ithaca style templates.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">tmpl_pagefooter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">ln</span><span class="o">=</span><span class="n">CFG_SITE_LANG</span><span class="p">,</span> <span class="n">lastupdated</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                        <span class="n">pagefooteradd</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ithaca style page footer.  See the default function for</span>
+<span class="sd">        the meaning of parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+        <span class="n">out</span> <span class="o">+=</span> <span class="s">&quot;&quot;&quot;&lt;hr&gt;This site has no footer.</span>
+<span class="s">                  &lt;/body&gt;</span>
+<span class="s">                  &lt;/html&gt;&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">out</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>After the file was created, restart Apache and lo, your new ithaca style
+footer will be seen in action.</p>
+<p>(A side comment: note that <tt class="docutils literal"><span class="pre">tmpl_page_footer()</span></tt> is an ideal place to
+put any local code you may want to execute at the end of web request
+processing when the main page content was just served to the user. As an
+example, if you are using Google Analytics, you may want to put just
+after the above <tt class="docutils literal"><span class="pre">out</span> <span class="pre">=</span> <span class="pre">&quot;&quot;</span></tt> statement your GA script code:</p>
+<div class="highlight-python"><div class="highlight"><pre>        [...]
+        out += &quot;&quot;&quot;
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+  var _gaq = _gaq || [];
+  _gaq.push([&#39;_setAccount&#39;, &#39;UA-XXXXX-X&#39;]);
+  _gaq.push([&#39;_trackPageview&#39;]);
+
+  (function() {
+    var ga = document.createElement(&#39;script&#39;); ga.type = &#39;text/javascript&#39;; ga.async = true;
+    ga.src = (&#39;https:&#39; == document.location.protocol ? &#39;https://ssl&#39; : &#39;http://www&#39;) + &#39;.google-analytics.com/ga.js&#39;;
+    var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+&lt;/script&gt;
+&quot;&quot;&quot;
+</pre></div>
+</div>
+<p>End of the side comment.)</p>
+<p>Some further remarks on this templating system:</p>
+<ul>
+<li><p class="first">We have observed that in practice the HTML page designers were ofter
+Python programmers, therefore we have adopted a programmer-friendly
+templating system.</p>
+</li>
+<li><p class="first">You have to know a bit of Python in order to use it. If you don&#8217;t
+know Python, do not worry, because you can basically copy and paste
+the original <tt class="docutils literal"><span class="pre">tmpl_foo()</span></tt> function definition &#8220;as is&#8221; into the
+above-cited example and then you would only modify its HTML snippets.
+The important thing is to preserve the imports
+(<tt class="docutils literal"><span class="pre">from</span> <span class="pre">invenio.config</span> <span class="pre">import</span> <span class="pre">CFG_SITE_LANG</span></tt>) as in the original
+<tt class="docutils literal"><span class="pre">webstyle_templates.py</span></tt> file and to preserve the leading whitespace
+Pythonic indentation.</p>
+</li>
+<li><p class="first">You do not have to learn &#8220;yet another templating language&#8221;, you can
+use the full power of Python. The <tt class="docutils literal"><span class="pre">tmpl_foo()</span></tt> functions do not
+contain any business logic in them, their only purpose is to make the
+HTML presentation of data supplied to them. But, should you need to
+carry out a little data transformation, you can do it within the
+<tt class="docutils literal"><span class="pre">tmpl_foo()</span></tt> function itself, thanks to the full Python power.</p>
+</li>
+<li><p class="first">If you feel like doing so, you can modify all the <tt class="docutils literal"><span class="pre">tmpl_foo()</span></tt>
+functions across all Invenio modules in a way that will completely
+change the presentation of elements including their content, position
+and order on the screen.</p>
+</li>
+<li><p class="first">In practice, it is sufficient to modify the CSS and the
+webstyle_templates_ithaca.py (and possibly
+websearch_templates_ithaca.py) files to achieve most important
+customizations.</p>
+</li>
+<li><p class="first">If you would like to discover which method of which template generate
+which region on the web page, you can switch on the
+<tt class="docutils literal"><span class="pre">CFG_WEBSTYLE_INSPECT_TEMPLATES</span></tt> configuration variable in your
+<tt class="docutils literal"><span class="pre">invenio-local.conf</span></tt> file and rerun
+<tt class="docutils literal"><span class="pre">sudo</span> <span class="pre">-u</span>&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">apache</span> <span class="pre">/opt/invenio/bin/inveniocfg</span>&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">--update-config-py</span></tt>.
+Then, after optionally running <tt class="docutils literal"><span class="pre">bibreformat</span> <span class="pre">-a</span></tt> and <tt class="docutils literal"><span class="pre">webcoll</span> <span class="pre">-f</span></tt>
+(if you want to debug search pages) and after having restarted your
+Apache server (in every case), you will find in your browser that a
+place-mark has been put next to every region of every page, and that
+you can hover your mouse pointer over any region of the page in order
+to discover which module/method/parameters have been used to generate
+it. This is useful for debugging Python templates and/or for
+understanding which part of code generates which HTML snippet in the
+output.</p>
+</li>
+<li><p class="first">We expect to provide possibly more than one skin with the default
+distribution, so if you have modified Invenio look and feel in an
+interesting way, please consider donating us your templates.</p>
+</li>
+<li><p class="first">When upgrading from one Invenio release to another, you may find out
+that the default templates have changed in a way that requires
+changes to your templates (such as an addition of parameters to cover
+the new functionality). This is inevitable in any templating system;
+unless you introduce new parameters, you would not see them being
+printed. Therefore, if you have modified <tt class="docutils literal"><span class="pre">tmpl_foo()</span></tt> and
+<tt class="docutils literal"><span class="pre">tmpl_bar()</span></tt>, and you are ugrading to a new release, you may at
+least briefly check whether the function arguments are the same. A
+quick check of the body would be helpful too, in case the new release
+fixed some display-related problems in these functions.
+In order to help you in this task, we provide a tool to check
+incompatibilities between your customized templates and the default
+templates.
+This tool can be run before doing a <tt class="docutils literal"><span class="pre">'make</span> <span class="pre">install'</span></tt>, therefore
+giving you a chance to fix your templates before upgrading. Just run
+<tt class="docutils literal"><span class="pre">'make</span> <span class="pre">check-custom-templates'</span></tt> to get the list of problems found
+with your templates.
+You can also run this tool any time after the new default templates
+have been installed, in order to ensure that modifications you have
+done to your templates are valid. To do so move to your Invenio
+installation directory, and run::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ python /opt/invenio/lib/python/invenio/template.py --check-custom-templates
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="look-of-bibliographic-references">
+<h3>1.3 Look of Bibliographic References<a class="headerlink" href="#look-of-bibliographic-references" title="Permalink to this headline">¶</a></h3>
+<p>Bibliographic metadata is formatted using
+<a class="reference external" href="bibformat-admin">BibFormat</a>. Read the <a class="reference external" href="bibformat-admin-guide">BibFormat
+documentation</a> for more information.</p>
+</div>
+<div class="section" id="specific-configurations">
+<h3>1.4 Specific Configurations<a class="headerlink" href="#specific-configurations" title="Permalink to this headline">¶</a></h3>
+<p>Note that the search interface pages may be modified to a large extent
+in the <a class="reference external" href="websearch-admin">WebSearch Admin Interface</a> by adding HTML
+portalboxes on various places on the page (right top, before/after page
+title, before/after narrow by collection boxes, etc).</p>
+</div>
+</div>
+<div class="section" id="detailed-record-pages">
+<h2>2. Detailed Record Pages<a class="headerlink" href="#detailed-record-pages" title="Permalink to this headline">¶</a></h2>
+<p>The web pages displaying the details of a record (such as
+/record/1) do not only show metadata, but also
+users&#8217; comments and reviews, statistics, etc. This information is
+organized into tabs.</p>
+<p>The content of these tabs can be customized on a collection basis. It is
+also possible to show/hide tabs depending on the displayed collection.</p>
+<p>The detailed record pages also feature a mini panel at the bottom of the
+page that links to popular functions (The mini panel is only displayed
+when <em>Information</em> tab is selected).</p>
+<div class="highlight-python"><div class="highlight"><pre>+--------------Detailed record page-------------+
+|                    header                     |
+|nav. breadcrumb                                |
+|                                               |
+|   .--------------------------------------.    |
+| .-|Info.|Ref.|Comm.|Review.|Stats.|Files |-.  |
+| | &#39;--------------------------------------&#39; |  |
+| |                                          |  |
+| |                  content                 |  |
+| |                                          |  |
+| &#39;------------------------------------------&#39;  |
+|                                               |
+| .---------------(Mini Panel)---------------.  |
+| |   Mini    |      Mini     |    Mini      |  |
+| |   File    |     Review    |   Actions    |  |
+| &#39;------------------------------------------&#39;  |
++-----------------------------------------------+
+</pre></div>
+</div>
+<div class="section" id="available-tabs">
+<h3>2.1 Available tabs<a class="headerlink" href="#available-tabs" title="Permalink to this headline">¶</a></h3>
+<p>The following tabs are available:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="35%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name
+Description
+URL (eg. for record
+&#8216;10&#8217;)</th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Information
+Show the formatted
+metadata of the record
+/re | record
+cord/10</td>
+<td>References
+Displays the references
+(bibliography) of the
+<a class="reference external" href="http://localhost:4000/re">http://localhost:4000/re</a>
+/re | cord/10/comments
+cord/10/references</td>
+<td>Comments
+Displays the users&#8217;
+comments</td>
+</tr>
+</tbody>
+</table>
+<p>The mini panel is only displayed when the <em>Information</em> tab is selected.
+It is divided into the following sections:</p>
+<ul class="simple">
+<li>Files: quick access to full-text file(s)</li>
+<li>Review: quick access to reviewing feature</li>
+<li>Actions: quick access to several other features</li>
+</ul>
+</div>
+<div class="section" id="showing-hiding-tabs">
+<h3>2.2 Showing/Hiding tabs<a class="headerlink" href="#showing-hiding-tabs" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="websearch-admin">WebSearch admin web interface</a> lets you decide
+for each collection which tabs are to be displayed. Choose a collection
+to edit in the collection tree and go to its <em>detailed record page
+options</em>. From there you can select which tabs to show for that
+collection.</p>
+<p>If you want to apply these settings to the subcollections, select <em>Also
+apply to subcollections</em> before you click on the button.</p>
+<p>Note that these settings only affect the tabs, not the content of the
+tabs: even if a tab is not displayed, it is still possible to access its
+content using its usual url. This is useful if you decide to completely
+change the detailed record pages, dropping the tab-metaphor (eg. for a
+side bar) but still want to access the comments, reviews, etc pages.</p>
+<p>Here are some behaviours you should expect when changing the tabs
+configuration:</p>
+<ul class="simple">
+<li>Given that search results pages always link to
+/record/10, and given the above comment about
+accessibility of tabs when they are not displayed, the content of the
+<em>Information</em> will always be show when clicking on <a class="reference external" href="#">detailed
+record</a> link in search results, even if the <em>Information</em> tab
+is set not to be displayed.</li>
+<li>If you select only 1 tab, none of the tabs will be displayed at the
+top of the page. This also means that whatever tabs you have
+selected, you users will always see the content of the &#8216;Information&#8217;
+tabs (see above behaviour).</li>
+<li>If you select 0 tab, only the content of <em>Information</em> tab is shown.
+None of the tabs, nor the border that usually surrounds the content
+of the tabs, nor the minipanel are shown. You should choose this
+option if you decide to drop the tabs metaphor for the detailed
+record pages. You can then build your own user interface on this
+almost blank page (See <a class="reference external" href="#det_page_cust_cont_tabs">Customizing content of
+tabs</a>).</li>
+<li>Note that <em>Comments</em> and <em>Reviews</em> tabs will not be shown if you have
+disabled commenting and reviewing features in your installation,
+respectively. (<tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_ALLOW_COMMENTS</span></tt> and
+<tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_ALLOW_REVIEWS</span></tt> variable in your config file)</li>
+</ul>
+</div>
+<div class="section" id="customizing-content-of-tabs">
+<h3>2.3 Customizing content of tabs<a class="headerlink" href="#customizing-content-of-tabs" title="Permalink to this headline">¶</a></h3>
+<p>The contents of tabs are defined in the following ways:</p>
+<dl class="docutils">
+<dt><strong>*Information* tab</strong></dt>
+<dd>The content of this tab is defined by function
+<tt class="docutils literal"><span class="pre">tmpl_detailed_record_metadata(..)</span></tt> in <tt class="docutils literal"><span class="pre">websearch_templates.py</span></tt>.
+By default <tt class="docutils literal"><span class="pre">tmpl_detailed_record_metadata</span></tt> simply returns the
+result of the formatting of the metadata by BibFormat using the &#8220;HD&#8221;
+output format. It can therefore be collection-specific.</dd>
+<dt><strong>*References* tab</strong></dt>
+<dd>The content of this tab is defined by function
+<tt class="docutils literal"><span class="pre">tmpl_detailed_record_references(..)</span></tt> in
+<tt class="docutils literal"><span class="pre">websearch_templates.py</span></tt>. By default
+<tt class="docutils literal"><span class="pre">tmpl_detailed_record_metadata</span></tt> simply returns the result of the
+formatting of the metadata by BibFormat using the &#8220;HDREF&#8221; output
+format. If the result returned by BibFormat is empty, the tab is
+disabled (visible, but not clickable). It can therefore be
+collection-specific.</dd>
+<dt><strong>*Comments* and *Reviews* tabs</strong></dt>
+<dd>The content of these tabs is mainly defined by function
+<tt class="docutils literal"><span class="pre">tmpl_get_comments(..)</span></tt> in <tt class="docutils literal"><span class="pre">webcomment_templates.py</span></tt>. Other
+functions in this file are also involved in the display.</dd>
+<dt><strong>*Usage Statistics* tab</strong></dt>
+<dd>The content of this tab is defined by function
+<tt class="docutils literal"><span class="pre">tmpl_detailed_record_statistics(..)</span></tt> in
+<tt class="docutils literal"><span class="pre">websearch_templates.py</span></tt>. If the returned content is empty, then
+the tabs will be disabled (visible, but cannot be clicked).</dd>
+<dt><strong>*Files* tab</strong></dt>
+<dd>The content of this tab is defined by function <tt class="docutils literal"><span class="pre">tmpl_filelist(..)</span></tt>
+in <tt class="docutils literal"><span class="pre">websubmit_templates.py</span></tt>.</dd>
+</dl>
+<p>The content of the mini panel is defined in the following ways:</p>
+<dl class="docutils">
+<dt><strong>*Files*</strong></dt>
+<dd>The content of this section is defined by the output format
+&#8216;HDFILE&#8217;. It can therefore be collection-specific.</dd>
+<dt><strong>*Review*</strong></dt>
+<dd>The content of this section is defined by function
+<tt class="docutils literal"><span class="pre">tmpl_mini_review(..)</span></tt> inside <tt class="docutils literal"><span class="pre">webcomment_templates.py</span></tt></dd>
+<dt><strong>*Actions*</strong></dt>
+<dd>The content of this section is defined by the output format
+<tt class="docutils literal"><span class="pre">HDACT</span></tt>. It can therefore be collection-specific.</dd>
+</dl>
+</div>
+<div class="section" id="customizing-look-of-tabs">
+<h3>2.4 Customizing look of tabs<a class="headerlink" href="#customizing-look-of-tabs" title="Permalink to this headline">¶</a></h3>
+<p>You can customize how tabs look like, as well change the look of the
+border that surrounds the content of tabs. The mini panel can similarly
+be customized.</p>
+<p>Have a look at the following classes in the CDS css stylesheet:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">detailedrecordtabs</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">detailedrecordbox</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">detailedrecordminipanel</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">top-left,</span> <span class="pre">top-right,</span> <span class="pre">bottom-left,</span> <span class="pre">bottom-right</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">detailedrecordminipanel{actions,review,file},</span> <span class="pre">detailedrecordshortreminder</span></tt></li>
+</ul>
+<p>Note that a tab might be greyed out (disabled) when its content is
+empty. This is the case for the <em>References</em> tab (see <a class="reference external" href="#det_page_cust_cont_tabs">Customizing
+content of tabs</a> -&gt; &#8216;References tab&#8217;) and
+the <em>Files</em> tab (if no file could be found for the record).</p>
+<p>For more advanced modifications (like changing the HTML code of the
+tabs), you can modify the <tt class="docutils literal"><span class="pre">detailed_record_container(..)</span></tt> and
+<tt class="docutils literal"><span class="pre">detailed_record_mini_panel(..)</span></tt> functions inside your
+<tt class="docutils literal"><span class="pre">webstyle_templates.py</span></tt> file.</p>
+</div>
+<div class="section" id="custom-redirections">
+<h3>Custom Redirections<a class="headerlink" href="#custom-redirections" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to create custom redirections to URLs within Invenio, by
+registering a given <em>unique label</em> to be used after path <strong>/goto/</strong>.</p>
+<p>FIXME</p>
+</div>
+<div class="section" id="command-line-interface">
+<h3>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>Usage: gotoadmin [options]
+
+Options:
+  -h, --help            show this help message and exit
+
+  Plugin Administration Options:
+    --list-plugins      List available GOTO plugins and their documentation
+    --list-broken-plugins
+                        List broken GOTO plugins
+
+  Redirection Manipultation Options:
+    -r LABEL, --register-redirection=LABEL
+                        Register a redirection with the provided LABEL
+    -u LABEL, --update-redirection=LABEL
+                        Update the redirection specified by the provided LABEL
+    -g LABEL, --get-redirection=LABEL
+                        Get all information about a redirection specified by
+                        LABEL
+    -d LABEL, --drop-redirection=LABEL
+                        Drop an existing redirection specified by LABEL
+
+  Specific Options:
+    -P PLUGIN, --plugin=PLUGIN
+                        Specify the plugin to use when registering or updating
+                        a redirection
+    -j PARAMETERS, --json-parameters=PARAMETERS
+                        Specify the parameters to provide to the plugin
+                        (serialized in JSON)
+    -p PARAM=VALUE, --parameter=PARAM=VALUE
+                        Specify a single PARAM=VALUE parameter to be provided
+                        to the plugin (alternative to the JSON serialization)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="websubmit-admin-guide.html" class="btn btn-neutral float-right" title="WebSubmit Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="webstat-admin-guide.html" class="btn btn-neutral" title="WebStat Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

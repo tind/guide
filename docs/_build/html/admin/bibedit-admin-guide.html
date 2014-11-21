@@ -1,0 +1,599 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibEdit Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="BibFormat Admin Guide" href="bibformat-admin-guide.html"/>
+        <link rel="prev" title="BibConvert Admin Guide" href="bibconvert-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibEdit Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibedit-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibedit-admin-guide">
+<span id="id1"></span><h1>BibEdit Admin Guide<a class="headerlink" href="#bibedit-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>BibEdit enables you to directly manipulate bibliographic data, edit a
+single record, do global replacements, and other cataloguing tasks.</p>
+</div>
+<div class="section" id="edit-records-via-web-interface">
+<h2>2. Edit records via Web interface<a class="headerlink" href="#edit-records-via-web-interface" title="Permalink to this headline">¶</a></h2>
+<p>To edit records via the web interface, please go to <a class="reference external" href="/record/edit/">BibEdit
+Editor</a>. This interface will let
+you add, change or delete fields in a record.</p>
+<p>If you want to change several records at once, you can use the batch
+command-line techniques described below or the <a class="reference external" href="#3.1">Multi-Record
+Editor</a>.</p>
+<p>Please note that 8564 tags pointing to fulltext files managed by Invenio
+can&#8217;t be manipulated via BibEdit. In order to modify them please use the
+<a class="reference external" href="bibupload-admin-guide#3.5">FFT tags through BibUpload</a> or the
+bibdocfile command line tool.</p>
+<div class="section" id="keyboard-shortcuts-on-bibedit">
+<h3>2.1 Keyboard shortcuts on BibEdit<a class="headerlink" href="#keyboard-shortcuts-on-bibedit" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="basic-record-actions">
+<h4>Basic record actions<a class="headerlink" href="#basic-record-actions" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Shortcut
+Definition
+Action</th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>g
+Select
+Go to the record
+selection field</td>
+<td>Ctrl+Right
+Next
+Go to next record (in
+search results).</td>
+<td>Ctrl+Left
+Previous
+Go to previous record
+(in search results).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="focused-clicked-subfield-or-field">
+<h4>Focused (clicked) subfield or field<a class="headerlink" href="#focused-clicked-subfield-or-field" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Shortcut
+Definition
+Action</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Ctrl+Up
+Move up
+Move focused subfield
+up.</td>
+<td>Ctrl+Down
+Move down
+Move focused subfield
+down.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="input-field-form">
+<h4>Input field/form<a class="headerlink" href="#input-field-form" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Shortcut
+Definition
+Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Esc
+Cancel
+Cancel edition of
+subfield</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="other-functionality">
+<h4>Other functionality<a class="headerlink" href="#other-functionality" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Shortcut
+Definition
+Action</th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>alt+s
+Selection mode
+Toggle selection mode.</td>
+<td>Ctrl+Shift+z
+Undo
+Undo last action.</td>
+<td>Ctrl+Shift+y
+Redo
+Redo last action.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="edit-multiple-records-via-web-interface">
+<h2>3. Edit multiple records via web interface<a class="headerlink" href="#edit-multiple-records-via-web-interface" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of the <a class="reference external" href="/record/multiedit/">Multi-Record Editor Web
+interface</a> is to allow
+cataloguers to easily edit more than one record in one go.</p>
+<p>The Multi-Record Editor allows cataloguers to easily look up various
+records in the system in order to find record sets upon which to
+operate, and then to allow some easy replacement procedures on these
+records in one go, e.g. a substring substitution of some field value in
+some field tags.</p>
+<div class="section" id="multi-record-editor-user-guide">
+<h3>3.1 Multi-Record Editor user guide<a class="headerlink" href="#multi-record-editor-user-guide" title="Permalink to this headline">¶</a></h3>
+<p>While working with the Multi-Record Editor, the first step is to filter
+the set of records that are going to be modified.</p>
+<p>In order to do that, three options are available in the interface:</p>
+<div class="highlight-python"><div class="highlight"><pre>Search criteria:    [         ]
+Filter collection:  [         ]
+Output tags:        [         ]
+[Search]
+</pre></div>
+</div>
+<ul class="simple">
+<li>Search criteria allows to search records using the same syntax
+offered by Invenio&#8217;s web search.</li>
+<li>These records can be filtered by the desired collection, thus
+narrowing the search results.</li>
+<li>Finally, for convenience, the tags displayed for each record can be
+specified. The tags have to be separated by commas.</li>
+</ul>
+<p>After clicking the <tt class="docutils literal"><span class="pre">Search</span></tt> button, the set of records that will be
+affected by the changes will be visible at the bottom of the interface.
+It is possible to specify whether to visualize them in <tt class="docutils literal"><span class="pre">MARC</span></tt> format
+or in <tt class="docutils literal"><span class="pre">HTML</span> <span class="pre">Brief</span></tt> format.</p>
+<p>The next step is to specify the desired changes to be made on the
+records. When defining a new field action, the field tag and its
+indicators (if necessary) have to be specified and one of the three
+actions (Add field, Delete field, Update field) selected.</p>
+<div class="highlight-python"><div class="highlight"><pre>Field
+[ tag ][ind1][ind2]     [Select action[V]]
+</pre></div>
+</div>
+<p>After that, as many actions on subfields as needed can be defined. The
+subfield tag has to be specified and one action
+(<tt class="docutils literal"><span class="pre">Add</span> <span class="pre">subfield,</span> <span class="pre">Delete</span> <span class="pre">subfield,</span> <span class="pre">Replace</span> <span class="pre">full</span> <span class="pre">content,</span> <span class="pre">Replace</span> <span class="pre">substring</span></tt>)
+selected. Depending on the field action selected some actions for
+subfields will not be available.</p>
+<p>The difference between <tt class="docutils literal"><span class="pre">Replace</span> <span class="pre">full</span> <span class="pre">content</span></tt> and
+<tt class="docutils literal"><span class="pre">Replace</span> <span class="pre">substring</span></tt> resides in that the former deletes all the content
+present in a subfield and writes the specified value on it whereas the
+latter looks for a string and substitutes it by a new string.</p>
+<p>All subfield actions have the <tt class="docutils literal"><span class="pre">Apply</span> <span class="pre">only</span> <span class="pre">to</span> <span class="pre">specific</span> <span class="pre">field</span> <span class="pre">instances</span></tt>
+option. This is useful, for example, in cases where there are multiple
+authors (<tt class="docutils literal"><span class="pre">700__</span></tt> tags) and we do not want to act in all of them.</p>
+<p>In that case one could add the condition that only fields where the tag
+<tt class="docutils literal"><span class="pre">$a</span></tt> is equal to <tt class="docutils literal"><span class="pre">Ellis</span> <span class="pre">A.</span></tt> should be modified.</p>
+<div class="highlight-python"><div class="highlight"><pre>700__   Update Field
+        [u] [Replace full content]
+            [Ellis J.]
+        when other subfield [u] is equal to [Ellis A.]
+</pre></div>
+</div>
+<p>Every subfield action defined has to be saved using the correspondent
+button before applying the changes.</p>
+<p>Once all the actions for fields and subfields have been specified the
+modifications can be previewed using the corresponding button.</p>
+<p>Finally, when clicking on the <tt class="docutils literal"><span class="pre">Apply</span> <span class="pre">changes</span></tt> button all modifications
+will be sent to the server and will be visible after some time.</p>
+</div>
+</div>
+<div class="section" id="edit-records-via-command-line">
+<h2>4. Edit records via command line<a class="headerlink" href="#edit-records-via-command-line" title="Permalink to this headline">¶</a></h2>
+<p>The idea is to download record in XML MARC format, edit it by using any
+editor, and upload the changes back. Note that you can edit any number
+of records at the same time: for example, you can download all records
+written by <tt class="docutils literal"><span class="pre">Qllis,</span> <span class="pre">J</span></tt>, open the file in your favourite text editor,
+and change globally the author name to the proper form <tt class="docutils literal"><span class="pre">Ellis,</span> <span class="pre">J</span></tt>.</p>
+<p>You therefore continue as follows:</p>
+<ol class="arabic">
+<li><p class="first">Download the record in XML MARC. For example, download record ID
+1234:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ wget -O z.xml &#39;http://your.site/record/1234?of=xm&#39;
+</pre></div>
+</div>
+<p>or download latest 5,000 public documents written by <tt class="docutils literal"><span class="pre">Qllis,</span> <span class="pre">J</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ wget -O z.xml &#39;http://your.site/search?p=Qllis%2C+J&amp;f=author&amp;of=xm&amp;rg=5000&#39;
+</pre></div>
+</div>
+<p>Note also that you can access history of records as covered in a
+<a class="reference external" href="#6">access record history</a> section below.</p>
+</li>
+<li><p class="first">Edit the metadata as necessary:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ emacs z.xml
+</pre></div>
+</div>
+</li>
+<li><p class="first">Upload changes back:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibupload -r z.xml
+</pre></div>
+</div>
+</li>
+<li><p class="first">See the progress of the treatment of the file via BibSched:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibsched
+</pre></div>
+</div>
+<p>If you do not want to wait for the next wake-up time of indexing and
+formatting daemons, launch them manually now:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibindex
+$ bibreformat
+$ webcoll
+</pre></div>
+</div>
+<p>and watch the progress via <tt class="docutils literal"><span class="pre">bibsched</span></tt>.</p>
+</li>
+</ol>
+<p>After which the record(s) should be fully modified and formatted and all
+indexes and collections updated, as necessary.</p>
+</div>
+<div class="section" id="delete-records-via-command-line">
+<h2>5. Delete records via command line<a class="headerlink" href="#delete-records-via-command-line" title="Permalink to this headline">¶</a></h2>
+<p>Once a record has been uploaded, we prefer not to *destroy* it fully
+anymore (i.e. to wipe it out and to reuse its record ID for another
+record) for a variety of reasons. For example, some users may have put
+this record already into their baskets in the meantime, or the record
+might have already been announced by alert emails to the external world,
+or the OAI harvestors might have harvested it already, etc. We usually
+prefer only to *mark* records as deleted, so that our record IDs are
+ensured to stay permanent.</p>
+<p>Thus said, the canonical way to delete the record #1234 in Invenio
+v0.1.x development branch is to download its XML MARC:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ wget -O z.xml &#39;http://your.site/record/1234?of=xm&#39;
+</pre></div>
+</div>
+<p>and to mark it as deleted by adding the indicator ``DELETED&#8217;&#8217; into the
+MARC 980 $$c tag:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ emacs z.xml
+[...]
+ &lt;datafield tag=&quot;980&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+   &lt;subfield code=&quot;a&quot;&gt;PREPRINT&lt;/subfield&gt;
+   &lt;subfield code=&quot;c&quot;&gt;DELETED&lt;/subfield&gt;
+ &lt;/datafield&gt;
+[...]
+</pre></div>
+</div>
+<p>and upload thusly modified record in the `replace&#8217; mode:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibupload -r z.xml
+</pre></div>
+</div>
+<p>and watch the progress via <tt class="docutils literal"><span class="pre">bibsched</span></tt>, as mentioned in the <a class="reference external" href="#3">section
+3</a>.</p>
+<p>This procedure will remove the record from the collection cache so that
+the record won&#8217;t be findable anymore. In addition, if the users try to
+access this record via direct URL such as distributed by the alert
+engine (record/1234) or via their baskets, they will see a message
+``This record has been deleted&#8217;&#8216;. Please note though that the original
+MARCXML of the record stays kept in the database, for example you can
+access it by:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ python -c &quot;from zlib import decompress; \\
+             from invenio.legacy.dbquery import run_sql; \\
+             print decompress(run_sql(&#39;SELECT value FROM bibfmt \\
+             WHERE id_bibrec=1234 AND format=\&#39;xm\&#39;&#39;)[0][0])&quot;
+</pre></div>
+</div>
+<p>In some cases you may want to hide the record from the searches, but to
+leave it accessible via direct URLs or via baskets. In this case the
+best it to alter its collection tag (980) to some non-existent
+collection, for example:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ wget -O z.xml &#39;http:://localhost/record/1234?of=xm&#39;
+$ perl -pi -e &#39;s,ARTICLE,HIDDENARTICLE,g&#39; z.xml
+$ bibupload -r z.xml
+</pre></div>
+</div>
+<p>This will make the record non-existent as far as the search engine is
+concerned, because it won&#8217;t belong to any existing collection, but the
+record will exist ``on its own&#8217;&#8217; and the users knowing its recID will
+be able to access it.</p>
+<p>P.S. Note that the ``bibXXx&#8217;&#8217; tables will keep having entries for the
+deleted records. These entries are to be cleaned from time to time by
+the BibEdit garbage collector. This GC isn&#8217;t part of Invenio yet;
+moreover in the future we plan to abolish all the bibXXx tables, so that
+this won&#8217;t be necessary anymore.</p>
+</div>
+<div class="section" id="delete-all-records">
+<h2>6. Delete all records<a class="headerlink" href="#delete-all-records" title="Permalink to this headline">¶</a></h2>
+<p>If you want to wipe out all the existing bibliographic content of your
+site, for example to start uploading the documents from scratch again,
+you can launch:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ /opt/invenio/bin/dbexec &lt; /opt/invenio/src/invenio-0.90/modules/miscutil/sql/tabbibclean.sql
+$ rm -rf /opt/invenio/var/data/files/*
+$ /opt/invenio/bin/webcoll
+$ /opt/invenio/bin/bibindex --reindex
+</pre></div>
+</div>
+<p>Note that you may also want to delete the fulltext files and the
+submission counters in <tt class="docutils literal"><span class="pre">/opt/invenio/var/data</span></tt> subdirectories, if you
+use WebSubmit.</p>
+</div>
+<div class="section" id="access-record-history">
+<h2>7. Access record history<a class="headerlink" href="#access-record-history" title="Permalink to this headline">¶</a></h2>
+<p>Every revision of the metadata of a record is stored in the &#8220;history&#8221;
+table containing all previous MARCXML master formats of the record. You
+can access them via the <tt class="docutils literal"><span class="pre">bibedit</span></tt> command line utility.</p>
+<p>To list previous revisions of record ID 1:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ /opt/invenio/bin/bibedit --list-revisions 1
+1.20080319193118
+1.20080318172536
+1.20080311020315
+</pre></div>
+</div>
+<p>To get MARCXML of the revision 1.20080318172536 (record ID 1, revision
+date 2008-03-18 17:25:36):</p>
+<div class="highlight-python"><div class="highlight"><pre>$/opt/invenio/bin/bibedit --get-revision 1.20080318172536 | head -5
+&lt;record&gt;
+  &lt;controlfield tag=&quot;001&quot;&gt;1&lt;/controlfield&gt;
+  &lt;datafield tag=&quot;037&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+    &lt;subfield code=&quot;a&quot;&gt;CERN-EX-0106015&lt;/subfield&gt;
+  &lt;/datafield&gt;
+[...]
+</pre></div>
+</div>
+<p>To compare the differences between the two last revisions:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ /opt/invenio/bin/bibedit --diff-revisions 1.20080318172536 1.20080319193118
+--- 1.20080318172536
++++ 1.20080319193118
+@@ -4,7 +4,7 @@
+     &lt;subfield code=&quot;a&quot;&gt;CERN-EX-0106015&lt;/subfield&gt;
+   &lt;/datafield&gt;
+   &lt;datafield tag=&quot;100&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+-    &lt;subfield code=&quot;a&quot;&gt;Photolab&lt;/subfield&gt;
++    &lt;subfield code=&quot;a&quot;&gt;Photolab SOME TEST EDIT HERE&lt;/subfield&gt;
+   &lt;/datafield&gt;
+   &lt;datafield tag=&quot;245&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+     &lt;subfield code=&quot;a&quot;&gt;ALEPH experiment: Candidate of Higgs boson production&lt;/subfield&gt;
+@@ -26,7 +26,7 @@
+   &lt;/datafield&gt;
+   &lt;datafield tag=&quot;650&quot; ind1=&quot;1&quot; ind2=&quot;7&quot;&gt;
+     &lt;subfield code=&quot;2&quot;&gt;SzGeCERN&lt;/subfield&gt;
+-    &lt;subfield code=&quot;a&quot;&gt;Experiments and Tracks&lt;/subfield&gt;
++    &lt;subfield code=&quot;a&quot;&gt;Experiments and Tracks SOME TEST EDIT THERE&lt;/subfield&gt;
+   &lt;/datafield&gt;
+   &lt;datafield tag=&quot;653&quot; ind1=&quot;1&quot; ind2=&quot; &quot;&gt;
+     &lt;subfield code=&quot;a&quot;&gt;LEP&lt;/subfield&gt;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibformat-admin-guide.html" class="btn btn-neutral float-right" title="BibFormat Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibconvert-admin-guide.html" class="btn btn-neutral" title="BibConvert Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

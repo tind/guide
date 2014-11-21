@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WebJournal Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="WebJournal Editor Guide" href="webjournal-editor-guide.html"/>
+        <link rel="prev" title="WebComment Admin Guide" href="webcomment-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>WebJournal Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/webjournal-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="webjournal-admin-guide">
+<span id="id1"></span><h1>WebJournal Admin Guide<a class="headerlink" href="#webjournal-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>1. `Introduction &lt;#introduction&gt;`__</strong></li>
+<li><strong>2. `Add a Journal &lt;#addJournal&gt;`__</strong></li>
+<li><strong>3. `Configure a Journal &lt;#configureJournal&gt;`__</strong></li>
+<li><strong>4. `Sitemap of a Journal &lt;#journalSitemap&gt;`__</strong></li>
+<li><strong>5. `Edit the Layout of a Journal &lt;#journalLayout&gt;`__</strong><ul>
+<li>5.1&nbsp;&nbsp;<a class="reference external" href="#editJournalElement">Edit Format Elements - Best
+Practices</a></li>
+<li>5.2&nbsp;&nbsp;<a class="reference external" href="#editJournalAlertLayout">Alert layout - Best Practices</a></li>
+</ul>
+</li>
+<li><strong>6. `Submit Articles &lt;#addArticles&gt;`__</strong><ul>
+<li>6.1&nbsp;&nbsp;<a class="reference external" href="#draftArticles">Draft/Unreleased/Offline Articles</a></li>
+<li>6.2&nbsp;&nbsp;<a class="reference external" href="#draftPreview">Preview Unreleased Issues</a></li>
+</ul>
+</li>
+<li><strong>7. `Access Control &lt;#accessControl&gt;`__</strong><ul>
+<li>7.1&nbsp;&nbsp;<a class="reference external" href="#accessControlSubmit">Articles Submission</a></li>
+<li>7.1&nbsp;&nbsp;<a class="reference external" href="#accessControlIssue">Issue Control System</a></li>
+</ul>
+</li>
+<li><strong>8. `Troubleshoots &lt;#troubleshoots&gt;`__</strong><ul>
+<li>8.1&nbsp;&nbsp;<a class="reference external" href="#updateCache">Update Cache</a></li>
+<li>8.1&nbsp;&nbsp;<a class="reference external" href="#issueReleases">Manage Issue Releases</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This guide shows how you can set up a new journal managed by the
+Invenio WebJournal module. You should first read the <a class="reference external" href="webjournal-editor-guide">WebJournal
+Editor Guide</a> to get an overview of the main
+concepts of this module.</p>
+</div>
+<div class="section" id="add-a-journal">
+<h2>2. Add a Journal<a class="headerlink" href="#add-a-journal" title="Permalink to this headline">¶</a></h2>
+<p>To add a journal, go to the WebJournal admin interface and click &#8220;Add
+new journal&#8221;. Provide the name of your journal, and edit the
+<a class="reference external" href="#configureJournal">configuration</a> of the journal. Click &#8220;Save&#8221;.</p>
+<p><strong>Note that by default your Apache user should not be able to save the
+configuration</strong> since it should not have rights to write to
+<tt class="docutils literal"><span class="pre">/opt/invenio/etc/webjournal/</span></tt>. To save the settings you might want to
+manually save your configuration to
+<tt class="docutils literal"><span class="pre">/opt/invenio/etc/webjournal/yourJournalName/yourJournalName-config.xml</span></tt>
+or give write permission to <tt class="docutils literal"><span class="pre">/opt/invenio/etc/webjournal/</span></tt></p>
+<p>Usually adding a journal also requires to set up a dedicated submission,
+give some access using WebAccess, and can optionally lead to the
+creation of WebSearch collections (you can, but you don&#8217;t have to, map
+your journal categories to WebSearch collections. You can also simply
+create a generic collection for all articles in all categories of your
+journal, or don&#8217;t create collections at all). See the section dedicated
+to <a class="reference external" href="#addArticles">articles submission</a>.</p>
+</div>
+<div class="section" id="configure-a-journal">
+<h2>3. Configure a Journal<a class="headerlink" href="#configure-a-journal" title="Permalink to this headline">¶</a></h2>
+<p>You can either configure the journal from the admin web interface or
+directly by editing the configuration file (see <a class="reference external" href="#journalConfigurationWritePermission">above
+note</a>).</p>
+<p>The configuration consists in an XML file with the following nodes:</p>
+<ul class="simple">
+<li>view<ul>
+<li><strong>niceName</strong>: The name of your journal as displayed on your
+journal pages</li>
+<li><strong>niceURL</strong>: <em>(not yet used)</em></li>
+<li>css<ul>
+<li><strong>screen</strong>: relative path to your journal CSS file.</li>
+<li><strong>print</strong>: same as <strong>screen</strong>, but used when your users want to
+print your journal</li>
+</ul>
+</li>
+<li>format_template<ul>
+<li><strong>index</strong>: format template of your journal <a class="reference external" href="#sitemapIndex">index
+page</a></li>
+<li><strong>detailed</strong>: format template of your journal <a class="reference external" href="#sitemapDetailed">article
+page</a></li>
+<li><strong>search</strong>: format template of your journal <a class="reference external" href="#sitemapSearch">search/archives
+page</a></li>
+<li><strong>contact</strong>: format template of your journal <a class="reference external" href="#sitemapContact">contact
+page</a></li>
+<li><strong>popup</strong>: format template of your journal <a class="reference external" href="#sitemapPopup">&#8220;pop-up article&#8221;
+page</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>model<ul>
+<li>record<ul>
+<li><strong>rule*</strong>: defines the categories of the journal, and the
+query matching articles of this category. Format:
+<tt class="docutils literal"><span class="pre">categoryName,</span> <span class="pre">query</span></tt>. The journal categories are not
+necessary mapped to Invenio collections (but they can be, for
+consistency)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>controller<ul>
+<li><strong>issue_grouping</strong>: the default number of issues that are
+released together when grouping issue. Specify <tt class="docutils literal"><span class="pre">1</span></tt> if your
+release are not usually grouped.</li>
+<li><strong>issues_per_year</strong>: number of expected issues per year. Helps to
+anticipate next issue dates and number.</li>
+<li><strong>hide_unreleased_issues</strong>: if all unreleased issue should be
+hidden to readers, type &#8220;<tt class="docutils literal"><span class="pre">all</span></tt>&#8221; (recommended). If only future
+unreleased issues must be hidden to readers, type &#8220;<tt class="docutils literal"><span class="pre">future</span></tt>&#8221;.
+If unreleased issues must always be accessible to everyone (even
+if displayed empty), use &#8220;<tt class="docutils literal"><span class="pre">none</span></tt>&#8221;. Hidden issues are only
+visible to users who can access action &#8220;<tt class="docutils literal"><span class="pre">cfgwebjournal</span></tt>&#8221;).</li>
+<li>marc_tags<ul>
+<li><strong>issue_number</strong>: <em>(not yet used. Should correspond to field
+containing issue number. Now hardcoded to 773__n)</em></li>
+<li><strong>order_number</strong>: <em>(not yet used. Should correspond to field
+containing article order. Now hardcoded to 773__c)</em></li>
+</ul>
+</li>
+<li><strong>alert_sender</strong>: email displayed as sender when sending journal
+newsletter</li>
+<li><strong>alert_recipients</strong>: default list of recipients emails
+(comma-separated) when sending journal newsletter</li>
+<li><strong>languages</strong>: comma-separated list of languages enabled for this
+journal (you should have an article in <em>each</em> of these languages)</li>
+<li>submission :<ul>
+<li><strong>doctype</strong>: the doctype of the submission used to edit record.
+Used to provide journal editors a direct link to submission
+from an article</li>
+<li><strong>identifier_element</strong>: the WebSubmit element name where the
+submission expects to get the report number of the article to
+edit.</li>
+<li><strong>identifier_field</strong>: the MARC field on which the submission
+should rely to retrieve the article (identifier to use to
+prefill the <em>identifier_element</em> input field when using
+<tt class="docutils literal"><span class="pre">CFG_SITE/submit/direct</span></tt> URLs).</li>
+</ul>
+</li>
+<li><strong>draft_keyword</strong>: keyword that will be removed from some fields
+of the records of the issue to be released: that is used to
+automatically &#8220;publish&#8221; records tagged as draft.</li>
+<li><strong>first_issue</strong>: The first issue number to be ever published for
+this journal: this is only needed at the beginning, in order for
+WebJournal to know what should be the first issue number (Eg. if
+it starts in the middle of the year with a different number than
+<tt class="docutils literal"><span class="pre">01</span></tt>)</li>
+<li><strong>draft_image_access_policy</strong>: &#8216;<tt class="docutils literal"><span class="pre">allow</span></tt>&#8216; or &#8216;<tt class="docutils literal"><span class="pre">deny</span></tt>&#8216;
+(default): if we should allow or not (default) access to images
+and files attached to an article even if this article is still
+part of a restricted collection: this allows to workaround the
+time required for an article to appear in a public collection
+after an issue has been released. Access is still forbidden if the
+article does not belong to a released issue, but at least default
+authorizations of the record do not apply.</li>
+</ul>
+</li>
+</ul>
+<p><em>* Means repeatable</em></p>
+</div>
+<div class="section" id="sitemap-of-a-journal">
+<h2>4. Sitemap of a Journal<a class="headerlink" href="#sitemap-of-a-journal" title="Permalink to this headline">¶</a></h2>
+<p>A journal typically contains the following sections, each generated
+using a different template (as defined in your journal configuration):</p>
+<ul class="simple">
+<li><strong>Index</strong>
+The main page of a journal, containing links to detailed articles.
+Correspond to a given journal, issue and category (by default the
+first category of the latest issue of the journal).
+Accessible at <tt class="docutils literal"><span class="pre">http://yourSite/journal/yourJournalName/</span></tt> or for a
+specific issue and/or category at
+<tt class="docutils literal"><span class="pre">http://yourSite/journal/yourJournalName/year/number/category</span></tt>
+When <tt class="docutils literal"><span class="pre">yourJournalName</span></tt> is not provided, the user is automatically
+redirected to the latest issue of your journal. If there are several
+journals available, he is offered a list of journals to choose from.
+When <strong>category</strong> is missing, the first category defined for your
+journal is used. When <tt class="docutils literal"><span class="pre">/year/number/</span></tt> are missing, the latest issue
+is chosen.</li>
+<li><strong>Detailed</strong>
+The page of a single article, in a given category, issue and
+journal.
+Accessible at
+<tt class="docutils literal"><span class="pre">http://yourSite/journal/yourJournalName/year/number/category</span></tt>/<strong>recID</strong></li>
+<li><strong>Search</strong>
+Used for search or access to past issues of a journal
+Accessible at
+<tt class="docutils literal"><span class="pre">http://yourSite/journal/</span></tt>search?name=<tt class="docutils literal"><span class="pre">yourJournalName</span></tt></li>
+<li><strong>Contact</strong>
+Information about the journal
+Accessible at
+<tt class="docutils literal"><span class="pre">http://yourSite/journal/</span></tt>contact?name=<tt class="docutils literal"><span class="pre">yourJournalName</span></tt></li>
+<li><strong>Popup</strong>
+Information about the journal
+Accessible at
+<tt class="docutils literal"><span class="pre">http://yourSite/journal/</span></tt>contact?name=<tt class="docutils literal"><span class="pre">yourJournalName</span></tt></li>
+</ul>
+</div>
+<div class="section" id="edit-the-layout-of-a-journal">
+<h2>5. Edit the Layout of a Journal<a class="headerlink" href="#edit-the-layout-of-a-journal" title="Permalink to this headline">¶</a></h2>
+<p>The WebJournal module relies on the BibFormat module to generate its
+output. You should then already be familiar with its concepts before
+reading further. In a few words, you edit the templates of a journal
+using HTML, and use special tags for the dynamic parts (navigation menu,
+article title, content, etc) of the layout.</p>
+<p>The main differences between the use of BibFormat for journals compared
+to BibFormat for the formatting of bibliographic records are:</p>
+<ul class="simple">
+<li>Output formats are not used: format templates are directly called
+based on your journal configuration (your configuration <em>acts</em> like a
+basic output format)</li>
+<li>A format template takes care of the full layout of your page: it
+should therefore include the <tt class="docutils literal"><span class="pre">tags</span>&nbsp;&nbsp; <span class="pre">&lt;html&gt;</span></tt>, <tt class="docutils literal"><span class="pre">&lt;header&gt;</span></tt>,
+<tt class="docutils literal"><span class="pre">&lt;body&gt;</span></tt>, etc.</li>
+<li>Format templates are saved to
+<tt class="docutils literal"><span class="pre">/opt/invenio/etc/bibformat/format_templates/webjournal/</span></tt>.</li>
+<li>In general, format elements (<em>in Python</em>) cannot rely on the <tt class="docutils literal"><span class="pre">bfo</span></tt>
+parameter passed to their <tt class="docutils literal"><span class="pre">format(bfo,</span>&nbsp;&nbsp; <span class="pre">...)</span></tt> function to access
+the articles metadata: format elements are not only used in the
+context of a single record/article, but can be used to format several
+records/articles at the same time. A notable exception is in the case
+of template used for the <tt class="docutils literal"><span class="pre">article</span></tt> page.</li>
+</ul>
+<div class="section" id="editing-format-elements-best-practices">
+<h3>5.1 Editing Format Elements - Best practices<a class="headerlink" href="#editing-format-elements-best-practices" title="Permalink to this headline">¶</a></h3>
+<p>As said above, WebJournal format elements are not used only to format a
+single article/record: they are used as a generic way to provide dynamic
+content to your journal, such as the main navigation menu containing the
+categories defined for your journal, or a dynamically updated weather
+forecast section. As a consequence you should not use the <tt class="docutils literal"><span class="pre">bfo</span></tt> object
+of the <tt class="docutils literal"><span class="pre">format_element(bfo,</span> <span class="pre">...)</span></tt> function to access the articles
+metadata, as it does not correspond to a record (see exceptions further
+below). You can however use it to access knowledge bases and user
+information.</p>
+<p>In order to access the context of the page, you should use the
+<tt class="docutils literal"><span class="pre">parse_url_string(bfo.user_uri['uri'])</span></tt> function, which returns a
+dictionary with the keys and values:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">journal_name</span></tt>: the name of the journal as shown in the URLs, and
+generally used as parameter to other functions, as <tt class="docutils literal"><span class="pre">string</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">category</span></tt>: the currently displayed category as <tt class="docutils literal"><span class="pre">string</span></tt>
+(Default: first category)</li>
+<li><tt class="docutils literal"><span class="pre">issue</span></tt>: the issue number in the form &#8220;08/2007&#8221; as <tt class="docutils literal"><span class="pre">string</span></tt>
+(Default: current issue)</li>
+<li><tt class="docutils literal"><span class="pre">issue_number</span></tt> and <tt class="docutils literal"><span class="pre">issue_year</span></tt>: same as <tt class="docutils literal"><span class="pre">issue</span></tt>, but split by
+component, as <tt class="docutils literal"><span class="pre">integer</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">recid</span></tt>: the displayed article ID as <tt class="docutils literal"><span class="pre">integer</span></tt> (Default: <tt class="docutils literal"><span class="pre">-1</span></tt>)</li>
+<li><tt class="docutils literal"><span class="pre">verbose</span></tt>: verbosity, as <tt class="docutils literal"><span class="pre">integer</span></tt> (Default: <tt class="docutils literal"><span class="pre">0</span></tt>)</li>
+<li><tt class="docutils literal"><span class="pre">ln</span></tt>: the language that should be used to display the page, as
+<tt class="docutils literal"><span class="pre">string</span></tt> (Default: preferred language or <tt class="docutils literal"><span class="pre">CFG_SITE_LANG</span></tt>)</li>
+<li><tt class="docutils literal"><span class="pre">archive_year</span></tt>: the year selected on the archive/search page, if
+any, as <tt class="docutils literal"><span class="pre">integer</span></tt> (Default: <tt class="docutils literal"><span class="pre">None</span></tt>)</li>
+<li><tt class="docutils literal"><span class="pre">archive_search</span></tt>: the pattern used on the archive/search page, as
+<tt class="docutils literal"><span class="pre">string</span></tt> (Default: empty <tt class="docutils literal"><span class="pre">string</span></tt>)</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">invenio.legacy.webjournal.utils</span> <span class="kn">import</span> <span class="n">parse_url_string</span>
+
+<span class="k">def</span> <span class="nf">format_element</span><span class="p">(</span><span class="n">bfo</span><span class="p">):</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parse_url_string</span><span class="p">(</span><span class="n">bfo</span><span class="o">.</span><span class="n">user_info</span><span class="p">[</span><span class="s">&#39;uri&#39;</span><span class="p">])</span>
+    <span class="n">journal_name</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s">&#39;journal_name&#39;</span><span class="p">]</span>
+    <span class="n">category</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s">&#39;category&#39;</span><span class="p">]</span>
+    <span class="n">ln</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s">&#39;ln&#39;</span><span class="p">]</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>These values remain empty if they do not make sense in the context. For
+example, the recid value will be empty when displaying an index page: we
+are not displaying a specific article.</p>
+<p><strong>Note</strong> the difference between <tt class="docutils literal"><span class="pre">bfo.lang</span></tt> and the &#8220;<tt class="docutils literal"><span class="pre">ln</span></tt>&#8221; value
+returned by <tt class="docutils literal"><span class="pre">parse_url_string(..)</span></tt>: the former represents the
+user-chosen language on your Invenio installation, while the latter is
+the more appropriate language to display the journal, based on the
+languages defined in your journal configuration file. Propagate
+<tt class="docutils literal"><span class="pre">bfo.lang</span></tt> through links, but display your article/interface using the
+value returned by <tt class="docutils literal"><span class="pre">parse_url_string(..)</span></tt>.</p>
+<div class="section" id="other-webjournal-helper-functions-for-format-elements">
+<h4>Other WebJournal helper functions for format elements<a class="headerlink" href="#other-webjournal-helper-functions-for-format-elements" title="Permalink to this headline">¶</a></h4>
+<p>The <tt class="docutils literal"><span class="pre">webjournal_utils.py</span></tt> file contains several functions that should
+help you work with the WebJournal module. Please refer to this file for
+the list of available functions.</p>
+</div>
+</div>
+<div class="section" id="alert-html-layout-best-practices">
+<h3>5.2 Alert HTML layout - Best practices<a class="headerlink" href="#alert-html-layout-best-practices" title="Permalink to this headline">¶</a></h3>
+<p>The HTML &#8220;alert&#8221; (or newsletter) is sent based on the homepage (&#8220;Index&#8221;
+format template) of the journal of a specific issue. In order to
+maximize the chances for the newsletter to display correctly in the
+recipients mail clients, the linked CSS files are embedded into the
+source of the email. Because of the very varying level of support for
+HTML in mail clients (including web-based ones) you should check that
+the markup of your pages will be adequate for your targeted readers, and
+simply the markup if necessary.</p>
+<p>You can include some specific markup in your &#8220;index&#8221; format template to
+define areas that should not be sent as part of the newsletter. Use
+<tt class="docutils literal"><span class="pre">&lt;!--START_NOT_FOR_ALERT--&gt;</span></tt> to mark the beginning of an area that
+should not be included in the newsletter, and
+<tt class="docutils literal"><span class="pre">&lt;!--END_NOT_FOR_ALERT--&gt;</span></tt> to mark the end of such area.</p>
+</div>
+</div>
+<div class="section" id="submit-articles">
+<h2>6. Submit Articles<a class="headerlink" href="#submit-articles" title="Permalink to this headline">¶</a></h2>
+<p>Journal articles are nothing more than regular records having some
+specific MARC fields. Hence they should be entered into the system like
+any other record: provide a submission to your journal editors, or input
+MARCXML using BibUpload. Have a look at the <a class="reference external" href="/help/hacking/webjournal-record-metadata">metadata
+requirements</a>
+of a WebJournal record.</p>
+<div class="section" id="draft-unreleased-offline-articles">
+<h3>6.1 Draft/Unreleased/Offline Articles<a class="headerlink" href="#draft-unreleased-offline-articles" title="Permalink to this headline">¶</a></h3>
+<p>Since articles are just regular records, you should ensure that your
+readers do not have access to these records before the issue they belong
+to is released. Indeed, even though the articles can be hidden from the
+journal interface (depending on the value of the configuration variable
+<strong>hide_unreleased_issues</strong>), they are still accessible from the
+standard Invenio interface (the CDS Invenio search/browse interface is
+independent from the WebJournal Module, as the WebJournal interface is
+independent from the CDS Invenio search/browse interface)</p>
+<p>In order to deal with unreleased articles, you can prepare a submission
+that can change some field of a record to flag it as &#8220;<em>draft</em>&#8221; or
+&#8220;<em>offline</em>&#8221; when necessary. These draft records should go to a
+restricted &#8220;Drafts&#8221; collection that only editors can see. Just before
+the issue is ready to be released, the editor can remove the &#8220;Draft&#8221;
+flag from each article.</p>
+<p>A suggested setting is to map each category of your journal to both a
+public and a restricted WebSearch collections. For example, your &#8220;sport&#8221;
+category may have a public &#8220;Sport&#8221; collection, and a restricted
+&#8220;Restricted Sport&#8221; collection. Your submission would for example
+flag/unflag the &#8220;Draft&#8221; by changing the collection field <tt class="docutils literal"><span class="pre">980__a</span></tt>
+based on the parameter of the submission: <tt class="docutils literal"><span class="pre">980__a:myJournalSportDraft</span></tt>
+&lt;-&gt; <tt class="docutils literal"><span class="pre">980__a:myJournalSportDraft</span></tt>.</p>
+<p>One of the drawbacks of this solution is that each article has to be
+manually &#8220;approved&#8221; <em>just before</em> releasing the issue. A workaround is
+to set your journal configuration variable <strong>remove_keyword</strong> to value
+&#8220;<tt class="docutils literal"><span class="pre">DRAFT</span></tt>&#8221;: that tells WebJournal to remove all occurrences of this
+keyword from the articles when a new issue is released. You then no
+longer have to take care of manually remove the &#8220;draft&#8221; flag from all
+these articles.</p>
+<p>Note that this technique applies only to <em>all</em> articles of the
+<em>released issue</em>, but that the following tags are not affected by this
+removal: <tt class="docutils literal"><span class="pre">100</span></tt>, <tt class="docutils literal"><span class="pre">245</span></tt>, <tt class="docutils literal"><span class="pre">246</span></tt>, <tt class="docutils literal"><span class="pre">520</span></tt>, <tt class="docutils literal"><span class="pre">590</span></tt> and <tt class="docutils literal"><span class="pre">700</span></tt>. You
+should therefore carefully choose your keyword so that it does not
+interfere with other values of your record.</p>
+</div>
+<div class="section" id="preview-unreleased-issues">
+<h3>6.2 Preview Unreleased Issues<a class="headerlink" href="#preview-unreleased-issues" title="Permalink to this headline">¶</a></h3>
+<p>By tweaking the URL, you can access the desired journal issue. Even if
+the unreleased issue is hidden to users, editors should be allowed to
+access it (See <a class="reference external" href="#accessControlIssue">Issue Control System</a> section).</p>
+</div>
+</div>
+<div class="section" id="access-control">
+<h2>7. Access Control<a class="headerlink" href="#access-control" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="articles-submission">
+<h3>7.1 Articles Submission<a class="headerlink" href="#articles-submission" title="Permalink to this headline">¶</a></h3>
+<p>Since submission is performed using WebSubmit, you can apply the
+standard procedures to restrict submissions of records.</p>
+</div>
+<div class="section" id="issue-control-system">
+<h3>7.2 Issue Control System<a class="headerlink" href="#issue-control-system" title="Permalink to this headline">¶</a></h3>
+<p>You can restrict access to the issue control system by using the
+&#8220;<tt class="docutils literal"><span class="pre">cfgwebjournal</span></tt>&#8221; WebAccess action. This action takes the journal
+name as parameter in order to restrict access to selected journal(s)
+only. A second parameter &#8220;<tt class="docutils literal"><span class="pre">with_editor_rights</span></tt>&#8221; must be set to &#8220;yes&#8221;
+in order for the authorized roles to edit apply changes using the
+interface (including sending alerts, releasing issues, etc.)</p>
+<p>Note that this action also lets your editors change your journal
+configuration file (unless the file is protected on disk, which is
+recommended).</p>
+</div>
+</div>
+<div class="section" id="troubleshoots">
+<h2>8. Troubleshoots<a class="headerlink" href="#troubleshoots" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="update-cache">
+<h3>8.1 Update Cache<a class="headerlink" href="#update-cache" title="Permalink to this headline">¶</a></h3>
+<p>WebJournal makes heavy use of caches in order to optimize the serving
+speed. Journal editors can regenerate the journal cache, but it does not
+apply to old issues, or cache that has been generated by some widgets.
+To clean the cache, remove the files in
+<tt class="docutils literal"><span class="pre">/opt/invenio/var/cache/webjournal/</span></tt><strong>yourjournal</strong>. Cached files
+starts with <tt class="docutils literal"><span class="pre">issue_year</span></tt>, followed by the <tt class="docutils literal"><span class="pre">category</span></tt> so that it is
+easy to remove the caches for a specific issue/section. Examples:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rm /opt/invenio/var/cache/webjournal/AtlantisTimes/07_2009_*
+$ rm /opt/invenio/var/cache/webjournal/AtlantisTimes/07_2009_index_News*
+</pre></div>
+</div>
+<p>You might want to remove some other specific files created by some
+widgets, for example:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ rm /opt/invenio/var/cache/webjournal/AtlantisTimes/weather.html
+</pre></div>
+</div>
+</div>
+<div class="section" id="manage-issue-releases">
+<h3>8.2 Manage Issue Releases<a class="headerlink" href="#manage-issue-releases" title="Permalink to this headline">¶</a></h3>
+<p>Issues are usually managed by the journal editors, using the web
+interface. You might have to help your editors if they released an issue
+by mistake, or created. Have a look at the <a class="reference external" href="/help/hacking/webjournal-table-structure">WebJournal Table
+Structure</a>
+hacking guide to find out how you can easily update entries in the
+WebJournal tables.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="webjournal-editor-guide.html" class="btn btn-neutral float-right" title="WebJournal Editor Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="webcomment-admin-guide.html" class="btn btn-neutral" title="WebComment Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

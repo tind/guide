@@ -1,0 +1,464 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WebComment Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="WebJournal Admin Guide" href="webjournal-admin-guide.html"/>
+        <link rel="prev" title="Publiline Admin Guide" href="publiline-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>WebComment Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/webcomment-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="webcomment-admin-guide">
+<span id="id1"></span><h1>WebComment Admin Guide<a class="headerlink" href="#webcomment-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>WebComment manages all aspects related to comments. From the admin
+interface it is possible to check comment statistics as well as manage
+comments reported. If the user is authorized for moderation, when
+viewing a record special links are displayed to execute actions such as
+delete/undelete or unreport comments.</p>
+</div>
+<div class="section" id="managing-webcomment">
+<h2>2. Managing WebComment<a class="headerlink" href="#managing-webcomment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="viewing-comments-review-information">
+<h3>2.1 Viewing comments/review information<a class="headerlink" href="#viewing-comments-review-information" title="Permalink to this headline">¶</a></h3>
+<p>From the admin interface it is possible to view statistics related to
+the most commented/reviewed records and latest comments/reviews posted.</p>
+<p>Depending on the role the user has, it will be possible to view
+information related to the collections the user is authorized to.</p>
+</div>
+</div>
+<div class="section" id="configuring-webcomment">
+<h2>3. Configuring WebComment<a class="headerlink" href="#configuring-webcomment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configuring-moderator-per-collection">
+<h3>3.1 Configuring moderator per collection<a class="headerlink" href="#configuring-moderator-per-collection" title="Permalink to this headline">¶</a></h3>
+<p>Configuration to specify which user is moderator of a given collection
+is done through WebAccess administration interface.</p>
+<p>In order to permit a given user to be a comment moderator, the following
+steps have to be followed:</p>
+<ul class="simple">
+<li>Create a role for the user who is going to moderate (one for each
+moderator)</li>
+<li>Go to the Action Administration Menu inside of WebAccess admin
+interface
+and assign this role to the action &#8216;moderatecomments&#8217;. Specify as
+argument
+the collections allowed for the user.</li>
+<li>In case you want to give the superadmin user access to all
+collections, follow
+the steps above and write * as the collection argument.</li>
+</ul>
+</div>
+<div class="section" id="enabling-latex-mathjax-in-comments">
+<h3>3.2 Enabling LaTeX/MathJax in comments<a class="headerlink" href="#enabling-latex-mathjax-in-comments" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to enable LaTeX rendering in comments with the MathJax
+module. In order to do that, it is necessary to set the following
+directive in the invenio configuration file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">CFG_WEBCOMMENT_USE_MATHJAX_IN_COMMENTS</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuring-threading">
+<h3>3.3 Configuring threading<a class="headerlink" href="#configuring-threading" title="Permalink to this headline">¶</a></h3>
+<p>Replies to comments can be organized in threads. It is possible to
+configure the maximum depth of the threads with the
+<tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_MAX_COMMENT_THREAD_DEPTH</span></tt> variable in the
+<tt class="docutils literal"><span class="pre">invenio-local.conf</span></tt> file.</p>
+<p>Set <tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_MAX_COMMENT_THREAD_DEPTH</span> <span class="pre">=</span> <span class="pre">-1</span></tt> to not limit the
+depth.</p>
+<p>Set <tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_MAX_COMMENT_THREAD_DEPTH</span> <span class="pre">=</span> <span class="pre">0</span></tt> for a &#8220;flat&#8221;
+discussion.</p>
+<p>Set <tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_MAX_COMMENT_THREAD_DEPTH</span> <span class="pre">=</span> <span class="pre">1</span></tt> for one-level
+deep threads (<strong>default</strong>) etc..</p>
+<p>The main advantage of setting a maximum depth is to not enter into deep,
+meaningless indentations when users might not understand the concept of
+threads, and mix the &#8220;reply to&#8221; and &#8220;add comment&#8221; actions. When
+<tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_MAX_COMMENT_THREAD_DEPTH</span></tt> is reached, the level of
+discussion becomes a &#8220;flat&#8221; discussion.</p>
+<p>For example, with <tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_MAX_COMMENT_THREAD_DEPTH</span> <span class="pre">=</span> <span class="pre">1</span></tt>,
+replies to comments would go through to the following states:</p>
+<p>State 1</p>
+<p>State 2</p>
+<p>State 3</p>
+<p>State 4</p>
+<p>Comment 1</p>
+<p>Reply to</p>
+<p>Comment 2</p>
+<p>Reply to</p>
+<div class="highlight-python"><div class="highlight"><pre>Reply to
+Comment 1
+--------&gt;
+</pre></div>
+</div>
+<p>Comment 1</p>
+<p>Reply to</p>
+<p><strong>Comment 3</strong></p>
+<p>Reply to</p>
+<p>Comment 2</p>
+<p>Reply to</p>
+<div class="highlight-python"><div class="highlight"><pre>Reply to
+Comment 3
+--------&gt;
+</pre></div>
+</div>
+<p>Comment 1</p>
+<p>Reply to</p>
+<p>Comment 3</p>
+<p>Reply to</p>
+<p><strong>Comment 4</strong></p>
+<p>Reply to</p>
+<p>Comment 2</p>
+<p>Reply to</p>
+<div class="highlight-python"><div class="highlight"><pre>Reply to
+Comment 3
+--------&gt;
+</pre></div>
+</div>
+<p>Comment 1</p>
+<p>Reply to</p>
+<p>Comment 3</p>
+<p>Reply to</p>
+<p>Comment 4</p>
+<p>Reply to</p>
+<p><strong>Comment 5</strong></p>
+<p>Reply to</p>
+<p>Comment 2</p>
+<p>Reply to</p>
+</div>
+<div class="section" id="configuring-commenting-rounds">
+<h3>3.4 Configuring commenting rounds<a class="headerlink" href="#configuring-commenting-rounds" title="Permalink to this headline">¶</a></h3>
+<p>You can configure WebComment to group comments according to the status
+of the commented record. This enables the creation of commenting
+<em>rounds</em>, so that comments belonging to the same round are grouped
+together, and comments belonging to past rounds are less prominently
+displayed.</p>
+<p>For example, let&#8217;s say that a collaboration is commenting a draft
+document: once a new revision of the document is uploaded by the author,
+the already existing comments are grouped together and moved to archive.
+The discussion page will then appear empty, and a new commenting round
+can start.</p>
+<p>The past commenting rounds are still visible as small individual
+links at the top of the discussion. A click on one of these links
+reveals the comments belonging to this group/round. It is then also
+possible to continue replying to comments submitted during this past
+round, though it is not possible to add a new comment (not a reply).</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt; Comments for revision 1
+  &gt; Comments for revision 2
+    v Comments for revision 3
+</pre></div>
+</div>
+<p>Great paper. Check typo line 12.</p>
+<p>Reply to</p>
+<p>Are you sure that figure 5 is ok?</p>
+<p>Reply to</p>
+<p>Please include the standard logo.</p>
+<p>Reply to</p>
+<div class="highlight-python"><div class="highlight"><pre>New revision
+   of file
+------------&gt;
+
+&gt;Comments for revision 1
+  &gt;Comments for revision 2
+  &gt; Comments for revision 3
+  v Comments for revision 4
+</pre></div>
+</div>
+<p><em>(blank)</em></p>
+<p>In order to know what is the current round, the MARC metadata of the
+commented record must specify the name of the current group to which new
+comments have to be attached. The MARC field specifying the round &#8220;name&#8221;
+can be configured with the <tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_ROUND_DATAFIELD</span></tt> of the
+<tt class="docutils literal"><span class="pre">invenio-local.conf</span></tt> file. There you can set the MARC code that
+contains the round name, for each collection you want to enable rounds.</p>
+<p>Note that whatever the current round is, a reply to a comment will
+always belong to the round of the parent.</p>
+<p><em>How to modify the MARC field with the round name?</em>: this is up to the
+admin of the system, but it would typically be done by a WebSubmit
+submission. This field might already exists if you store a revision
+number in your metadata, or date, etc.</p>
+<p><em>How to restrict commenting rounds?</em>: you can combine rounds with the
+comment-level restrictions documented in section <a class="reference external" href="#3.5.3">Comment-level
+restrictions</a>, which uses a similar mechanism to protect
+comments.</p>
+</div>
+<div class="section" id="configuring-restrictions">
+<h3>3.5 Configuring restrictions<a class="headerlink" href="#configuring-restrictions" title="Permalink to this headline">¶</a></h3>
+<p>Comments restrictions can be configured at several levels, detailed in
+the next sections. Note that restrictions applied to comments also apply
+to the files attached to comments.</p>
+<div class="section" id="record-level-restrictions">
+<h4>3.5.1 Record-level restrictions<a class="headerlink" href="#record-level-restrictions" title="Permalink to this headline">¶</a></h4>
+<p>When a record is restricted via its collection (<tt class="docutils literal"><span class="pre">viewrestrcoll</span></tt>
+WebAccess action), the comments submitted for this record are restricted
+to users who can view the record.</p>
+</div>
+<div class="section" id="discussion-level-restrictions">
+<h4>3.5.2 Discussion-level restrictions<a class="headerlink" href="#discussion-level-restrictions" title="Permalink to this headline">¶</a></h4>
+<p>Discussion pages can be restricted with the WebAccess <tt class="docutils literal"><span class="pre">viewcomment</span></tt>
+and <tt class="docutils literal"><span class="pre">sendcomment</span></tt> actions. This let you define who can read or send
+comments in particular collections.</p>
+</div>
+<div class="section" id="comment-level-restrictions">
+<h4>3.5.3 Comment-level restrictions<a class="headerlink" href="#comment-level-restrictions" title="Permalink to this headline">¶</a></h4>
+<p>Restrictions can be applied at the level of individual records. When
+submitting a comment, WebComment checks in the record metadata if some
+restriction should be applied. The field where WebComment is looking for
+restrictions can be configured in the the
+<tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_RESTRICTION_DATAFIELD</span></tt> of the <tt class="docutils literal"><span class="pre">invenio-local.conf</span></tt>
+file. There you can define for each collection the MARC code containing
+the restriction information.</p>
+<p>For the restriction to be applied, an authorisation for the
+<tt class="docutils literal"><span class="pre">viewrestrcomment</span></tt> WebAccess action must be set up. The &#8220;status&#8221;
+parameter of the <tt class="docutils literal"><span class="pre">viewrestrcomment</span></tt> must match the value in the MARC
+metadata. This lets you define different restrictions based on the value
+in the metadata.</p>
+<p>Unless the status is empty, the comment will be restricted, even if no
+role is specifically linked to the <tt class="docutils literal"><span class="pre">viewrestrcomment</span></tt> action for this
+status.</p>
+<p>Note that whatever the status of the record is, a reply to a comment
+always inherits the restriction of the parent.</p>
+<p><em>How to modify the MARC field with the restriction?</em>: this is up to the
+admin of the system, but it would typically be done by a WebSubmit
+submission.</p>
+</div>
+</div>
+<div class="section" id="configuring-file-attachments">
+<h3>3.6 Configuring file attachments<a class="headerlink" href="#configuring-file-attachments" title="Permalink to this headline">¶</a></h3>
+<p>WebComment allows authorized users to attach files to submitted
+comments. This is only available to logged in users, who have been
+authorized via the <tt class="docutils literal"><span class="pre">attachcommentfile</span></tt> WebAccess action. By default no
+user (except admin) can attach files.</p>
+<p>In addition, you can configure the maximum number of allowed
+attachments with the <tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_MAX_ATTACHED_FILES</span></tt> (default 5)
+variable of the the <tt class="docutils literal"><span class="pre">invenio-local.conf</span></tt> file. Set
+<tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_MAX_ATTACHED_FILES</span> <span class="pre">=</span> <span class="pre">0</span></tt> for unlimited number of files.</p>
+<p>Note that this is only applicable only if you installed the jQuery
+plugins with <tt class="docutils literal"><span class="pre">make</span> <span class="pre">install-jquery-plugins</span></tt>.</p>
+<p>You can set up the maximum size (in bytes) of attachments with the
+<tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_MAX_ATTACHMENT_SIZE</span></tt> variable of the the
+<tt class="docutils literal"><span class="pre">invenio-local.conf</span></tt> file.</p>
+</div>
+<div class="section" id="configuring-email-notifications">
+<h3>3.7 Configuring email notifications<a class="headerlink" href="#configuring-email-notifications" title="Permalink to this headline">¶</a></h3>
+<p>WebComment allows users to subscribe to discussions directly from the
+web interface. In addition you can set up automatic notifications that
+don&#8217;t require the users to subscribe. The main use case for this is to
+notify the author that a new comment has been submitted on her document.</p>
+<p>WebComment checks for automatic notifications of comments in the MARC
+record. It specifically looks for emails in fields defined by the
+<tt class="docutils literal"><span class="pre">CFG_WEBCOMMENT_EMAIL_REPLIES_TO</span></tt> variable of the the
+<tt class="docutils literal"><span class="pre">invenio-local.conf</span></tt> file. There you can define the fields to look for
+for specific collections.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="webjournal-admin-guide.html" class="btn btn-neutral float-right" title="WebJournal Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="publiline-admin-guide.html" class="btn btn-neutral" title="Publiline Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

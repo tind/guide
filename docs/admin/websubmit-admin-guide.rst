@@ -34,7 +34,6 @@ demo site remain essential companions to this guide.
 **Contributions are welcome (for eg. sample workflows, function
 descriptions, etc.)**
 
-
 1. Overview
 -----------
 

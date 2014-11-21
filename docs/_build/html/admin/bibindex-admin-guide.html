@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibIndex Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="BibKnowledge Admin Guide" href="bibknowledge-admin-guide.html"/>
+        <link rel="prev" title="BibFormat Admin Guide" href="bibformat-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibIndex Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibindex-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibindex-admin-guide">
+<span id="id1"></span><h1>BibIndex Admin Guide<a class="headerlink" href="#bibindex-admin-guide" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">WARNING: BIBINDEX ADMIN GUIDE IS UNDER DEVELOPMENT</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>BibIndex Admin Guide is not yet completed. Most of admin-level functionality for BibIndex exists only in commandline mode. We are in the process of developing both the guide as well as the web admin interface. If you are interested in seeing some specific things implemented with high priority, please contact us at <a class="reference external" href="mailto:info&#37;&#52;&#48;invenio-software&#46;org">info<span>&#64;</span>invenio-software<span>&#46;</span>org</a>. Thanks for your interest!</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>1.`Overview &lt;#1&gt;`__</strong></div>
+<div class="line-block">
+<div class="line"><strong>2. `Configure Metadata Tags and Fields &lt;#2&gt;`__</strong></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1 <a class="reference external" href="#2.1">Configure Physical MARC Tags</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2 <a class="reference external" href="#2.2">Configure Logical Fields</a></div>
+<div class="line"><strong>3. `Configure Word/Phrase Indexes &lt;#3&gt;`__</strong></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1 <a class="reference external" href="#3.1">Define New Index</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2 <a class="reference external" href="#3.2">Configure Word-Breaking Procedure</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.3 <a class="reference external" href="#3.3">Configure Stopwords List</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.4 <a class="reference external" href="#3.4">Configure Stemming</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.5 <a class="reference external" href="#3.5">Configure Word Length</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.6 <a class="reference external" href="#3.6">Configure Removal of HTML Code</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.7 <a class="reference external" href="#3.7">Configure Accent Stripping</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.8 <a class="reference external" href="#3.8">Configure Fulltext Indexing</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.8.1 <a class="reference external" href="#3.8.1">Configure Solr Fulltext Indexing</a></div>
+<div class="line"><strong>4. `Run BibIndex Daemon &lt;#4&gt;`__</strong></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.1 <a class="reference external" href="#4.1">Run BibIndex daemon</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.2 <a class="reference external" href="#4.2">Checking and repairing indexes</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.3 <a class="reference external" href="#4.3">Reindexing</a></div>
+<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.4 <a class="reference external" href="#4.4">Solr fulltext indexing</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="configure-metadata-tags-and-fields">
+<h2>2. Configure Metadata Tags and Fields<a class="headerlink" href="#configure-metadata-tags-and-fields" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configure-physical-marc-tags">
+<h3>2.1 Configure Physical MARC Tags<a class="headerlink" href="#configure-physical-marc-tags" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="configure-logical-fields">
+<h3>2.2 Configure Logical Fields<a class="headerlink" href="#configure-logical-fields" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="configure-word-phrase-indexes">
+<h2>3. Configure Word/Phrase Indexes<a class="headerlink" href="#configure-word-phrase-indexes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="define-new-index">
+<h3>3.1 Define New Index<a class="headerlink" href="#define-new-index" title="Permalink to this headline">¶</a></h3>
+<p>To define a new index you must first give the index a internal name. An
+empty index is then created by preparing the database tables.</p>
+<p>Before the index can be used for searching, the fields that should be
+included in the index must be selected.</p>
+<p>When desired to fill the index based on the fields selected, you can
+schedule the update by running <strong>bibindex -w indexname</strong> together with
+other desired parameters.</p>
+</div>
+<div class="section" id="configure-word-breaking-procedure">
+<h3>3.2 Configure Word-Breaking Procedure<a class="headerlink" href="#configure-word-breaking-procedure" title="Permalink to this headline">¶</a></h3>
+<p>Can be configured by changing
+<strong>CFG_BIBINDEX_CHARS_ALPHANUMERIC_SEPARATORS</strong> and
+<strong>CFG_BIBINDEX_CHARS_PUNCTUATION</strong> in the general config file.</p>
+<p>How the words are broken up defines what is added to the index. Should
+only &#8220;director-general&#8221; be added, or should &#8220;director&#8221;, &#8220;general&#8221; and
+&#8220;director-general&#8221; be added? The index can vary between 300 000 and 3
+000 000 terms based the policy for breaking words.</p>
+</div>
+<div class="section" id="configure-stopwords-list">
+<h3>3.3 Configure Stopwords List<a class="headerlink" href="#configure-stopwords-list" title="Permalink to this headline">¶</a></h3>
+<p>BibIndex supports stopword removal by not adding words which exists in a
+given stopword list to the index. Stopword removal makes the index
+smaller by removing much used words.</p>
+<p>Which stopword list that should be used can be configured in the general
+config file file by changing the value of the variable
+CFG_BIBINDEX_PATH_TO_STOPWORDS_FILE. If no stopword list should be
+used, the value should be 0.</p>
+</div>
+<div class="section" id="configure-stemming">
+<h3>3.4 Configure stemming<a class="headerlink" href="#configure-stemming" title="Permalink to this headline">¶</a></h3>
+<p>The BibIndex indexer supports stemming, removing the ending of words
+thus creating a smaller indexer. For example, using English, the word
+&#8220;information&#8221; will be stemmed to &#8220;inform&#8221;; or &#8220;looking&#8221;, &#8220;looks&#8221;, and
+&#8220;looked&#8221; will be all stemmed to &#8220;look&#8221;, thus giving more hits to each
+word.</p>
+<p>Currently you can configure the stemming language on a per-index basis.
+All searches referring a stemmed index will also be stemmed based on the
+same language.</p>
+</div>
+<div class="section" id="configure-word-length">
+<h3>3.5 Configure Word Length<a class="headerlink" href="#configure-word-length" title="Permalink to this headline">¶</a></h3>
+<p>By setting the value of <strong>CFG_BIBINDEX_MIN_WORD_LENGTH</strong> in the
+general config file higher than 0, only words with the number of
+characters higher than this will be added to the index.</p>
+</div>
+<div class="section" id="configure-removal-of-html-and-latex-code">
+<h3>3.6 Configure Removal of HTML and LaTeX Code<a class="headerlink" href="#configure-removal-of-html-and-latex-code" title="Permalink to this headline">¶</a></h3>
+<p>If you set the <strong>Remove HTML Markup</strong> parameter in the admin interface
+to &#8216;Yes&#8217; the indexer will try to remove all HTML code from documents
+before indexing, and index only the text left. (HTML code is defined as
+everything between &#8216;&lt;&#8217; and &#8216;&gt;&#8217; in a text.)</p>
+<p>If you set the <strong>Remove LATEX Markup</strong> parameter in the admin interface
+to &#8216;Yes&#8217;, the indexer will try to remove all LaTeX code from documents
+before indexing, and index only the text left. (LaTeX code is defined as
+everything between &#8216;\command{&#8216; and &#8216;}&#8217; in a text, or &#8216;{\command &#8216; and
+&#8216;}&#8217;).</p>
+</div>
+<div class="section" id="configure-accent-stripping">
+<h3>3.7 Configure Accent Stripping<a class="headerlink" href="#configure-accent-stripping" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="configure-fulltext-indexing">
+<h3>3.8 Configure Fulltext Indexing<a class="headerlink" href="#configure-fulltext-indexing" title="Permalink to this headline">¶</a></h3>
+<p>The metadata tags are usually indexed by its content. There are special
+cases however, such as the fulltext indexing. In this case the tag
+contains an URL to the fulltext material and we would like to fetch this
+material and index words found in this material rather than in the
+metadata itself. This is possible via special tag assignement via
+<tt class="docutils literal"><span class="pre">tagToWordsFunctions</span></tt> variable.</p>
+<p>The default setup is configured in the way that if the indexer sees that
+it has to index tag <tt class="docutils literal"><span class="pre">8564_u</span></tt>, it switches into the fulltext indexing
+mode described above. It can index locally stored files or even fetch
+them from external URLs, depending on the value of the
+<strong>CFG_BIBINDEX_FULLTEXT_INDEX_LOCAL_FILES_ONLY</strong> configuration
+variable. When fetching files from remote URLs, when it ends on a splash
+page (an intermediate page before getting to fulltext file itself), it
+can find and follow any further links to fulltext files.</p>
+<p>The default setup also differentiate between metadata and fulltext
+indexing, so that <tt class="docutils literal"><span class="pre">any</span> <span class="pre">field</span></tt> index does process only metadata, not
+fulltext. If you want to have the fulltext indexed together with the
+metadata, so that both are searched by default, you can go to BibIndex
+Admin interface and in the Manage Logical Fields explicitly add the tag
+<tt class="docutils literal"><span class="pre">8564_u</span></tt> under <tt class="docutils literal"><span class="pre">any</span> <span class="pre">field</span></tt> field.</p>
+</div>
+<div class="section" id="configure-solr-fulltext-indexing">
+<h3>3.8.1 Configure Solr Fulltext Indexing<a class="headerlink" href="#configure-solr-fulltext-indexing" title="Permalink to this headline">¶</a></h3>
+<p>Solr can be used to index fulltext and to serve fulltext queries. To use
+it, the following steps are necessary:</p>
+<p>First, Solr is installed:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ cd &lt;invenio source tree&gt;
+$ sudo make install-solrutils
+</pre></div>
+</div>
+</div></blockquote>
+<p>Second, <tt class="docutils literal"><span class="pre">invenio-local.conf</span></tt> is amended:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>CFG_SOLR_URL = http://localhost:8983/solr
+</pre></div>
+</div>
+</div></blockquote>
+<p>Third, Solr is set to index fulltext:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>UPDATE idxINDEX SET indexer=&#39;SOLR&#39; WHERE name=&#39;fulltext&#39;
+</pre></div>
+</div>
+</div></blockquote>
+<p>Fourth, Solr is started:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>&lt;invenio installation&gt;/lib/apache-solr-3.1.0/example$ sudo -u www-data java -jar start.jar
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="run-bibindex-daemon">
+<h2>4. Run BibIndex Daemon<a class="headerlink" href="#run-bibindex-daemon" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>4.1 Run BibIndex daemon<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>To index your newly created or modified documents, bibindex must be run
+periodically via bibsched. This is achieved by the sleep option (-s) to
+bibindex. For more information please see <a class="reference external" href="howto-run">HOWTO Run</a>
+admin guide.</p>
+</div>
+<div class="section" id="checking-and-repairing-indexes">
+<h3>4.2 Checking and repairing indexes<a class="headerlink" href="#checking-and-repairing-indexes" title="Permalink to this headline">¶</a></h3>
+<p>Upon each indexing run, bibindex checks and reports any inconsistencies
+in the indexes. You can also manually check for the index corruption
+yourself by using the check (-k) option to bibindex.</p>
+<p>If a problem is found during the check, bibindex hints you to run
+repairing (-r). If you run it, then during repair bibindex tries to
+correct problems automatically by its own means. Usually it succeeds.</p>
+<p>When the automatic repairing does not succeed though, then manual
+intervention is required. The easiest thing to get the indexes back to
+shape are commands like: (assuming the problem is with the index ID 1):</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ echo &quot;DELETE FROM idxWORD01R WHERE type=&#39;TEMPORARY&#39; or type=&#39;FUTURE&#39;;&quot; | \
+  /opt/invenio/bin/dbexec
+</pre></div>
+</div>
+</div></blockquote>
+<p>to leave only the &#8216;CURRENT&#8217; reverse index. After that you can rerun the
+index checking procedure (-k) and, if successful, continue with the
+normal web site operation. However, a full reindexing should be
+scheduled for the forthcoming night or weekend.</p>
+</div>
+<div class="section" id="reindexing">
+<h3>4.3 Reindexing<a class="headerlink" href="#reindexing" title="Permalink to this headline">¶</a></h3>
+<p>The procedure of reindexing is taking place into the real indexes that
+are also used for searching. Therefore the end users will feel
+immediately any change in the indexes. If you need to reindex your
+records from scratch, then the best procedure is the following: reindex
+the collection index only (fast operation), recreate collection cache,
+and only after that reindex all the other indexes (slow operation). This
+will ensure that the records in your system will be at least browsable
+while the indexes are being rebuilt. The steps to perform are:</p>
+<p>First we reindex the collection index:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ bibindex --reindex -f50000 -wcollection # reindex the collection index (fast)
+$ echo &quot;UPDATE collection SET reclist=NULL;&quot; | \
+  /opt/invenio/bin/dbexec # clean collection cache
+$ webcoll -f # recreate the collection cache
+$ bibsched # run the two above-submitted tasks
+$ sudo apachectl restart
+</pre></div>
+</div>
+</div></blockquote>
+<p>Then we launch (slower) reindexing of the remaining indexes:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ bibindex --reindex -f50000 # reindex other indexes (slow)
+$ webcoll -f
+$ bibsched # run the two above-submitted tasks, and put the queue back in auto mode
+$ sudo apachectl restart
+</pre></div>
+</div>
+</div></blockquote>
+<p>You may optionally want to reindex the word ranking tables:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ bibsched # wait for all active tasks to finish, and put the queue into manual mode
+$ cd invenio-0.92.1 # source dir
+$ grep rnkWORD ./modules/miscutil/sql/tabbibclean.sql | \
+  /opt/invenio/bin/dbexec # truncate rank indexes
+$ echo &quot;UPDATE rnkMETHOD SET last_updated=&#39;0000-00-00 00:00:00&#39;;&quot; | \
+  /opt/invenio/bin/dbexec # rewind the last ranking time
+</pre></div>
+</div>
+</div></blockquote>
+<p>Secondly, if you have been using custom ranking methods using new
+rnkWORD* tables (most probably you have not), you would have to
+truncate them too:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre># find out which custom ranking indexes were added:
+$ echo &quot;SELECT id FROM rnkMETHOD&quot; | /opt/invenio/bin/dbexec
+id
+66
+67
+[...]
+
+# for every ranking index id, truncate corresponding ranking tables:
+$ echo &quot;TRUNCATE rnkWORD66F&quot; | /opt/invenio/bin/dbexec
+$ echo &quot;TRUNCATE rnkWORD66R&quot; | /opt/invenio/bin/dbexec
+$ echo &quot;TRUNCATE rnkWORD67F&quot; | /opt/invenio/bin/dbexec
+$ echo &quot;TRUNCATE rnkWORD67R&quot; | /opt/invenio/bin/dbexec
+</pre></div>
+</div>
+</div></blockquote>
+<p>At last, we launch reindexing of the ranking indexes:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ bibrank -f50000
+$ bibsched # run the three above-submitted tasks, and put the queue back in auto mode
+$ sudo apachectl restart
+</pre></div>
+</div>
+</div></blockquote>
+<p>and we are done.</p>
+<p>In the future Invenio should ideally run indexing into invisible tables
+that would be switched against the production ones once the indexing
+process is successfully over. For the time being, if reindexing takes
+several hours in your installation (e.g. if you have 1,000,000 records),
+you may want to mysqlhotcopy your tables and run reindexing on those
+copies yourself.</p>
+</div>
+<div class="section" id="solr-fulltext-indexing">
+<h3>4.4 Solr fulltext indexing<a class="headerlink" href="#solr-fulltext-indexing" title="Permalink to this headline">¶</a></h3>
+<p>If Solr is used for both fulltext and ranking, only the <tt class="docutils literal"><span class="pre">BibRank</span></tt>
+daemon shall run. Since Solr documents can only be overriden and not
+updated, the <tt class="docutils literal"><span class="pre">BibRank</span></tt> daemon also indexes fulltext.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibknowledge-admin-guide.html" class="btn btn-neutral float-right" title="BibKnowledge Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibformat-admin-guide.html" class="btn btn-neutral" title="BibFormat Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

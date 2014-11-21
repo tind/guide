@@ -1,0 +1,580 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibSword client Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="BibUpload Admin Guide" href="bibupload-admin-guide.html"/>
+        <link rel="prev" title="BibSort Admin Guide" href="bibsort-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibSword client Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibsword-client-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibsword-client-admin-guide">
+<span id="id1"></span><h1>BibSword client Admin Guide<a class="headerlink" href="#bibsword-client-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>BibSword client enables you to forward a record from Invenio to any
+remote server that has an interface implementing the SWORD protocol. The
+aim of the BibSword client module is to simplify and to speed up the
+submission process of a digital report. Basically, the fulltext and the
+metadata are automatically taken from the record stored in Invenio. For
+more flexibility, they can be manually added and modified during the
+forwarding process.</p>
+<div class="section" id="remote-authentication">
+<h3>1.1 Remote authentication<a class="headerlink" href="#remote-authentication" title="Permalink to this headline">¶</a></h3>
+<p>For reasons of conveniency, it is annoying to ask a user who is already
+authencticated in Invenio to log in a remote server before forwarding a
+record. This problem is solved by using the &#8220;mediated deposit&#8221; function
+described by the SWORD protocol specification.</p>
+<p>The mediated deposit function allows any user to forward a document in
+the name of the author. The solution was then to create a global user account
+that is always used to connect to the remote server. This user submits
+the record &#8220;on behalf of&#8221; the real author of the file. So the user does
+not even need to have an account on the remote server.</p>
+<p>Because of this function, users are allowed to submit what they want as
+long as they know the global user. To prevent users from doing anything
+they want, access of the BibSword client module is restricted to a group
+of user named &#8220;bibsword_curator&#8221;. However, users can forward their own
+record through the WebSubmit workflow that already manages the record
+access rights.</p>
+</div>
+<div class="section" id="forwarding-status">
+<h3>1.2 Forwarding status<a class="headerlink" href="#forwarding-status" title="Permalink to this headline">¶</a></h3>
+<p>When a record is forwarded to a remote SWORD server, it goes through
+several well-defined states:</p>
+<ol class="arabic simple">
+<li>submitted: the record is waiting for approval</li>
+<li>published: the record has been approved and is published</li>
+<li>unknown: the record has been refused or has never been submitted</li>
+</ol>
+<p>For each state, an information is stored on the MARC file of the
+submitted record:</p>
+<ul class="simple">
+<li>submitted: an information field (by default the &#8216;595__a&#8217; tag) is
+added. It contains information about the time and the user having
+done the submission but also the remote id given by the SWORD server
+for the record.</li>
+<li>published: the remote id is added to the MARC file as an additionnal
+record id (by default the &#8216;088_a&#8217; tag).</li>
+<li>unknown: the record has been refused by the remote server or a
+problem occured during the submission. In this case, the information
+field (by default the &#8216;595__a&#8217; tag) and the additional record id
+field (by default the &#8216;088_a&#8217; tag) are removed.</li>
+</ul>
+</div>
+<div class="section" id="forwarding-options">
+<h3>1.3 Forwarding options<a class="headerlink" href="#forwarding-options" title="Permalink to this headline">¶</a></h3>
+<p>By default, the BibSword client sends the fulltext and the metadata stored in
+Invenio.</p>
+<p>It also allows to select the fulltext to forward and even to upload a new
+fulltext. If a new fulltext is uploaded, it is stored in the Invenio
+record fulltext as a &#8220;Pushed_via_Sword&#8221; file.</p>
+</div>
+</div>
+<div class="section" id="bibsword-client-admin-web-interface">
+<h2>2. BibSword client : Admin Web Interface<a class="headerlink" href="#bibsword-client-admin-web-interface" title="Permalink to this headline">¶</a></h2>
+<p>To access the Admin Web interface, please go to <a class="reference external" href="/bibsword">BibSword Client Admin
+Interface</a>. Note that you first have
+to be logged with a user of the group &#8220;bibSword_curator&#8221;.</p>
+<p>This interface allows to:</p>
+<ul class="simple">
+<li>Consult information about the forwarded records</li>
+<li>Refresh the status of the forwarded records on the remote server</li>
+<li>Forward any record to any available SWORD remote server.</li>
+</ul>
+<div class="section" id="submission-state">
+<h3>2.1 Submission state<a class="headerlink" href="#submission-state" title="Permalink to this headline">¶</a></h3>
+<p>The main BibSword Admin Interface shows a table containing information
+about every forwarded record.</p>
+<div class="section" id="submission-state-table-fields">
+<h4>Submission state table fields<a class="headerlink" href="#submission-state-table-fields" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field
+Definition
+Link</th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Remote server
+id and name of the
+remote server where the
+record has been
+submitted
+Go to the information
+table where to find
+credential and link to
+the remote server</td>
+<td>Submitter
+username and email of
+the user that made the
+submission
+None</td>
+<td>Report number
+database id and report
+number of the forwarded
+record
+Go to the record
+information page on
+Invenio</td>
+</tr>
+</tbody>
+</table>
+<p>The records are displayed in the order of change of their state. The most recent
+change first and the older changes last. To see records which are not
+displayed, navigate between pages using the &#8220;Prev&#8221; - &#8220;Next&#8221; and
+the &#8220;First&#8221; - &#8220;Last&#8221; buttons.</p>
+<p>You can also select a different number of records displayed per
+page by changing the displayed record number.</p>
+</div>
+</div>
+<div class="section" id="refresh-forwarded-record-status">
+<h3>2.2 Refresh forwarded record status<a class="headerlink" href="#refresh-forwarded-record-status" title="Permalink to this headline">¶</a></h3>
+<p>Each time the submission state table is loaded, the BibSword client
+module checks each displayed record with the &#8220;submitted&#8221; status to see if
+their status has been changed to &#8220;published&#8221; or to &#8220;removed&#8221;.</p>
+<p>To minimize table loading time, the default number of displayed
+records is set to 10. However it is possiblie to select a different number of
+displayed fields. (5 - 10 - 25 - 50 - all)</p>
+<p>In some unusual cases, a &#8220;published&#8221; record can be removed from the
+SWORD remote server. In this case, the status of the submitted record is
+not automatically updated. To update &#8220;published&#8221; record, click the
+&#8220;Refresh all&#8221; button. It will check the status of every forwarded record
+on each remote server.</p>
+</div>
+<div class="section" id="setting-up-a-record-forwarding">
+<h3>2.3 Setting up a record forwarding<a class="headerlink" href="#setting-up-a-record-forwarding" title="Permalink to this headline">¶</a></h3>
+<p>The forwarding of a record from the admin interface is done through four
+different forms. Each of them has a precise purpose and is generated
+dynamically according to the record and the remote server information.</p>
+<ol class="arabic simple">
+<li>Select the record and the remote server</li>
+<li>Select the remote server collection</li>
+<li>Select the remote server categories</li>
+<li>Check, add, modify and/or delete media and metadata to be forwarded</li>
+</ol>
+<p>To forward a record, click the &#8220;New Submission&#8221; button from the
+BibSword Admin Interface.</p>
+<p>Alternatively, you can access the SWORD forward interface from any
+record information page by clicking the &#8220;Push to <em>Remote Server</em>&#8221;
+located on the toolbar bellow the record information box. Note that in
+this case, you are directly redirected to step two of the forward
+process.</p>
+<p><strong>Step 1/4: Select record and remote server</strong></p>
+<p>The form has the following fields:</p>
+<ul class="simple">
+<li><strong>Report number:</strong> specify the record to forward, enter its report
+number (e.g: <em>PUPT-1665</em>)</li>
+<li><strong>Remote server:</strong> specify the remote server where to forward the
+record, select it in the dropdown list</li>
+</ul>
+<p>Both fields are mandatory. If you forget one of them or if you give an
+nonexistient report number, an error message will be displayed and you
+will be invited to give all information correctly.</p>
+<p>You can abort the submission by pushing the &#8220;cancel&#8221; button and be
+redirected to the BibSword Admin Interface.</p>
+<p><strong>Step 2/4: Select the remote server collection</strong></p>
+<p>The second step displays information about the selected remote server as
+well as the implemented version of SWORD and the maximum size of file to
+forward. At this point, it is possible to modify the remote server and
+the record by pushing &#8220;Modify server&#8221;.</p>
+<p>The pupose of this step is to select the remote collection. The
+collection contains the URL where to sent information to the remote
+server.</p>
+<p>The form has the following fields:</p>
+<ul class="simple">
+<li><strong>Remote collection:</strong> specify the collection in the dropdown list.</li>
+</ul>
+<p>Most of the remote servers have a collection called &#8220;test&#8221;. This
+collection is very useful to check the correct function of the
+implementation of a remote server. When a record is sent to the &#8220;test&#8221;
+collection of a remote server, the SWORD remote interface will act
+exactly the same as with a normal forward but without to save the
+record.</p>
+<p>You can abort the submission by pushing the &#8220;Cancel&#8221; button and be
+redirected to the BibSword Admin Interface.</p>
+<p><strong>Step 3/4: Select Remote Categories</strong></p>
+<p>The third step displays information about the Remote Server as well as
+information concerning the selected collection. At this point, it is
+possible to modify the remote server and the record by pushing &#8220;Modify
+server&#8221;. It is also possible to modify the selected Remote Collection by
+pushing &#8220;Modify collection&#8221;.</p>
+<p>This step allows to select remote categories. Categories are used for
+two purposes:</p>
+<ul class="simple">
+<li>Specify the exact place where the record will be stored in the remote
+server</li>
+<li>Specify all the topics related to the record for easy
+localisation of the record</li>
+</ul>
+<p>The form has the following fields:</p>
+<ul class="simple">
+<li><strong>Mandatory category:</strong> Select the specific topic of the record for
+the collection from the dropdown list</li>
+<li><strong>Optional categories:</strong> Select all categories related to the record
+from the multiple choice list (CTRL+CLICK to select many)</li>
+</ul>
+<p>If you forget to select a mandatory category, a message will be displayed
+and you will be invited to give a mandatory category.</p>
+<p>You can abort the submission by pushing the &#8220;Cancel&#8221; button and be
+redirected to the BibSword Admin Interface.</p>
+<p><strong>Step 4/4: Select fulltext and check metadata</strong></p>
+<p>The last step contains many boxes, one for each following pupose:</p>
+<ul class="simple">
+<li><strong>Submitter:</strong> Shows the remote server, the collection and the
+categories you have selected in the step 1 to 3. You can modify it by
+pushing the &#8220;Modify destination&#8221; button</li>
+<li><strong>Submitter:</strong> Shows the username and the email address used for the
+forward. Once the record is accepted, an email will be sent back to
+this email address.</li>
+<li><strong>Media:</strong> Displays each file of the fulltext as a checkbox field.
+The files are organized by categories as they where found in Invenio.
+The files from the &#8220;Main&#8221; category are selected by default. The user
+can choose the file he wants to forward and also decide to add a file
+by uploading it directly in this function. The uploaded file will be
+stored in Invenio in the &#8220;Pushed_via_SWORD&#8221; category.</li>
+<li><strong>Metadata:</strong> Display each metadata found in the MARC file of the
+record. The submitter can modify them as he wants. Be careful,
+changing a metadata before forwarding a record to a SWORD Remote
+Server will not change it in Invenio. The result of modifing metadata
+will then be that those data will not be the same in Invenio and on
+the Remote Server.</li>
+</ul>
+<p>Mandatory fields are displayed with a * after the field label. If one
+mandatory field is missing or not well formed, an error message
+specifying the wrong field will be displayed and you will be invited to
+enter a correct value.</p>
+<p>You can abort the submission by pushing the &#8220;Cancel&#8221; button and be
+redirected to the BibSword Admin Interface.</p>
+</div>
+<div class="section" id="forwarding-process">
+<h3>2.4 Forwarding process<a class="headerlink" href="#forwarding-process" title="Permalink to this headline">¶</a></h3>
+<p>Once a record is submitted to a Remote Server, several actions are launched:</p>
+<ul class="simple">
+<li><strong>Data integrity:</strong> Before sending anything, the BibSword Client
+module checks whether the record has already been submitted. If that is the
+case, the action will be aborted and an error message will be returned
+to the user.</li>
+<li><strong>Media deposit:</strong> The media is sent to the Remote Collection URL. If
+many files have been selected, they are set in a compressed zip
+archive. If the action failed for any reason such as wrong credentials,
+no response or corrupted media, it will be aborted and an error
+message will be sent back to the user.</li>
+<li><strong>Response parsing:</strong> The response of the media deposit is a XML Atom
+Element file. This file contains the URL of the media on the Remote
+Server. The BibSword client module parses this file to retreive the
+URL and send it to the next step.</li>
+<li><strong>Metadata submission:</strong>Before submitting the metadata, they are
+formatted according to the information given in the last form.
+If any error happens during the metadata deposit process, an error
+message is sent back to the end user.</li>
+<li><strong>Forward acknowlegment:</strong> Enventually, when the metadata has been
+correctly submitted to the Remote Server, an acknowlegment XML Atom
+Entry is sent back containing the URL to the media, the metadata and
+the status of the forwarded record. These information allow the user
+to consult, modify and delete the submitted record.</li>
+</ul>
+</div>
+<div class="section" id="email-acknowlegment">
+<h3>2.5 Email acknowlegment<a class="headerlink" href="#email-acknowlegment" title="Permalink to this headline">¶</a></h3>
+<p>Once a record has been submitted, it is not directly published on the
+remote server. It needs to be accepted by the remote mandator. To
+inform the user of the publication of the record, the remote server
+sent him an Email containing the link to the record and the password to
+be able to do any modification. This email is also sent to the SWORD
+Invenio user.</p>
+</div>
+</div>
+<div class="section" id="bibsword-client-user-web-interface">
+<h2>3. BibSword client : User Web Interface<a class="headerlink" href="#bibsword-client-user-web-interface" title="Permalink to this headline">¶</a></h2>
+<p>Users are allowed to forward their document to a SWORD remote server
+using the BibSword client module. For security and integrity reasons,
+this action is reachable by users only via the WebSubmit module. This
+module defines different workflow for the submission of report. The idea
+here is to add the &#8220;Forward from Invenio to any remote server&#8221; function
+in some existing workflow. This workflow already implements credential
+checking. So it is easy ensure that an user will not be able to
+forward a report he is not autorized to manage.</p>
+<div class="section" id="the-demo-export-via-sword-action">
+<h3>3.1 The &#8220;Demo Export via SWORD&#8221; Action<a class="headerlink" href="#the-demo-export-via-sword-action" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="adding-an-export-via-sword-in-an-existing-workflow">
+<h3>3.2 Adding an &#8220;Export via SWORD&#8221; in an existing workflow<a class="headerlink" href="#adding-an-export-via-sword-in-an-existing-workflow" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="configuring-a-new-remote-server">
+<h2>4. Configuring a new remote server<a class="headerlink" href="#configuring-a-new-remote-server" title="Permalink to this headline">¶</a></h2>
+<p>To add a new remote server, the following actions have to be done:</p>
+<ul class="simple">
+<li>Inserting remote server information in the swrREMOTESERVER table</li>
+<li>Setting up the type of metadata file</li>
+<li>Adding a link button in the record information page</li>
+</ul>
+<div class="section" id="the-swrremoteserver-table">
+<h3>3.1 The swrREMOTESERVER table<a class="headerlink" href="#the-swrremoteserver-table" title="Permalink to this headline">¶</a></h3>
+<p>The swrREMOTESERVER table contains links to and credentials of all
+SWORD remote servers.
+.</p>
+<div class="section" id="srwremoteserver-table-fields">
+<h4>srwREMOTESERVER table fields<a class="headerlink" href="#srwremoteserver-table-fields" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field
+Definition
+Type</th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>id
+unique identification
+key of the table
+int(15) unique
+primary_key</td>
+<td>name
+name of the remote
+server (e.g.: <em>arXiv</em>)
+varchar(50) unique</td>
+<td>host
+URL where to send the
+authentication request
+(e.g.: <em>arXiv.org</em>)
+varchar(50) unique</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="the-metadata-file-type">
+<h3>3.2 The metadata file type<a class="headerlink" href="#the-metadata-file-type" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="link-to-a-new-remote-server">
+<h3>3.3 Link to a new remote server<a class="headerlink" href="#link-to-a-new-remote-server" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="references">
+<h2>5. References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibupload-admin-guide.html" class="btn btn-neutral float-right" title="BibUpload Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibsort-admin-guide.html" class="btn btn-neutral" title="BibSort Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

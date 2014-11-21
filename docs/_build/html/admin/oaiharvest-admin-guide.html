@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OAIHarvest Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="OAIRepository Admin Guide" href="oairepository-admin-guide.html"/>
+        <link rel="prev" title="ElmSubmit Admin Guide" href="elmsubmit-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>OAIHarvest Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/oaiharvest-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="oaiharvest-admin-guide">
+<span id="id1"></span><h1>OAIHarvest Admin Guide<a class="headerlink" href="#oaiharvest-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The OAI Harvest module handles metadata gathering between OAI-PMH
+v.2.0 compliant repositories. Metadata exchange is performed on top of
+the <a class="reference external" href="http://www.openarchives.org/pmh/">OAI-PMH</a>, the Open Archives
+Initiative&#8217;s Protocol for Metadata Harvesting. The OAI Harvest Admin
+Interface can be used to set up a database of OAI sources and open your
+repository for OAI harvesting.</p>
+</div>
+<div class="section" id="oai-data-harvesting">
+<h2>2. OAI Data Harvesting<a class="headerlink" href="#oai-data-harvesting" title="Permalink to this headline">¶</a></h2>
+<p>In order to periodically harvest metadata from one or several
+repositories, it is possible to organize OAI sources through the
+<a class="reference external" href="/admin/oaiharvest/oaiharvestadmin.py">OAI Harvest Admin Interface</a>.
+The interface allows the administrator to add new repositories as well
+as edit and delete existing ones. Once defined, run the <tt class="docutils literal"><span class="pre">oaiharvest</span></tt>
+command-line tool to start periodical harvesting of these repositories
+based on your settings.</p>
+<p>(Note that you can <strong>alternatively</strong> use the <tt class="docutils literal"><span class="pre">oaiharvest</span></tt> command-line
+tool to perform a manual harvesting of a repository independently of the
+settings in OAI Harvest admin interface, and save the result into a
+file. This lets you specify the OAI arguments for the harvesting (verb,
+dates, sets, metadata format, etc.). You would then need to run
+<tt class="docutils literal"><span class="pre">bibconvert</span></tt> and <tt class="docutils literal"><span class="pre">bibupload</span></tt> to integrate the harvested records into
+your repository. This method can be useful to play with repositories, or
+for writing custom harvesting scripts, but it is not recommended for
+periodical harvesting. Run <tt class="docutils literal"><span class="pre">oaiharvest</span> <span class="pre">-h</span></tt> for additional
+information.)</p>
+<div class="section" id="oai-harvest-admin-interface">
+<h3>2.1 OAI Harvest Admin Interface<a class="headerlink" href="#oai-harvest-admin-interface" title="Permalink to this headline">¶</a></h3>
+<p><strong>Add OAI sources</strong></p>
+<p>The first step requires the administrator to enter the baseURL of the
+OAI repository. This is done for validation purposes - i.e. to check
+that the baseURL actually points to an OAI-compliant repository. (Note:
+the validation simply performs an &#8216;Identify&#8217; query to the baseURL and
+parses the reply with crucial tags such as <tt class="docutils literal"><span class="pre">OAI-PMH</span></tt> and
+<tt class="docutils literal"><span class="pre">Identify</span></tt>).</p>
+<p>Once the baseURL is validated, the administrator is required to fill
+into the following fields:</p>
+<ul>
+<li><p class="first"><strong>Source name</strong>: this will be the (alphanumeric) name used to refer
+to this OAI repository.</p>
+</li>
+<li><p class="first"><strong>Metadata prefix</strong>: upon validation the baseURL is checked for the
+available metadata formats. The administator can choose the desired
+format to harvest metadata in.</p>
+</li>
+<li><p class="first"><strong>Sets</strong>: upon validation the baseURL is checked for the available
+sets of the repository. The administator can choose the desired sets
+to harvest. If none is checked, all records are harvested. Otherwise
+selective harvesting for checked sets is done.</p>
+</li>
+<li><p class="first"><strong>Frequency</strong>: how often do you intend to harvest from this
+repository? (Note: selecting &#8220;never&#8221; excludes this source from
+automatic periodical harvesting)</p>
+</li>
+<li><p class="first"><strong>Starting date</strong>: on your first harvesting session, do you intend to
+harvest the whole repository (from beginning) or only newly added
+material (from today)? (WARNING: harvesting large collections of
+material may take very long!)</p>
+</li>
+<li><p class="first"><strong>Postprocess</strong>: how is the harvested material be dealt with after
+harvesting? You can choose among several action to be taken after
+harvesting records:</p>
+<ul class="simple">
+<li>c: convert - harvested metadata will be converted (given
+BibConvert config file) and saved locally - this is useful when
+harvested metadata is in a format different from marcxml (e.g.
+oai_dc)</li>
+<li>r: extract references - attempt to download full-text pdf for each
+record and run refextract to add references to resulting MARCXML</li>
+<li>p: extract plots - attempt to download material (like tarballs)
+for each record and extract plots (only from LaTeX sources) to
+attach with FFT to resulting MARXML</li>
+<li>t: attach full-text - attempt to download full-text for each
+record and add it as FFT upload in resulting MARCXML</li>
+<li>f: filter - useful when you want to filter harvested data in some
+non-trivial way before uploading</li>
+<li>u: upload - metadata will be automatically queued for upload (this
+is useful when harvested metadata is already in marcxml format)</li>
+</ul>
+<p>Note: Select none of the above to only harvest records</p>
+</li>
+<li><p class="first"><strong>BibConvert configuration file</strong>: if postprocess involves
+conversion, the filename of an existing BibConvert configuration file
+(or its full path if file is not in standard BibConvert config
+directory) is needed. This file determines how the metadata
+conversion will take place (e.g. oai_dc to marcxml). In order to
+ensure that the configuration file performs the desired conversion,
+please test it in advance and follow the instruction contained in the
+<a class="reference external" href="/help/admin/bibconvert-admin-guide">BibConvert Admin
+Guide</a>.
+Please note that some conversion parameters previously input at the
+command line can now be handled by the BibConvert Configuration
+Language (namely record separator, file header and file footer).
+Please consult the <a class="reference external" href="/help/admin/bibconvert-admin-guide">BibConvert Admin
+Guide</a>
+for more information on this. This allows fully automatised
+harvesting and conversion (and possibly upload) of records provided a
+valid, functioning, BibConvert template is provided.</p>
+</li>
+<li><p class="first"><strong>BibFilter program file</strong>: if postprocess involves filtering, the
+full path of an existing BibFilter script is needed. This file
+determines how the harvested records should be filtered. It should
+produce 4 different MARXML outputs:</p>
+<ul class="simple">
+<li>*.insert.xml: full records will be uploaded with &#8220;-i&#8221; parameter,
+new record</li>
+<li>*.append.xml: record snippets will be uploaded with &#8220;-a&#8221;
+parameter, record additions</li>
+<li>*.correct.xml: record snippets will be uploaded with &#8220;-c&#8221;
+parameter, record corrections</li>
+<li>*.holdingpen.xml: full records will be uploaded with &#8220;-o&#8221;
+parameter, to Holding Pen</li>
+</ul>
+<p>Please refer to <a class="reference external" href="/help/admin/bibupload-admin-guide">BibUpload Admin
+Guide</a> for
+more information in BibUpload parameters. In order to ensure that the
+program performs the desired actions, please test it in advance.</p>
+</li>
+</ul>
+<p><strong>Edit and delete OAI sources</strong></p>
+<p>Once a source has been added to the database, it will be visible in the
+overview page, as shown below</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">name
+baseURL
+metadatapr
+efix
+frequency
+bibconvert
+file
+postproces
+s
+actions</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cds
+<a class="reference external" href="http://cds">http://cds</a>
+.cern.ch/o
+ai2d
+marcxml
+daily
+NULL
+h-u
+edit /
+delete /
+test /
+history /
+harvest</td>
+</tr>
+</tbody>
+</table>
+<p>At this point it will be possible to edit the definition of this
+source by clicking on the appropriate action button. All the fields
+described in 2.2.1 can be modified (except for the Starting date). There
+is no more validation at this stage, hence, please take extra care when
+editing important fields such as baseurl and metadataprefix.</p>
+<p>OAI repositories can be removed from the database by clicking on the
+appropriate action button in the overview page.</p>
+<p><strong>Testing OAI sources</strong></p>
+<p>This interface provides the possibility to test OAI harvesting settings.
+In order to see the harvesting and postprocessing results, administrator
+has to provide record identifier (insige the harvested OAI source) and
+click &#8220;test&#8221; button. After doing this, two new frames will appear. The
+upper contatins original OAI XML harvested from the source. The second
+contains the result of all the postprocessing activities or an error
+message.</p>
+<p><strong>Viewing the harvesting history</strong></p>
+<p>This page allows the administrator to see which records have been
+recently harvested. All the data is shown in database insertion order.
+If there was more than 10 inserted records during a day, only first 10
+will be displayed. In order to do manipulations connected with the rest,
+the administrator has to proceed to day details page which is available
+by &#8220;View next entries...&#8221; link.</p>
+<p>The same page provides the possibility of reharvesting the records
+present in the past. All have to be done in order to achieve this is
+selecting appropriate records by checking the checkboxes on the right
+side of the entry and clicking &#8220;reharvest selected records&#8221; button.</p>
+<p><strong>Harvesting particular records</strong></p>
+<p>This page provides the possibility of harvesting records manually. The
+administrator has to provide an internal OAI source identifier. After this,
+record will be harvested, converted and filtered according to the source
+settings and scheduled to be uploaded into the database.</p>
+</div>
+<div class="section" id="oaiharvest-commmand-line-tool">
+<h3>2.2 oaiharvest commmand-line tool<a class="headerlink" href="#oaiharvest-commmand-line-tool" title="Permalink to this headline">¶</a></h3>
+<p>Once administrators have set up their desired OAI repositories in the
+database through the Admin Interface they can invoke <tt class="docutils literal"><span class="pre">oaiharvest</span></tt> to
+start up periodical harvesting.</p>
+<p><strong>Oaiharvest usage</strong></p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>oaiharvest [options]
+
+Manual single-shot harvesting mode:
+  -o, --output         specify output file
+  -v, --verb           OAI verb to be executed
+  -m, --method         http method (default POST)
+  -p, --metadataPrefix metadata format
+  -i, --identifier     OAI identifier
+  -s, --set            OAI set(s). Whitespace-separated list
+  -r, --resuptionToken Resume previous harvest
+  -f, --from           from date (datestamp)
+  -u, --until          until date (datestamp)
+  -c, --certificate    path to public certificate (in case of certificate-based harvesting)
+  -k, --key            path to private key (in case of certificate-based harvesting)
+  -l, --user           username (in case of password-protected harvesting)
+  -w, --password       password (in case of password-protected harvesting)
+
+Automatic periodical harvesting mode:
+  -r, --repository=&quot;repo A&quot;[,&quot;repo B&quot;]   which repositories to harvest (default=all)
+  -d, --dates=yyyy-mm-dd:yyyy-mm-dd      reharvest given dates only
+
+Scheduling options:
+  -u, --user=USER   User name under which to submit this task.
+  -t, --runtime=TIME    Time to execute the task. [default=now]
+            Examples: +15s, 5m, 3h, 2002-10-27 13:57:26.
+  -s, --sleeptime=SLEEP Sleeping frequency after which to repeat the task.
+            Examples: 30m, 2h, 1d. [default=no]
+  -L  --limit=LIMIT Time limit when it is allowed to execute the task.
+            Examples: 22:00-03:00, Sunday 01:00-05:00.
+            Syntax: [Wee[kday]] [hh[:mm][-hh[:mm]]].
+  -P, --priority=PRI    Task priority (0=default, 1=higher, etc).
+  -N, --name=NAME   Task specific name (advanced option).
+
+General options:
+  -h, --help        Print this help.
+  -V, --version     Print version information.
+  -v, --verbose=LEVEL   Verbose level (0=min, 1=default, 9=max).
+      --profile=STATS   Print profile information. STATS is a comma-separated
+            list of desired output stats (calls, cumulative,
+            file, line, module, name, nfl, pcalls, stdname, time).
+</pre></div>
+</div>
+</div></blockquote>
+<p><tt class="docutils literal"><span class="pre">oaiharvest</span></tt> performs a number of operations on the repositories
+listed in the database. By default <tt class="docutils literal"><span class="pre">oaiharvest</span></tt> considers all
+repositories, one by one (this gets overridden when <tt class="docutils literal"><span class="pre">--repository</span></tt>
+argument is passed).</p>
+<p>For each repository that is considered, <tt class="docutils literal"><span class="pre">oaiharvest</span></tt> behaves
+according to the arguments passed at the command line:</p>
+<ul class="simple">
+<li>If the <tt class="docutils literal"><span class="pre">--dates</span></tt> argument is not passed, it checks whether an
+update from the repository is needed (Note: the update status is
+calculated based on the time of the last harvesting and the frequency
+chosen by the administrator).<ul>
+<li>If an update is needed, it harvests all the metadata that the
+repository has added since the data of the last update. When the
+update is finished, the last update value is set to the current
+time and date.</li>
+<li>If an update is not needed, the source is skipped.</li>
+</ul>
+</li>
+<li>If the <tt class="docutils literal"><span class="pre">--dates</span></tt> argument is passed, it simply harvests the
+metadata of the repository from/until the given dates. The last
+update date is left unchanged.</li>
+<li>Finally, it performs the operations indicated in the postprocess
+mode, i.e. convert and/or upload the harvested metadata.</li>
+</ul>
+<p><strong>Oaiharvest usage examples</strong></p>
+<p>In most cases, administrators will want <tt class="docutils literal"><span class="pre">oaiharvest</span></tt> to run in the
+background, i.e. run in sleep mode and wake up periodically (e.g. every
+24 hours) to check whether updates are needed:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ oaiharvest -s 24h
+</pre></div>
+</div>
+</div></blockquote>
+<p>In other cases, administrators may want to perform periodical harvesting
+only on specific sources:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ oaiharvest -r cds -s 12h
+</pre></div>
+</div>
+</div></blockquote>
+<p>Another option is that administrators may want to harvest from certain
+repositories within two specific dates. This will be regarded as a
+one-off operation and will not affect the last update value of the
+source:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$oaiharvest -r cds -d 2005-05-05:2005-05-30
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oairepository-admin-guide.html" class="btn btn-neutral float-right" title="OAIRepository Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="elmsubmit-admin-guide.html" class="btn btn-neutral" title="ElmSubmit Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

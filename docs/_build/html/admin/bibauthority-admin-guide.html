@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibAuthority Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="BibCheck Admin Guide" href="bibcheck-admin-guide.html"/>
+        <link rel="prev" title="BibExport Admin Guide" href="bibexport-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibAuthority Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibauthority-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibauthority-admin-guide">
+<span id="id1"></span><h1>BibAuthority Admin Guide<a class="headerlink" href="#bibauthority-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The INVENIO admin can configure the various ways in which authority
+control works for INVENIO by means of the
+<tt class="docutils literal"><span class="pre">invenio.legacy.bibauthority.config</span></tt>
+file. The location and full contents of this configuration file with a
+commented example configuration are shown at the bottom of this page.
+Their functionality is explained in the following paragraphs.</p>
+<p><em>For examples of how Authority Control works in Invenio from a user&#8217;s
+perspective, cf. `HOWTO Manage Authority Records &lt;howto-authority&gt;`_.</em></p>
+</div>
+<div class="section" id="enforcing-types-of-authority-records">
+<h2>Enforcing types of authority records<a class="headerlink" href="#enforcing-types-of-authority-records" title="Permalink to this headline">¶</a></h2>
+<p>INVENIO is originally agnostic about the types of authority records it
+contains. Everything it needs to know about authority records comes, on
+the one hand, from the authority record types that are contained within
+the &#8216;980__a&#8217; fields, and from the configurations related to these
+types on the other hand. Whereas the &#8216;980__a&#8217; values are usually
+edited by the librarians, the INVENIO configuration is the
+responsibility of the administrator. It is important for librarians and
+administrators to communicate the exact authority record types as well
+as the desired functionality relative to the types for the various
+INVENIO modules.</p>
+</div>
+<div class="section" id="bibedit">
+<h2>BibEdit<a class="headerlink" href="#bibedit" title="Permalink to this headline">¶</a></h2>
+<p>As admin of an INVENIO instance, you have the possibility of configuring
+which fields are under authority control. In the “Configuration File
+Overview” at the end of this page you will find an example of a
+configuration which will enable the auto-complete functionality for the
+&#8216;100__a&#8217;, &#8216;100__u&#8217;, &#8216;110__a&#8217;, &#8216;130__a&#8217;, &#8216;150__a&#8217;, &#8216;700__a&#8217;
+and &#8216;700__u&#8217; fields of a bibliographic record in BibEdit. The keys of
+the “CFG BIBAUTHORITY CONTROLLED FIELDS” dictionary indicate which
+bibliographic fields are under authority control. If the user types
+Ctrl-Shift-A while typing within one of these fields, they will propose
+an auto-complete dropdown list in BibEdit. The user still has the option
+to enter values manually without use of the drop-down list. The values
+associated with each key of the dictionary indicate which kind of
+authority record is to be associated with this field. In the example
+given, the &#8216;100__a&#8217; field is associated with the authority record type
+&#8216;AUTHOR&#8217;.</p>
+<p>The “CFG BIBAUTHORITY AUTOSUGGEST OPTIONS” dictionary gives us the
+remaining configurations, specific only to the auto-suggest
+functionality. The value for the &#8216;index&#8217; key determines which index type
+will be used find the authority records that will populate the drop-down
+with a list of suggestions (cf. the following paragraph on configuring
+the BibIndex for authority records). The value of the
+&#8216;insert_here_field&#8217; determines which authority record field contains
+the value that should be used both for constructing the strings of the
+entries in the drop-down list as well as the value to be inserted
+directly into the edited subfield if the user clicks on one of the
+drop-down entries. Finally, the value for the &#8216;disambiguation_fields&#8217;
+key is an ordered list of authority record fields that are used, in the
+order in which they appear in the list, to disambiguate between
+authority records with exactly the same value in their
+&#8216;insert_here_field&#8217;.</p>
+</div>
+<div class="section" id="bibindex">
+<h2>BibIndex<a class="headerlink" href="#bibindex" title="Permalink to this headline">¶</a></h2>
+<p>As an admin of INVENIO, you have the possibility of configuring how
+indexing works in regards to authority records that are referenced by
+bibliographic records. When a bibliographic record is indexed for a
+particular index type, and if that index type contains MARC fields which
+are under authority control in this particular INVENIO instance (as
+configured by the, “CFG BIBAUTHORITY CONTROLLED FIELDS” dictionary in
+the bibauthority_config.py configuration file, mentioned above), then
+the indexer will include authority record data from specific MARC fields
+of these authority records in the same index. Which authority record
+fields are to be used to enrich the indexes for bibliographic records
+can be configured by the “CFG BIBAUTHORITY AUTHORITY SUBFIELDS TO INDEX”
+dictionary. In the example below each of the 4 authority record types
+(&#8216;AUTHOR&#8217;, &#8216;INSTITUTION&#8217;, &#8216;JOURNAL&#8217; and &#8216;SUBJECT&#8217;) is given a list of
+authority record MARC fields which are to be scanned for data that is to
+be included in the indexed terms of the dependent bibliographic records.
+For the &#8216;AUTHOR&#8217; authority records, the example specifies that the
+values of the fields &#8216;100__a&#8217;, &#8216;100__d&#8217;, &#8216;100__q&#8217;, &#8216;400__a&#8217;,
+&#8216;400__d&#8217;, and &#8216;400__q&#8217; (i.e. name, alternative names, and year of
+birth) should all be included in the data to be indexed for any
+bibliographic records referencing these authority records in their
+authority-controlled subfields.</p>
+</div>
+<div class="section" id="configuration-file-overview">
+<h2>Configuration File Overview<a class="headerlink" href="#configuration-file-overview" title="Permalink to this headline">¶</a></h2>
+<p>The configuration file for the BibAuthority module can be found at
+<tt class="docutils literal"><span class="pre">invenio/legacy/bibauthority/config.py</span></tt>. Below is a
+commented example configuration to show how one would typically
+configure the parameters for BibAuthority. The details of how this works
+were explained in the paragraphs above.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># CFG_BIBAUTHORITY_RECORD_CONTROL_NUMBER_FIELD</span>
+<span class="c"># the authority record field containing the authority record control number</span>
+<span class="n">CFG_BIBAUTHORITY_RECORD_CONTROL_NUMBER_FIELD</span> <span class="o">=</span> <span class="s">&#39;035__a&#39;</span>
+
+<span class="c"># Separator to be used in control numbers to separate the authority type</span>
+<span class="c"># PREFIX (e.g. &quot;INSTITUTION&quot;) from the control_no (e.g. &quot;(CERN)abc123&quot;</span>
+<span class="n">CFG_BIBAUTHORITY_PREFIX_SEP</span> <span class="o">=</span> <span class="s">&#39;|&#39;</span>
+
+<span class="c"># the (&#39;980__a&#39;) string that identifies an authority record</span>
+<span class="n">CFG_BIBAUTHORITY_AUTHORITY_COLLECTION_IDENTIFIER</span> <span class="o">=</span> <span class="s">&#39;AUTHORITY&#39;</span>
+
+<span class="c"># the name of the authority collection.</span>
+<span class="c"># This is needed for searching within the authority record collection.</span>
+<span class="n">CFG_BIBAUTHORITY_AUTHORITY_COLLECTION_NAME</span> <span class="o">=</span> <span class="s">&#39;Authority Records&#39;</span>
+
+<span class="c"># used in log file and regression tests</span>
+<span class="n">CFG_BIBAUTHORITY_BIBINDEX_UPDATE_MESSAGE</span> <span class="o">=</span> \
+    <span class="s">&quot;Indexing records dependent on modified authority records&quot;</span>
+
+<span class="c"># CFG_BIBAUTHORITY_TYPE_NAMES</span>
+<span class="c"># Some administrators may want to be able to change the names used for the</span>
+<span class="c"># authority types. Although the keys of this dictionary are hard-coded into</span>
+<span class="c"># Invenio, the values are not and can therefore be changed to match whatever</span>
+<span class="c"># values are to be used in the MARC records.</span>
+<span class="c"># WARNING: These values shouldn&#39;t be changed on a running INVENIO installation</span>
+<span class="c"># ... since the same values are hard coded into the MARC data,</span>
+<span class="c"># ... including the 980__a subfields of all authority records</span>
+<span class="c"># ... and the $0 subfields of the bibliographic fields under authority control</span>
+<span class="n">CFG_BIBAUTHORITY_TYPE_NAMES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;INSTITUTION&#39;</span><span class="p">:</span> <span class="s">&#39;INSTITUTION&#39;</span><span class="p">,</span>
+    <span class="s">&#39;AUTHOR&#39;</span><span class="p">:</span> <span class="s">&#39;AUTHOR&#39;</span><span class="p">,</span>
+    <span class="s">&#39;JOURNAL&#39;</span><span class="p">:</span> <span class="s">&#39;JOURNAL&#39;</span><span class="p">,</span>
+    <span class="s">&#39;SUBJECT&#39;</span><span class="p">:</span> <span class="s">&#39;SUBJECT&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c"># CFG_BIBAUTHORITY_CONTROLLED_FIELDS_BIBLIOGRAPHIC</span>
+<span class="c"># 1. tells us which bibliographic subfields are under authority control</span>
+<span class="c"># 2. tells us which bibliographic subfields refer to which type of</span>
+<span class="c"># ... authority record (must conform to the keys of CFG_BIBAUTHORITY_TYPE_NAMES)</span>
+<span class="n">CFG_BIBAUTHORITY_CONTROLLED_FIELDS_BIBLIOGRAPHIC</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;100__a&#39;</span><span class="p">:</span> <span class="s">&#39;AUTHOR&#39;</span><span class="p">,</span>
+    <span class="s">&#39;100__u&#39;</span><span class="p">:</span> <span class="s">&#39;INSTITUTION&#39;</span><span class="p">,</span>
+    <span class="s">&#39;110__a&#39;</span><span class="p">:</span> <span class="s">&#39;INSTITUTION&#39;</span><span class="p">,</span>
+    <span class="s">&#39;130__a&#39;</span><span class="p">:</span> <span class="s">&#39;JOURNAL&#39;</span><span class="p">,</span>
+    <span class="s">&#39;150__a&#39;</span><span class="p">:</span> <span class="s">&#39;SUBJECT&#39;</span><span class="p">,</span>
+    <span class="s">&#39;260__b&#39;</span><span class="p">:</span> <span class="s">&#39;INSTITUTION&#39;</span><span class="p">,</span>
+    <span class="s">&#39;700__a&#39;</span><span class="p">:</span> <span class="s">&#39;AUTHOR&#39;</span><span class="p">,</span>
+    <span class="s">&#39;700__u&#39;</span><span class="p">:</span> <span class="s">&#39;INSTITUTION&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c"># CFG_BIBAUTHORITY_CONTROLLED_FIELDS_AUTHORITY</span>
+<span class="c"># Tells us which authority record subfields are under authority control</span>
+<span class="c"># used by autosuggest feature in BibEdit</span>
+<span class="c"># authority record subfields use the $4 field for the control_no (not $0)</span>
+<span class="n">CFG_BIBAUTHORITY_CONTROLLED_FIELDS_AUTHORITY</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;500__a&#39;</span><span class="p">:</span> <span class="s">&#39;AUTHOR&#39;</span><span class="p">,</span>
+    <span class="s">&#39;510__a&#39;</span><span class="p">:</span> <span class="s">&#39;INSTITUTION&#39;</span><span class="p">,</span>
+    <span class="s">&#39;530__a&#39;</span><span class="p">:</span> <span class="s">&#39;JOURNAL&#39;</span><span class="p">,</span>
+    <span class="s">&#39;550__a&#39;</span><span class="p">:</span> <span class="s">&#39;SUBJECT&#39;</span><span class="p">,</span>
+    <span class="s">&#39;909C1u&#39;</span><span class="p">:</span> <span class="s">&#39;INSTITUTION&#39;</span><span class="p">,</span> <span class="c"># used in bfe_affiliation</span>
+    <span class="s">&#39;920__v&#39;</span><span class="p">:</span> <span class="s">&#39;INSTITUTION&#39;</span><span class="p">,</span> <span class="c"># used by FZ Juelich demo data</span>
+<span class="p">}</span>
+
+<span class="c"># constants for CFG_BIBEDIT_AUTOSUGGEST_TAGS</span>
+<span class="c"># CFG_BIBAUTHORITY_AUTOSUGGEST_SORT_ALPHA for alphabetical sorting</span>
+<span class="c"># ... of drop-down suggestions</span>
+<span class="c"># CFG_BIBAUTHORITY_AUTOSUGGEST_SORT_POPULAR for sorting of drop-down</span>
+<span class="c"># ... suggestions according to a popularity ranking</span>
+<span class="n">CFG_BIBAUTHORITY_AUTOSUGGEST_SORT_ALPHA</span> <span class="o">=</span> <span class="s">&#39;alphabetical&#39;</span>
+<span class="n">CFG_BIBAUTHORITY_AUTOSUGGEST_SORT_POPULAR</span> <span class="o">=</span> <span class="s">&#39;by popularity&#39;</span>
+
+<span class="c"># CFG_BIBAUTHORITY_AUTOSUGGEST_CONFIG</span>
+<span class="c"># some additional configuration for auto-suggest drop-down</span>
+<span class="c"># &#39;field&#39; : which logical or MARC field field to use for this</span>
+<span class="c"># ... auto-suggest type</span>
+<span class="c"># &#39;insert_here_field&#39; : which authority record field to use</span>
+<span class="c"># ... for insertion into the auto-completed bibedit field</span>
+<span class="c"># &#39;disambiguation_fields&#39;: an ordered list of fields to use</span>
+<span class="c"># ... in case multiple suggestions have the same &#39;insert_here_field&#39; values</span>
+<span class="c"># TODO: &#39;sort_by&#39;. This has not been implemented yet !</span>
+<span class="n">CFG_BIBAUTHORITY_AUTOSUGGEST_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;AUTHOR&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;field&#39;</span><span class="p">:</span> <span class="s">&#39;authorityauthor&#39;</span><span class="p">,</span>
+        <span class="s">&#39;insert_here_field&#39;</span><span class="p">:</span> <span class="s">&#39;100__a&#39;</span><span class="p">,</span>
+        <span class="s">&#39;sort_by&#39;</span><span class="p">:</span> <span class="n">CFG_BIBAUTHORITY_AUTOSUGGEST_SORT_POPULAR</span><span class="p">,</span>
+        <span class="s">&#39;disambiguation_fields&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;100__d&#39;</span><span class="p">,</span> <span class="s">&#39;270__m&#39;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="s">&#39;INSTITUTION&#39;</span><span class="p">:{</span>
+        <span class="s">&#39;field&#39;</span><span class="p">:</span> <span class="s">&#39;authorityinstitution&#39;</span><span class="p">,</span>
+        <span class="s">&#39;insert_here_field&#39;</span><span class="p">:</span> <span class="s">&#39;110__a&#39;</span><span class="p">,</span>
+        <span class="s">&#39;sort_by&#39;</span><span class="p">:</span> <span class="n">CFG_BIBAUTHORITY_AUTOSUGGEST_SORT_ALPHA</span><span class="p">,</span>
+        <span class="s">&#39;disambiguation_fields&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;270__b&#39;</span><span class="p">],</span>
+    <span class="p">},</span>
+    <span class="s">&#39;JOURNAL&#39;</span><span class="p">:{</span>
+        <span class="s">&#39;field&#39;</span><span class="p">:</span> <span class="s">&#39;authorityjournal&#39;</span><span class="p">,</span>
+        <span class="s">&#39;insert_here_field&#39;</span><span class="p">:</span> <span class="s">&#39;130__a&#39;</span><span class="p">,</span>
+        <span class="s">&#39;sort_by&#39;</span><span class="p">:</span> <span class="n">CFG_BIBAUTHORITY_AUTOSUGGEST_SORT_POPULAR</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s">&#39;SUBJECT&#39;</span><span class="p">:{</span>
+        <span class="s">&#39;field&#39;</span><span class="p">:</span> <span class="s">&#39;authoritysubject&#39;</span><span class="p">,</span>
+        <span class="s">&#39;insert_here_field&#39;</span><span class="p">:</span> <span class="s">&#39;150__a&#39;</span><span class="p">,</span>
+        <span class="s">&#39;sort_by&#39;</span><span class="p">:</span> <span class="n">CFG_BIBAUTHORITY_AUTOSUGGEST_SORT_ALPHA</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c"># list of authority record fields to index for each authority record type</span>
+<span class="c"># R stands for &#39;repeatable&#39;</span>
+<span class="c"># NR stands for &#39;non-repeatable&#39;</span>
+<span class="n">CFG_BIBAUTHORITY_AUTHORITY_SUBFIELDS_TO_INDEX</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;AUTHOR&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">&#39;100__a&#39;</span><span class="p">,</span> <span class="c">#Personal Name (NR, NR)</span>
+        <span class="s">&#39;100__d&#39;</span><span class="p">,</span> <span class="c">#Year of birth or other dates (NR, NR)</span>
+        <span class="s">&#39;100__q&#39;</span><span class="p">,</span> <span class="c">#Fuller form of name (NR, NR)</span>
+        <span class="s">&#39;400__a&#39;</span><span class="p">,</span> <span class="c">#(See From Tracing) (R, NR)</span>
+        <span class="s">&#39;400__d&#39;</span><span class="p">,</span> <span class="c">#(See From Tracing) (R, NR)</span>
+        <span class="s">&#39;400__q&#39;</span><span class="p">,</span> <span class="c">#(See From Tracing) (R, NR)</span>
+    <span class="p">],</span>
+    <span class="s">&#39;INSTITUTION&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">&#39;110__a&#39;</span><span class="p">,</span> <span class="c">#(NR, NR)</span>
+        <span class="s">&#39;410__a&#39;</span><span class="p">,</span> <span class="c">#(R, NR)</span>
+    <span class="p">],</span>
+    <span class="s">&#39;JOURNAL&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">&#39;130__a&#39;</span><span class="p">,</span> <span class="c">#(NR, NR)</span>
+        <span class="s">&#39;130__f&#39;</span><span class="p">,</span> <span class="c">#(NR, NR)</span>
+        <span class="s">&#39;130__l&#39;</span><span class="p">,</span> <span class="c">#(NR, NR)</span>
+        <span class="s">&#39;430__a&#39;</span><span class="p">,</span> <span class="c">#(R, NR)</span>
+    <span class="p">],</span>
+    <span class="s">&#39;SUBJECT&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">&#39;150__a&#39;</span><span class="p">,</span> <span class="c">#(NR, NR)</span>
+        <span class="s">&#39;450__a&#39;</span><span class="p">,</span> <span class="c">#(R, NR)</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibcheck-admin-guide.html" class="btn btn-neutral float-right" title="BibCheck Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibexport-admin-guide.html" class="btn btn-neutral" title="BibExport Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

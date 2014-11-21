@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibKnowledge Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="BibMatch Admin Guide" href="bibmatch-admin-guide.html"/>
+        <link rel="prev" title="BibIndex Admin Guide" href="bibindex-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibKnowledge Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibknowledge-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibknowledge-admin-guide">
+<span id="id1"></span><h1>BibKnowledge Admin Guide<a class="headerlink" href="#bibknowledge-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>1. `Overview &lt;#shortIntro&gt;`__</strong></li>
+<li><strong>2. `Configure Knowledge Bases &lt;#admin&gt;`__</strong><ul>
+<li>2.1&nbsp;&nbsp;<a class="reference external" href="#addKB">Add a Knowledge Base</a></li>
+<li>2.2&nbsp;&nbsp;<a class="reference external" href="#removeKB">Remove a Knowledge Base</a></li>
+<li>2.3&nbsp;&nbsp;<a class="reference external" href="#addMappingKB">Add a Mapping</a></li>
+<li>3.4&nbsp;&nbsp;<a class="reference external" href="#removeMappingKB">Remove a Mapping</a></li>
+<li>3.5&nbsp;&nbsp;<a class="reference external" href="#editMappingKB">Edit a Mapping</a></li>
+<li>3.6&nbsp;&nbsp;<a class="reference external" href="#attrsKB">Edit the Attributes of a Knowledge Base</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The BibKnowledge module provides tools for cataloguers to manage
+&#8220;knowledge bases&#8221;, &#8220;authority files&#8221;, and &#8220;ontologies&#8221;. BibKnowledge
+contains information for standardisation and record quality checking.
+Typical examples: (1) field author institute is often written as &#8220;Odd
+University Strange Research Lab&#8221; though it is officially (canonically)
+known as &#8220;StrangeLab of the Odd University&#8221;. (2) If field &#8220;author email&#8221;
+contains &#8220;&#64;strange.odd.edu&#8221; the author institute should be &#8220;StrangeLab
+of the Odd University&#8221;. (3) Ontology files contain information about the
+hierarchy of key words.</p>
+<p>There are three four types of knowledge bases</p>
+<ul class="simple">
+<li>&#8220;map_from&#8221; &#8220;map_to&#8221;: this is the typical case, the knowledge base
+is essentially a list of left side - right side pairs, like Genf -&gt;
+Geneva or &#8220;Odd University Strange Research Lab&#8221; -&gt; &#8220;StrangeLab of the
+Odd University&#8221;. The abbreviation for this type is kbr (for
+reference).</li>
+<li>&#8220;authority only&#8221;: this kind of knowledge base only lists the
+canonical values. Example: &#8220;Geneva&#8221;, &#8220;StrangeLab of the Odd
+University&#8221;. It is a special case of &#8220;map_from&#8221; &#8220;map_to&#8221;, where
+left side and right side are identical. The abbreviation for this
+type is kba (for authority).</li>
+<li>dynamic: these knowledge bases are &#8220;authority only&#8221; knowledge bases
+that are built dynamically using a search expression. Example: if the
+author institute is stored in field 100__u, a dynamic knowledge
+base that uses this field, returns all the values of 100__u. The
+abbreviation for this type is kbd (for dynamic).</li>
+<li>taxonomy (or ontology): an RDF (resource description framework) file
+can be uploaded into invenio and used as a knowledge base.</li>
+</ul>
+</div>
+<div class="section" id="configure-knowledge-bases">
+<h2>2. Configure Knowledge Bases<a class="headerlink" href="#configure-knowledge-bases" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="add-a-knowledge-base">
+<h3>2.1 Add a Knowledge Base<a class="headerlink" href="#add-a-knowledge-base" title="Permalink to this headline">¶</a></h3>
+<p>To add a knowledge base go to the <a class="reference external" href="/kb">Manage Knowledge Bases</a>
+administration page. Three types of knowledge bases can be added:
+&#8220;map_from&#8221; &#8220;map_to&#8221; by the &#8220;Add New Knowledge Base&#8221; button, dynamic by
+the &#8220;Add a dynamic KB&#8221; button and a taxonomy by the &#8220;Add new Taxonomy&#8221;
+button. After the knowledge base has been created you will be asked to
+fill in its attribute. See <a class="reference external" href="#attrsKB">Edit the Attributes of a Knowledge
+Base</a> to learn more about the attributes of knowledge
+bases.</p>
+</div>
+<div class="section" id="remove-a-knowledge-base">
+<h3>2.2 Remove a Knowledge Base<a class="headerlink" href="#remove-a-knowledge-base" title="Permalink to this headline">¶</a></h3>
+<p>To remove a knowledge base go to the <a class="reference external" href="/kb">Manage Knowledge Bases</a>
+administration page. Click on the &#8220;Delete&#8221; button facing the knowledge
+base you want to remove and confim. The knowledge base and all the
+mapping it includes are removed.</p>
+</div>
+<div class="section" id="add-a-mapping">
+<h3>2.3 Add a Mapping<a class="headerlink" href="#add-a-mapping" title="Permalink to this headline">¶</a></h3>
+<p>Go to the <a class="reference external" href="/kb">Manage Knowledge Bases</a> administration page and click
+on the knowledge base for which you want to add a mapping. Fill in the
+form of the &#8220;Add New Mapping&#8221; section on the left of the page with the
+new mapping, and click on &#8220;Add New Mapping&#8221;. The mapping has been
+created. Alternatively you can create the mapping without its
+attributes, and fill them afterward (See <a class="reference external" href="#editMappingKB">Edit a
+Mapping</a>).</p>
+</div>
+<div class="section" id="remove-a-mapping">
+<h3>2.4 Remove a Mapping<a class="headerlink" href="#remove-a-mapping" title="Permalink to this headline">¶</a></h3>
+<p>Go to the <a class="reference external" href="/kb">Manage Knowledge Bases</a> administration page and click
+on the knowledge base for which you want to remove a mapping. Click on
+the &#8220;Delete&#8221; button facing the mapping you want to delete.</p>
+</div>
+<div class="section" id="edit-a-mapping">
+<h3>2.5 Edit a Mapping<a class="headerlink" href="#edit-a-mapping" title="Permalink to this headline">¶</a></h3>
+<p>Go to the <a class="reference external" href="/kb">Manage Knowledge Bases</a> administration page and click
+on the knowledge base for which you want to edit a mapping. Locate the
+mapping in the list. You can click on the column headers to order the
+list by <em>Map From</em> or by <em>Map To</em> to help you find it. Once you have
+edited the mapping click on the corresponding &#8220;Save&#8221; button.</p>
+</div>
+<div class="section" id="edit-the-attributes-of-a-knowledge-base">
+<h3>2.6 Edit the Attributes of a Knowledge Base<a class="headerlink" href="#edit-the-attributes-of-a-knowledge-base" title="Permalink to this headline">¶</a></h3>
+<p>Go to the <a class="reference external" href="/kb">Manage Knowledge Bases</a> administration page and click
+on the knowledge base you want to edit. In the top menu, click on
+&#8220;Knowledge Base Attributes&#8221;. You can then give your knowledge base a
+name and a description. Finally click on the &#8220;Update Base Attributes&#8221;
+button.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibmatch-admin-guide.html" class="btn btn-neutral float-right" title="BibMatch Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibindex-admin-guide.html" class="btn btn-neutral" title="BibIndex Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,982 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibUpload Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="DocExtract Admin Guide" href="docextract-admin-guide.html"/>
+        <link rel="prev" title="BibSword client Admin Guide" href="bibsword-client-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibUpload Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibupload-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibupload-admin-guide">
+<span id="id1"></span><h1>BibUpload Admin Guide<a class="headerlink" href="#bibupload-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>BibUpload enables you to upload bibliographic data in MARCXML format
+into Invenio bibliographic database. It is also used internally by other
+Invenio modules as the sole entrance of metadata into the bibliographic
+databases.</p>
+<p>Note that before uploading a MARCXML file, you may want to run provided
+<tt class="docutils literal"><span class="pre">/opt/invenio/bin/xmlmarclint</span></tt> on it in order to verify its
+correctness.</p>
+</div>
+<div class="section" id="configuring-bibupload">
+<h2>2. Configuring BibUpload<a class="headerlink" href="#configuring-bibupload" title="Permalink to this headline">¶</a></h2>
+<p>BibUpload takes a MARCXML file as its input. There is nothing to be
+configured for these files. If the files have to be coverted into
+MARCXML from some other format, structured or not, this is usually done
+beforehand via the <a class="reference external" href="bibconvert-admin">BibConvert</a> module.</p>
+<p>Note that if you are using external system numbers for your records,
+such as when your records are being synchronized from an external
+system, then BibUpload knows about the 970 tag as the one containing
+external system number. (To change this 970 tag into something else, you
+would have to edit BibUpload config source file.)</p>
+<p>Note that BibUpload also similarly knows about OAI identifiers,
+so it will refuse to insert the same OAI-harvested record twice,
+for example.</p>
+</div>
+<div class="section" id="running-bibupload">
+<h2>3. Running BibUpload<a class="headerlink" href="#running-bibupload" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="inserting-new-records">
+<h3>3.1 Inserting new records<a class="headerlink" href="#inserting-new-records" title="Permalink to this headline">¶</a></h3>
+<p>Consider that you have an MARCXML file containing new records that is to
+be uploaded into the Invenio. (For example, it might have been produced
+by <a class="reference external" href="bibconvert-admin">BibConvert</a>.) To finish the upload, you would
+call the BibUpload script in the insert mode as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibupload -i file.xml
+
+
+
+In the insert mode, all the records from the file will be treated as
+new.  This means that they should not contain neither 001 tags
+(holding record IDs) nor 970 tags (holding external system numbers).
+BibUpload would refuse to upload records having these tags, in order
+to prevent potential double uploading.  If your file does contain 001
+or 970, then chances are that you want to update existing records, not
+re-upload them as new, and so BibUpload will warn you about this and
+will refuse to continue.
+
+
+For example, to insert a new record, your file should look like this:
+
+
+    &lt;record&gt;
+        &lt;datafield tag=&quot;100&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+            &lt;subfield code=&quot;a&quot;&gt;Doe, John&lt;/subfield&gt;
+        &lt;/datafield&gt;
+        &lt;datafield tag=&quot;245&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+            &lt;subfield code=&quot;a&quot;&gt;On The Foo And Bar&lt;/subfield&gt;
+        &lt;/datafield&gt;
+    &lt;/record&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="inserting-records-into-the-holding-pen">
+<h3>3.2 Inserting records into the Holding Pen<a class="headerlink" href="#inserting-records-into-the-holding-pen" title="Permalink to this headline">¶</a></h3>
+<p>A special mode of BibUpload that is tigthly connected with BibEdit
+is the <em>Holding Pen</em> mode.</p>
+<p>When you insert a record using the holding pen mode such as in the
+following example:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ bibupload -o file.xml
+</pre></div>
+</div>
+</div></blockquote>
+<p>the records are not actually integrated into the database, but are
+instead put into an intermediate space called holding pen, where
+authorized curators can review them, manipulate them and eventually
+approve them.</p>
+<p>The holding pen is integrated with
+<a class="reference external" href="/help/admin/bibedit-admin-guide">BibEdit</a>.</p>
+</div>
+<div class="section" id="updating-existing-records">
+<h3>3.3 Updating existing records<a class="headerlink" href="#updating-existing-records" title="Permalink to this headline">¶</a></h3>
+<p>When you want to update existing records, with the new content from
+your input MARCXML file, then your input file should contain either
+tags 001 (holding record IDs) or tag 970 (holding external system
+numbers). BibUpload will try to match existing records via 001 and
+970 and if it finds a record in the database that corresponds to a
+record from the file, it will update its content. Otherwise it will
+signal an error saying that it could not find the
+record-to-be-updated.</p>
+<p>For example, to update a title of record #123 via correct mode, your
+input file should contain record ID in the 001 tag and the title in
+245 tag as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;record&gt;
+    &lt;controlfield tag=&quot;001&quot;&gt;123&lt;/controlfield&gt;
+    &lt;datafield tag=&quot;245&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+        &lt;subfield code=&quot;a&quot;&gt;My Newly Updated Title&lt;/subfield&gt;
+    &lt;/datafield&gt;
+&lt;/record&gt;
+</pre></div>
+</div>
+<p>There are several updating modes:</p>
+<div class="highlight-python"><div class="highlight"><pre>-r, --replace Replace existing records by those from the XML
+              MARC file.  The original content is wiped out
+              and fully replaced.  Signals error if record
+              is not found via matching record IDs or system
+              numbers.
+              Fields defined in Invenio config variable
+              CFG_BIBUPLOAD_STRONG_TAGS are not replaced.
+
+              Note also that `-r&#39; can be combined with `-i&#39;
+              into an `-ir&#39; option that would automatically
+              either insert records as new if they are not
+              found in the system, or correct existing
+              records if they are found to exist.
+
+-a, --append  Append fields from XML MARC file at the end of
+              existing records.  The original content is
+              enriched only.  Signals error if record is not
+              found via matching record IDs or system
+              numbers.
+
+-c, --correct Correct fields of existing records by those
+              from XML MARC file.  The original record
+              content is modified only on those fields from
+              the XML MARC file where both the tags and the
+              indicators match: the original fields are
+              removed and replaced by those from the XML
+              MARC file.  Fields not present in XML MARC
+              file are not changed (unlike the -r option).
+              Fields with &quot;provenance&quot; subfields defined in
+              &#39;CFG_BIBUPLOAD_CONTROLLED_PROVENANCE_TAGS&#39;
+              are protected against deletion unless the
+              input MARCXML contains a matching
+              provenance value.
+              Signals error if record is not found via
+              matching record IDs or system numbers.
+
+-d, --delete  Delete fields of existing records that are
+              contained in the XML MARC file. The fields in
+              the original record that are not present in
+              the XML MARC file are preserved.
+              This is incompatible with FFT (see below).
+</pre></div>
+</div>
+<p>Note that if you are using the <tt class="docutils literal"><span class="pre">--replace</span></tt> mode, and you specify
+in the incoming MARCXML a 001 tag with a value representing a record
+ID that does not exist, bibupload will not create the record
+on-the-fly unless the <tt class="docutils literal"><span class="pre">--force</span></tt> parameter was also passed on the
+command line. This is done in order to avoid accidentally creating
+gaps in the database list of record identifiers. In fact, when you ask
+to <tt class="docutils literal"><span class="pre">--replace</span></tt> a non-existing record imposing a record ID
+with a value of, say, <tt class="docutils literal"><span class="pre">1</span> <span class="pre">000</span> <span class="pre">000</span></tt> and, subsequently, you
+<tt class="docutils literal"><span class="pre">--insert</span></tt> a new record, this will automatically receive an ID
+with the value <tt class="docutils literal"><span class="pre">1</span> <span class="pre">000</span> <span class="pre">001</span></tt>.</p>
+<p>If you combine the <tt class="docutils literal"><span class="pre">--pretend</span></tt> parameter with the above updating
+mode, you can actually test what would be executed without modifying
+the database or altering the system status.</p>
+</div>
+<div class="section" id="inserting-and-updating-at-the-same-time">
+<h3>3.4 Inserting and updating at the same time<a class="headerlink" href="#inserting-and-updating-at-the-same-time" title="Permalink to this headline">¶</a></h3>
+<p>Note that the insert/update modes can be combined together. For
+example, if you have a file that contains a mixture of new records
+with possibly some records to be updated, then you can run:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibupload -i -r file.xml
+
+
+
+In this case BibUpload will try to do an update (for records having
+either 001 or 970 identifiers), or an insert (for the other ones).
+
+
+3.6 Uploading fulltext files
+
+The fulltext files can be uploaded and revised via a special FFT
+(&quot;fulltext file transfer&quot;) tag with the following
+semantic:
+
+
+    FFT $a  ...  location of the docfile to upload (a filesystem path or a URL)
+        $d  ...  docfile description (optional)
+        $f  ...  format (optional; if not set, deduced from $a)
+        $m  ...  new desired docfile name (optional; used for renaming files)
+        $n  ...  docfile name (optional; if not set, deduced from $a)
+        $o  ...  flag (repeatable subfield)
+        $r  ...  restriction (optional, see below)
+        $s  ...  set timestamp (optional, see below)
+        $t  ...  docfile type (e.g. Main, Additional)
+        $v  ...  version (used only with REVERT and DELETE-FILE, see below)
+        $x  ...  url/path for an icon (optional)
+        $z  ...  comment (optional)
+        $w  ... MoreInfo modification of the document
+        $p  ... MoreInfo modification of a current version of the document
+        $b  ... MoreInfo modification of a current version and format of the document
+        $u  ... MoreInfo modification of a format (of any version) of the document
+</pre></div>
+</div>
+<p>For example, to upload a new fulltext file <tt class="docutils literal"><span class="pre">thesis.pdf</span></tt>
+associated to record ID 123:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;record&gt;
+    &lt;controlfield tag=&quot;001&quot;&gt;123&lt;/controlfield&gt;
+    &lt;datafield tag=&quot;FFT&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+        &lt;subfield code=&quot;a&quot;&gt;/tmp/thesis.pdf&lt;/subfield&gt;
+        &lt;subfield code=&quot;t&quot;&gt;Main&lt;/subfield&gt;
+        &lt;subfield code=&quot;d&quot;&gt;
+          This is the fulltext version of my thesis in the PDF format.
+          Chapter 5 still needs some revision.
+        &lt;/subfield&gt;
+    &lt;/datafield&gt;
+&lt;/record&gt;
+</pre></div>
+</div>
+<p>The FFT tag can be repetitive, so one can pass along another FFT
+tag instance containing a pointer to e.g. the thesis defence
+slides. The subfields of an FFT tag are non-repetitive.</p>
+<p>When more than one FFT tag is specified for the same document
+(e.g. for adding more than one format at a time), if $t (docfile
+type), $m (new desired docfile name), $r (restriction), $v
+(version), $x (url/path for an icon), are specified, they should
+be identically specified for each single entry of FFT. E.g. if
+you want to specify an icon for a document with two formats (say
+.pdf and .doc), you&#8217;ll write two FFT tags, both containing the
+same $x subfield.</p>
+<p>The bibupload process, when it encounters FFT tags, will
+automatically populate the fulltext storage space
+(<tt class="docutils literal"><span class="pre">/opt/invenio/var/data/files</span></tt>) and metadata record associated
+tables (<tt class="docutils literal"><span class="pre">bibrec_bibdoc</span></tt>, <tt class="docutils literal"><span class="pre">bibdoc</span></tt>) as appropriate. It will
+also enrich the 856 tags (URL tags) of the MARC metadata of the
+record in question with references to the latest versions of
+each file.</p>
+<p>Note that for the $a and $x subfields, the filesystem paths must be
+absolute (e.g. <tt class="docutils literal"><span class="pre">/tmp/icon.gif</span></tt> is valid, while
+<tt class="docutils literal"><span class="pre">Destkop/icon.gif</span></tt> is not) and they must be readable by the
+user/group of the bibupload process that will handle the FFT.</p>
+<p>The bibupload process supports the usual modes correct, append,
+replace, insert with a semantic that is somewhat similar to the
+semantic of the metadata upload:</p>
+<blockquote>
+<div>Metadata
+Fulltext
+objects being uploaded
+MARC field instances characterized by tags (010-999)
+fulltext files characterized by unique file names (FFT $n)
+insert
+insert new record; must not exist
+insert new files; must not exist
+append
+append new tag instances for the given tag XXX, regardless
+of existing tag instances
+append new files, if filename (i.e. new format) not already
+present
+correct
+correct tag instances for the given tag XXX; delete existing
+ones and replace with given ones
+correct files with the given filename; add new revision or
+delete file; if the docname does not exist the file is added
+replace
+replace all tags, whatever XXX are
+replace all files, whatever filenames are
+delete
+delete all existing tag instances
+not supported</div></blockquote>
+<p>Note that in append and insert mode</p>
+<div class="highlight-python"><div class="highlight"><pre>$m
+</pre></div>
+</div>
+<p>is ignored.</p>
+<p>In order to rename a document just use the the correct mode
+specifing in the $n subfield the original docname that should be
+renamed and in $m the new name.</p>
+<p>Special values can be assigned to the $t subfield.</p>
+<p>Value</p>
+<p>Meaning</p>
+<p><tt class="docutils literal"><span class="pre">PURGE</span></tt></p>
+<p>In order to purge previous file revisions (i.e. in order to keep
+only the latest file version), please use the correct mode with
+$n docname and $t PURGE as the special keyword.</p>
+<p><tt class="docutils literal"><span class="pre">DELETE</span></tt></p>
+<p>In order to delete all existing versions of a file, making it
+effectively hidden, please use the correct mode with $n docname
+and $t DELETE as the special keyword.</p>
+<p>EXPUNGE</p>
+<p>In order to expunge (i.e. remove completely, also from the
+filesystem) all existing versions of a file, making it
+effectively disappear, please use the correct mode with $n
+docname and $t EXPUNGE as the special keyword.</p>
+<p><tt class="docutils literal"><span class="pre">FIX-MARC</span></tt></p>
+<p>In order to synchronize MARC to the bibrec/bibdoc structure
+(e.g. after an update or a tweak in the database), please use
+the correct mode with $n docname and $t FIX-MARC as the special
+keyword.</p>
+<p><tt class="docutils literal"><span class="pre">FIX-ALL</span></tt></p>
+<p>In order to fix a record (i.e. put all its linked documents in a
+coherent state) and synchronize the MARC to the table, please
+use the correct mode with $n docname and $t FIX-ALL as the
+special keyword.</p>
+<p><tt class="docutils literal"><span class="pre">REVERT</span></tt></p>
+<p>In order to revert to a previous file revision (i.e. to create a
+new revision with the same content as some previous revision
+had), please use the correct mode with $n docname, $t REVERT as
+the special keyword and $v the number corresponding to the
+desired version.</p>
+<p><tt class="docutils literal"><span class="pre">DELETE-FILE</span></tt></p>
+<p>In order to delete a particular file added by mistake, please
+use the correct mode with $n docname, $t DELETE-FILE, specifing
+$v version and $f format. Note that this operation is not
+reversible. Note that if you don&#8217;t spcify a version, the last
+version will be used.</p>
+<p>In order to preserve previous comments and descriptions when
+correcting, please use the KEEP-OLD-VALUE special keyword with
+the desired $d and $z subfield.</p>
+<p>The $r subfield can contain a string that can be used to restrict
+the given document. The same value must be specified for all the
+format of a given document. By default the keyword will be used
+as the status parameter for the &#8220;viewrestrdoc&#8221; action, which can
+be used to give access right/restriction to desired user. e.g.
+if you set the keyword &#8220;thesis&#8221;, you can the connect the
+&#8220;thesisviewer&#8221; to the action &#8220;viewrestrdoc&#8221; with parameter
+&#8220;status&#8221; set to &#8220;thesis&#8221;. Then all the user which are linked
+with the &#8220;thesisviewer&#8221; role will be able to download the
+document. Instead any other user <em>which are not considered as
+authors</em> for the given record will not be allowed. Note, if you
+use the keyword &#8220;KEEP-OLD-VALUE&#8221; the previous restrictions if
+applicable will be kept.</p>
+<p>More advanced document-level restriction is indeed possible. If
+the value contains in fact:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">email:</span> <span class="pre">john.doe&#64;example.org</span></tt>: then only the user having
+<tt class="docutils literal"><span class="pre">john.doe&#64;example.org</span></tt> as email address will be authorized
+to access the given document.</li>
+<li><tt class="docutils literal"><span class="pre">group:</span> <span class="pre">example</span></tt>: then only users belonging to the
+local/external group <tt class="docutils literal"><span class="pre">example</span></tt> will be authorized to access
+the given document.</li>
+<li><tt class="docutils literal"><span class="pre">role:</span> <span class="pre">example</span></tt>: then only the users belonging to the
+WebAccess role <tt class="docutils literal"><span class="pre">example</span></tt> will be authorized to access the
+given document.</li>
+<li><tt class="docutils literal"><span class="pre">firerole:</span> <span class="pre">allow</span> <span class="pre">.../deny...</span></tt>: then only the users
+implicitly matched by the given <a class="reference external" href="/help/admin/webaccess-admin-guide#6">firewall like role
+definition</a> will be
+authorized to access the given document.</li>
+<li><tt class="docutils literal"><span class="pre">status:</span> <span class="pre">example</span></tt>: then only the users belonging to roles
+having an authorization for the WebAccess action
+<tt class="docutils literal"><span class="pre">viewrestrdoc</span></tt> with parameter <tt class="docutils literal"><span class="pre">status</span></tt> set to <tt class="docutils literal"><span class="pre">example</span></tt>
+will be authorized (that is exactly like setting $r to
+<tt class="docutils literal"><span class="pre">example</span></tt>).</li>
+</ul>
+<p>Note, that authors (as defined in the record MARC) and
+superadmin are always authorized to access a document, no matter
+what is the given value of the status.</p>
+<p>Some special flags might be set via FFT and associated with the
+current document by using the $o subfield. This feature is
+experimental. Currently only two flags are actively considered:</p>
+<ul class="simple">
+<li><strong>HIDDEN</strong>: used to specify that the file that is currently
+added (via revision or append) must be hidden, i.e. must not
+be visible to the world but only known by the system (e.g. to
+allow for fulltext indexing). This flag is permanently
+associated with the specific revision and format of the file
+being added.</li>
+<li><strong>PERFORM_HIDE_PREVIOUS</strong>: used to specify that, although
+the current file should be visible (unless the HIDDEN flag is
+also specified), any other previous revision of the document
+should receive the HIDDEN flag, and should thus be hidden to
+the world.</li>
+</ul>
+<p>Note that each time bibupload is called on a record, the 8564
+tags pointing to locally stored files are recreated on the basis
+of the full-text files connected to the record. Thus, if you
+whish to update some 8564 tag pointing to a locally managed
+file, the only way to perform this is through the FFT tag, not
+by editing 8564 directly.</p>
+<p>The subfield $s of FFT can be used to set time stamp of the
+uploaded file to a given value, e.g. 2007-05-04 03:02:01. This
+is useful when uploading old files. When $s is not present, the
+current time will be used.</p>
+</div>
+<div class="section" id="obtaining-feedbacks">
+<h3>3.7 Obtaining feedbacks<a class="headerlink" href="#obtaining-feedbacks" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes, to implement a particular workflow or policy in a
+digital repository, it might be nice to receive an automatic
+machine-friendly feedback that acknowledges the outcome of a
+bibupload execution. To this aim the <tt class="docutils literal"><span class="pre">--callback-url</span></tt> command
+line parameter can be used. This parameter expects a <em>URL</em> to be
+specified to which a <strong>`JSON &lt;http://json.org/&gt;`__-serialized</strong>
+response will <strong>POSTed</strong>.</p>
+<p>Say, you have an external service reachable via the URL
+<tt class="docutils literal"><span class="pre">http://www.example.org/accept_feedback</span></tt>. If the argument:</p>
+<div class="highlight-python"><div class="highlight"><pre>--callback-url http://www.example.org/accept_feedback
+</pre></div>
+</div>
+<p>is added to the usual bibupload call, at the end of the
+execution of the corresponding bibupload task, an HTTP POST
+request will be performed, if possible to the given URL,
+reporting the outcome of the bibupload execution as a
+JSON-serialized response with the following structure:</p>
+<ul class="simple">
+<li>a JSON <strong>object</strong> with the following <em>string</em> &#8211; <em>value</em>
+mapping:<ul>
+<li>string: <strong>results</strong> &#8211; value: a JSON <strong>array</strong> whose
+values are all JSON <strong>objects</strong> with the following
+<em>string</em> &#8211; <em>value</em> mapping:<ul>
+<li><strong>recid</strong>: an integer number, representing the
+described record identifier (<tt class="docutils literal"><span class="pre">-1</span></tt> if no record
+identifier can be retrieved)</li>
+<li><strong>success</strong>: either <tt class="docutils literal"><span class="pre">true</span></tt> or <tt class="docutils literal"><span class="pre">false</span></tt> depending on
+the success of the elaboration of the corresponding
+MARCXML</li>
+<li><strong>error_message</strong>: a <strong>string</strong> containing a
+human-friendly description of the error that caused the
+MARCXML elaboration to fail (in case <tt class="docutils literal"><span class="pre">success</span></tt> was
+having <tt class="docutils literal"><span class="pre">false</span></tt> value)</li>
+<li><strong>marcxml</strong>: in case of success, this contains the
+final MARCXML representation of the record</li>
+<li><strong>url</strong>: in case of success, this contains the final
+URL where the detailde representation of the record can
+be fetched (i.e. its canonical URL)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>For example, a possible JSON response posted to a specified URL
+can look like:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">&quot;recid&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s">&quot;error_message&quot;</span><span class="p">:</span> <span class="s">&quot;ERROR: can not retrieve the record identifier&quot;</span><span class="p">,</span>
+            <span class="s">&quot;success&quot;</span><span class="p">:</span> <span class="n">false</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s">&quot;recid&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="s">&quot;error_message&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+            <span class="s">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s">&quot;marcxml&quot;</span><span class="p">:</span> <span class="s">&quot;1000...&quot;</span><span class="p">,</span>
+            <span class="s">&quot;url&quot;</span><span class="p">:</span> <span class="s">&quot;http://www.example.org/record/1000&quot;</span>
+        <span class="p">},</span>
+        <span class="o">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that, currently, in case the specified URL can not be
+reached at the time of the POST request, the whole bibupload
+task will fail.</p>
+<p>If you use the same callback URL to receive the feedback from
+more than one bibupload request you might want to be able to
+correctly identify each bibupload call with the corresponding
+feedback. For this reason you can pass to the bibupload call an
+additional argument:</p>
+<div class="highlight-python"><div class="highlight"><pre>--nonce VALUE
+</pre></div>
+</div>
+<p>where value can be any string you wish. Such string will be then
+added to the JSON structure, as in (supposing you specified
+<tt class="docutils literal"><span class="pre">--nonce</span> <span class="pre">1234</span></tt>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;nonce&quot;</span><span class="p">:</span> <span class="s">&quot;1234&quot;</span><span class="p">,</span>
+    <span class="s">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">&quot;recid&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s">&quot;error_message&quot;</span><span class="p">:</span> <span class="s">&quot;ERROR: can not retrieve the record identifier&quot;</span><span class="p">,</span>
+            <span class="s">&quot;success&quot;</span><span class="p">:</span> <span class="n">false</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s">&quot;recid&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="s">&quot;error_message&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+            <span class="s">&quot;success&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s">&quot;marcxml&quot;</span><span class="p">:</span> <span class="s">&quot;1000...&quot;</span><span class="p">,</span>
+            <span class="s">&quot;url&quot;</span><span class="p">:</span> <span class="s">&quot;http://www.example.org/record/1000&quot;</span>
+        <span class="p">},</span>
+        <span class="o">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="assigning-additional-information-to-documents-and-other-entities">
+<h3>3.8 Assigning additional information to documents and other entities<a class="headerlink" href="#assigning-additional-information-to-documents-and-other-entities" title="Permalink to this headline">¶</a></h3>
+<p>Some bits of meta-data should not be viewed by Invenio users
+directly and stored in the MARC format. This includes all types
+of non-standard data related to records and documents, for
+example flags realted to documents (sepcified inside a FFT
+tag) or bits of semantic information related to entities
+managed in Invenio. This type of data is usually machine
+generated and should be used by modules of Invenio internally.</p>
+<p>Invenio provides a general mechanism allowing to store objects
+related to different entities of Invenio. This mechanism is
+called MoreInfo and resembles well-known more-info solutions.
+Every entity (document, version of a document, format of a
+particular version of a document, relation between documents)
+can be assigned a dictionary of arbitrary values. The dictionary
+is divided into namespaces, which allow to separate data from
+different modules and serving different purposes.</p>
+<p>BibUpload, the only gateway to uploading data into the Invenio
+database, allows to populate MoreInfo structures. MoreInfo
+related to a given entity can be modified by providing a
+Pickle-serialised byte64 encoded Python object having following
+structure:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;namespace&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&quot;key&quot;</span><span class="p">:</span> <span class="s">&quot;value&quot;</span><span class="p">,</span>
+        <span class="s">&quot;key2&quot;</span><span class="p">:</span> <span class="s">&quot;value2&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For example the above dictionary should be uploaded as</p>
+<div class="highlight-python"><div class="highlight"><pre>KGRwMQpTJ25hbWVzcGFjZScKcDIKKGRwMwpTJ2tleTInCnA0ClMndmFsdWUyJwpwNQpzUydrZXknCnA2ClMndmFsdWUnCnA3CnNzLg==
+</pre></div>
+</div>
+<p>Which is a base-64 encoded representation of the string</p>
+<div class="highlight-python"><div class="highlight"><pre>(dp0\nS&#39;namespace&#39;\np1\n(dp2\nS&#39;key2&#39;\np3\nS&#39;value2&#39;\np4\nsS&#39;key&#39;\np5\nS&#39;value&#39;\np6\nss.
+</pre></div>
+</div>
+<p>Removing of data keys from a dictionary can happen by providing
+None value as a value. Empty namespaces are considered
+non-existent.</p>
+<p>The string representation of modifications to the MoreInfo
+dictionary can be provided in several places, depending, to
+which object it should be attached. The most general upload
+method, the BDM tag has following semantic:</p>
+<div class="highlight-python"><div class="highlight"><pre>BDM $r  ... Identifier of a relation between documents (optional)
+    $i  ... Identifier of a BibDoc (optional)
+    $v  ... Version of a BibDoc (optional)
+    $n  ... Name of a BibDoc (within a current record) (optional)
+    $f  ... Format of a BibDoc (optional)
+    $m  ... Serialised update to the MoreInfo dictionary
+</pre></div>
+</div>
+<p>All (except $m) subfields are optional and allow to identify an
+entity to which MoreInfo should refer.</p>
+<p>Besides the BDM tag, MoreInfo can be transfered using special
+subfields of FFT and BDR tags. The first one allows to modify
+MoreInfo of a newly uploaded document, the second of a relation.
+The additional subfields have following semantic:</p>
+<div class="highlight-python"><div class="highlight"><pre>FFT $w  ... MoreInfo modification of the document
+    $p  ... MoreInfo modification of a current version of the document
+    $s  ... MoreInfo modification of a current version and format of the document
+    $u  ... MoreInfo modification of a format (of any version) of the document
+BDR $m  ... MoreInfo modification of a relation between BibDocs
+</pre></div>
+</div>
+<div class="section" id="uploading-relations-between-documents">
+<h4>3.8.1 Uploading relations between documents<a class="headerlink" href="#uploading-relations-between-documents" title="Permalink to this headline">¶</a></h4>
+<p>One of additional pieces of non-MARC data which can be uploaded
+to Invenio are relations between documents. Similarly to
+MoreInfos, relations are intended to be used by Invenio modules.
+The semantics of BDR field allowing to upload relations looks as
+follows</p>
+<div class="highlight-python"><div class="highlight"><pre>BDR $r  ... Identifier of the relation (optional, can be provided if modifying a known relation)
+
+    $i  ... Identifier of the first document
+    $n  ... Name of the first document (within the current record) (optional)
+    $v  ... Version of the first document (optional)
+    $f  ... Format of the first document (optional)
+
+    $j  ... Identifier of the second document
+    $o  ... Name of the second document (within the current record) (optional)
+    $w  ... Version of the second document (optional)
+    $g  ... Format of the second document (optional)
+
+    $t  ... Type of the relation
+    $m  ... Modification of the MoreInfo of the relation
+    $d  ... Special field. if value=DELETE, relation is removed
+</pre></div>
+</div>
+<p>Behaviour of the BDR tag in different upload modes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>insert, append
+Inserts new relation if necessary.
+Appends fields to the MoreInfo
+structure</td>
+<td>correct, replace
+Creates new relation if necessary,
+replaces the entire content of
+MoreInfo field.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="using-temporary-identifiers">
+<h4>3.8.2 Using temporary identifiers<a class="headerlink" href="#using-temporary-identifiers" title="Permalink to this headline">¶</a></h4>
+<p>In many cases, users want to upload large collections of
+documents using a single BibUpload task. The infrastructure
+described in the rest of this manual allows easy upload of
+multiple documents, but lacks facilities for relating them to
+each other. A sample use-case which can not be satisfied by
+simple usage of FFT tags is uploading a document and relating it
+to another which is either already in the database or is being
+uploaded within the same BibUpload task. BibUpload provides a
+mechanism of temporary identifiers which allows to serve
+scenarios similar to the aforementioned.</p>
+<p>A temporary identifier is a string (unique in the context of a
+single MARC XML document), which replaces the document number or a
+version number. In the context of BibDoc manipulations (FFT, BDR
+and BDM tags), temporary identifiers can appear everywhere where
+version or numerical id are required. If a temporary identifier
+appears in a context of document already having an ID assigned,
+it will be interpreted as this already existent number. If a newly
+created document is assigned a temporary identifier, the newly
+generated numerical ID is assigned to the temporary id. In order
+to be recognised as a temporary identifier, a string has to
+begin with the <strong>TMP:</strong> prefix. The mechanism of temporary
+identifiers can not be used in the context of records, only
+with BibDocs.</p>
+<p>A BibUpload input using temporary identifiers can look like this:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;collection xmlns=&quot;http://www.loc.gov/MARC21/slim&quot;&gt;
+  &lt;record&gt;
+    &lt;datafield tag=&quot;100&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+      &lt;subfield code=&quot;a&quot;&gt;This is a record of the publication&lt;/subfield&gt;
+    &lt;/datafield&gt;
+    &lt;datafield tag=&quot;FFT&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+      &lt;subfield code=&quot;a&quot;&gt;http://somedomain.com/document.pdf&lt;/subfield&gt;
+      &lt;subfield code=&quot;t&quot;&gt;Main&lt;/subfield&gt;
+      &lt;subfield code=&quot;n&quot;&gt;docname&lt;/subfield&gt;
+      &lt;subfield code=&quot;i&quot;&gt;TMP:id_identifier1&lt;/subfield&gt;
+      &lt;subfield code=&quot;v&quot;&gt;TMP:ver_identifier1&lt;/subfield&gt;
+    &lt;/datafield&gt;
+  &lt;/record&gt;
+
+  &lt;record&gt;
+    &lt;datafield tag=&quot;100&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+      &lt;subfield code=&quot;a&quot;&gt;This is a record of a dataset extracted from the publication&lt;/subfield&gt;
+    &lt;/datafield&gt;
+
+    &lt;datafield tag=&quot;FFT&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+      &lt;subfield code=&quot;a&quot;&gt;http://sample.com/dataset.data&lt;/subfield&gt;
+      &lt;subfield code=&quot;t&quot;&gt;Main&lt;/subfield&gt;
+      &lt;subfield code=&quot;n&quot;&gt;docname2&lt;/subfielxd&gt;
+      &lt;subfield code=&quot;i&quot;&gt;TMP:id_identifier2&lt;/subfield&gt;
+      &lt;subfield code=&quot;v&quot;&gt;TMP:ver_identifier2&lt;/subfield&gt;
+    &lt;/datafield&gt;
+
+    &lt;datafield tag=&quot;BDR&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+      &lt;subfield code=&quot;i&quot;&gt;TMP:id_identifier1&lt;/subfield&gt;
+      &lt;subfield code=&quot;v&quot;&gt;TMP:ver_identifier1&lt;/subfield&gt;
+      &lt;subfield code=&quot;j&quot;&gt;TMP:id_identifier2&lt;/subfield&gt;
+      &lt;subfield code=&quot;w&quot;&gt;TMP:ver_identifier2&lt;/subfield&gt;
+
+      &lt;subfield code=&quot;t&quot;&gt;is_extracted_from&lt;/subfield&gt;
+    &lt;/datafield&gt;
+  &lt;/record&gt;
+
+&lt;/collection&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="batch-uploader">
+<h2>4. Batch Uploader<a class="headerlink" href="#batch-uploader" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="web-interface-cataloguers">
+<h3>4.1 Web interface - Cataloguers<a class="headerlink" href="#web-interface-cataloguers" title="Permalink to this headline">¶</a></h3>
+<p>The batchuploader web interface can be used either to upload
+metadata files or documents. Opposed to daemon mode, actions
+will be executed only once.</p>
+<p>The available upload history displays metadata and document
+uploads using the web interface, not daemon mode.</p>
+</div>
+<div class="section" id="web-interface-robots">
+<h3>4.2 Web interface - Robots<a class="headerlink" href="#web-interface-robots" title="Permalink to this headline">¶</a></h3>
+<p>If it is needed to use the batch upload function from within
+command line, this can be achieved with a curl call, like:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ curl -F &#39;file=@localfile.xml&#39; -F &#39;mode=-i&#39; http://cds.cern.ch/batchuploader/robotupload [-F &#39;callback_url=http://...&#39;] -A invenio_webupload
+
+
+
+This service provides (client, file) checking to assure the records are put into a collection the client has rights to.
+To configure this permissions, check CFG_BATCHUPLOADER_WEB_ROBOT_RIGHTS variable in the configuration file.
+The allowed user agents can also be defined using the CFG_BATCHUPLOADER_WEB_ROBOT_AGENT variable.
+Note that you can receive machine-friendly feedbacks from the corresponding
+bibupload task that is launched by a given batchuploader request, by adding
+the optional POST field callback_url with the same semantic of the --callback-url
+command line parameter of bibupload (see the previous paragraph Obtaining feedbacks).
+
+A second more RESTful interface is also available: it will suffice to append to the URL the specific mode (among &quot;insert&quot;,
+&quot;append&quot;, &quot;correct&quot;, &quot;delete&quot;, &quot;replace&quot;), as in:
+
+http://cds.cern.ch/batchuploader/robotupload/insert
+</pre></div>
+</div>
+<p>The <em>callback_url</em> argument can be put in query part of the
+URL as in:</p>
+<div class="highlight-python"><div class="highlight"><pre>http://cds.cern.ch/batchuploader/robotupload/insert?callback_url=http://myhandler
+</pre></div>
+</div>
+<p>In case the HTTP server that is going to receive the
+feedback at <em>callback_url</em> expect the request to be encoded
+in <em>application/x-www-form-urlencoded</em> rather than
+<em>application/json</em> (e.g. if the server is implemented
+directly in Oracle), you can further specify the
+special_treatment argument and set it to <em>oracle</em>. The
+feedback will then be further encoded into an
+<em>application/x-www-form-urlencoded</em> request, with a single
+form key called <em>results</em>, which will contain the final JSON
+data.</p>
+<p>The MARCXML content should then be specified as the body of
+the request. With <em>curl</em> this can be implemented as in:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ curl -T localfile.xml http://cds.cern.ch/batchuploader/robotupload/insert?callback_url=http://... -A invenio_webupload -H &quot;Content-Type: application/marcxml+xml&quot;
+</pre></div>
+</div>
+<p>The <em>nonce</em> argument that can be passed to BibUpload as
+described in the previous paragraph can also be specified
+with both robotupload interfaces. E.g.:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ curl -F &#39;file=@localfile.xml&#39; -F &#39;nonce=1234&#39; -F &#39;mode=-i&#39; http://cds.cern.ch/batchuploader/robotupload -F &#39;callback_url=http://...&#39; -A invenio_webupload
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-python"><div class="highlight"><pre>$ curl -T localfile.xml http://cds.cern.ch/batchuploader/robotupload/insert?nonce=1234&amp;callback_url=http://... -A invenio_webupload -H &quot;Content-Type: application/marcxml+xml&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="daemon-mode">
+<h3>4.2 Daemon mode<a class="headerlink" href="#daemon-mode" title="Permalink to this headline">¶</a></h3>
+<p>The batchuploader daemon mode is intended to be a bibsched
+task for document or metadata upload. The parent directory
+where the daemon will look for folders <tt class="docutils literal"><span class="pre">metadata</span></tt> and
+<tt class="docutils literal"><span class="pre">documents</span></tt> must be specified in the Invenio configuration
+file.</p>
+<p>An example of how directories should be arranged,
+considering that Invenio was installed in folder
+<tt class="docutils literal"><span class="pre">/opt/invenio</span></tt> would be:</p>
+<div class="highlight-python"><div class="highlight"><pre>/opt/invenio/var/batchupload
+       /opt/invenio/var/batchupload/documents
+               /opt/invenio/var/batchupload/documents/append
+               /opt/invenio/var/batchupload/documents/revise
+       /opt/invenio/var/batchupload/metadata
+               /opt/invenio/var/batchupload/metadata/append
+               /opt/invenio/var/batchupload/metadata/correct
+               /opt/invenio/var/batchupload/metadata/insert
+               /opt/invenio/var/batchupload/metadata/replace
+</pre></div>
+</div>
+<p>When running the batchuploader daemon there are two possible
+execution modes:</p>
+<div class="highlight-python"><div class="highlight"><pre>-m,   --metadata    Look for metadata files in folders insert, append, correct and replace.
+                    All files are uploaded and then moved to the corresponding DONE folder.
+-d,   --documents   Look for documents in folders append and revise. Uploaded files are then
+                    moved to DONE folders if possible.
+</pre></div>
+</div>
+<p>By default, the metadata mode is used.</p>
+<p>An example invocation would be:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ batchuploader --documents
+
+
+
+It is possible to program the batch uploader to run periodically. Read the Howto-run guide to see how.
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docextract-admin-guide.html" class="btn btn-neutral float-right" title="DocExtract Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibsword-client-admin-guide.html" class="btn btn-neutral" title="BibSword client Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

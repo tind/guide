@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WebJournal Editor Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="WebMessage Admin Guide" href="webmessage-admin-guide.html"/>
+        <link rel="prev" title="WebJournal Admin Guide" href="webjournal-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>WebJournal Editor Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/webjournal-editor-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="webjournal-editor-guide">
+<span id="id1"></span><h1>WebJournal Editor Guide<a class="headerlink" href="#webjournal-editor-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>1. `Introduction &lt;#introduction&gt;`__</strong><ul>
+<li>1.1&nbsp;&nbsp;<a class="reference external" href="#introductionConcepts">Concepts</a></li>
+</ul>
+</li>
+<li><strong>2. `Submit an Article &lt;#addArticle&gt;`__</strong><ul>
+<li><strong>2.1 `Using the web HTML editor &lt;#webEditor&gt;`__</strong></li>
+<li><strong>2.1 `Offline VS online &lt;#offlineVsOnline&gt;`__</strong></li>
+</ul>
+</li>
+<li><strong>3. `Edit an Article &lt;#editArticle&gt;`__</strong></li>
+<li><strong>4. `Feature a Record &lt;#editArticle&gt;`__</strong></li>
+<li><strong>5. `Preview an Issue &lt;#previewIssue&gt;`__</strong></li>
+<li><strong>6. `Release an Issue &lt;#releaseIssue&gt;`__</strong><ul>
+<li><strong>6.1 `Issue Updates &lt;#issueUpdates&gt;`__</strong></li>
+</ul>
+</li>
+<li><strong>7. `Send an Alert &lt;#sendAlert&gt;`__</strong></li>
+<li><strong>8. `Regenerate Your Journal &lt;#cache&gt;`__</strong><ul>
+<li><strong>8.1 `Switch Offline articles to Online &lt;#cache-online&gt;`__</strong></li>
+</ul>
+</li>
+<li><strong>9. `Other Administrative tasks &lt;#adminTasks&gt;`__</strong></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>WebJournal is a module of Invenio that assists you in publishing an
+online journal. This guide should help you get familiar with the tools
+offered by WebJournal.</p>
+<div class="section" id="concepts">
+<h3>1.1 Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h3>
+<p>An <strong>online journal</strong> (managed by WebJournal) is similar to the
+widespread &#8220;<em>blogs</em>&#8221; systems, with the major difference that articles
+of an online journal are grouped by &#8220;<strong>issues</strong>&#8221;: new blog articles
+usually push old articles away one after the other, while an online
+journal wipes out all the previous articles once a new issue is
+<strong>released</strong>.</p>
+<p>As an editor of an online journal, you will have the task to release an
+issue once all the articles of this issue have been submitted into the
+system. The new release becomes the current one and is accessible
+online, while the old issue is archived.</p>
+<p>Once an issue has been released, you have the possibility to send an
+email <strong>alert</strong> to notify your subscribers about the availability of a
+new issue. This alert can contain custom text, or embed your journal
+homepage (in the manner of a <strong>newsletter</strong>).</p>
+<p><strong>More about the issues:</strong></p>
+<p>Issues of a journal are numbered: <tt class="docutils literal"><span class="pre">10/2009</span></tt>, <tt class="docutils literal"><span class="pre">11/2009</span></tt>, <tt class="docutils literal"><span class="pre">12/2009</span></tt>,
+etc. Every new release increments the previous number, and each year the
+issue number is reset: <tt class="docutils literal"><span class="pre">12/2009</span></tt>, <tt class="docutils literal"><span class="pre">1/2010</span></tt>, <tt class="docutils literal"><span class="pre">2/2010</span></tt>.</p>
+<p>The format of the issue numbers is important (&#8220;number/year&#8221;) as it is
+used in WebJournal URLs (in the reverse form). You can therefore not
+really go for another format, though you have the possibility to display
+it in a different way on the journal page, thanks to customizable
+templates.</p>
+<p>The number of issues per year should be defined in advance, though it is
+possible to have a variable number of issues (the system proposes the
+next issue number, but you can choose to override it with your own issue
+number). It is even possible to skip issue numbers, though it is not
+recommended: <tt class="docutils literal"><span class="pre">1/2010</span></tt>, <tt class="docutils literal"><span class="pre">3/2010</span></tt>, <tt class="docutils literal"><span class="pre">5/2010</span></tt>, etc.</p>
+<p>Issues can be <strong>grouped</strong> together to make a &#8220;<strong>publication</strong>&#8221;: this
+is typically used when you want to publish an issue every two weeks,
+with a small update every second two weeks: Issue <tt class="docutils literal"><span class="pre">10/2009</span></tt> has brand
+new articles, while the next issue <tt class="docutils literal"><span class="pre">11/2009</span></tt> should feature the same
+articles, plus a few new updates.</p>
+<p>Issues must be grouped before they are released: you cannot decide to
+group the next issue to be released with the latest issue.</p>
+<p>When grouping issues, you first release the group as a whole, and
+then &#8220;update&#8221; the group when you thing they are ready. For example you
+release the group <tt class="docutils literal"><span class="pre">[10/2009,</span> <span class="pre">11/2009]</span></tt> the first week: <tt class="docutils literal"><span class="pre">10/2009</span></tt>
+becomes the current issue. The next week, you <strong>update</strong> issue
+<tt class="docutils literal"><span class="pre">10/2009</span></tt>: the publication <tt class="docutils literal"><span class="pre">10-11/2009</span></tt> becomes the current issue.</p>
+<p><strong>More about the articles:</strong></p>
+<p>The articles submitted to WebJournal are considered as regular
+bibliographic records: the same treatment is applied to them, and the
+bibliographic tools found in Invenio can be used to manipulate them.</p>
+<p>As a consequence WebJournal articles also appear on the regular search
+system of Atlantis Institute of Fictive Science. In order for articles
+of unreleased issues not to appear on the regular search interface, the
+articles are flagged as <strong>offline</strong> until the issue they belong to is
+released (the articles are then flagged <strong>online</strong>).</p>
+<p>Articles are submitted to specific categories of the journal (if
+multiple categories are defined for your journal), and are assigned a
+unique identifier: both attributes are visible in the URLs when
+selecting an article. It is then easy to build links to an article. The
+article identifier also corresponds to the identifier of the entry in
+Atlantis Institute of Fictive Science.</p>
+</div>
+</div>
+<div class="section" id="submit-an-article">
+<h2>2. Submit an Article<a class="headerlink" href="#submit-an-article" title="Permalink to this headline">¶</a></h2>
+<p>To submit an article, go to the <a class="reference external" href="/submit">regular submission page</a>,
+and choose the category corresponding to your journal.</p>
+<p>(This can vary depending on how the administrator configured the
+system).</p>
+<p>It is at submission time that you have to decide what issue(s) this
+article is to be part of (this can be modified later by editing the
+article). If you use &#8220;grouped issues&#8221;, you have to specify that the
+article belong to each individual issue of the group.</p>
+<p>Note that a small delay exists between the time an article is submitted
+and the time it appears online.</p>
+<div class="section" id="using-the-web-html-editor">
+<h3>2.1 Using the web HTML editor<a class="headerlink" href="#using-the-web-html-editor" title="Permalink to this headline">¶</a></h3>
+<p>Depending on how the administrator configured the system, you might be
+given the possibility to write your articles online as if you were
+editing them from a desktop text editor. If you have already used such a
+tool, you should feel at home with the provided editor.</p>
+<p>This editor translates your articles into HTML markup, ready for
+displaying in a web browser. You therefore do not need to know how to
+write HTML code, but you should be aware of a few consequences due to
+online publishing. Here is a list of best practices when using the
+online HTML editor:</p>
+<ul class="simple">
+<li>You can copy-paste text from other editors. Note that the formatting
+(font, color, size) might not be kept correctly in some cases. If you
+copy-paste text from Microsoft Word, please use the dedicated
+&#8220;Word-text cleaner&#8221; button of the toolbar.</li>
+<li>If you want to paste styled text but you do not want to keep its
+style, use the dedicated &#8220;Text cleaner&#8221; button of the toolbar.</li>
+<li>Pasting text from your own machine that contains images (or any
+multimedia content) will not paste the images, but just the text. To
+have your images, you must first upload them to the server using the
+&#8220;Image&#8221; button of the toolbar, and click on the &#8220;Upload&#8221; tab.</li>
+<li>Do not upload big images: they might take a long time to load in your
+readers&#8217; browsers. WebJournal will usually try to scale down the
+images, but you would achieve better effect by first reducing them
+using a dedicated image processing application.</li>
+<li>If you want to display images that already exist online, you do not
+need to download them and re-upload them: you can simply link them
+(&#8220;Image&#8221; button of the toolbar, link to the image).</li>
+<li>Try not to use custom styles (colors, font, size): you should
+restrict to a layout and styles that have a semantic meaning for your
+article (paragraphs, [STRIKEOUT:stroked text], <em>italics</em>, header,
+etc.) and let WebJournal applies the corresponding styles: that will
+ensure a consistent look of all the articles over time, and will make
+possible future re-styling of your journal, even of your past issues.</li>
+<li>You can view the source of the produced HTML, if you need to apply
+specific modifications that are unsupported by the online editor (for
+eg. linking to a video).</li>
+</ul>
+</div>
+<div class="section" id="offline-vs-online">
+<h3>2.2 Offline VS Online<a class="headerlink" href="#offline-vs-online" title="Permalink to this headline">¶</a></h3>
+<p>Depending on how the system was configured by the administrator, you
+might be given the choice to have your article offline or online when
+adding or editing it:</p>
+<dl class="docutils">
+<dt>Offline</dt>
+<dd>The article is not visible on the regular search interface of
+Atlantis Institute of Fictive Science until the issue has been
+released</dd>
+<dt>Online</dt>
+<dd>The article is immediately visible on the regular search interface
+of Atlantis Institute of Fictive Science. You should use this option
+if you want to add an article to an already released issue
+(otherwise the article will never be visible on the regular search
+interface).</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="edit-an-article">
+<h2>3. Edit an Article<a class="headerlink" href="#edit-an-article" title="Permalink to this headline">¶</a></h2>
+<p>You can edit articles in same way as you add articles: you just have
+to go to the <a class="reference external" href="/submit">regular submission page</a>
+and provide the article number you want to modify. If you are logged in
+as editor of the journal, you should also see a direct link to edit the
+article from the main article page of your journal.</p>
+<p>(This can vary depending on how the administrator configured the system).</p>
+</div>
+<div class="section" id="feature-a-record">
+<h2>4. Feature a Record<a class="headerlink" href="#feature-a-record" title="Permalink to this headline">¶</a></h2>
+<p>Depending on your journal configuration, you might be given the
+possibility to feature on your main journal page records (photos,
+videos, etc) found on Atlantis Institute of Fictive Science.</p>
+<p>To feature a record, go to you journal <a class="reference external" href="/admin/webjournal/webjournaladmin.py">administration
+page</a>, and
+choose &#8220;Feature a record&#8221;. You must then provide the identifier of the
+record you want to feature, as well as the URL of the image you want to
+associate to the record. On the very same page you can remove featured
+records.</p>
+<p>Note that featured records are independent of releases: you can update
+them whenever you want.</p>
+</div>
+<div class="section" id="preview-an-issue">
+<h2>5. Preview an Issue<a class="headerlink" href="#preview-an-issue" title="Permalink to this headline">¶</a></h2>
+<p>To preview an issue, go to your journal <a class="reference external" href="/admin/webjournal/webjournaladmin.py">administration
+page</a>, and
+select the &#8220;edit&#8221; link of the category you want to preview.</p>
+<p>You can also preview any issue of your journal by specifying the correct
+issue number in your journal URL. In that case, make sure you are logged
+into <a class="reference external" href="http://localhost:4000">Atlantis Institute of Fictive Science</a>,
+otherwise you will not be able to access the unreleased issue.</p>
+</div>
+<div class="section" id="release-an-issue">
+<h2>6. Release an Issue<a class="headerlink" href="#release-an-issue" title="Permalink to this headline">¶</a></h2>
+<p>To release an issue, go to your journal <a class="reference external" href="/admin/webjournal/webjournaladmin.py">administration
+page</a>, and
+select &#8220;Release now&#8221;. You should then be given the choice of the issue
+number to release. By default the next issue number is selected, but you
+can decide to:</p>
+<ul class="simple">
+<li>Add a higher issue number to create a <a class="reference external" href="#groupedIssue">grouped
+issue</a> (&#8220;publication&#8221;)</li>
+<li>Add a higher issue number and deselect the suggested one to skip the
+release of the suggested issue number.</li>
+<li>Add a custom issue number (Eg. the system suggest you issue number
+<tt class="docutils literal"><span class="pre">52/2008</span></tt>, but you want to jump to <tt class="docutils literal"><span class="pre">01/2009</span></tt>)</li>
+</ul>
+<p>You can group as many issue as you want. Only the selected issue
+number(s) will be published. Click on the &#8220;Publish&#8221; button once done.</p>
+<p>Depending on the configuration set by your administrator, when an issue
+is released, any article still marked as &#8220;Offline&#8221; for this issue is
+switched to &#8220;Online&#8221; to ensure consistency between the journal view and
+Atlantis Institute of Fictive Science. Read more about <a class="reference external" href="#offlineVsOnline">Offline/Online
+articles</a>. You also have the possibility to mark
+&#8220;Online&#8221; any further set of articles added for this issue by
+<a class="reference external" href="#cache-online">regenerating the issue</a> and ticking the adequate
+checkbox.</p>
+<div class="section" id="issue-updates">
+<h3>6.1 Issue Updates<a class="headerlink" href="#issue-updates" title="Permalink to this headline">¶</a></h3>
+<p>We call <strong>issue update</strong> the action of releasing an individual issue of
+a grouped issue (&#8220;publication&#8221;). Eg. you grouped issues
+<tt class="docutils literal"><span class="pre">[15/2009,</span> <span class="pre">16/2009]</span></tt>: releasing issue <tt class="docutils literal"><span class="pre">16/2009</span></tt> is an update to the
+publication <tt class="docutils literal"><span class="pre">15-16/2009</span></tt></p>
+<p>If you have previously grouped some issues, you first have to publish
+the pending one before releasing a completely new issue. Eg. you want to
+release issue <tt class="docutils literal"><span class="pre">17/2009</span></tt> but you had previously grouped the issues
+<tt class="docutils literal"><span class="pre">[15/2009,</span> <span class="pre">16/2009]</span></tt>, without releasing issue <tt class="docutils literal"><span class="pre">16/2009</span></tt>: you first
+have to release the pending update <tt class="docutils literal"><span class="pre">16/2009</span></tt> before you can release
+<tt class="docutils literal"><span class="pre">17/2009</span></tt>.</p>
+<p>If you just want to add an article to an already released issue without
+using grouped issues, simply submit your article for this issue, and
+<a class="reference external" href="#cache">update the cache</a>. (If necessary note that you can either
+mark the article as &#8220;Online&#8221; when submitting it, or by ticking the
+adequate checkbox when <a class="reference external" href="#cache-online">regenerating the issue</a>. Read
+more about <a class="reference external" href="#offlineVsOnline">Offline/Online articles</a>)</p>
+</div>
+</div>
+<div class="section" id="send-an-alert">
+<h2>7. Send an Alert<a class="headerlink" href="#send-an-alert" title="Permalink to this headline">¶</a></h2>
+<p>To send an alert about a new issue, go to your journal <a class="reference external" href="/admin/webjournal/webjournaladmin.py">administration
+page</a>, and
+click on the &#8220;send alert&#8221; link for the issue you want to send the alert.</p>
+<p>Update the recipients address and the text of the alert if needed.</p>
+<p>If you keep the box &#8220;Send journal front-page&#8221; checked, your
+subscribers will receive the front page of your new release by email. If
+you uncheck this box (or if your subscribers have configured their email
+clients to not display HTML emails) the textual version of the alert
+will be shown instead.</p>
+<p>Note that you can only send an alert for an issue that has been already
+released, and that you will be warned if you try to send an alert that
+has already been sent for a past issue.</p>
+</div>
+<div class="section" id="regenerate-your-journal">
+<h2>8. Regenerate Your Journal<a class="headerlink" href="#regenerate-your-journal" title="Permalink to this headline">¶</a></h2>
+<p>In order to optimize the display speed of the journal for your readers,
+the WebJournal module creates static versions of your journal. These
+static pages need to be recreated if you update the journal after it has
+been released.</p>
+<p>To do so, go to your journal <a class="reference external" href="/admin/webjournal/webjournaladmin.py">administration
+page</a>, and
+click on the &#8220;regenerate&#8221; link of the issue you want to update.</p>
+<div class="section" id="switch-offline-articles-to-online">
+<h3>8.1 Switch Offline articles to Online<a class="headerlink" href="#switch-offline-articles-to-online" title="Permalink to this headline">¶</a></h3>
+<p>When regenerating the cache of a journal issue you have the possibility
+to switch all the articles still marked as &#8220;Offline&#8221; (i.e. drafts) to
+&#8220;Online&#8221; (similarly to what is taking place when releasing an issue).
+Tick the corresponding checkbox if you which so. Note that the box is
+disabled if trying to re-generate the cache for an issue unreleased yet.</p>
+<p>Read more about <a class="reference external" href="#offlineVsOnline">Offline/Online articles</a>.</p>
+</div>
+</div>
+<div class="section" id="other-administrative-tasks">
+<h2>9. Other Administrative tasks<a class="headerlink" href="#other-administrative-tasks" title="Permalink to this headline">¶</a></h2>
+<p>Administrative tasks such as adding or removing a journal, editing its
+layout and settings have to be performed by an administrator-level user.</p>
+<p>Please refer to <a class="reference external" href="/help/admin/webjournal-admin-guide">WebJournal Admin
+Guide</a>.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="webmessage-admin-guide.html" class="btn btn-neutral float-right" title="WebMessage Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="webjournal-admin-guide.html" class="btn btn-neutral" title="WebJournal Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

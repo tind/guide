@@ -1,0 +1,1080 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibConvert Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="BibEdit Admin Guide" href="bibedit-admin-guide.html"/>
+        <link rel="prev" title="BibClassify Admin Guide" href="bibclassify-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibConvert Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibconvert-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibconvert-admin-guide">
+<span id="id1"></span><h1>BibConvert Admin Guide<a class="headerlink" href="#bibconvert-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-overview">
+<h2>A. Overview<a class="headerlink" href="#a-overview" title="Permalink to this headline">¶</a></h2>
+<p>BibConvert utility enables you to convert metadata records from various
+metadata formats into another metadata format supported by the Invenio
+local database. It is designed to process XML harvested metadata
+records, converting them into MARC21 before they are uploaded into the
+database. However, BibConvert is flexible enough to deal also with other
+structured metadata according to your needs, and offers a way to
+actually insert what you want into the database.</p>
+<p>BibConvert is suitable for tasks such as conversion of records received
+from multiple data sources, or conversion of records from another system
+that may support a different metadata format.</p>
+<p>In order to cover a wider range of possible conversions, BibConvert has
+2 different modes, each dealing with different types of data, and each
+using different configuration files.</p>
+<dl class="docutils">
+<dt><strong>Plain text-oriented mode:</strong></dt>
+<dd>Deals with source data being typically structured with line breaks,
+and character-based separators. You can use this mode when you need
+to process line-based data, such as comma/tab separated values.
+Still, this mode is powerful enough to convert complex structures,
+at the cost of a more complex configuration.</dd>
+<dt><strong>XML-oriented mode</strong></dt>
+<dd>Convert source data being encoded in XML. Provided you have
+installed a supported XSLT processor on your machine, BibConvert can
+make use of standard XSLT to interpret your XML data.</dd>
+</dl>
+<p>In addition to XSLT, we provide a home-made solution for converting
+XML source data. It uses our own BFX language as transformation
+language, extended with XPath for node selections.</p>
+<p>You should consider using this solution only in the case where you
+have not installed (or do not want to install) an XSLT processor on your
+machine.</p>
+</div>
+<div class="section" id="b-xml-oriented-mode">
+<h2>B. XML-Oriented Mode<a class="headerlink" href="#b-xml-oriented-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configuration-file-examples">
+<h3>1. Configuration File Examples<a class="headerlink" href="#configuration-file-examples" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="using-xslt">
+<h4>Using XSLT<a class="headerlink" href="#using-xslt" title="Permalink to this headline">¶</a></h4>
+<p>You can use standard XSL stylesheets to transform your source data.
+Have a look at the provided samples in <tt class="docutils literal"><span class="pre">etc/bibconvert/config</span></tt>
+directory of your Invenio installation.</p>
+</div>
+<div class="section" id="using-bfx">
+<h4>Using BFX<a class="headerlink" href="#using-bfx" title="Permalink to this headline">¶</a></h4>
+<p>BFX (BibFormat for XML) uses a syntax similar to XSLT. Roughly they
+only differ in the name of the tags.
+More documentation about it is to be added soon (FIXME).
+Have a look at the provided samples in <tt class="docutils literal"><span class="pre">etc/bibconvert/config</span></tt>
+directory of your Invenio installation to learn more about it.</p>
+</div>
+</div>
+<div class="section" id="running-bibconvert">
+<h3>2. Running BibConvert<a class="headerlink" href="#running-bibconvert" title="Permalink to this headline">¶</a></h3>
+<p>BibConvert in XML-oriented mode has only 1 parameter: <tt class="docutils literal"><span class="pre">-c</span></tt>. It is used
+to specify which transformation stylesheet to apply to the piped XML.</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibconvert -coaidc2marcxml.xsl &lt; sample.xml &gt; /tmp/record.xml
+</pre></div>
+</div>
+<p>If the stylesheet you want to use is installed in the
+<tt class="docutils literal"><span class="pre">etc/bibconvert/config</span></tt> directory of your Invenio installation, then
+you can just refer to it by its filename. Otherwise use the full path to
+the file.</p>
+</div>
+</div>
+<div class="section" id="c-plain-text-oriented-mode">
+<h2>C. Plain Text-Oriented Mode<a class="headerlink" href="#c-plain-text-oriented-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>1. Configuration File Examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>OAI DublinCore into MARC21 and OAI MARC into MARC21 configurations will
+be provided as default configuration, ensuring the standard uploading
+sequence (incl. <a class="reference external" href="oaiharvest-admin-guide">OAIHarvest</a> and
+<a class="reference external" href="bibupload-admin-guide">BibUpload</a> utilities). Other configurations
+can be created according to your needs. The configuration file that has
+to be created for each data source is a text file with following
+structure:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>### the configuration starts here
+### Configuration of bibconvert templates
+### source data :
+
+=== data extraction configuration template ===
+### here comes the data extraction configuration template
+#   entry example:
+
+AU---%A---MAX---;---
+
+#   extracts maximum available data by field from metadata record
+#   the values are found between specified tags
+#   in this case between the &#39;%A&#39; tag and other tags defined
+#   repetitive values are recognized by a semicolon separator
+#   resp. by multiple presence of &#39;%A&#39; tag
+
+===   data source configuration template   ===
+### here comes the data source configuration template
+#   entry example:
+
+AU---&lt;:FIRSTNAME:&gt;-&lt;:SURNAME:&gt;
+
+#   describes the contents of extracted source data fields
+#   in this case, the field AU is described as having two distinct subfields
+
+===   data target configuration template   ===
+### here comes the data target configuration template
+#   entry example:
+
+AU::CONF(AU,,0)---&lt;datafield id=&quot;700&quot; ind1=&quot;&quot; ind2=&quot;&quot;&gt;&lt;subfield code=&quot;a&quot;&gt;&lt;:AU*::SURNAME::CAP():&gt;, &lt;AU*::FIRSTNAME::ABR():&gt;&lt;/subfield&gt;&lt;/datafield&gt;
+
+#   This section concerns rather the desired output, while previous two were focused on the data source structures.
+#   Each line equals to one output line, composed of given literals and values from extracted source data fields.
+#   In this example, the XML Marc21 output line is defined,
+#   containing re-formatted values of source fields SURNAME and FIRSTNAME
+
+### the configuration ends here
+</pre></div>
+</div>
+</div></blockquote>
+<p>Having prepared a configuration, the BibConvert will convert the source
+data file according to it in a batch mode. The BibConvert is fully
+compatible with the Uploader1.x configuration language. For more
+information, have a look at the <a class="reference external" href="#C.3">BibConvert Configuration
+Guide</a> section below.</p>
+</div>
+<div class="section" id="id3">
+<h3>2. Running BibConvert<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>For a fully functional demo, consider the following sample input data:</p>
+<blockquote>
+<div><a class="reference external" href="/static/bibconvert-admin-guide/sample.dat">sample.dat</a>
+&#8211; sample bibliographic data to be converted and inputted into
+Invenio
+<a class="reference external" href="/static/bibconvert-admin-guide/sample.cfg">sample.cfg</a>
+&#8211; sample configuration file, featuring knowledge base demo</div></blockquote>
+<p>To convert the above data into XML MARC, use the following command:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ bibconvert -b&#39;&lt;collection&gt;&#39; -csample.cfg -e&#39;&lt;/collection&gt;&#39; &lt; sample.dat &gt; /tmp/sample.xml
+</pre></div>
+</div>
+</div></blockquote>
+<p>and see the XML MARC output file. You would then continue the upload
+procedure by calling <a class="reference external" href="bibupload-admin-guide">BibUpload</a>.</p>
+<p>Other useful BibConvert configuration examples:</p>
+<blockquote>
+<div><p><a class="reference external" href="/static/bibconvert-admin-guide/dcq.cfg">dcq.cfg</a>
+&#8211; Qualified Dublin Core in SGML to XML MARC example
+<a class="reference external" href="/static/bibconvert-admin-guide/dcq.dat">dcq.dat</a>
+&#8211; corresponding data file, featuring collection identifiers demo</p>
+<p><a class="reference external" href="/static/bibconvert-admin-guide/dcxml-to-marcxml.cfg">dcxml-to-marcxml.cfg</a>
+&#8211; OAI XML Dublin Core to XML MARC example</p>
+<p><a class="reference external" href="/static/bibconvert-admin-guide/bibtex.cfg">bibtex.cfg</a>
+&#8211; BibTeX to XML MARC example</p>
+</div></blockquote>
+</div>
+<div class="section" id="bibconvert-configuration-guide">
+<h3>3. BibConvert Configuration Guide<a class="headerlink" href="#bibconvert-configuration-guide" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="conventions">
+<h4>Conventions<a class="headerlink" href="#conventions" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>comment line starts with &#8216;#&#8217; sign in the first column</li>
+<li>each section is declared by a line starting with &#8216;===&#8217;
+(further characters on the line are ignored)</li>
+<li>values are separated by &#8216;&#8212;&#8217;</li>
+</ul>
+</div>
+<div class="section" id="step-1-definition-of-source-record">
+<h4>3.1 Step 1 Definition of Source record<a class="headerlink" href="#step-1-definition-of-source-record" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Create/edit &#8220;data extraction configuration template&#8221; section of the
+configuration file.</li>
+<li>Each line of this section stands for a definition of one source
+field:</li>
+</ul>
+<p><strong>name&#8212;keyword&#8212;terminating string&#8212;separator&#8212;</strong></p>
+<ul class="simple">
+<li>Choose a (valid) name allowed by the system</li>
+<li>Enter <strong>keyword</strong> and <strong>terminating string</strong>, which are boundary
+tags for the wanted value extraction</li>
+<li>In case the field is repetitive, enter the value <strong>separator</strong></li>
+<li>&#8220;<strong>&#8212;</strong>&#8220;is mandatory separator between all values, even
+zero-length</li>
+<li><strong>MAX</strong>/<strong>MIN</strong> keywords can be used instead of terminating string</li>
+</ul>
+<p>Example of a definition of author(repetitive) and title (non-repetitive) fields:</p>
+<div class="highlight-python"><div class="highlight"><pre>=== data extraction configuration template ===
+### here comes the data extraction configuration template
+
+AU---AU_---MAX---;---
+TI---TI_---EOL------
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2-definition-of-source-fields">
+<h4>3.2 Step 2 Definition of Source fields<a class="headerlink" href="#step-2-definition-of-source-fields" title="Permalink to this headline">¶</a></h4>
+<p><em>Each field extracted from the source according to the definition done
+in the first step can have an internal structure, which is described in
+this section.</em></p>
+<ul class="simple">
+<li>Create/edit &#8220;data source configuration template&#8221; section of the
+configuration file.</li>
+<li>Each line of this section stands for a definition of one source field
+corresponds to the name defined in the step 1</li>
+</ul>
+<p>name&#8212;{CONST&lt;:SUBFIELD:&gt;[CONST]}}</p>
+<ul class="simple">
+<li>Enter only constants that appear systematically.</li>
+<li>Between two discrete subfields has to be defined a constant of a non
+zero length</li>
+<li>&#8220;&#8212;&#8221;is a mandatory separator between the name and the source field
+definition</li>
+</ul>
+<p>Example of a definition of author(repetitive) and title (non-repetitive)
+fields:</p>
+<div class="highlight-python"><div class="highlight"><pre>===   data source configuration template   ===
+TI---&lt;:TI:&gt;
+AU---&lt;:FIRSTNAME:&gt;-&lt;:SURNAME:&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-definition-of-target-record">
+<h4>3.3 Step 3 Definition of target record<a class="headerlink" href="#step-3-definition-of-target-record" title="Permalink to this headline">¶</a></h4>
+<p><em>This definition describes the layout of the target record that is
+created by the conversion, together with the corresponcence to the
+source fields defined in step 2.</em></p>
+<ul class="simple">
+<li>Create/edit &#8220;data target configuration template&#8221; section of the
+configuration file.</li>
+<li>Each line of this section stands for an output line created by the
+conversion.</li>
+<li>&lt;name&gt; corresponds to the name defined in the steps 1 and 2</li>
+</ul>
+<p>CODE&#8212;CONST&lt;:name::SUBFIELD::FUNCT():&gt;CONST&lt;:GENERATED_VALUE:&gt;</p>
+<ul class="simple">
+<li><strong>CODE</strong> stands for a tag for readability (optional)</li>
+<li>&#8220;<strong>::</strong>&#8220;is a mandatory separator between the name and the subfield
+definition</li>
+<li>optionally, you can apply the appropriate <a class="reference external" href="#C.3.4.1">formatting function(s)</a>
+and <a class="reference external" href="#C.3.4.2">generated values</a></li>
+<li>&#8220;<strong>::</strong>&#8220;is a mandatory separator between the subfield definition
+and the function(s)</li>
+<li>&#8220;<strong>&#8212;</strong>&#8220;is a mandatory separator between the tag and the output
+code definition</li>
+<li>mark repetitive source fields with an asterisk (*)</li>
+</ul>
+<p>Example of a definition of author (repetitive) and title
+(non-repetitive) codes:</p>
+<div class="highlight-python"><div class="highlight"><pre>AU::CONF(AU,,0)---&lt;datafield id=&quot;700&quot; ind1=&quot;&quot; ind2=&quot;&quot;&gt;&lt;subfield code=&quot;a&quot;&gt;&lt;:AU*::AU:&gt;&lt;/subfield&gt;&lt;/datafield&gt;
+TI::CONF(TI,,0)---&lt;datafield id=&quot;245&quot; ind1=&quot;&quot; ind2=&quot;&quot;&gt;&lt;subfield code=&quot;a&quot;&gt;&lt;:TI::TI::SUP(SPACE, ):&gt;&lt;/subfield&gt;&lt;/datafield&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li>preserve newlines in a source field for later use by formatting
+functions by marking them with &#8220;^&#8221;</li>
+</ul>
+<p>Example of a definition of a book editors field in which the newlines
+are preserved so that they can be processed by the JOINMULTILINES
+formatting function:</p>
+<div class="highlight-python"><div class="highlight"><pre>AU---&lt;datafield id=&quot;773&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;&lt;:BOOKEDITOR^::BOOKEDITOR::JOINMULTILINES(&lt;subfield code=&quot;a&quot;&gt;,&lt;/subfield&gt;):&gt;&lt;/datafield&gt;
+
+With a value such as:
+Test
+Case, A
+
+The results may be:
+&lt;datafield tag=&quot;773&quot; ind1=&quot;&quot; ind2=&quot;&quot;&gt;&lt;subfield code=&quot;a&quot;&gt;Test&lt;/subfield&gt;&lt;subfield code=&quot;a&quot;&gt;Case, A&lt;/subfield&gt;&lt;/datafield&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="formatting-in-bibconvert">
+<h4>3.4 Formatting in BibConvert<a class="headerlink" href="#formatting-in-bibconvert" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="definition-of-formatting-functions">
+<h5>3.4.1 Definition of formatting functions<a class="headerlink" href="#definition-of-formatting-functions" title="Permalink to this headline">¶</a></h5>
+<p>Every field can be processed with a variety of functions that
+partially or entirely change the original value.</p>
+<p>There are three types of functions available that take as element
+either single characters, words or the entire value of processed
+field.</p>
+<p>Every function requires a certain number of parameters to be entered
+in brackets. If an&nbsp; insufficient number of parameters is present,
+the function uses default values. Default values are constructed
+with attempt to keep the original value.</p>
+<p>The configuration of templates is case sensitive.</p>
+<p>The following functions are available:</p>
+<p><a class="reference external" href="#ADD">ADD(prefix,suffix) - add prefix/suffix</a>
+<a class="reference external" href="#KB">KB(kb_file,[0-9]) -lookup in kb_file and replace value</a>
+<a class="reference external" href="#ABR">ABR(x,suffix)/ABRW(x,suffix) - abbreviation with suffix
+addition</a>
+<a class="reference external" href="#ABRX">ABRX() - abbreviate exclusively words longer</a>
+<a class="reference external" href="#CUT">CUT(prefix,postfix) - remove substring from side</a>
+<a class="reference external" href="#REP">REP(x,y) - replacement of characters</a>
+<a class="reference external" href="#SUP">SUP(type) - suppression of characters of specified type</a>
+<a class="reference external" href="#LIM">LIM(n,L/R)/LIMW(str,L/R) - restriction to n letters</a>
+<a class="reference external" href="#WORDS">WORDS(n,side) - restriction to n words from L/R</a>
+<a class="reference external" href="#MINL">MINL(n)/MAXL(n) - replacement of words shorter/greater than</a>
+<a class="reference external" href="#MINLW">MINLW(n) - replacement of short values</a>
+<a class="reference external" href="#EXPW">EXP(str,1|0)/EXPW(type) - replacement of words from value if containing spec.
+type/string</a>
+<a class="reference external" href="#IF">IF(value,valueT,valueF) - replace T/F value</a>
+<a class="reference external" href="#UP">UP/DOWN/CAP/SHAPE/NUM - lower case and upper case, shape</a>
+<a class="reference external" href="#SPLIT">SPLIT(n,h,str,from)/SPLITW(sep,h,str,from) - split into more lines</a>
+<a class="reference external" href="#CONF">CONF(field,value,1/0)/CONFL(value,1/0) - confirm validity of a field</a>
+<a class="reference external" href="#RANGE">RANGE(from,to) - confirm only entries in the specified range</a>
+<a class="reference external" href="#DEFP">DEFP() - default print</a>
+<a class="reference external" href="#IFDEFP">IFDEFP(field,value,1/0) - IF condition is met, default print</a>
+<a class="reference external" href="#JOINMULTILINES">JOINMULTILINES(prefix,suffix) - Join a multiline string into a single line
+with each segment having prefix and suffix</a></p>
+</div>
+</div>
+<div class="section" id="add-prefix-postfix">
+<h4>ADD(prefix,postfix)<a class="headerlink" href="#add-prefix-postfix" title="Permalink to this headline">¶</a></h4>
+<p>default: ADD(,)&nbsp;&nbsp;&nbsp; no addition</p>
+<p>Adds prefix/postfix to the value, we can use this function to add
+the proper field name as a prefix of the value itself:</p>
+<p>ADD(WAU=,)&nbsp;&nbsp;&nbsp; prefix for the first author (which may have been
+taken from the field AU2)</p>
+</div>
+<div class="section" id="kb-kb-file-kb-file-search">
+<h4>KB(kb_file)&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;&nbsp; kb_file search<a class="headerlink" href="#kb-kb-file-kb-file-search" title="Permalink to this headline">¶</a></h4>
+<p>default: KB(kb_file,1/0/R)</p>
+<p>The input value is compared to a kb_file and may be replaced by
+another value. In the case that the input value is not recognized,
+it is by default kept without any modification. This default can be
+overridden by <strong>_DEFAULT_&#8212;default value</strong> entry in the kb_file</p>
+<p>The file specified in the parameter is a text file representing a
+table of values that correspond to each other:</p>
+<div class="highlight-python"><div class="highlight"><pre>{**input\_value---output\_value**\ }
+
+KB(file,1) searches the exact value passed.
+KB(file,0) searches the KB code inside the value passed.
+KB(file,2) as 0 but not case sensitive
+KB(file,R) replacements are applied on substrings/characters only.
+
+bibconvert look-up value in KB\_file in one of following modes:
+===========================================================
+1 - case sensitive / match (default)
+2 - not case sensitive / search
+3 - case sensitive / search
+4 - not case sensitive / match
+5 - case sensitive / search (in KB)
+6 - not case sensitive / search (in KB)
+7 - case sensitive / search (reciprocal)
+8 - not case sensitive / search (reciprocal)
+9 - replace by \_DEFAULT\_ only
+R - not case sensitive / search (reciprocal) replace
+</pre></div>
+</div>
+<p>Edge spaces are not considered. Output value is not further
+formated.</p>
+</div>
+<div class="section" id="abr-x-trm-abrw-x-trm-abbreviate-term-to-x-places-with-out-postfix">
+<h4>ABR(x,trm),ABRW(x,trm)&nbsp; - abbreviate term to x places with(out) postfix<a class="headerlink" href="#abr-x-trm-abrw-x-trm-abbreviate-term-to-x-places-with-out-postfix" title="Permalink to this headline">¶</a></h4>
+<p>default: ABR(1,.)
+default: ABRW(1,.)</p>
+<p>The words in the input value are shortened according to the
+parameters specified. By default, only the initial character is kept
+and the output value is terminated by a dot.</p>
+<p>ABRW takes entire value as one word.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>example
+input
+output</td>
+<td>ABR()
+firstname_surname
+f._s.</td>
+<td>ABR(1,)
+firstname_surname
+f_s</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="abrx-abbreviate-exclusively-words-longer-than-given-limit">
+<h4>ABRX() - abbreviate exclusively words longer than given limit<a class="headerlink" href="#abrx-abbreviate-exclusively-words-longer-than-given-limit" title="Permalink to this headline">¶</a></h4>
+<p>default: ABRX(1,.)</p>
+<p>Exclusively words that reach the specified length limit in the input
+value are abbreviated. No suffix is appended to the words shorter
+than specified limit.</p>
+</div>
+<div class="section" id="cut-prefix-postfix-remove-substring-from-side">
+<h4>CUT(prefix,postfix) - remove substring from side<a class="headerlink" href="#cut-prefix-postfix-remove-substring-from-side" title="Permalink to this headline">¶</a></h4>
+<p>default: CUT(,)</p>
+<p>Remove string from the value (reverse function to the &#8220;ADD&#8221;)</p>
+</div>
+<div class="section" id="rep-x-y-replace-x-with-y">
+<h4>REP(x,y)&nbsp;&nbsp; - replace x with y<a class="headerlink" href="#rep-x-y-replace-x-with-y" title="Permalink to this headline">¶</a></h4>
+<p>default: REP(,)&nbsp;&nbsp;&nbsp; no replacement</p>
+<p>The input value is searched for the string specified in the first
+parameter. All such strings are replaced with the string specified
+in the second parameter.</p>
+</div>
+<div class="section" id="sup-type-string-suppress-chars-of-certain-type">
+<h4>SUP(type,string)&nbsp;&nbsp; - suppress chars of certain type<a class="headerlink" href="#sup-type-string-suppress-chars-of-certain-type" title="Permalink to this headline">¶</a></h4>
+<p>default: SUP(,)&nbsp;&nbsp;&nbsp; type not recognized</p>
+<p>All groups of characters belonging to the type specified in the
+first parameter are suppressed or replaced with a string specified
+in the second parameter.</p>
+<p>Recognized types:</p>
+<div class="highlight-python"><div class="highlight"><pre>SPACE .. invisible chars incl. NEWLINE
+ALPHA .. alphabetic
+NALPHA .. not alphabetic
+NUM .. numeric
+NNUM    .. not numeric
+ALNUM  .. alphanumeric
+NALNUM  .. non alphanumeric
+LOWER  .. lower case
+UPPER  .. upper case
+PUNCT  .. punctuation
+NPUNCT  .. not punctuation
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>example
+input
+output</td>
+<td>SUP(SPACE,-)
+sep_1999
+sep-1999</td>
+<td>SUP(NNUM)
+sep_1999
+1999</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lim-n-side-limw-str-side-limit-to-n-letters-while-trimming-l-r-side">
+<h4>LIM(n,side)/LIMW(str,side)&nbsp;&nbsp; - limit to n letters while trimming L/R side<a class="headerlink" href="#lim-n-side-limw-str-side-limit-to-n-letters-while-trimming-l-r-side" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div>default: LIM(0,)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; no change
+default: LIMW(,R)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; no change</div></blockquote>
+<p>Limits the value to the required number of characters by cutting
+excess characters either on the Left or Right.</p>
+<p>LIMW locates the first occurrence of (str) string and cut either
+Left or Right side.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="35%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>example
+input
+output</td>
+<td>LIM(4,L)
+sep_1999
+1999</td>
+<td>LIM(4,R)
+sep_1999
+sep_</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="words-n-side-limit-to-n-words-while-trimming-l-r-side">
+<h4>WORDS(n,side)&nbsp; - limit to n words while trimming L/R side<a class="headerlink" href="#words-n-side-limit-to-n-words-while-trimming-l-r-side" title="Permalink to this headline">¶</a></h4>
+<p>default: WORDS(0,R)</p>
+<p>Keeps the number of words specified in the first parameter and cuts
+the excessive characters either on Left or Right.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>example
+input
+output</td>
+<td>WORDS(1,R)
+Sep 1999
+Sep</td>
+<td>WORDS(1,L)
+Sep 1999
+1999</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="minl-n-exp-words-shorter-than-n">
+<h4>MINL(n)&nbsp;&nbsp; - exp. words shorter than n<a class="headerlink" href="#minl-n-exp-words-shorter-than-n" title="Permalink to this headline">¶</a></h4>
+<p>default: MINL(1)</p>
+<p>All words shorter than the limit specified in the parameter are
+replaced from the sentence. The words with length exactly n are kept.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>example
+input
+output</td>
+<td>MINL(2)
+History of Physics
+History of Physics</td>
+<td>MINL(3)
+History of Physics
+History Physics</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="maxl-n-exp-words-longer-than-n">
+<h4>MAXL(n)&nbsp;&nbsp; - exp. words longer than n<a class="headerlink" href="#maxl-n-exp-words-longer-than-n" title="Permalink to this headline">¶</a></h4>
+<p>default: MAXL(0)</p>
+<p>All words greater in number of characters than the limit specified
+in the parameter are replaced. Words with length exactly n are kept.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>example
+input
+output</td>
+<td>MAXL(2)
+History of Physics
+of</td>
+<td>MAXL(3)
+History of Physics
+of</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="minlw-n-replacement-of-short-values">
+<h4>MINLW(n) - replacement of short values<a class="headerlink" href="#minlw-n-replacement-of-short-values" title="Permalink to this headline">¶</a></h4>
+<p>default: MINLW(1) (no change)</p>
+<p>The entire value is deleted if shorter than the specified limit.
+This is used for the validation of created records, where we have
+20 characters in the header.
+The default validation is MINLW(21), i.e. the record entry will
+not be consided as valid, unless it contains at least 21 characters
+including the header. This default setting can be overriden by the
+-l command line option.</p>
+<p>In order to increase the necessary length of the output line in the
+configuration itself, apply the function on the total value:</p>
+<div class="highlight-python"><div class="highlight"><pre>AU::MINLW(25)---CER &lt;:SYSNO:&gt; AU    L &lt;:SURNAME:&gt;, &lt;:NAME:&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="exp-str-1-0-exp-aprove-word-containing-specified-string">
+<h4>EXP(str,1|0) - exp./aprove word containing specified string<a class="headerlink" href="#exp-str-1-0-exp-aprove-word-containing-specified-string" title="Permalink to this headline">¶</a></h4>
+<p>default: EXP&nbsp;&nbsp; (,0)&nbsp;&nbsp;&nbsp;&nbsp; leave all value</p>
+<p>The record is shortened by replacing words containing the specified string.</p>
+<p>The second parameter states whether the string approves the word
+(0) or disables it (1).</p>
+<p>For example, to get the email address from the value, use the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>example
+input
+output</td>
+<td>EXP(&#64;,0)
+mail to: <a class="reference external" href="mailto:libdesk&#37;&#52;&#48;cern&#46;ch">libdesk<span>&#64;</span>cern<span>&#46;</span>ch</a>
+<a class="reference external" href="mailto:libdesk&#37;&#52;&#48;cern&#46;ch">libdesk<span>&#64;</span>cern<span>&#46;</span>ch</a></td>
+<td>EXP(:,1)
+mail to: <a class="reference external" href="mailto:libdesk&#37;&#52;&#48;cern&#46;ch">libdesk<span>&#64;</span>cern<span>&#46;</span>ch</a>
+mail <a class="reference external" href="mailto:libdesk&#37;&#52;&#48;cern&#46;ch">libdesk<span>&#64;</span>cern<span>&#46;</span>ch</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="expw-type-exp-word-from-value-if-containing-spec-type">
+<h4>EXPW(type)&nbsp;&nbsp; - exp. word from value if containing spec. type<a class="headerlink" href="#expw-type-exp-word-from-value-if-containing-spec-type" title="Permalink to this headline">¶</a></h4>
+<p>default: EXPW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type not recognized</p>
+<p>The sentence is shortened by replacing words containing specified
+type of character.</p>
+<p>Types supported in EXPW function:</p>
+<div class="highlight-python"><div class="highlight"><pre>ALPHA .. alphabetic
+NALPHA .. not alphabetic
+NUM .. numeric
+NNUM    .. not numeric
+ALNUM  .. alphanumeric
+NALNUM  .. non alphanumeric
+LOWER  .. lower case
+UPPER  .. upper case
+PUNCT  .. punctuation
+NPUNCT  .. non punctuation
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">SPACE is not handled as a keyword, since all space characters
+are considered as word separators.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="35%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>example
+input
+output</td>
+<td>EXPW(NNUM)
+sep_1999
+1999</td>
+<td>EXPW(NUM)
+sep_1999
+sep</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="if-value-valuet-valuef-replace-t-f-value">
+<h4>IF(value,valueT,valueF) - replace T/F value<a class="headerlink" href="#if-value-valuet-valuef-replace-t-f-value" title="Permalink to this headline">¶</a></h4>
+<p>default: IF(,,)</p>
+<p>Compares the value with the first parameter. In case the result is
+TRUE, the input value is replaced with the second parameter,
+otherwise the input value is replaced with the third parameter.</p>
+<p>In case the input value has to be kept, whatever it is, the
+keyword ORIG can be used (usually in the place of the third parameter)</p>
+<div class="highlight-python"><div class="highlight"><pre>example
+input
+output
+IF(sep\_1999,sep)
+sep\_1999
+sep
+IF(oct\_1999,oct)
+sep\_1999
+IF(oct\_1999,oct,ORIG)
+sep\_1999
+oct\_1999
+</pre></div>
+</div>
+</div>
+<div class="section" id="up-upper-case">
+<h4>UP - upper case<a class="headerlink" href="#up-upper-case" title="Permalink to this headline">¶</a></h4>
+<p>Convert all characters to upper case</p>
+</div>
+<div class="section" id="down-lower-case">
+<h4>DOWN - lower case<a class="headerlink" href="#down-lower-case" title="Permalink to this headline">¶</a></h4>
+<p>Convert all characters to lower case</p>
+</div>
+<div class="section" id="cap-make-capitals">
+<h4>CAP - make capitals<a class="headerlink" href="#cap-make-capitals" title="Permalink to this headline">¶</a></h4>
+<p>Convert the initial character of each word to upper case and the
+rest of characters to lower case</p>
+</div>
+<div class="section" id="shape-format-string">
+<h4>SHAPE&nbsp;- format string<a class="headerlink" href="#shape-format-string" title="Permalink to this headline">¶</a></h4>
+<p>Supresses all invalid spaces</p>
+</div>
+<div class="section" id="num-number">
+<h4>NUM - number<a class="headerlink" href="#num-number" title="Permalink to this headline">¶</a></h4>
+<p>If it contains at least one digit, convert it into a number by
+suppressing other characters. Leading zeroes are deleted.</p>
+</div>
+<div class="section" id="split-n-h-str-from">
+<h4>SPLIT(n,h,str,from)<a class="headerlink" href="#split-n-h-str-from" title="Permalink to this headline">¶</a></h4>
+<p>Splits the input value into more lines, where each line contains at
+most (n+h+length of str) characters, (n) being the number of
+characters following the number of characters in the header,
+specified in (h). The header repeats at the beginning of each line.
+An additional string can be inserted as a separator between the
+header and the following value. This string is specified by the
+third parameter (str). It is possible to restrict the application of
+(str) so it does not appear on the first line by entering &#8220;2&#8221; for
+(from)</p>
+</div>
+<div class="section" id="splitw-sep-h-str-from">
+<h4>SPLITW(sep,h,str,from)<a class="headerlink" href="#splitw-sep-h-str-from" title="Permalink to this headline">¶</a></h4>
+<p>Splits the input value into more lines by replacing the line
+separator stated in (sep) with CR/LFs. Also, as in the case of the
+SPLIT function, the first (h) characters are taken as a header and
+repeat at the beginning of each line.&nbsp; An additional string can be
+inserted as a separator between the header and the following value.
+This string is specified by the third parameter (str). It is
+possible to restrict the application of (str) so it does not appear
+on the first line by entering &#8220;2&#8221; for (from)</p>
+</div>
+<div class="section" id="conf-field-value-1-0-confirm-validity-of-a-field">
+<h4>CONF(field,value,1/0)&nbsp; - confirm validity of a field<a class="headerlink" href="#conf-field-value-1-0-confirm-validity-of-a-field" title="Permalink to this headline">¶</a></h4>
+<p>The input value is taken as it is, or refused depending on the value
+of some other field. In case the other (field) contains&nbsp; the string
+specified in (value), then the input value is confirmed (1) or
+refused (0).</p>
+</div>
+<div class="section" id="confl-str-1-0-confirm-validity-of-a-field">
+<h4>CONFL(str,1|0) - confirm validity of a field<a class="headerlink" href="#confl-str-1-0-confirm-validity-of-a-field" title="Permalink to this headline">¶</a></h4>
+<p>The input value is confirmed if it contains (<strong>1</strong>)/misses(<strong>0</strong>)
+the specified string (<strong>str</strong>)</p>
+</div>
+<div class="section" id="range-from-to-confirm-only-entries-in-the-specified-range">
+<h4>RANGE(from,to) - confirm only entries in the specified range<a class="headerlink" href="#range-from-to-confirm-only-entries-in-the-specified-range" title="Permalink to this headline">¶</a></h4>
+<p>Left side function of target template configuration section to
+select the desired entries from the repetitive field.
+The range can only be continuous.</p>
+<p>The entry is confirmed in case its input falls into the range
+from-to specified in the parameter, border values included. As an
+upper limit it is possibe to use the keyword MAX.</p>
+<p>This is useful in case of AU code, where the first entry has a
+different definition from other entries:</p>
+<div class="highlight-python"><div class="highlight"><pre>AU::RANGE(1,1)---CER &lt;:SYSNO:&gt; AU2    L &lt;:AU::SURNAME:&gt;,
+&lt;:AU::NAME:&gt;    ... takes the first name from the defined AU field
+AU::RANGE(2,MAX)---CER &lt;:SYSNO:&gt; AU     L &lt;:AU::SURNAME:&gt; ,
+&lt;:AU::NAME:&gt;    ... takes the the rest of namesfrom the AU field
+</pre></div>
+</div>
+</div>
+<div class="section" id="defp-default-print">
+<h4>DEFP() - default print<a class="headerlink" href="#defp-default-print" title="Permalink to this headline">¶</a></h4>
+<p>The value is printed by default even if it does not contain any variable
+input from the source file.</p>
+</div>
+<div class="section" id="ifdefp-field-value-1-0-if-condition-is-met-default-print">
+<h4>IFDEFP(field,value,1/0)&nbsp;- IF condition is met, default print<a class="headerlink" href="#ifdefp-field-value-1-0-if-condition-is-met-default-print" title="Permalink to this headline">¶</a></h4>
+<p>The line is printed by default (even if it does not contain any
+variable input from the source file) IF a condition is met that
+depends on the value of some other field. The condition is basically
+either that &#8220;field&#8221; contains &#8220;value&#8221; (in which case the 3rd
+parameter should be set to 1), or that &#8220;field&#8221; does NOT contain
+&#8220;value&#8221; (in which case the 3rd parameter should be set to 0).
+For example, given the following line:</p>
+<div class="highlight-python"><div class="highlight"><pre>690C::REP(EOL,)::IFDEFP(comboYEL,BOOK,1)---&lt;datafield tag=&quot;690&quot;
+ind1=&quot;C&quot; ind2=&quot; &quot;&gt;&lt;subfield code=&quot;a&quot;&gt;BOOK&lt;/subfield&gt;&lt;/datafield&gt;
+</pre></div>
+</div>
+<p>We want to print the line if the (field) &#8220;comboYEL&#8221; contains the
+(value) &#8220;BOOK&#8221;, otherwise we don&#8217;t want to print it. Therefore, the
+3rd parameter is set to &#8220;1&#8221;. However, in the following line:</p>
+<div class="highlight-python"><div class="highlight"><pre>690C::REP(EOL,)::IFDEFP(comboYEL,BOOK,0)---&lt;datafield tag=&quot;690&quot;
+ind1=&quot;C&quot; ind2=&quot; &quot;&gt;&lt;subfield code=&quot;a&quot;&gt;OTHER&lt;/subfield&gt;&lt;/datafield&gt;
+</pre></div>
+</div>
+<p>We want to print the line if the (field) &#8220;comboYEL&#8221; does NOT
+contain the (value) &#8220;BOOK&#8221;, otherwise we don&#8217;t want to print it.
+Therefore, the 3rd parameter is set to &#8220;0&#8221;.</p>
+<p>This is achieved by using &#8220;IFDEFP&#8221;. If the line had contained
+variables, the &#8220;CONF&#8221; function would have been used instead.</p>
+</div>
+<div class="section" id="joinmultilines-prefix-suffix-join-a-multiline-string-into-a-single-line-with-each-segment-having-prefix-and-suffix">
+<h4>JOINMULTILINES(prefix,suffix) - Join a multiline string into a single line with each segment having prefix and suffix<a class="headerlink" href="#joinmultilines-prefix-suffix-join-a-multiline-string-into-a-single-line-with-each-segment-having-prefix-and-suffix" title="Permalink to this headline">¶</a></h4>
+<p>Given a field-value with newlines in it, split the field on the new
+lines (\n), separating them with prefix, then suffix. E.g. for the
+field XX with the value:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Test</span>
+<span class="n">Case</span><span class="p">,</span> <span class="n">A</span>
+</pre></div>
+</div>
+<p>And the function call:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;:XX^::XX::JOINMULTILINES(&lt;subfield code=&quot;a&quot;&gt;,&lt;/subfield&gt;):&gt;
+</pre></div>
+</div>
+<p>The results would be:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;subfield code=&quot;a&quot;&gt;Test&lt;/subfield&gt;&lt;subfield code=&quot;a&quot;&gt;Case, A&lt;/subfield&gt;
+</pre></div>
+</div>
+<p>One note on this: <tt class="docutils literal"><span class="pre">&lt;:XX^::XX:</span></tt>
+Without the ^ the newlines will be lost as bibconvert will remove
+them, so you&#8217;ll never see an effect from this function.</p>
+</div>
+<div class="section" id="generated-values">
+<h4>3.4.2 Generated values<a class="headerlink" href="#generated-values" title="Permalink to this headline">¶</a></h4>
+<p>In the template configurations, values can be either taken from the
+source or generated in the process itself. This is mainly useful for
+evaluating constant values.</p>
+<p>Currently, the following date values are generated:</p>
+</div>
+<div class="section" id="date-format-n">
+<h4>DATE(format,n)<a class="headerlink" href="#date-format-n" title="Permalink to this headline">¶</a></h4>
+<p>default: DATE(,10)</p>
+<p>where n is the number of digits required.</p>
+<p>Generates the current date in the form given as a parameter. The
+format has to be given according to the ANSI C notation, i.e. the
+string is composed out of following components:</p>
+<div class="highlight-python"><div class="highlight"><pre>%a    abbreviated weekday name
+%A    full weekday name
+%b    abbreviated month name
+%B    full month name
+%c    date and time representation
+%d    decimal day of month number (01-31)
+%H    hour (00-23)(12 hour format)
+%I    hour (01-12)(12 hour format)
+%j    day of year(001-366)
+%m    month (01-12)
+%M    minute (00-59)
+%p    local equivalent of a.m. or p.m.
+%S    second (00-59)
+%U    week number in year (00-53)(starting with Sunday)
+%V    week number in year
+%w    weekday (0-6)(starting with Sunday)
+%W    week number in year (00-53)(starting with Monday)
+%x    local date representation
+%X    local time representation
+%y    year (no century prefix)
+%Y    year (with century prefix)
+%Z    time zone name
+%%    %
+</pre></div>
+</div>
+</div>
+<div class="section" id="week-diff">
+<h4>WEEK(diff)<a class="headerlink" href="#week-diff" title="Permalink to this headline">¶</a></h4>
+<p>Enters the two-digit number of the current week (%V) increased by
+specified difference.
+If the resulting number is negative, the returned value is zero (00).
+Values are kept up to 99, three digit values are shortened from the
+left.</p>
+<div class="highlight-python"><div class="highlight"><pre>WEEK(-4)    returns 48, if current week is 52
+WEEK        current week
+</pre></div>
+</div>
+</div>
+<div class="section" id="sysno">
+<h4>SYSNO<a class="headerlink" href="#sysno" title="Permalink to this headline">¶</a></h4>
+<p>Works the same as DATE, however the format of the resulting value
+is fixed so it complies with the requirements of further record
+handling. The format is &#8216;whhmmss&#8217;, where:</p>
+<div class="highlight-python"><div class="highlight"><pre>w     current weekday
+hh    current hour
+mm    current minute
+ss    current second
+</pre></div>
+</div>
+<p>The system number, if generated like this, contains a variable value
+changing every second. For the system number is an identifier of the
+record, it is needed to ensure it will be unique for the entire
+record processed. Unlike the function DATE, which simply generates
+the value of format given, SYSNO keeps the value persistent
+throughout the entire record and excludes collision with other
+records that are generated in period of one week with one second
+granularity.</p>
+<p>It is not possible to use the DATE function for generating a system
+number instead.</p>
+<p>The system number is unique in range of one week only, according
+to the current definition.</p>
+</div>
+<div class="section" id="oai">
+<h4>OAI<a class="headerlink" href="#oai" title="Permalink to this headline">¶</a></h4>
+<p>Inserts OAI identifier incremented by one for earch record Starting
+value that is used in the first record in the batch job can be
+specified on the command line using the -o&lt;starting_value&gt; option.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibedit-admin-guide.html" class="btn btn-neutral float-right" title="BibEdit Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibclassify-admin-guide.html" class="btn btn-neutral" title="BibClassify Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

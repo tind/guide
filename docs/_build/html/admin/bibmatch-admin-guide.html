@@ -1,0 +1,546 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibMatch Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="BibRank Admin Guide" href="bibrank-admin-guide.html"/>
+        <link rel="prev" title="BibKnowledge Admin Guide" href="bibknowledge-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibMatch Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibmatch-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibmatch-admin-guide">
+<span id="id1"></span><h1>BibMatch Admin Guide<a class="headerlink" href="#bibmatch-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-bibmatch">
+<h3>1.1 What is BibMatch<a class="headerlink" href="#what-is-bibmatch" title="Permalink to this headline">¶</a></h3>
+<p>BibMatch is a tool for matching bibliographic meta-data records against
+a local or remote Invenio repository. The incoming records can be
+matched against zero, one or more then one records. This way, it is
+possible to identify potential duplicate entries before they are
+uploaded into the repository. This can also be helpful in detecting
+already existing duplicates in the database.</p>
+<p>BibMatch also acts as a filter for incoming records, by splitting the
+records into &#8216;new records&#8217; or &#8216;existing records&#8217;. In most cases this
+separation makes a big difference when ingesting content into a digital
+repository.</p>
+</div>
+<div class="section" id="features">
+<h3>1.2 Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Matches meta-data records locally and remotely</li>
+<li>Supports user authentication to allow matching against restricted
+collections</li>
+<li>Highly configurable match validation step for reliable matching
+results</li>
+<li>Allows full customisation of the search queries used to find matching
+candidates</li>
+<li>Incoming meta-data can be manipulated through BibConvert formatting
+functions</li>
+<li>Supports transliteration of Unicode meta-data into ASCII (useful for
+legacy systems)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>2. Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basic-usage">
+<h3>2.1 Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="input-records">
+<h4>Input records<a class="headerlink" href="#input-records" title="Permalink to this headline">¶</a></h4>
+<p>BibMatch needs a set of records to match. You can give BibMatch these
+records in two ways:</p>
+<p>By standard input::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch &lt; input.xml
+</pre></div>
+</div>
+<p>or, by <em>-i</em> parameter::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -i input.xml
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-records">
+<h4>Output records<a class="headerlink" href="#output-records" title="Permalink to this headline">¶</a></h4>
+<p>When BibMatch matches records, they will be classified in one of 4
+ways:</p>
+<ul class="simple">
+<li><strong>Match</strong> - exact match found</li>
+<li><strong>Ambiguous</strong> - record matches more then one record</li>
+<li><strong>Fuzzy</strong> - record <em>may</em> match a record</li>
+<li><strong>New</strong> - record does not match any record</li>
+</ul>
+<p>You can choose which types of records to output after matching has
+completed by specifying it in the command::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-match &lt; input.xml
+$ bibmatch --print-new &lt; input.xml
+</pre></div>
+</div>
+<p>You can also output all matching results to a set of files, by
+specifying a filename-prefix to the command-line option <em>-b</em>::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -b output_results &lt; input.xml
+</pre></div>
+</div>
+<p>This will create a set of 4 files: <em>output_results.matched.xml</em>,
+<em>output_results.new.xml</em>, <em>output_results.fuzzy.xml</em>,
+<em>output_results.ambiguous.xml</em></p>
+</div>
+<div class="section" id="matching-queries">
+<h4>Matching queries<a class="headerlink" href="#matching-queries" title="Permalink to this headline">¶</a></h4>
+<p>By default, BibMatch will try to find potential record matches using the
+MARC tag 245__$$a, i.e. the title. In many cases this is not an
+efficient metric to find all potential matching records with, because of
+its ambiguous nature. As such, BibMatch provide users a way to specify
+the exact queries to use and where to extract meta-data to put in the
+queries.</p>
+<p>Using the command-line option <em>-q</em> you can specify your own
+<em>querystrings</em> to use when searching for records. Read more about
+querystrings <a class="reference external" href="#querystrings">here</a>.</p>
+<p>For example, if available in the meta-data, you can search using the
+ISBN or DOI, which <em>usually</em> are stable identifiers::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -q &quot;[020__a] or [0247_a]&quot; -b output_results &lt; input.xml
+</pre></div>
+</div>
+<p>As you can see, any data from the input record you want to replace in
+the query is referenced using square-brackets [] containing the exact
+MARC notation.</p>
+<p>You can specify several <em>-q</em> queries and they will all be performed in
+order, until a match is found. If you want to avoid specifying long
+complicated query-strings every time, you can use short-hand <em>template
+queries</em> that can be defined in the configuration of BibMatch. (See
+hacking guide)</p>
+</div>
+<div class="section" id="match-remote-installations">
+<h4>Match remote installations<a class="headerlink" href="#match-remote-installations" title="Permalink to this headline">¶</a></h4>
+<p>By default, BibMatch will try to match records on the local
+installation. In order to match against records on a remote Invenio
+installation (like <a class="reference external" href="http://cds.cern.ch">http://cds.cern.ch</a> or <a class="reference external" href="http://inspire-hep.net">http://inspire-hep.net</a>) you can
+use the option <em>-r</em>::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -r &quot;http://cds.cern.ch&quot; -q &quot;[020__a] or [0247_a]&quot; -b output_results &lt; input.xml
+</pre></div>
+</div>
+<p>If the remote installation requires user authentication, you can also
+specify this using <em>&#8211;user</em>. You will then be prompted for a password::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -r &quot;http://cds.cern.ch&quot; --user admin -q &quot;[020__a] or [0247_a]&quot; -b output_results &lt; input.xml
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-textmarc">
+<h4>Using TEXTMARC<a class="headerlink" href="#using-textmarc" title="Permalink to this headline">¶</a></h4>
+<p>BibMatch usually works with MARCXML, but you can still input TEXTMARC
+files that will be automatically converted to MARCXML in BibMatch. If
+you want to also receive the output in TEXTMARC (limited support) you
+can use the command-line option <em>-t</em>::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -b out.marc -t &lt; input.marc
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="advanced-usage">
+<h3>2.2 Advanced usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h3>
+<p>When matching records against a repository you <em>may</em> sometimes want to
+update or replace any existing records in the database with the given
+records. In order to allow for easy upload after BibMatch has run, you
+can use the <em>-a</em> parameter to tell BibMatch to add the matched records
+001 identifier.:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch -q &quot;[020__a] or [0247_a]&quot; -b output_records -a &lt; input.xml
+</pre></div>
+</div>
+<p>To match using BibConvert formats to manipulate MARC field-values from
+the input records. See <a class="reference external" href="/help/admin/bibconvert-admin-guide#C.3.4">BibConvert Admin
+Guide</a>
+for more details on formats. An example of extracting the first word
+from the 100__a field and lower-case it::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --query-string=\&quot;[245__a] [100__a::WORDS(1,R)::DOWN()]&quot; &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>You can also search directly in specific collection(s) in the repository
+using the <em>&#8211;collection</em> option. To match more then one collection,
+separate each with comma::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --collection &#39;Books,Articles&#39; &lt; input.xml
+</pre></div>
+</div>
+<p>If some collections are restricted or you are searching for restricted
+meta-data fields in the repository, you can specify a user login with
+the <em>&#8211;user</em> command::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --collection &#39;Theses&#39; --user admin &lt; input.xml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="more-examples">
+<h2>3. More examples<a class="headerlink" href="#more-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>3.1 More examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>To match records on title in the title index, also print out only new
+(unmatched) ones::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-new -q &quot;[title]&quot; --field=\&quot;title\&quot; &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>To print potential duplicate entries before manual upload using
+predefined queries, use::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-match -q title-author &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>Two options for matching on multiple fields, including predefined fields
+(title, author etc.)::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --query-string=&quot;[245__a] [author]&quot; &lt; input.xml &gt; output.xml
+$ bibmatch --query-string=&quot;245__a||author&quot; &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>To print &#8220;fuzzy&#8221; (almost matching by title) records::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-fuzzy  &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+<p>An example of use of predefined searching:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ bibmatch --print-match -q title-author &lt; input.xml &gt; output.xml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="appendix">
+<h2>Appendix<a class="headerlink" href="#appendix" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-querystrings">
+<h3>A. Querystrings<a class="headerlink" href="#a-querystrings" title="Permalink to this headline">¶</a></h3>
+<p>Querystrings determine which type of query/strategy to use when
+searching for the matching records in the database.</p>
+<p><strong>Predefined querystrings:</strong></p>
+<p>There are some predefined querystrings available:</p>
+<ul class="simple">
+<li><strong>title</strong> - standard title search. (i.e. &#8220;this is a title&#8221;) (default)</li>
+<li><strong>title-author</strong> - title and author search (i.e. &#8220;this is a title AND
+Lastname, F&#8221;)</li>
+<li><strong>reportnumber</strong> - reportnumber search (i.e.
+reportnumber:REP-NO-123).</li>
+</ul>
+<p>You can also add your own predefined querystrings inside invenio.conf
+file.</p>
+<p>You can structure your query in different ways:</p>
+<ul>
+<li><p class="first">Old-style: fieldnames separated by &#8216;||&#8217; (conforms with earlier
+BibMatch versions):</p>
+<div class="highlight-python"><div class="highlight"><pre>-q &quot;773__p||100__a&quot;
+</pre></div>
+</div>
+</li>
+<li><p class="first">New-style: Invenio query syntax with &#8220;bracket syntax&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre>-q &quot;773__p:\&quot;[773__p]\&quot; 100__a:[100__a]&quot;
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Depending on the structure of the query, it will fetch associated values
+from each record and put it into the final search query. i.e in the
+above example it will put journal-title from 773__p.</p>
+<p>When more then one value/datafield is found, i.e. when looking for
+700__a (additional authors), several queries will be put together to
+make sure all combinations of values are accounted for. The queries are
+separated with given operator (-o, &#8211;operator) value.</p>
+<p>Note: You can add more then one query to a search, just give more (-q,
+&#8211;query-string) arguments. The results of all queries will be combined
+when matching.</p>
+</div>
+<div class="section" id="b-bibconvert-formats">
+<h3>B. BibConvert formats<a class="headerlink" href="#b-bibconvert-formats" title="Permalink to this headline">¶</a></h3>
+<p>Another option to further improve your matching strategy is to use
+BibConvert formats. By using the formats available by BibConvert you can
+change the values from the retrieved record-fields.</p>
+<p>i.e. using WORDS(1,R) will only return the first (1) word from the right
+(R). This can be very useful when adjusting your matching parameters to
+better match the content. For example only getting authors last-name
+instead of full-name.</p>
+<p>You can use these formats directly in the querystrings (indicated by &#8216;::&#8217;):</p>
+<ul class="simple">
+<li>Old-style: -q &#8220;100__a::WORDS(1,R)::DOWN()&#8221;
+This query will take first word from the right from 100__a and
+also convert it to lower-case.</li>
+<li>New-style: -q &#8220;100__a:[100__a::WORDS(1,R)::DOWN()]&#8221;
+See BibConvert documentation for a more detailed explanation of
+formats.</li>
+</ul>
+</div>
+<div class="section" id="c-predefined-fields">
+<h3>C. Predefined fields<a class="headerlink" href="#c-predefined-fields" title="Permalink to this headline">¶</a></h3>
+<p>In addition to specifying distinct MARC fields in the querystrings you
+can use predefined fields as configured in the LOCAL(!) Invenio system.
+These fields will then be mapped to one or more fieldtags to be
+retrieved from input records.</p>
+<p>Common predefined fields used in querystrings: (for Invenio demo site,
+your fields may vary!)</p>
+<div class="highlight-python"><div class="highlight"><pre>&#39;abstract&#39;, &#39;affiliation&#39;, &#39;anyfield&#39;, &#39;author&#39;, &#39;coden&#39;, &#39;collaboration&#39;,
+ &#39;collection&#39;, &#39;datecreated&#39;, &#39;datemodified&#39;, &#39;division&#39;, &#39;exactauthor&#39;, &#39;exactfirstauthor&#39;,
+ &#39;experiment&#39;, &#39;fulltext&#39;, &#39;isbn&#39;, &#39;issn&#39;, &#39;journal&#39;, &#39;keyword&#39;, &#39;recid&#39;,
+ &#39;reference&#39;, &#39;reportnumber&#39;, &#39;subject&#39;, &#39;title&#39;, &#39;year&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="d-bibmatch-commmand-line-tool">
+<h3>D. BibMatch commmand-line tool<a class="headerlink" href="#d-bibmatch-commmand-line-tool" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>Output:
+
+ -0 --print-new (default) print unmatched in stdout
+ -1 --print-match print matched records in stdout
+ -2 --print-ambiguous print records that match more than 1 existing records
+ -3 --print-fuzzy print records that match the longest words in existing records
+
+ -b --batch-output=(filename). filename.new will be new records, filename.matched will be matched,
+      filename.ambiguous will be ambiguous, filename.fuzzy will be fuzzy match
+ -t --text-marc-output transform the output to text-marc format instead of the default MARCXML
+
+ Simple query:
+
+ -q --query-string=(search-query/predefined-query) See &quot;Querystring&quot;-section below.
+ -f --field=(field)
+
+ General options:
+
+ -n   --noprocess          Do not print records in stdout.
+ -i,  --input              use a named file instead of stdin for input
+ -v,  --verbose=LEVEL      verbose level (from 0 to 9, default 1)
+ -r,  --remote=URL         match against a remote Invenio installation (Full URL, no trailing &#39;/&#39;)
+                           Beware: Only searches public records attached to home collection
+ -a,  --alter-recid        The recid (controlfield 001) of matched or fuzzy matched records in
+                           output will be replaced by the 001 value of the matched record.
+                           Note: Useful if you want to replace matched records using BibUpload.
+ -z,  --clean              clean queries before searching
+ --no-validation           do not perform post-match validation
+ -h,  --help               print this help and exit
+ -V,  --version            print version information and exit
+
+ Advanced options:
+
+ -m --mode=(a|e|o|p|r)     perform an advanced search using special search mode.
+                             Where mode is:
+                               &quot;a&quot; all of the words,
+                               &quot;o&quot; any of the words,
+                               &quot;e&quot; exact phrase,
+                               &quot;p&quot; partial phrase,
+                               &quot;r&quot; regular expression.
+
+ -o --operator(a|o)        used to concatenate identical fields in search query (i.e. several report-numbers)
+                             Where operator is:
+                               &quot;a&quot; boolean AND (default)
+                               &quot;o&quot; boolean OR
+
+ -c --config=filename      load querystrings from a config file. Each line starting with QRYSTR will
+                           be added as a query. i.e. QRYSTR --- [title] [author]
+
+ -x --collection           only perform queries in certain collection(s).
+                           Note: matching against restricted collections requires authentication.
+
+ --user=USERNAME           username to use when connecting to Invenio instance. Useful when searching
+                           restricted collections. You will be prompted for password.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibrank-admin-guide.html" class="btn btn-neutral float-right" title="BibRank Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibknowledge-admin-guide.html" class="btn btn-neutral" title="BibKnowledge Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

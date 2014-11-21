@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BibClassify Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="BibConvert Admin Guide" href="bibconvert-admin-guide.html"/>
+        <link rel="prev" title="BibCirculation Admin Guide" href="bibcirculation-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>BibClassify Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/bibclassify-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="bibclassify-admin-guide">
+<span id="id1"></span><h1>BibClassify Admin Guide<a class="headerlink" href="#bibclassify-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>BibClassify automatically extracts keywords from fulltext documents. The
+automatic assignment of keywords to textual documents has clear benefits
+in the digital library environment as it aids catalogization,
+classification and retrieval of documents.</p>
+<div class="section" id="thesaurus">
+<h3>1.1 Thesaurus<a class="headerlink" href="#thesaurus" title="Permalink to this headline">¶</a></h3>
+<p>BibClassify performs an extraction of keywords based on the recurrence
+of specific terms, taken from a controlled vocabulary. A controlled
+vocabulary is a thesaurus of all the terms that are relevant in a
+specific context. When a context is defined by a discipline or branch of
+knowledge then the vocabulary is said to be a <em>subject thesaurus</em>.
+Various existing subject thesauri can be found
+<a class="reference external" href="http://www.fbi.fh-koeln.de/institut/labor/Bir/thesauri_new/thesen.htm">here</a>.</p>
+<p>A subject thesaurus can be expressed in several different formats.
+Different institutions/disciplines have developed different ways of
+representing their vocabulary systems. The taxonomy used by bibclassify
+is expressed in RDF/SKOS. It allows not only to list keywords but to
+specify relations between the keywords and alternative ways to represent
+the same keyword.</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>&lt;Concept rdf:about=&quot;http://cern.ch/thesauri/HEP.rdf#scalar&quot;&gt;
+ &lt;composite rdf:resource=&quot;http://cern.ch/thesauri/HEP.rdf#Composite.fieldtheoryscalar&quot;/&gt;
+ &lt;prefLabel xml:lang=&quot;en&quot;&gt;scalar&lt;/prefLabel&gt;
+ &lt;note xml:lang=&quot;en&quot;&gt;nostandalone&lt;/note&gt;
+&lt;/Concept&gt;
+
+&lt;Concept rdf:about=&quot;http://cern.ch/thesauri/HEP.rdf#fieldtheory&quot;&gt;
+ &lt;composite rdf:resource=&quot;http://cern.ch/thesauri/HEP.rdf#Composite.fieldtheoryscalar&quot;/&gt;
+ &lt;prefLabel xml:lang=&quot;en&quot;&gt;field theory&lt;/prefLabel&gt;
+ &lt;altLabel xml:lang=&quot;en&quot;&gt;QFT&lt;/altLabel&gt;
+ &lt;hiddenLabel xml:lang=&quot;en&quot;&gt;/field theor\w*/&lt;/hiddenLabel&gt;
+ &lt;note xml:lang=&quot;en&quot;&gt;nostandalone&lt;/note&gt;
+&lt;/Concept&gt;
+
+&lt;Concept rdf:about=&quot;http://cern.ch/thesauri/HEP.rdf#Composite.fieldtheoryscalar&quot;&gt;
+ &lt;compositeOf rdf:resource=&quot;http://cern.ch/thesauri/HEP.rdf#scalar&quot;/&gt;
+ &lt;compositeOf rdf:resource=&quot;http://cern.ch/thesauri/HEP.rdf#fieldtheory&quot;/&gt;
+ &lt;prefLabel xml:lang=&quot;en&quot;&gt;field theory: scalar&lt;/prefLabel&gt;
+ &lt;altLabel xml:lang=&quot;en&quot;&gt;scalar field&lt;/altLabel&gt;
+&lt;/Concept&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p>In RDF/SKOS, every keyword is wrapped around a <em>concept</em> which
+encapsulates the full semantics and hierarchical status of a term -
+including synonyms, alternative forms, broader concepts, notes and so on
+- rather than just a plain keyword.</p>
+<p>The specification of the SKOS language and <a class="reference external" href="http://www.w3.org/TR/2005/WD-swbp-thesaurus-pubguide-20050517/">various
+manuals</a>
+that aid the building of a semantic thesaurus can be found at the <a class="reference external" href="http://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20051102/">SKOS
+W3C
+website</a>.
+Furthermore, BibClassify can function on top of an extended version of
+SKOS, which includes special elements such as key chains, composite
+keywords and special annotations. The extension of the SKOS language is
+documented in the <a class="reference external" href="/help/hacking/bibclassify-internals">hacking
+guide</a>.</p>
+</div>
+<div class="section" id="keyword-extraction">
+<h3>1.2 Keyword extraction<a class="headerlink" href="#keyword-extraction" title="Permalink to this headline">¶</a></h3>
+<p>BibClassify computes the keywords of a fulltext document based on the
+frequency of thesaurus terms in it. In other words, it calculates how
+many times a thesaurus keyword (and its alternative and hidden labels,
+defined in the taxonomy) appears in a text and it ranks the results.
+Unlike other similar systems, BibClassify does not use any machine
+learning or AI methodologies - a just plain phrase matching using
+<a class="reference external" href="http://en.wikipedia.org/wiki/Regex">regular expressions</a>: it
+exploits the conformation and richness of the thesaurus to produce
+accurate results. It is then clear that BibClassify performs best on top
+of rich, well-structured, subject thesauri expressed in the RDF/SKOS
+language.</p>
+<p>A detailed account of the phrase matching mechanisms used by BibClassify
+is included in the <a class="reference external" href="/help/hacking/bibclassify/">hacking
+guide</a>.</p>
+</div>
+</div>
+<div class="section" id="running-bibclassify">
+<h2>2. Running BibClassify<a class="headerlink" href="#running-bibclassify" title="Permalink to this headline">¶</a></h2>
+<p>&nbsp;<strong>Dependencies.</strong> BibClassify requires Python
+<a class="reference external" href="http://rdflib.net/">RDFLib</a> in order to process the RDF/SKOS
+taxonomy.</p>
+<p>In order to extract relevant keywords from a document <tt class="docutils literal"><span class="pre">fulltext.pdf</span></tt>
+based on a controlled vocabulary <tt class="docutils literal"><span class="pre">thesaurus.rdf</span></tt>, you would run
+BibClassify as follows:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>$ bibclassify.py -k thesaurus.rdf fulltext.pdf
+</pre></div>
+</div>
+</div></blockquote>
+<p>Launching <tt class="docutils literal"><span class="pre">bibclassify</span> <span class="pre">--help</span></tt> shows the options available for
+BibClassify:</p>
+<div class="highlight-python"><div class="highlight"><pre>Usage: bibclassify [OPTION]... [FILE/URL]...
+       bibclassify [OPTION]... [DIRECTORY]...
+Searches keywords in FILEs and/or files in DIRECTORY(ies). If a directory is
+specified, BibClassify will generate keywords for all PDF documents contained
+in the directory.  Can also run in a daemon mode, in which case the files to
+be run are looked for from the database (=records modified since the last run).
+
+General options:
+  -h, --help                display this help and exit
+  -V, --version             output version information and exit
+  -v, --verbose=LEVEL       sets the verbose to LEVEL (=0)
+  -k, --taxonomy=NAME       sets the taxonomy NAME. It can be a simple
+                            controlled vocabulary or a descriptive RDF/SKOS
+                            and can be located in a local file or URL.
+
+Standalone file mode options:
+  -o, --output-mode=TYPE    changes the output format to TYPE (text, marcxml or
+                            html) (=text)
+  -s, --spires              outputs keywords in the SPIRES format
+  -n, --keywords-number=INT sets the number of keywords displayed (=20), use 0
+                            to set no limit
+  -m, --matching-mode=TYPE  changes the search mode to TYPE (full or partial)
+                            (=full)
+  --detect-author-keywords  detect keywords that are explicitely written in the
+                            document
+Daemon mode options:
+  -i, --recid=RECID         extract keywords for a record and store into DB
+                            (=all necessary ones for pre-defined taxonomies)
+  -c, --collection=COLL     extract keywords for a collection and store into DB
+                            (=all necessary ones for pre-defined taxonomies)
+
+Taxonomy management options:
+  --check-taxonomy          checks the taxonomy and reports warnings and errors
+  --rebuild-cache           ignores the existing cache and regenerates it
+  --no-cache                don&#39;t cache the taxonomy
+
+Backward compatibility options (discouraged):
+  -q                        equivalent to -s
+  -f FILE URL               sets the file to read the keywords from
+
+Examples (standalone file mode):
+    $ bibclassify -k HEP.rdf http://arxiv.org/pdf/0808.1825
+    $ bibclassify -k HEP.rdf article.pdf
+    $ bibclassify -k HEP.rdf directory/
+
+Examples (daemon mode):
+    $ bibclassify -u admin -s 24h -L 23:00-05:00
+    $ bibclassify -u admin -i 1234
+    $ bibclassify -u admin -c Preprints
+</pre></div>
+</div>
+<p>&nbsp;<strong>NB.</strong> BibClassify can run as a CDS Invenio module or as a standalone
+program. If you already run a server with a Invenio installation, you
+can simply run <em>/opt/invenio/bin/bibclassify [options]</em>. Otherwise, you
+can run from BibClassify sources <em>bibclassify [options]</em>.</p>
+<p>As an example, running BibClassify on document
+<a class="reference external" href="http://cds.cern.ch/record/547024">nucl-th/0204033</a> using the
+high-energy physics RDF/SKOS taxonomy (<tt class="docutils literal"><span class="pre">HEP.rdf</span></tt>) would yield the
+following results (based on the HEP taxonomy from October 10th 2008):</p>
+<div class="highlight-python"><div class="highlight"><pre>Input file: 0204033.pdf
+
+Author keywords:
+Dense matter
+Saturation
+Unstable nuclei
+
+Composite keywords:
+10  nucleus: stability [36, 14]
+6  saturation: density [25, 31]
+6  energy: symmetry [35, 11]
+4  nucleon: density [13, 31]
+3  energy: Coulomb [35, 3]
+2  energy: density [35, 31]
+2  nuclear matter: asymmetry [21, 2]
+1  n: matter [54, 36]
+1  n: density [54, 31]
+1  n: mass [54, 16]
+
+Single keywords:
+61  K0
+23  equation of state
+12  slope
+4  mass number
+4  nuclide
+3  nuclear model
+3  mass formula
+2  charge distribution
+2  elastic scattering
+2  binding energy
+</pre></div>
+</div>
+<p>or, the following keyword-cloud HTML visualization:
+<img alt="tag-cloud for document nucl-th/0204033" src="_static/admin/bibclassify-admin-guide-cloud.jpeg" /></p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bibconvert-admin-guide.html" class="btn btn-neutral float-right" title="BibConvert Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bibcirculation-admin-guide.html" class="btn btn-neutral" title="BibCirculation Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

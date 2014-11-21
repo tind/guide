@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WebStat Admin Guide &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for System Administrators" href="index.html"/>
+        <link rel="next" title="WebStyle Admin Guide" href="webstyle-admin-guide.html"/>
+        <link rel="prev" title="WebSession Admin Guide" href="websession-admin-guide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarians</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/export-xml.html">Export data</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">WebStat Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#make-documents-restricted">2. Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/index.html#link-records">3. Link records</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for System Administrators</a> &raquo;</li>
+      
+    <li>WebStat Admin Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/admin/webstat-admin-guide.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="webstat-admin-guide">
+<span id="id1"></span><h1>WebStat Admin Guide<a class="headerlink" href="#webstat-admin-guide" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python"><div class="highlight"><pre>Invenio Web usage analyzer
+==========================
+
+Purpose:
+--------
+
+  Walk through the Apache combined log and analyse the usage of the
+  site with respect to the searching habits, alert/basket pages, etc.
+
+  Note: Please analyze only moderately-sized logs, e.g. for a day or a week.
+
+Usage:
+------
+
+   $ webstat example_access_log
+
+  or specify your preferred Common Lisp implementation:
+
+   $ LISP=sbcl webstat example_access_log
+
+Supported Common Lisp implementations:
+-------------------------------------
+
+   CMUCL, SBCL, CLISP.
+   GCL doesn&#39;t work at the moment.
+   Use CMUCL for fastest results.
+
+
+Configuration:
+--------------
+
+Edit the config file:
+
+   $ vim /opt/invenio/etc/webstat/webstat.cfg
+
+The file is self-explanatory.
+
+
+Example output:
+--------------
+
+** APACHE LOG FILE ANALYSIS
+Filename: example_access_log
+Excluding search engine hits from (137.138.249.162).
+
+** GENERAL STATS
+There were 36109 website hits dating from 20041014 to 20041014.
+This makes an average of 36109.0 website hits per day.
+There were 1706 unique visitors in 1 days.
+Visitor ............................................................ no. of hits
+w1.x1.y1.z1 ............................................................... 1844
+w2.x2.y2.z2 ............................................................... 1761
+w3.x3.y3.z3 ............................................................... 1012
+w4.x4.y4.z4 ................................................................ 913
+w5.x5.y5.z5 ................................................................ 889
+w6.x6.y6.z6 ................................................................ 562
+w7.x7.y7.z7 ................................................................ 449
+w8.x8.y8.z8 ................................................................ 373
+w9.x9.y9.z9 ................................................................ 335
+
+** SEARCH COLLECTIONS USAGE ANALYSIS
+There were 9059 visits of search interface pages.
+There were 8688 visits of non-Home search interface pages. ( 4.1%)
+Collection ....................................................... no. of visits
+CERN Document Server ....................................................... 371
+Photos ..................................................................... 207
+Articles &amp; Preprints ....................................................... 149
+HEP Institutes .............................................................. 98
+Periodicals ................................................................. 87
+Weekly Bulletin ............................................................. 85
+Preprints ................................................................... 84
+Theses ...................................................................... 80
+CERN PhotoLab ............................................................... 78
+CERN Yellow Reports ......................................................... 77
+Books ....................................................................... 75
+ATLAS Photos ................................................................ 72
+ATLAS ....................................................................... 68
+CERN Archives ............................................................... 68
+Academic Training Lectures .................................................. 66
+Internet Resources .......................................................... 65
+Books &amp; Proceedings ......................................................... 62
+Published Articles .......................................................... 60
+Summer Student Lectures ..................................................... 60
+Standards ................................................................... 59
+
+** SEARCH COLLECTIONS USAGE ANALYSIS
+There were 5935 search engine hits.
+There were 2586 searches originating from non-Home collections. (56.4%)
+Originating collection ......................................... no. of searches
+CERN Document Server ...................................................... 3349
+News Articles .............................................................. 649
+ATLAS eNews ................................................................ 481
+Photos ..................................................................... 335
+Weekly Bulletin ............................................................ 205
+General Information ........................................................ 102
+Articles &amp; Preprints ........................................................ 85
+CERN PhotoLab ............................................................... 76
+CERN Yellow Reports ......................................................... 59
+Official News ............................................................... 58
+Training and Development .................................................... 50
+Staff Association ........................................................... 45
+Pension Fund ................................................................ 38
+ATLAS Photos ................................................................ 36
+CMS Photos .................................................................. 29
+Books ....................................................................... 28
+Preprints ................................................................... 21
+Videos ...................................................................... 18
+CERN Committee Documents .................................................... 17
+Translation and Minutes ..................................................... 17
+
+** SEARCH ENGINE QUERY PATTERN ANALYSIS
+Found 8692 search engine hits.
+First search engine hit log is dated 20041014.
+Last search engine hit log is dated 20041014.
+This makes an average of 8692.0 search engine hits per day.
+There were 5424 simple searches out of 8692 search engine hits. (62.4%)
+There were 1886 advanced searches out of 8692 search engine hits. (21.7%)
+There were 1382 detailed record pages out of 8692 search engine hits. (15.9%)
+There are 2523 different query patterns for 8692 search engine hits. (29.0%)
+There are 169 empty query pattern searches out of 8692 search engine hits. (1.94%)
+There are 1264 phrase searches out of 8692 search engine hits. (14.5%)
+There are 263 phrase query patterns out of 2523 query patterns. (10.4%)
+There are 1748 one-time event searches out of 8692 search engine hits. (20.1%)
+There are 1748 one-time query patterns out of 2523 query patterns. (69.3%)
+There are 4276 one-word searches out of 8692 search engine hits. (49.2%)
+There are 1602 one-word query patterns out of 2523 query patterns. (63.5%)
+There are 223 wildcard searches out of 8692 search engine hits. (2.57%)
+There are 35 wildcard query patterns out of 2523 query patterns. (1.39%)
+There are 1466 punctuation-like searches out of 8692 search engine hits. (16.9%)
+There are 407 punctuation-like query patterns out of 2523 query patterns. (16.1%)
+There are 2424 any-field query patterns out of 2523 query patterns. (96.1%)
+User query .................................................. no. of occurrences
+200409 ..................................................................... 432
+ ........................................................................... 169
+&quot;42/2004&quot; ................................................................... 64
+&quot;43/2004&quot; ................................................................... 48
+&quot;40/2004&quot; ................................................................... 46
+internalnote:press internalnote:&#39;Views*&#39; .................................... 44
+ALICE ....................................................................... 29
+&quot;27/2004&quot; ................................................................... 28
+0002235ATLATL ............................................................... 28
+&quot;36/2004&quot; ................................................................... 26
+&quot;24/2004&quot; ................................................................... 25
+internet .................................................................... 24
+intranet .................................................................... 24
+0021317ADMBUL ............................................................... 23
+internalnote:press internalnote:&#39;physics diagrams*&#39; ......................... 23
+&quot;19/2004&quot; ................................................................... 22
+&quot;39/2004&quot; ................................................................... 22
+0005179UDCCER ............................................................... 22
+&quot;23/2004&quot; ................................................................... 21
+&quot;38/2004&quot; ................................................................... 21
+
+** USER BASKETS STATS
+There were 196 user basket page hits.
+This makes an average of 196.0 user basket page hits per day.
+There were 47 unique basket page users in 1 days.
+There were 82 additions to baskets.
+There were 114 displays of baskets, out of which 39 public baskets accesses.
+
+** USER ALERTS STATS
+There were 7 user alert page hits.
+This makes an average of 7.0 user alert page hits per day.
+There were 5 unique alert page users in 1 days.
+There were 3 displays of user alerts.
+There were 4 displays of user searches history.
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="webstyle-admin-guide.html" class="btn btn-neutral float-right" title="WebStyle Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="websession-admin-guide.html" class="btn btn-neutral" title="WebSession Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
