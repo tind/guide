@@ -29,9 +29,9 @@
 
   
     <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
-        <link rel="up" title="System Administrator Guide" href="index.html"/>
+        <link rel="up" title="Guide for system administrators" href="index.html"/>
         <link rel="next" title="BibExport Admin Guide" href="bibexport-admin-guide.html"/>
-        <link rel="prev" title="System Administrator Guide" href="index.html"/> 
+        <link rel="prev" title="Guide for system administrators" href="index.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -58,8 +58,14 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
         
-            <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">System Administrator Guide</a><ul class="current">
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../librarian/index.html">Guide for Librarian</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../librarian/create-collection.html">Creation of Collections</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for system administrators</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="">WebSubmit Admin Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
 </ul>
@@ -76,13 +82,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../howto/index.html">How to create documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../howto/docguide.html">Blablabla</a></li>
 </ul>
 </li>
 </ul>
@@ -108,7 +109,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">System Administrator Guide</a> &raquo;</li>
+          <li><a href="index.html">Guide for system administrators</a> &raquo;</li>
       
     <li>WebSubmit Admin Guide</li>
       <li class="wy-breadcrumbs-aside">
@@ -134,71 +135,6 @@ this point the demo submissions that come standard with the Atlantis
 demo site remain essential companions to this guide.</p>
 <p><strong>Contributions are welcome (for eg. sample workflows, function
 descriptions, etc.)</strong></p>
-<div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><strong>1. `Overview &lt;#shortIntro&gt;`__</strong><ul>
-<li>1.1  <a class="reference external" href="#philosophy">How WebSubmit works</a></li>
-<li>1.2  <a class="reference external" href="#behindthescenes">Behind the scenes</a></li>
-</ul>
-</li>
-<li><strong>2. `Configure Submissions: a Tutorial &lt;#2&gt;`__</strong><ul>
-<li>2.1  <a class="reference external" href="#2.1">Creating the submission</a></li>
-<li>2.2  <a class="reference external" href="#2.2">Building the interface</a></li>
-<li>2.3  <a class="reference external" href="#2.3">Adding the functions</a></li>
-<li>2.4  <a class="reference external" href="#2.4">Restricting the submission</a></li>
-</ul>
-</li>
-<li><strong>3. `WebSubmit Elements &lt;#3&gt;`__</strong><ul>
-<li>3.1  <a class="reference external" href="#3.1">Existing elements</a></li>
-<li>3.2  <a class="reference external" href="#3.2">Creating a new element</a></li>
-<li>3.3  <a class="reference external" href="#3.3">Creating a new check</a></li>
-</ul>
-</li>
-<li><strong>4. `WebSubmit Functions &lt;#4&gt;`__</strong><ul>
-<li>4.1  <a class="reference external" href="#4.1">Existing functions</a></li>
-<li>4.2  <a class="reference external" href="#4.2">Creating a new function</a></li>
-</ul>
-</li>
-<li><strong>5. `File Management with WebSubmit &lt;#5&gt;`__</strong><ul>
-<li>5.1  <a class="reference external" href="#5.1">**Option 1:** File Input element + FFT</a></li>
-<li>5.2  <a class="reference external" href="#5.2">**Option 2:** File Input element +
-Move_Files_To_Storage function</a></li>
-<li>5.3  <a class="reference external" href="#5.3">**Option 3:** Create_Upload_Files_Interface +
-Move_Uploaded_Files_To_Storage functions</a></li>
-<li>5.4  <a class="reference external" href="#5.4">**Option 4:** Upload_File element instance +
-Move_Uploaded_Files_To_Storage function</a></li>
-<li>5.5  <a class="reference external" href="#5.5">**Option 5:** FCKeditor element instance +
-Move_FCKeditor_Files_To_Storage function</a></li>
-<li>5.6  <a class="reference external" href="#5.6">**Option 6:** Upload_Photo_interface element instance +
-Move_Photos_To_Storage function</a></li>
-<li>5.7  <a class="reference external" href="#5.7">Alternatives to WebSubmit: BibDocFile CLI or BibDocFile
-Web Interface</a></li>
-</ul>
-</li>
-<li><strong>6. `Access restrictions &lt;#6&gt;`__</strong><ul>
-<li>6.1  <a class="reference external" href="#6.1">Admin-level</a></li>
-<li>6.2  <a class="reference external" href="#6.2">User-level</a></li>
-</ul>
-</li>
-<li><strong>7. `Linking to submissions &lt;#linking&gt;`__</strong><ul>
-<li>7.1  <a class="reference external" href="#linkingfromsubmissions">Adding a link from the submissions
-page</a></li>
-<li>7.2  <a class="reference external" href="#linkingwithurl">Linking to a submission with direct URL (in email,
-formats, etc.)</a></li>
-</ul>
-</li>
-<li><strong>8. `Terminology &lt;#terminology&gt;`__</strong><ul>
-<li>8.1  <cite>8.1 The document type of a file
-(``doctype`</cite>) &lt;#terminologydocumenttype&gt;`__</li>
-<li>8.2  <cite>8.2 The submission directory
-(``curdir`</cite>) &lt;#terminologycurdir&gt;`__</li>
-</ul>
-</li>
-<li><strong>9. `Load/dump Submissions &lt;#load_dump_cli&gt;`__</strong></li>
-</ul>
-<p>(Check out the <a class="reference external" href="#oldwebsubmitguide">old WebSubmit admin guide</a>)</p>
-</div>
 <div class="section" id="overview">
 <h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="how-websubmit-works">
@@ -3233,7 +3169,7 @@ Please see the HOWTO Manage Fulltext Files for more information on the administr
         <a href="bibexport-admin-guide.html" class="btn btn-neutral float-right" title="BibExport Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="System Administrator Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Guide for system administrators"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

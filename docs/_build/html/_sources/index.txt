@@ -35,7 +35,6 @@ General Guide for Administrators
    admin/index
 
 
-
 Guide for tool.tind.io
 ======================
 
@@ -56,6 +55,7 @@ Contents:
    :maxdepth: 2
    
    doc/index
+
 
 
 
