@@ -1,5 +1,4 @@
-..  This file is part of TIND documentation
-    Copyright (C) 2014 TIND Technologies AS.
+..  Copyright (C) 2014 TIND Technologies AS.
 
 .. _docguide:
 

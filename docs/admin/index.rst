@@ -6,13 +6,13 @@ Guide for System Administrators
    :maxdepth: 1
 
 
-   bibexport-admin-guide
    bibauthority-admin-guide
    bibcheck-admin-guide
    bibcirculation-admin-guide
    bibclassify-admin-guide
    bibconvert-admin-guide
    bibedit-admin-guide
+   bibexport-admin-guide
    bibformat-admin-guide
    bibindex-admin-guide
    bibknowledge-admin-guide
