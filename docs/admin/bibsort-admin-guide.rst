@@ -43,11 +43,8 @@ will be used.
 The different sort options that can be chosen are the logical fields defined in BibIndex.
 Which sorting methods that should be shown to the user are defined in WebSearch, 
 collection parameters, point 8 “Modify sort option for collection “xx”. 
-By default, all sub-collections will have the same settings as the main collection
-(e.g. Institutional Repository). The default settings are latest first, title, author, 
-report number and year. Latest first cannot be removed. To change it from the default 
-settings, add a new sorting option for the specific collection you would like to change. 
-If you would like to change it for all, you need only to change it for the main collection.
+By default, all sub-collections will have the same settings as the main collection. To change from default 
+settings, add a new sorting option for the specific collections you would like to change. 
 
 2.2 Translate the Sorting Options for Multilingual Sides
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -61,14 +58,12 @@ Translation of the name is done for each specific logical field in BibIndex
 3.1 Introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When the user choose a sorting option, for example “title”, the query “sf=title” will
-be added to the url (meaning argument “title”). 
-If no sorting method is defined in BibSort, sorting is still enabled is executed 
+When the user choose a sorting option, for example “title”, the arument “title” will
+be added to the url. If no sorting method is defined in BibSort, sorting will still be enabled and executed 
 by live SQL queries, hence slower than with BibSort.  
 
 To enable BibSort for the specific sorting option, the argument need to be equal to the name in
-BibSort. Then it will execute the task according to the 
-definition/washer.
+BibSort. Then it will execute the task according to the definition/washer.
 
 3.1 Configure
 ~~~~~~~~~~~~~
