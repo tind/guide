@@ -42,7 +42,7 @@ will be used.
 
 The different sort options that can be chosen are the logical fields defined in BibIndex.
 Which sorting methods that should be shown to the user are defined in WebSearch, 
-collection parameters, point 8 “Modify sort option for collection “xx”. 
+collection parameters, point 8 “Modify sort option for collection .. ”. 
 By default, all sub-collections will have the same settings as the main collection. To change from default 
 settings, add a new sorting option for the specific collections you would like to change. 
 
