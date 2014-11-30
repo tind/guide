@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Guide for Librarians &mdash; tind-doc 1.0.0 documentation</title>
+  <title>Make documents restricted &mdash; tind-doc 1.0.0 documentation</title>
   
 
   
@@ -29,8 +29,9 @@
 
   
     <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
-        <link rel="next" title="Create Collections" href="create-collection.html"/>
-        <link rel="prev" title="TIND Technologies` administration guide" href="../index.html"/> 
+        <link rel="up" title="Guide for Librarians" href="index.html"/>
+        <link rel="next" title="Guide for System Administrators" href="../admin/index.html"/>
+        <link rel="prev" title="Export data" href="export-xml.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -58,10 +59,10 @@
         
         
             <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Guide for Librarians</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Make documents restricted</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Make documents restricted</a></li>
 </ul>
 </li>
 </ul>
@@ -136,10 +137,12 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Guide for Librarians</li>
+          <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
+      
+    <li>Make documents restricted</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../_sources/librarian/index.txt" rel="nofollow"> View page source</a>
+          <a href="../_sources/librarian/restrict-documents.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -147,14 +150,55 @@
 </div>
           <div role="main">
             
-  <div class="section" id="guide-for-librarians">
-<h1>Guide for Librarians<a class="headerlink" href="#guide-for-librarians" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="export-xml.html">Export data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="restrict-documents.html">Make documents restricted</a></li>
-</ul>
+  <div class="section" id="make-documents-restricted">
+<span id="restrict-documents"></span><h1>Make documents restricted<a class="headerlink" href="#make-documents-restricted" title="Permalink to this headline">¶</a></h1>
+<p>There are several ways to restrict documents in Invenio. Three of the procedures are shown below. The examples below assume a bibliographic record already exists.</p>
+<p>Note: Documents becomes restricted if they have a restriction status in marc field 856__r, example <tt class="docutils literal"><span class="pre">856__r</span> <span class="pre">=</span> <span class="pre">Private</span></tt>. The restriction status is selectable, but it is important that it matches the restriction status defined in WebAccess for the specific role.</p>
+<div class="section" id="change-the-restriction-status-in-document-file-manager">
+<h2>1. Change the restriction status in Document File Manager<a class="headerlink" href="#change-the-restriction-status-in-document-file-manager" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to add restriction to a file through &#8220;Document File Manager&#8221;.  This can be done for new and existing files. The default restriction status is &#8220;Private&#8221; and cannot be changed.</p>
+<p><img alt="tag-cloud for document restr-cod/001" src="../_images/restrict-documents1.png" /></p>
+</div>
+<div class="section" id="upload-xml-file-through-batch-uploader">
+<h2>2. Upload xml.-file through Batch Uploader<a class="headerlink" href="#upload-xml-file-through-batch-uploader" title="Permalink to this headline">¶</a></h2>
+<p>If you would like to add a file to an existing record, the xml.-file should look like this:</p>
+<p>Afterwords run the &#8220;correct&#8221; mode in Batch Uploader.</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;record&gt;
+        &lt;controlfield tag=&quot;001&quot;&gt;310&lt;/controlfield&gt;
+                &lt;datafield tag=&quot;FFT&quot;&gt;
+                &lt;subfield code=&quot;a&quot;&gt;https://tools.tind.io/uploads/pdf/Demo document.pdf&lt;/subfield&gt;
+                &lt;subfield code=&quot;r&quot;&gt;Private&lt;/subfield&gt;
+        &lt;/datafield&gt;
+&lt;/record&gt;
+</pre></div>
+</div>
+<p>Afterwords run the &#8220;append&#8221; mode in Batch Uploader.</p>
+<p>If the file is already in the database, the xml.-file should look like this:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;record&gt;
+        &lt;controlfield tag=&quot;001&quot;&gt;310&lt;/controlfield&gt;
+        &lt;datafield tag =&quot;FFT&quot; ind1=&quot; &quot; ind2=&quot; &quot;&gt;
+                &lt;subfield code=&quot;n&quot;&gt;1407&lt;/subfield&gt;
+                &lt;subfield code=&quot;f&quot;&gt;.pdf&lt;/subfield&gt;
+                &lt;subfield code=&quot;d&quot;&gt;KEEP-OLD-VALUE&lt;/subfield&gt;
+                &lt;subfield code=&quot;z&quot;&gt;KEEP-OLD-VALUE&lt;/subfield&gt;
+                &lt;subfield code=&quot;r&quot;&gt;restricted&lt;/subfield&gt;
+        &lt;/datafield&gt;
+&lt;/record&gt;
+</pre></div>
+</div>
+<p>Here it creates a restriction status for an existing file named 1407.pdf belonging to record 310.</p>
+<p>Afterwords run the &#8220;correct&#8221; mode in Batch Uploader.</p>
+<p>This step should be used together with a xml creation tools. See example of how it can be done with <a class="reference external" href="xml-manipulation">TIND xml manipulation</a></p>
+<p>Check out <a class="reference external" href="/docs/tools/xml-manipulation">TIND xml manipulation</a> for more help.</p>
+</div>
+<div class="section" id="change-the-restriction-command-based">
+<h2>3. Change the restriction Command based<a class="headerlink" href="#change-the-restriction-command-based" title="Permalink to this headline">¶</a></h2>
+<p>The command below creates an xml as above and runs the “correct”-mode automatically.</p>
+<p>The command <tt class="docutils literal"><span class="pre">sudo</span> <span class="pre">-u</span> <span class="pre">www-data</span> <span class="pre">/opt/invenio/bin/bibdocfile</span> <span class="pre">-r</span> <span class="pre">310</span> <span class="pre">--set-restriction=Private</span></tt>
+will set restriction for all the files attached to the given record.</p>
+<p>The command <tt class="docutils literal"><span class="pre">sudo</span> <span class="pre">-u</span> <span class="pre">www-data</span> <span class="pre">/opt/invenio/bin/bibdocfile</span> <span class="pre">-c</span> <span class="pre">Preprints</span> <span class="pre">--set-restriction=Private</span></tt>
+will make all the files attached to records which are in the collection Preprint restricted.</p>
+<p>This procedure is recommended if you would like to give several records the same restriction status. Contact your system administrator to do this for you.</p>
 </div>
 </div>
 
@@ -164,10 +208,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="create-collection.html" class="btn btn-neutral float-right" title="Create Collections"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../admin/index.html" class="btn btn-neutral float-right" title="Guide for System Administrators"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="TIND Technologies` administration guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="export-xml.html" class="btn btn-neutral" title="Export data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
