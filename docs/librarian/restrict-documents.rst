@@ -75,10 +75,7 @@ Here it creates a restriction status for an existing file named 1407.pdf belongi
 
 Afterwords run the "correct" mode in Batch Uploader.
 
-This step should be used together with a xml creation tools. See example of how it can be done with `TIND xml manipulation <xml-manipulation>`__ 
-
-Check out `TIND xml manipulation </en/latest/tools/xml-manipulation.html>`__ for more help.
-
+This step should be used together with a xml creation tools. See example of how it can be done with `TIND xml manipulation </en/latest/tools/xml-manipulation.html>`__ 
 
 3. Change the restriction Command based
 ---------------------------------------
