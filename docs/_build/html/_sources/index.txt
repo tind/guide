@@ -47,20 +47,5 @@ The guide for use of tools.tind.io. This site will be filled with several nice t
    tools/index
 
 
-Doc
-====================================
-
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-   
-   doc/index
-
-
-
-
-
-
 
 
