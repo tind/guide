@@ -20,69 +20,34 @@
 Create Collections
 =======================
 
-1. Overview
------------
-
-WebSearch Admin interface will help you to configure the search
-collections that the end-users see. The WebSearch Admin functionality
-can be basically separated into several parts: (i) how to organize
-collections into `collection tree <#2>`__; (ii) how to define and edit
-`collection parameters <#3>`__; (iii) how to update collection cache via
-the `webcoll daemon <#4>`__; and (iv) how to influence the search engine
-behaviour and set various `search engine parameters <#5>`__. 
-
-The first two issues will be described in the rest of this guide. See WebSearch Admin Guide for the last two issues.
-
-2. Edit Collection Tree
+1. Introduction
 -----------------------
 
 Metadata corpus in Invenio is organized into collections. The
 collections are organized in a tree. The collection tree is what the
-end-users see when they start to navigate at `Atlantis Institute of
-Fictive Science <http://localhost:4000>`__. The collection tree is
-similar to what other sites call Web Directories that organize Web into
-topical categories, such as `Google
-Directory <http://www.google.com/dirhp>`__.
+end-users see when they start to navigate. 
 
-Note that Invenio permits every collection in the tree to have either
-"regular" or "virtual" sons. In other words, every node in the
-collection tree may see either regular or virtual branches growing out
-of it. This permits to create a tree with very complex, multi-level,
-nested structures of regular and virtual branches, if needed, with the
-aim to ease navigation to end-users from one branch to another. The
-difference between a regular and a virtual branch will be explained in
-detail further below in the `section 2.2 <#2.2>`__.
+|tag-cloud for document create-col/001|
 
-2.1 Add new collection
-~~~~~~~~~~~~~~~~~~~~~~
+.. |tag-cloud for document create-col/001| image:: /_static/librarian/create-collection1.png
 
-To add a new collection, enter its default name in the default language
-of the installation and click on the ADD button to add it. There are two
-important actions that you have to perform after adding a collection:
+2. Create new collection and add the collection to the tree
+-----------------------------------------------------------
 
--  You have to define the set of records that belong to this collection.
-   This is done by defining a search engine query that would return all
-   records belonging to this collection. See hints on `modify collection
-   query <#3.1>`__ below.
--  In order for the collection to appear in the collection navigation
-   tree, you will have to attach it to some existing collection in the
-   tree. See hints on `add collection to tree <#2.2>`__ below.
+To add a new collection, go to "1. Create new collection", enter its default name in the default language
+of the installation and click on the ADD button to add it. 
 
-After you edit these two things, the collection is fully usable for the
-search interface. It will appear in the search interface after the next
-run of the `WebColl Daemon <#4>`__.
+|tag-cloud for document create-col/002|
 
-However, you will probably want to customize further things, like define
-collection name translation in various languages, define collection web
-page portalboxes, define search options, etc, as explained in this guide
-under the section `Edit Collection Parameters <#3>`__.
-
-2.2 Add collection to tree
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. |tag-cloud for document create-col/002| image:: /_static/librarian/create-collection2.png
 
 To attach a collection to the tree, choose first which collection do you
 want to attach, then choose the father collection to attach to, and then
 choose the fathership relation type between them (regular, virtual).
+
+|tag-cloud for document create-col/003|
+
+.. |tag-cloud for document create-col/003| image:: /_static/librarian/create-collection3.png
 
 The difference between the regular and the virtual relationship goes as
 follows:
@@ -135,52 +100,49 @@ end-user that is activated only when users are interested in a
 particular "focus-on" relationship, provided that this "virtual" point
 of view on A interests her.
 
-2.3 Modify existing tree
-~~~~~~~~~~~~~~~~~~~~~~~~
+3 Modify existing tree
+-------------------------
 
 To modify existing tree by WebSearch Admin Interface, click on icons
 displayed next to collections. The meaning of icons is as follows:
 
 +--------------------------------------+--------------------------------------+
-| |A   |                               | |B |            |C  |                |
+| |image0|                             | |image1|   |image2|                  |
 | Remove chosen collection with its    | Move chosen collection up or down    |
 | subcollections from the collection   | among its brothers and sisters, i.e. |
 | tree, but do not delete the          | change the order of collections      |
 | collection itself. (For full         | inside the same level of the tree.   |
 | deletion of a collection, see        |                                      |
-| `section 3.4 <#3.4>`__.)             |                                      |
+| `section 4.3 <#4.3>`__.)             |                                      |
 +--------------------------------------+--------------------------------------+
 
-3. Edit Collection Parameters
+4. Edit Collection Parameters
 -----------------------------
 
 To finalize setting up of a collection, you could and should edit many
 parameters, such as define list of records belonging to a collection,
 define search fields, define search interface page portalboxes, etc. In
-this section we will subsequently describe all the various possibilities
-as they are presented in the `Edit
-Collection </admin/websearch/websearchadmin.py/editcollection?colID=1>`__
-pages of the WebSearch Admin Interface.
+this section we will describe the most important possibilities
+as they are presented in the "Edit Collection" pages of the WebSearch Admin Interface.
 
-3.1 Modify collection query
+|tag-cloud for document create-col/004|
+
+.. |tag-cloud for document create-col/004| image:: /_static/librarian/create-collection4.png
+
+4.1 Modify collection query
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The *collection query* defines which documents belong to the given
 collection. It is equal to the search term that retrieves all documents
 belonging to the given collection, exactly as you would have typed it
-into the search interface. For example, to define a collection of all
-papers written by Ellis, you could set up your collection query to be
-``author:Ellis``.
+into the search interface. 
 
 Usually, the collection query is chosen on the basis of the collection
-identifier that we store in MARC tag 980. This tag is indexed in a
-logical field called ``collection`` so that a collection of Theses could
-be defined via ``collection:THESIS``, supposing that every thesis
-metadata record has got the text ``THESIS`` in MARC tag 980. (Nitpick:
-we use the term \`collection' in two contexts here: once as a collection
-of metadata documents, but also and as a logical field name. We should
-have probably called the latter ``collectionidentifier`` or somesuch
-instead, but we hope the difference is clear from... the context.)
+identifier that we store in MARC tag 980. Example, if you would like to collect all drafts into one collection, set the query to be: ``980:"DRAFTS"``
+
+This tag is indexed in a logical field called ``collection`` so that a collection of Drafts could also
+be defined via ``collection:DRAFTS``, supposing that every thesis
+metadata record has got the text ``THESIS`` in MARC tag 980. 
 
 If a collection does not have any collection query defined, then its
 content is defined by means of the content of its descendants
@@ -199,7 +161,7 @@ contents will be empty.
 
 To remove the collection query, set the parameter empty.
 
-3.2 Modify translations
+4.2 Modify translations
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 You may define translations of collection names into the languages of
@@ -215,7 +177,7 @@ the collection name in the default language of this installation.
 Note also that the list of available languages depends on the
 compile-time configuration (see the general ``invenio.conf`` file).
 
-3.3 Delete collection
+4.3 Delete collection
 ~~~~~~~~~~~~~~~~~~~~~
 
 The collection to be deleted must be first removed from the collection
@@ -236,7 +198,7 @@ search interface page for this collection will stay updated, but won't
 be neither shown in the tree nor searchable from Home page. It will only
 be accessible via bookmarked URL, for example.
 
-3.4 Modify search fields
+4.4 Modify search fields
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The *search field* is a logical field (such as author, title, etc) that
@@ -249,7 +211,7 @@ physical MARC tags for a logical field, you have to use the `BibIndex
 Admin </admin/bibindex/bibindexadmin.py>`__
 interface.
 
-3.5 Modify search options
+4.5 Modify search options
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The *search option* is like `search field <#3.6>`__ in a way that it
@@ -287,4 +249,9 @@ existing physical MARC tags for a logical field, you have to use the
 `BibIndex
 Admin </admin/bibindex/bibindexadmin.py>`__
 interface.
+
+
+.. |image0| image:: /_static/iconcross.gif
+.. |image1| image:: /_static/arrow_up.gif
+.. |image2| image:: /_static/arrow_down.gif
 

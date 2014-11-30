@@ -68,36 +68,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Guide for System Administrators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibexport-admin-guide.html">BibExport Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibrank-admin-guide.html">BibRank Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibsched-admin-guide.html">BibSched Admin Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../admin/bibsort-admin-guide.html">BibSort Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/docextract-admin-guide.html">DocExtract Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/publiline-admin-guide.html">Publiline Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/webcomment-admin-guide.html">WebComment Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/websearch-admin-guide.html">WebSearch Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/websession-admin-guide.html">WebSession Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/webstat-admin-guide.html">WebStat Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../admin/websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
 </ul>
 </li>
 </ul>
@@ -152,61 +123,22 @@
             
   <div class="section" id="create-collections">
 <span id="create-collection"></span><h1>Create Collections<a class="headerlink" href="#create-collections" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>WebSearch Admin interface will help you to configure the search
-collections that the end-users see. The WebSearch Admin functionality
-can be basically separated into several parts: (i) how to organize
-collections into <a class="reference external" href="#2">collection tree</a>; (ii) how to define and edit
-<a class="reference external" href="#3">collection parameters</a>; (iii) how to update collection cache via
-the <a class="reference external" href="#4">webcoll daemon</a>; and (iv) how to influence the search engine
-behaviour and set various <a class="reference external" href="#5">search engine parameters</a>.</p>
-<p>The first two issues will be described in the rest of this guide. See WebSearch Admin Guide for the last two issues.</p>
-</div>
-<div class="section" id="edit-collection-tree">
-<h2>2. Edit Collection Tree<a class="headerlink" href="#edit-collection-tree" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Metadata corpus in Invenio is organized into collections. The
 collections are organized in a tree. The collection tree is what the
-end-users see when they start to navigate at <a class="reference external" href="http://localhost:4000">Atlantis Institute of
-Fictive Science</a>. The collection tree is
-similar to what other sites call Web Directories that organize Web into
-topical categories, such as <a class="reference external" href="http://www.google.com/dirhp">Google
-Directory</a>.</p>
-<p>Note that Invenio permits every collection in the tree to have either
-&#8220;regular&#8221; or &#8220;virtual&#8221; sons. In other words, every node in the
-collection tree may see either regular or virtual branches growing out
-of it. This permits to create a tree with very complex, multi-level,
-nested structures of regular and virtual branches, if needed, with the
-aim to ease navigation to end-users from one branch to another. The
-difference between a regular and a virtual branch will be explained in
-detail further below in the <a class="reference external" href="#2.2">section 2.2</a>.</p>
-<div class="section" id="add-new-collection">
-<h3>2.1 Add new collection<a class="headerlink" href="#add-new-collection" title="Permalink to this headline">¶</a></h3>
-<p>To add a new collection, enter its default name in the default language
-of the installation and click on the ADD button to add it. There are two
-important actions that you have to perform after adding a collection:</p>
-<ul class="simple">
-<li>You have to define the set of records that belong to this collection.
-This is done by defining a search engine query that would return all
-records belonging to this collection. See hints on <a class="reference external" href="#3.1">modify collection
-query</a> below.</li>
-<li>In order for the collection to appear in the collection navigation
-tree, you will have to attach it to some existing collection in the
-tree. See hints on <a class="reference external" href="#2.2">add collection to tree</a> below.</li>
-</ul>
-<p>After you edit these two things, the collection is fully usable for the
-search interface. It will appear in the search interface after the next
-run of the <a class="reference external" href="#4">WebColl Daemon</a>.</p>
-<p>However, you will probably want to customize further things, like define
-collection name translation in various languages, define collection web
-page portalboxes, define search options, etc, as explained in this guide
-under the section <a class="reference external" href="#3">Edit Collection Parameters</a>.</p>
+end-users see when they start to navigate.</p>
+<p><img alt="tag-cloud for document create-col/001" src="../_images/create-collection1.png" /></p>
 </div>
-<div class="section" id="add-collection-to-tree">
-<h3>2.2 Add collection to tree<a class="headerlink" href="#add-collection-to-tree" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="create-new-collection-and-add-the-collection-to-the-tree">
+<h2>2. Create new collection and add the collection to the tree<a class="headerlink" href="#create-new-collection-and-add-the-collection-to-the-tree" title="Permalink to this headline">¶</a></h2>
+<p>To add a new collection, go to &#8220;1. Create new collection&#8221;, enter its default name in the default language
+of the installation and click on the ADD button to add it.</p>
+<p><img alt="tag-cloud for document create-col/002" src="../_images/create-collection2.png" /></p>
 <p>To attach a collection to the tree, choose first which collection do you
 want to attach, then choose the father collection to attach to, and then
 choose the fathership relation type between them (regular, virtual).</p>
+<p><img alt="tag-cloud for document create-col/003" src="../_images/create-collection3.png" /></p>
 <p>The difference between the regular and the virtual relationship goes as
 follows:</p>
 <ul class="simple">
@@ -259,7 +191,7 @@ particular &#8220;focus-on&#8221; relationship, provided that this &#8220;virtua
 of view on A interests her.</p>
 </div>
 <div class="section" id="modify-existing-tree">
-<h3>2.3 Modify existing tree<a class="headerlink" href="#modify-existing-tree" title="Permalink to this headline">¶</a></h3>
+<h2>3 Modify existing tree<a class="headerlink" href="#modify-existing-tree" title="Permalink to this headline">¶</a></h2>
 <p>To modify existing tree by WebSearch Admin Interface, click on icons
 displayed next to collections. The meaning of icons is as follows:</p>
 <table border="1" class="docutils">
@@ -268,14 +200,14 @@ displayed next to collections. The meaning of icons is as follows:</p>
 <col width="50%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a href="#id1"><span class="problematic" id="id2">|</span></a>A   |
+<tr class="row-odd"><td><img alt="image0" src="../_images/iconcross.gif" />
 Remove chosen collection with its
 subcollections from the collection
 tree, but do not delete the
 collection itself. (For full
 deletion of a collection, see
-<a class="reference external" href="#3.4">section 3.4</a>.)</td>
-<td><a href="#id3"><span class="problematic" id="id4">|</span></a>B |            <a href="#id5"><span class="problematic" id="id6">|</span></a>C  |
+<a class="reference external" href="#4.3">section 4.3</a>.)</td>
+<td><img alt="image1" src="../_images/arrow_up.gif" />   <img alt="image2" src="../_images/arrow_down.gif" />
 Move chosen collection up or down
 among its brothers and sisters, i.e.
 change the order of collections
@@ -284,33 +216,25 @@ inside the same level of the tree.</td>
 </tbody>
 </table>
 </div>
-</div>
 <div class="section" id="edit-collection-parameters">
-<h2>3. Edit Collection Parameters<a class="headerlink" href="#edit-collection-parameters" title="Permalink to this headline">¶</a></h2>
+<h2>4. Edit Collection Parameters<a class="headerlink" href="#edit-collection-parameters" title="Permalink to this headline">¶</a></h2>
 <p>To finalize setting up of a collection, you could and should edit many
 parameters, such as define list of records belonging to a collection,
 define search fields, define search interface page portalboxes, etc. In
-this section we will subsequently describe all the various possibilities
-as they are presented in the <a class="reference external" href="/admin/websearch/websearchadmin.py/editcollection?colID=1">Edit
-Collection</a>
-pages of the WebSearch Admin Interface.</p>
+this section we will describe the most important possibilities
+as they are presented in the &#8220;Edit Collection&#8221; pages of the WebSearch Admin Interface.</p>
+<p><img alt="tag-cloud for document create-col/004" src="../_images/create-collection4.png" /></p>
 <div class="section" id="modify-collection-query">
-<h3>3.1 Modify collection query<a class="headerlink" href="#modify-collection-query" title="Permalink to this headline">¶</a></h3>
+<h3>4.1 Modify collection query<a class="headerlink" href="#modify-collection-query" title="Permalink to this headline">¶</a></h3>
 <p>The <em>collection query</em> defines which documents belong to the given
 collection. It is equal to the search term that retrieves all documents
 belonging to the given collection, exactly as you would have typed it
-into the search interface. For example, to define a collection of all
-papers written by Ellis, you could set up your collection query to be
-<tt class="docutils literal"><span class="pre">author:Ellis</span></tt>.</p>
+into the search interface.</p>
 <p>Usually, the collection query is chosen on the basis of the collection
-identifier that we store in MARC tag 980. This tag is indexed in a
-logical field called <tt class="docutils literal"><span class="pre">collection</span></tt> so that a collection of Theses could
-be defined via <tt class="docutils literal"><span class="pre">collection:THESIS</span></tt>, supposing that every thesis
-metadata record has got the text <tt class="docutils literal"><span class="pre">THESIS</span></tt> in MARC tag 980. (Nitpick:
-we use the term `collection&#8217; in two contexts here: once as a collection
-of metadata documents, but also and as a logical field name. We should
-have probably called the latter <tt class="docutils literal"><span class="pre">collectionidentifier</span></tt> or somesuch
-instead, but we hope the difference is clear from... the context.)</p>
+identifier that we store in MARC tag 980. Example, if you would like to collect all drafts into one collection, set the query to be: <tt class="docutils literal"><span class="pre">980:&quot;DRAFTS&quot;</span></tt></p>
+<p>This tag is indexed in a logical field called <tt class="docutils literal"><span class="pre">collection</span></tt> so that a collection of Drafts could also
+be defined via <tt class="docutils literal"><span class="pre">collection:DRAFTS</span></tt>, supposing that every thesis
+metadata record has got the text <tt class="docutils literal"><span class="pre">THESIS</span></tt> in MARC tag 980.</p>
 <p>If a collection does not have any collection query defined, then its
 content is defined by means of the content of its descendants
 (subcollections). This is the case for composed collections. For
@@ -327,7 +251,7 @@ contents will be empty.</p>
 <p>To remove the collection query, set the parameter empty.</p>
 </div>
 <div class="section" id="modify-translations">
-<h3>3.2 Modify translations<a class="headerlink" href="#modify-translations" title="Permalink to this headline">¶</a></h3>
+<h3>4.2 Modify translations<a class="headerlink" href="#modify-translations" title="Permalink to this headline">¶</a></h3>
 <p>You may define translations of collection names into the languages of
 your Invenio installation. Moreover, a collection name may be different
 in different contexts (e.g. long name, short name, etc), so that prior
@@ -340,7 +264,7 @@ the collection name in the default language of this installation.</p>
 compile-time configuration (see the general <tt class="docutils literal"><span class="pre">invenio.conf</span></tt> file).</p>
 </div>
 <div class="section" id="delete-collection">
-<h3>3.3 Delete collection<a class="headerlink" href="#delete-collection" title="Permalink to this headline">¶</a></h3>
+<h3>4.3 Delete collection<a class="headerlink" href="#delete-collection" title="Permalink to this headline">¶</a></h3>
 <p>The collection to be deleted must be first removed from the collection
 tree. Any metametadata associated with the collection (such as
 association to portalboxes, association to records belonging to this
@@ -359,7 +283,7 @@ be neither shown in the tree nor searchable from Home page. It will only
 be accessible via bookmarked URL, for example.</p>
 </div>
 <div class="section" id="modify-search-fields">
-<h3>3.4 Modify search fields<a class="headerlink" href="#modify-search-fields" title="Permalink to this headline">¶</a></h3>
+<h3>4.4 Modify search fields<a class="headerlink" href="#modify-search-fields" title="Permalink to this headline">¶</a></h3>
 <p>The <em>search field</em> is a logical field (such as author, title, etc) that
 will be proposed to the end users in Simple and Advanced Search
 interface pages. If you do not set any search fields for a collection,
@@ -370,7 +294,7 @@ Admin</a>
 interface.</p>
 </div>
 <div class="section" id="modify-search-options">
-<h3>3.5 Modify search options<a class="headerlink" href="#modify-search-options" title="Permalink to this headline">¶</a></h3>
+<h3>4.5 Modify search options<a class="headerlink" href="#modify-search-options" title="Permalink to this headline">¶</a></h3>
 <p>The <em>search option</em> is like <a class="reference external" href="#3.6">search field</a> in a way that it
 permits the end user to narrow down his search to some logical field
 such as &#8220;subject&#8221;, but unlike with the search field the user is not
