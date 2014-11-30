@@ -83,20 +83,3 @@ the job is run by this command:
 Default folder for storing is:
 ``/opt/invenio/var/www/export/marcxml``
 
-
-NOTE: This feature is under development by TIND to allow to be set through ac.tind.io
-
-LINK: BibExport as a model is described here [add link]
-
-3. Google Scholar
--------------------------------
-
-3.1 Subtitle
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-dsf
-
-
-
-
-
