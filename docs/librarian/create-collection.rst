@@ -245,7 +245,7 @@ Admin </admin/bibindex/bibindexadmin.py>`__
 interface.
 
 
-.. |image0| image:: /_static/iconcross.gif
-.. |image1| image:: /_static/arrow_up.gif
-.. |image2| image:: /_static/arrow_down.gif
+.. |image0| image:: /_static/iconcross.png
+.. |image1| image:: /_static/arrow_up.png
+.. |image2| image:: /_static/arrow_down.png
 
