@@ -77,7 +77,7 @@ Afterwords run the "correct" mode in Batch Uploader.
 
 This step should be used together with a xml creation tools. See example of how it can be done with `TIND xml manipulation <xml-manipulation>`__ 
 
-Check out `TIND xml manipulation </docs/tools/xml-manipulation>`__ for more help.
+Check out `TIND xml manipulation </tools/xml-manipulation>`__ for more help.
 
 3. Change the restriction Command based
 ---------------------------------------
