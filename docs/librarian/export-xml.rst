@@ -29,33 +29,39 @@ This guide gives describes how data can be exported from Invenio.
 2. Export records as xml.-files
 -------------------------------
 
-There are predominantly two methods of exporting records as xml.-files in Invenio. 
+There are predominantly two methods of exporting records as xml.-files in Invenio: 
 
-The first method has the advantage of finding the desired records fast, but has the disadvantage
-of being slow to load the search result as MARCXML, if the result contains many records.
-
-The second method has the disadvantage of require access as a system librarian, but it quick to use after it is set up.
+  - The first method has the advantage of finding the desired records fast, but has the disadvantage
+    of being slow to load the search result as MARCXML. This is only a problem if the result contains many records.
+  - The second method is quick to run after it is set up but has the disadvantage of requiring access as a system librarian.
 
 2.1 By the user interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to export both multiple and single records as MARCXML from the OPAC. 
+It is possible to export both multiple and single records as MARCXML from the user interface.
 Single records are exported from the detailed view, while multiple records are exported
-in brief view. First find the desired records, example << 980:"ARTICLE" AND author:"Polyakov, A M" AND 962__r:"002" >>.
+in brief view. For multiple records, first query the desired records, example ``980:"ARTICLE" AND author:"Polyakov, A M" AND 962__r:"002"``.
 Then choose export format MARCXML.  
+
+|tag-cloud for document export-xml/001|
+
+.. |tag-cloud for document export-xml/001| image:: /_static/librarian/export-xml1.png
+
 The url will look similar to this:
-``https://yoursite.com/search?sf=&so=d&rg=10&sc=1&c=Article&c=&of=xm&ln=en&cc=Article&p=980%3A%22ARTICLE%22+AND+962__r%3A%002%22&f=``
+
+.. code-block:: console
+
+    https://yoursite.com/search?sf=&so=d&rg=10&sc=1&c=Article&c=&of=xm&ln=en&cc=Article&p=980%3A%22ARTICLE%22+AND+962__r%3A%002%22&f=``
 
 
-``rg=10``  means number of records displayed in the search results at ones. This number can be set to be equal to the numbers of records in the search result. 
+``rg=10``  means number of records displayed in the search results at ones. This number can be set to be equal to the numbers of records in the search result. Afterwords, save the page as an xml.-file.
 
  
 
 2.2 By BibExport
 ~~~~~~~~~~~~~~~~
 
-First change this config file:
-``/opt/invenio/etc/bibexport/marcxml.cfg``
+First change this config file: ``/opt/invenio/etc/bibexport/marcxml.cfg``
 
 The MARCXML exporting method export all the records
 matching a particular search query, zip them and move them to the
@@ -77,9 +83,15 @@ collection into one xml.-file and all articles with the author "Polyakov, A M" i
 
 
 the job is run by this command:
-``/opt/invenio/bin/bibexport -u admin -wmarcxml``
+
+.. code-block:: console
+
+    /opt/invenio/bin/bibexport -u admin -wmarcxml
 
 
 Default folder for storing is:
-``/opt/invenio/var/www/export/marcxml``
+
+.. code-block:: console
+
+    /opt/invenio/var/www/export/marcxml
 

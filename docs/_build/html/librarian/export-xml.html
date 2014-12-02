@@ -78,14 +78,6 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
-</ul>
-</li>
-</ul>
 
         
       </div>
@@ -129,24 +121,30 @@
 </div>
 <div class="section" id="export-records-as-xml-files">
 <h2>2. Export records as xml.-files<a class="headerlink" href="#export-records-as-xml-files" title="Permalink to this headline">¶</a></h2>
-<p>There are predominantly two methods of exporting records as xml.-files in Invenio.</p>
-<p>The first method has the advantage of finding the desired records fast, but has the disadvantage
-of being slow to load the search result as MARCXML, if the result contains many records.</p>
-<p>The second method has the disadvantage of require access as a system librarian, but it quick to use after it is set up.</p>
+<p>There are predominantly two methods of exporting records as xml.-files in Invenio:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The first method has the advantage of finding the desired records fast, but has the disadvantage
+of being slow to load the search result as MARCXML. This is only a problem if the result contains many records.</li>
+<li>The second method is quick to run after it is set up but has the disadvantage of requiring access as a system librarian.</li>
+</ul>
+</div></blockquote>
 <div class="section" id="by-the-user-interface">
 <h3>2.1 By the user interface<a class="headerlink" href="#by-the-user-interface" title="Permalink to this headline">¶</a></h3>
-<p>It is possible to export both multiple and single records as MARCXML from the OPAC.
+<p>It is possible to export both multiple and single records as MARCXML from the user interface.
 Single records are exported from the detailed view, while multiple records are exported
-in brief view. First find the desired records, example &lt;&lt; 980:&#8221;ARTICLE&#8221; AND author:&#8221;Polyakov, A M&#8221; AND 962__r:&#8221;002&#8221; &gt;&gt;.
-Then choose export format MARCXML.
-The url will look similar to this:
-<tt class="docutils literal"><span class="pre">https://yoursite.com/search?sf=&amp;so=d&amp;rg=10&amp;sc=1&amp;c=Article&amp;c=&amp;of=xm&amp;ln=en&amp;cc=Article&amp;p=980%3A%22ARTICLE%22+AND+962__r%3A%002%22&amp;f=</span></tt></p>
-<p><tt class="docutils literal"><span class="pre">rg=10</span></tt>  means number of records displayed in the search results at ones. This number can be set to be equal to the numbers of records in the search result.</p>
+in brief view. For multiple records, first query the desired records, example <tt class="docutils literal"><span class="pre">980:&quot;ARTICLE&quot;</span> <span class="pre">AND</span> <span class="pre">author:&quot;Polyakov,</span> <span class="pre">A</span> <span class="pre">M&quot;</span> <span class="pre">AND</span> <span class="pre">962__r:&quot;002&quot;</span></tt>.
+Then choose export format MARCXML.</p>
+<p><img alt="tag-cloud for document export-xml/001" src="../_images/export-xml1.png" /></p>
+<p>The url will look similar to this:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">https://yoursite.com/search?sf=&amp;so=d&amp;rg=10&amp;sc=1&amp;c=Article&amp;c=&amp;of=xm&amp;ln=en&amp;cc=Article&amp;p=980%3A%22ARTICLE%22+AND+962__r%3A%002%</span>22&amp;f<span class="o">=</span><span class="sb">``</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">rg=10</span></tt>  means number of records displayed in the search results at ones. This number can be set to be equal to the numbers of records in the search result. Afterwords, save the page as an xml.-file.</p>
 </div>
 <div class="section" id="by-bibexport">
 <h3>2.2 By BibExport<a class="headerlink" href="#by-bibexport" title="Permalink to this headline">¶</a></h3>
-<p>First change this config file:
-<tt class="docutils literal"><span class="pre">/opt/invenio/etc/bibexport/marcxml.cfg</span></tt></p>
+<p>First change this config file: <tt class="docutils literal"><span class="pre">/opt/invenio/etc/bibexport/marcxml.cfg</span></tt></p>
 <p>The MARCXML exporting method export all the records
 matching a particular search query, zip them and move them to the
 requested folder. The output of this exporting method is similar to
@@ -161,10 +159,14 @@ books = 980__a:BOOK
 polyakov_articles = 980__a:ARTICLE and author:&quot;Polyakov, A M&quot;
 </pre></div>
 </div>
-<p>the job is run by this command:
-<tt class="docutils literal"><span class="pre">/opt/invenio/bin/bibexport</span> <span class="pre">-u</span> <span class="pre">admin</span> <span class="pre">-wmarcxml</span></tt></p>
-<p>Default folder for storing is:
-<tt class="docutils literal"><span class="pre">/opt/invenio/var/www/export/marcxml</span></tt></p>
+<p>the job is run by this command:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">/opt/invenio/bin/bibexport -u admin -wmarcxml</span>
+</pre></div>
+</div>
+<p>Default folder for storing is:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">/opt/invenio/var/www/export/marcxml</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>

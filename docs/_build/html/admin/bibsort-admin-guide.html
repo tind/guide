@@ -30,8 +30,8 @@
   
     <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Guide for System Administrators" href="index.html"/>
-        <link rel="next" title="BibSword client Admin Guide" href="bibsword-client-admin-guide.html"/>
-        <link rel="prev" title="BibSched Admin Guide" href="bibsched-admin-guide.html"/> 
+        <link rel="next" title="Guide for tools.tind.io" href="../tools/index.html"/>
+        <link rel="prev" title="Guide for System Administrators" href="index.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -68,50 +68,13 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for System Administrators</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="bibauthority-admin-guide.html">BibAuthority Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibcheck-admin-guide.html">BibCheck Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibcirculation-admin-guide.html">BibCirculation Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibclassify-admin-guide.html">BibClassify Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibconvert-admin-guide.html">BibConvert Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibedit-admin-guide.html">BibEdit Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibexport-admin-guide.html">BibExport Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibformat-admin-guide.html">BibFormat Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibindex-admin-guide.html">BibIndex Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibknowledge-admin-guide.html">BibKnowledge Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibmatch-admin-guide.html">BibMatch Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibrank-admin-guide.html">BibRank Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibsched-admin-guide.html">BibSched Admin Guide</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">BibSort Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibsword-client-admin-guide.html">BibSword client Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bibupload-admin-guide.html">BibUpload Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docextract-admin-guide.html">DocExtract Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="elmsubmit-admin-guide.html">ElmSubmit Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oaiharvest-admin-guide.html">OAIHarvest Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="oairepository-admin-guide.html">OAIRepository Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publiline-admin-guide.html">Publiline Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webcomment-admin-guide.html">WebComment Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webjournal-admin-guide.html">WebJournal Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webjournal-editor-guide.html">WebJournal Editor Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webmessage-admin-guide.html">WebMessage Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websearch-admin-guide.html">WebSearch Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websession-admin-guide.html">WebSession Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webstat-admin-guide.html">WebStat Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webstyle-admin-guide.html">WebStyle Admin Guide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="websubmit-admin-guide.html">WebSubmit Admin Guide</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/xml-manipulation.html">XML Manipulation</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../doc/intro.html">MARC intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../doc/docguide.html">Site template</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../doc/use-of-marc.html">MARC Fields</a></li>
 </ul>
 </li>
 </ul>
@@ -201,43 +164,56 @@ washer = sort_alphanumerically_remove_leading_articles
 definition = FIELD: title
 </pre></div>
 </div>
-<p>Each section of the file corresponds to a method:
-- The name property holds the name of the sorting method, that should be unique.
-- The washer property holds the name of the function that will process the values of the records, for this method, before they get sorted (in this case, it will remove the leading articles). This functions are implemented in bibsort_washer.py.
-One can also set the washer to &#8216;NOOP&#8217; which will mean that no washer should be applied to the data before the sorting.
-Bibsort supports string collation. There is the possibility of selecting a specific language for this, by adding at the end of the washer &#8216;:ln&#8217;, where &#8216;ln&#8217; is the language according to which the string comparison should be done.
-Ex: &#8220;washer = sort_alphanumerically_remove_leading_articles:fr&#8221; means that the string comparison would be done using the French rules.
-- The definition property holds the name of the place from where the data should be taken for this sorting method. There are several options for defining this property:</p>
-<blockquote>
-<div><ul class="simple">
+<dl class="docutils">
+<dt>Each section of the file corresponds to a method:</dt>
+<dd><ul class="first last simple">
+<li>The name property holds the name of the sorting method, that should be unique.</li>
+<li>The washer property holds the name of the function that will process the values of the records, for this method, before they get sorted (in this case, it will remove the leading articles). This functions are implemented in bibsort_washer.py. One can also set the washer to &#8216;NOOP&#8217; which will mean that no washer should be applied to the data before the sorting. Bibsort supports string collation. There is the possibility of selecting a specific language for this, by adding at the end of the washer &#8216;:ln&#8217;, where &#8216;ln&#8217; is the language according to which the string comparison should be done. Ex: &#8220;washer = sort_alphanumerically_remove_leading_articles:fr&#8221; means that the string comparison would be done using the French rules.</li>
+<li>The definition property holds the name of the place from where the data should be taken for this sorting method. There are several options for defining this property:<ul>
 <li>definition = RNK: method_name means that the data should be taken from the rnkMETHODDATA table, based on the method_name (the method_name should correspond to a method in rnkMETHOD table)</li>
 <li>definition = MARC: marc1,marc2,marc3.. means that BibSort will sequentially look in all the MARC fields (bibxxx tables) and retrieve the data (the order of the MARC fields is important, since for a given record, BibSort will keep the value from the first MARC field that has data).</li>
 <li>definition = FIELD: foo is similar with the above option, but for cases were we already have logical fields defined in Invenio, BibSort can look into them in order to retrieve the list of MARC fields that need to be queried.</li>
 </ul>
-</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
 <p>For adding a new sorting method, one needs to add a new section to the <tt class="docutils literal"><span class="pre">bibsort.cfg</span></tt> file. Once this is done, the config file needs to be loaded into the database:</p>
-<p><tt class="docutils literal"><span class="pre">$</span> <span class="pre">./bibsort</span> <span class="pre">--load-config</span></tt>
-Similar, for deleting a method, one needs to remove the corresponding section from the bibsort.cfg file, and load the config into the database.
-To dump the configuration from the database into a file:
-<tt class="docutils literal"><span class="pre">$</span> <span class="pre">./bibsort</span> <span class="pre">--dump-config</span></tt></p>
-<p>NOTE: It is necessary to run rebalance (-R) before sorting/updating (-S), after changing
-configuration.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ./bibsort --load-config
+</pre></div>
+</div>
+<p>Similar, for deleting a method, one needs to remove the corresponding section from the bibsort.cfg file, and load the config into the database.
+To dump the configuration from the database into a file:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ./bibsort --dump-config
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is necessary to run rebalance (-R) before sorting/updating (-S), after changing</p>
+</div>
+<p>configuration.</p>
 </div>
 </div>
 <div class="section" id="running-bibsort">
 <h2>3. Running BibSort<a class="headerlink" href="#running-bibsort" title="Permalink to this headline">¶</a></h2>
 <p>There are several command line instructions that can be used in order to update the BibSort data. For each instruction, one can define the methods and the records that the command should run on, like this:</p>
-<p><tt class="docutils literal"><span class="pre">$</span> <span class="pre">./bibsort</span> <span class="pre">--methods=method1,method2</span> <span class="pre">--recids=4,7-17,23,1</span></tt>
-If these options will be let empty it will mean that the bibsort operations will run on all the defined methods, and either on all the records existing in the database, or on the all updated records (depending on the operation, see 3.1 and 3.2).</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ./bibsort --methods<span class="o">=</span>method1,method2 --recids<span class="o">=</span>4,7-17,23,1
+</pre></div>
+</div>
+<p>If these options will be let empty it will mean that the bibsort operations will run on all the defined methods, and either on all the records existing in the database, or on the all updated records (depending on the operation, see 3.1 and 3.2).</p>
 <div class="section" id="rebalancing">
 <h3>3.1 Rebalancing<a class="headerlink" href="#rebalancing" title="Permalink to this headline">¶</a></h3>
 <p>Rebalancing is the operation that will redo from scratch the sorting and recreate the sorting buckets. This should be performed once at the beginning and then maybe once per day, to be sure that the database is in complete sync with the BibSort data structures, and also, to be sure that the buckets are balanced (Imagine a big upload of new records, that will have the same publication year. All these records will be added to the same bucket for the &#8216;publication date&#8217; method, making it much bigger then the others, and slower to perform any data calculations on it, including intersecting with the search engine output). If you have a clear idea of how the data is changing during one day, you can set up the rebalancing only for several methods, that contain data that is frequently updated.</p>
-<p><tt class="docutils literal"><span class="pre">$</span> <span class="pre">./bibsort</span> <span class="pre">-B</span> <span class="pre">[--methods=method1,method2]</span></tt></p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ./bibsort -B <span class="o">[</span>--methods<span class="o">=</span>method1,method2<span class="o">]</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="inserting-updating-deleting-records-in-bibsort">
 <h3>3.2. Inserting/Updating/Deleting records in BibSort<a class="headerlink" href="#inserting-updating-deleting-records-in-bibsort" title="Permalink to this headline">¶</a></h3>
 <p>Inserting/Updating/Deleting records in BibSort is done via the update-sorting operation. Theoretically, this operation should run at short intervals, and for the benefit of the user it would be good to run after BibIndex, so that the updates can be viewed as soon as possible. If no methods are defined it will run for all the methods defined in bibsort.cfg. But, if you have a good overview of the nature of the changes in the data during a period of time, the update-sorting can run more frequently for some methods (like sort by year or sort by title) or less frequently (like sort by most cited, since the citation dictionaries are not updated so frequently). Defining the recids, will result in the update-sorting to run only on those records. If no records are defined bibsort will grab all the modified records since its last run. Since for ranking methods it will anyway grab all the data, update-sorting for a ranking method is basically a rebalancing.</p>
-<p><tt class="docutils literal"><span class="pre">$</span> <span class="pre">./bibsort</span> <span class="pre">-S</span> <span class="pre">[--methods=method1,method2]</span> <span class="pre">[--recids=4,7-17,23,1]</span></tt></p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> ./bibsort -S <span class="o">[</span>--methods<span class="o">=</span>method1,method2<span class="o">]</span> <span class="o">[</span>--recids<span class="o">=</span>4,7-17,23,1<span class="o">]</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="impact-on-the-sorted-search-results">
@@ -255,10 +231,10 @@ If in the search results there are records that have no value for the selected s
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="bibsword-client-admin-guide.html" class="btn btn-neutral float-right" title="BibSword client Admin Guide"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../tools/index.html" class="btn btn-neutral float-right" title="Guide for tools.tind.io"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="bibsched-admin-guide.html" class="btn btn-neutral" title="BibSched Admin Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Guide for System Administrators"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

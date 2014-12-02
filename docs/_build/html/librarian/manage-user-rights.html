@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Guide for Librarians &mdash; tind-doc 1.0.0 documentation</title>
+  <title>Manage User Rights &mdash; tind-doc 1.0.0 documentation</title>
   
 
   
@@ -29,8 +29,9 @@
 
   
     <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
-        <link rel="next" title="Create Collections" href="create-collection.html"/>
-        <link rel="prev" title="TIND Technologies` administration guide" href="../index.html"/> 
+        <link rel="up" title="Guide for Librarians" href="index.html"/>
+        <link rel="next" title="Make documents restricted" href="restrict-documents.html"/>
+        <link rel="prev" title="Export data" href="export-xml.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -58,10 +59,10 @@
         
         
             <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Guide for Librarians</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Manage User Rights</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Make documents restricted</a></li>
 </ul>
 </li>
@@ -100,10 +101,12 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Guide for Librarians</li>
+          <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
+      
+    <li>Manage User Rights</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../_sources/librarian/index.txt" rel="nofollow"> View page source</a>
+          <a href="../_sources/librarian/manage-user-rights.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -111,15 +114,47 @@
 </div>
           <div role="main">
             
-  <div class="section" id="guide-for-librarians">
-<h1>Guide for Librarians<a class="headerlink" href="#guide-for-librarians" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="export-xml.html">Export data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
-<li class="toctree-l1"><a class="reference internal" href="restrict-documents.html">Make documents restricted</a></li>
+  <div class="section" id="manage-user-rights">
+<span id="id1"></span><h1>Manage User Rights<a class="headerlink" href="#manage-user-rights" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>There are three important terms regarding user rights in Invenio:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>User</strong> are the physical persons having access to Invenio.</li>
+<li><strong>Action</strong> identifies a task a user can perform.</li>
+<li><strong>Roles</strong> works as an intermediate between the users and actions, allowing several users to perform several actions.</li>
 </ul>
+</div></blockquote>
+<p><img alt="tag-cloud for document mng-user/001" src="../_images/manage-user-rights1.png" /></p>
+</div>
+<div class="section" id="create-new-collection-and-add-the-collection-to-the-tree">
+<h2>2. Create new collection and add the collection to the tree<a class="headerlink" href="#create-new-collection-and-add-the-collection-to-the-tree" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Users are connected to roles that cover different areas of access. I.e administrator of the photo</dt>
+<dd>collection or system librarian. Users can be active in
+different areas and of course connected to as many roles as needed.</dd>
+</dl>
+<p>An action . It can be defined to take any number of</p>
+<dl class="docutils">
+<dt>arguments in order to more clearly describe what you are allowing</dt>
+<dd><p class="first">connected users to do.</p>
+<p>For example the system librarian can be allowed to run bibindex on
+the different indexes. To allow system librarians to run the
+bibindex indexing on the field author we connect role system
+librarian with action runbibindex using the argument
+index=&#8217;author&#8217;.</p>
+<p>Additionally, roles could have firewall-like role
+definitions. A definition is a formal description of which
+users are entitled to belong to the role. So you have two ways for
+connecting users to roles. Either linking explicitly a user with the
+role or describing the characteristics that makes users belong to
+the role.</p>
+<p class="last">WebAccess is based on allowing users to perform actions. This means
+that only allowed actions are stored in the access control engine&#8217;s
+database.</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -129,10 +164,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="create-collection.html" class="btn btn-neutral float-right" title="Create Collections"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="restrict-documents.html" class="btn btn-neutral float-right" title="Make documents restricted"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="TIND Technologies` administration guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="export-xml.html" class="btn btn-neutral" title="Export data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
