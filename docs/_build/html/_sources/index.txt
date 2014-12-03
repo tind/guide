@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 
-TIND Technologies` administration guide
+TIND Technologies` Administration Guide
 ###################################################
 
 Welcome to TIND Technologies’ documentation on Invenio. This documentation is divided into three different parts:
@@ -41,8 +41,6 @@ Guide for System Administrators
 
 Guide for tools.tind.io
 =======================
-
-The guide for use of tools.tind.io. This site will be filled with several nice to have tools for librarians and administrators.  
 
 .. toctree::
    :maxdepth: 2
