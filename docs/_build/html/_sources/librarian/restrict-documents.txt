@@ -35,7 +35,6 @@ It is possible to add restriction to a file through "Document File Manager".  Th
 .. |tag-cloud for document restr-cod/001| image:: /_static/librarian/restrict-documents1.png
 
 
-
 2. Upload xml.-file through Batch Uploader
 ------------------------------------------
 
@@ -75,7 +74,7 @@ Here it creates a restriction status for an existing file named 1407.pdf belongi
 
 Afterwords run the "correct" mode in Batch Uploader.
 
-This step should be used together with a xml creation tools. See example of how it can be done with `TIND xml manipulation </en/latest/tools/xml-manipulation.html>`__ 
+This step should be used together with a xml creation tools. See example of how it can be done with :ref:`xml-manipulation`
 
 3. Change the restriction Command based
 ---------------------------------------

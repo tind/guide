@@ -25,8 +25,8 @@ Manage User Rights
 
 There are three important terms regarding user rights in Invenio:
 
-  - **User** are the physical persons having access to Invenio.
-  - **Action** identifies a task a user can perform.
+  - **Users** are the physical persons having access to Invenio.
+  - **Actions** identifies tasks a user can perform.
   - **Roles** works as an intermediate between the users and actions, allowing several users to perform several actions.
 
 
@@ -35,12 +35,10 @@ There are three important terms regarding user rights in Invenio:
 
 .. |tag-cloud for document mng-user/001| image:: /_static/librarian/manage-user-rights1.png
 
-2. Create new collection and add the collection to the tree
+2. Connect roles to actions
 -----------------------------------------------------------
 
-Users are connected to roles that cover different areas of access. I.e administrator of the photo
-  collection or system librarian. Users can be active in
-  different areas and of course connected to as many roles as needed.
+
 
 An action . It can be defined to take any number of
 
@@ -65,3 +63,8 @@ arguments in order to more clearly describe what you are allowing
   database.
 
 
+3. Connect users to roles
+-----------------------------------------------------------
+Users are connected to roles that cover different areas of access. I.e administrator of the photo
+  collection or system librarian. Users can be active in
+  different areas and of course connected to as many roles as needed.

@@ -101,8 +101,10 @@ To dump the configuration from the database into a file:
 
     $ ./bibsort --dump-config
 
-.. note:: It is necessary to run rebalance (-R) before sorting/updating (-S), after changing 
-configuration.
+.. note::
+
+    It is necessary to run rebalance (-R) before sorting/updating (-S), after changing
+    configuration.
 
 3. Running BibSort
 ------------------

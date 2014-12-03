@@ -11,11 +11,14 @@ Welcome to TIND Technologies’ documentation on Invenio. This documentation is 
 
 - The first guide is meant for librarians and repository managers who do not have access as system administrators. The subjects are categorized by the different tasks that librarians and managers will conduct.  
 
-- The second guide is meant for system administrators who are gonna configure the system. The subjects are categorized after the different modules in Invenio. This guide is an extension of documentation at ``invenio.readthedocs.org``. Therefore, you will only find information about the modules which are not yet described at ``invenio.readthedocs.org``.
+- The second guide is meant for system administrators who are gonna configure the system. The subjects are categorized after the different modules in Invenio. This guide is an extension of the documentation at http://invenio.readthedocs.org. Therefore, you will only find information about the modules which are not yet described at http://invenio.readthedocs.org.
 
 - The third guide describes tools developed by TIND to provide extra value to the users of Invenio.  
 
-.. note:: This guide is work in progress and some sites will miss information. It is meant for users of Invenio 1.3.x and later. See ``yoursite.com/help/admin`` for the official guide for version 1.3.x 
+.. note::
+
+    This guide is work in progress and some sites will miss information.
+    It is meant for users of Invenio 1.3.x and later. See ``yoursite.com/help/admin`` for the official guide for version 1.3.x
 
 
 Guide for Librarians and Repository Managers
