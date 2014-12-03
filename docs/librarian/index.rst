@@ -8,4 +8,5 @@ Guide for Librarians
 
    create-collection
    export-xml
+   manage-user-rights
    restrict-documents
