@@ -10,3 +10,4 @@ Guide for Librarians
    export-xml
    manage-user-rights
    restrict-documents
+   submit-documents

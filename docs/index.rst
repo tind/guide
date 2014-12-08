@@ -5,7 +5,7 @@
 
 
 TIND Technologies` Administration Guide
-###################################################
+#######################################
 
 Welcome to TIND Technologies’ documentation on Invenio. This documentation is divided into three different parts:
 
@@ -18,7 +18,7 @@ Welcome to TIND Technologies’ documentation on Invenio. This documentation is 
 .. note::
 
     This guide is work in progress and some sites will miss information.
-    It is meant for users of Invenio 1.3.x and later. See ``yoursite.com/help/admin`` for the official guide for version 1.3.x
+    It is meant for users of Invenio 1.1.3 and later. See ``yoursite.com/help/admin`` for the official guide for version 1.1.3
 
 
 Guide for Librarians and Repository Managers
