@@ -18,17 +18,17 @@
 .. _submit-documents:
 
 Submit Documents
-=======================
+================
 
 FIXME
 
 1. Introduction
------------------------
+---------------
 
 asd
 
 2. Meaning of doctype categ act
------------------------------------------------------------
+-------------------------------
 
 First click on the "Role Area" on the front page of the WebAcces
 

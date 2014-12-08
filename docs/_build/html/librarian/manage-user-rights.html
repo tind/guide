@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manage User Rights &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for Librarians" href="index.html"/>
+        <link rel="next" title="Make documents restricted" href="restrict-documents.html"/>
+        <link rel="prev" title="Export data" href="export-xml.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Manage User Rights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Guide for System Administrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/xml-manipulation.html">XML Manipulation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
+      
+    <li>Manage User Rights</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/librarian/manage-user-rights.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="manage-user-rights">
+<span id="id1"></span><h1>Manage User Rights<a class="headerlink" href="#manage-user-rights" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>There are three important terms regarding user rights in Invenio:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Users</strong> are the physical persons having access to Invenio.</li>
+<li><strong>Actions</strong> identifies tasks a user can perform.</li>
+<li><strong>Roles</strong> works as an intermediate between the users and actions, allowing several users to perform several actions.</li>
+</ul>
+</div></blockquote>
+<p><img alt="tag-cloud for document mng-user/001" src="../_images/manage-user-rights1.png" /></p>
+<p>All the parameters are set in the module WebAccess.</p>
+<p><img alt="tag-cloud for document mng-user/002" src="../_images/manage-user-rights2.png" /></p>
+</div>
+<div class="section" id="connect-roles-to-actions">
+<h2>2. Connect roles to actions<a class="headerlink" href="#connect-roles-to-actions" title="Permalink to this headline">¶</a></h2>
+<p>First click on the &#8220;Role Area&#8221; on the front page of the WebAccess admin panel.
+A list of existing roles will now be displayed.
+Scroll down to the desired role and click &#8220;show details&#8221;.  As an example, we
+will look at the role &#8220;Usergroup1&#8221;.</p>
+<p><img alt="tag-cloud for document mng-user/003" src="../_images/manage-user-rights3.png" /></p>
+<p>Here you can see information about the role, which users who are connected and
+which actions (also called authorizations) that are connected.</p>
+<p><img alt="tag-cloud for document mng-user/004" src="../_images/manage-user-rights4.png" /></p>
+<div class="section" id="overview-of-existing-authorizations">
+<h3>2.1 Overview of existing authorizations<a class="headerlink" href="#overview-of-existing-authorizations" title="Permalink to this headline">¶</a></h3>
+<p>As of existing authorizations, the users connected to this role are allowed to
+submit. By having a closer look at the action submit, we see that it has three
+parameters: &#8220;act&#8221;, &#8220;categ&#8221; and &#8220;doctype&#8221;. Such parameters helps the manager to
+set well defined authorizations. Different actions has different sets of
+parameters. A list of parameters are given in <a class="reference internal" href="#table-webaccess-parameters"><em>section five</em></a></p>
+<p>In this example, the &#8220;doctype&#8221; is the first parameter to choose and should be
+equal to the code name of the submission workflow. Here the user are allowed to
+submit Theses, Conference Materials and Author Works.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is important that the name of the parameter is identical to how it is
+defined in Websubmit. Please check the documentation for your repository
+for correct names.</p>
+</div>
+<p>The second parameter, category ID, are used to distinguish subsets of a
+submission workflow. Example both Articles and Preprints belongs to the
+workflow AUTH_WOrKS, but the users linked to &#8220;Usergroup1&#8221; are only authorized
+to submit articles.</p>
+<p>The third parameter, &#8220;act&#8221; defines if a person is allowed to submit (SBI),
+modify (MDI), or approve (APP).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A star <tt class="docutils literal"><span class="pre">*</span></tt> means all and will allow for any arguments.</p>
+</div>
+</div>
+<div class="section" id="link-new-actions-to-the-role">
+<h3>2.2 Link new actions to the role<a class="headerlink" href="#link-new-actions-to-the-role" title="Permalink to this headline">¶</a></h3>
+<p>To link new actions to the same role press &#8220;Add new authorization&#8221; in the upper
+right side. A new side will appear where you will see a roll-down menu with the
+different available action.</p>
+<p><img alt="tag-cloud for document mng-user/005" src="../_images/manage-user-rights5.png" /></p>
+<p>By choosing the desired action, you will be asked if it shall be authorized for
+any arguments or some specific arguments. If you would authorize for only
+some arguments, insert the related parameters. A star <tt class="docutils literal"><span class="pre">*</span></tt> authorize it for any
+arguments for the specific parameter.</p>
+<p><img alt="tag-cloud for document mng-user/006" src="../_images/manage-user-rights6.png" /></p>
+</div>
+</div>
+<div class="section" id="connect-users-to-roles">
+<h2>3. Connect users to roles<a class="headerlink" href="#connect-users-to-roles" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways of connecting users to a role.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Explicitly by adding single users directly.</li>
+<li>Implicitly by adding firewall-like role definitions.</li>
+</ul>
+</div></blockquote>
+<div class="section" id="explicitly">
+<h3>3.1 Explicitly<a class="headerlink" href="#explicitly" title="Permalink to this headline">¶</a></h3>
+<p>First go to the detailed page of the desired role. To add single users
+directly, choose &#8220;Connect Users&#8221; on the upper right side. A new site will
+appear where you will be able to search for users and select them from the
+search results.</p>
+<p><img alt="tag-cloud for document mng-user/007" src="../_images/manage-user-rights7.png" /></p>
+</div>
+<div class="section" id="implicitly">
+<h3>3.1 Implicitly<a class="headerlink" href="#implicitly" title="Permalink to this headline">¶</a></h3>
+<p>Roles could also have firewall-like role definitions. This means that the
+definition is built up by rows which are matched from top to bottom,
+in order to decide if the current user (wethever he/she is logged in or not)
+may belong to a role.</p>
+<p>The syntax goes as follow:</p>
+<blockquote>
+<div><ul class="simple">
+<li>ALLOW/DENY ANY/ALL</li>
+<li>ALLOW/DENY FROM/UNTIL &#8220;YYYY-MM-DD&#8221;</li>
+<li>ALLOW/DENY [NOT] field {one or more values}</li>
+</ul>
+</div></blockquote>
+<p>The rows are parsed from top to bottom. If a row matches the user than the
+user belongs to the role if the rule is an ALLOW rule, otherwise, if the
+rule is a DENY one, the user doesn&#8217;t belong to the role.</p>
+<p>A rule of the kind ALLOW|DENY ANY always matches, regardless of the user.</p>
+<p>Note, in place of ANY you can use the word ALL. The semantic is the same. The
+system support both to let the user comply with the English grammar.</p>
+<dl class="docutils">
+<dt>The default fields are:</dt>
+<dd><ul class="first last simple">
+<li>uid: an integer representing the user id</li>
+<li>nickname: the nickname of the user</li>
+<li>email: the email of the user</li>
+<li>group/groups: local or external group to which the user belong</li>
+<li>guest: 1 if the user is a guest (not logged), 0 otherwise</li>
+<li>remote_ip: the remote ip address of the user who is browsing</li>
+<li>remote_host: the remote hostname of the user who is browsing</li>
+<li>referer: the webpage from where the user is coming from</li>
+<li>uri: the uri the user is visiting</li>
+<li>agent: the agent string describing the user&#8217;s browser</li>
+</ul>
+</dd>
+</dl>
+<p>To set a new definition, choose &#8220;modify role&#8221; on the upper right side. A new
+site will appear where you will be able to write your definitions. An example
+is given below:</p>
+<p><img alt="tag-cloud for document mng-user/008" src="../_images/manage-user-rights8.png" /></p>
+<p>This definition would match all users whose emails don&#8217;t end with &#64;gmail.com
+and &#64;hotmail.com, or who don&#8217;t belong to the group badguys and have remote_ip
+in the 24bit mask network of 127.0.0.0. All the the other users don&#8217;t belong
+to the role which is being defined.</p>
+<p>The example above is reproduced below to easy copy/paste:</p>
+<div class="highlight-python"><div class="highlight"><pre>allow not email /.*@gmail.com/,/.*@hotmail.com/
+deny group badguys
+allow remote_ip &quot;127.0.0.0/24&quot;
+deny all
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-new-roles">
+<h2>4. Create new roles<a class="headerlink" href="#create-new-roles" title="Permalink to this headline">¶</a></h2>
+<p>To create a new role is an easy task and is mainly composed of adding actions
+(section two) and adding users (section three).</p>
+<p>To create the new role, go to the overview of all roles and choose
+&#8220;Create new role&#8221;. You will then be guided step-by-step to define the necessary
+fields as described in section two and three.</p>
+<p><img alt="tag-cloud for document mng-user/009" src="../_images/manage-user-rights9.png" /></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can always edit the role, add/remove users and
+add/remove actions later by going into the detailed page of a role.</p>
+</div>
+</div>
+<div class="section" id="list-of-parameters">
+<span id="s4"></span><h2>5. List of parameters<a class="headerlink" href="#list-of-parameters" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils" id="table-webaccess-parameters">
+<caption>List of actions and corresponding parameters</caption>
+<colgroup>
+<col width="27%" />
+<col width="18%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Parameter</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Submit</td>
+<td>doctype</td>
+<td>Is equal to the code name of the submission workflow. A more detailed
+description is found in <a class="reference internal" href="submit-documents.html#submit-documents"><em>Submit Documents</em></a>.</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>categ</td>
+<td>The category (for eg. &#8220;Article&#8221;, &#8220;Preprint&#8221;) for which you wan to set
+the restriction</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>act</td>
+<td>The action (for eg. &#8220;SBI&#8221;) for which you want to set the restriction.</td>
+</tr>
+<tr class="row-odd"><td>Referee</td>
+<td>doctype</td>
+<td>Is equal to the code name of the submission workflow. A more detailed
+description is found in <a class="reference internal" href="submit-documents.html#submit-documents"><em>Submit Documents</em></a>.</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>categ</td>
+<td>The category (eg. &#8220;Article&#8221;, &#8220;Preprint&#8221;) for which you wan to set the
+restriction</td>
+</tr>
+<tr class="row-odd"><td>viewrestrcoll</td>
+<td>collection</td>
+<td>Is the name of the collection which you would like to restrict.</td>
+</tr>
+<tr class="row-even"><td>viewrestrdoc</td>
+<td>status</td>
+<td>Is the restriction parameter given in marc field <tt class="docutils literal"><span class="pre">856__r</span></tt> for
+restricted files. PS. cannot be seen in the metadata by a user.</td>
+</tr>
+<tr class="row-odd"><td>runbibedit</td>
+<td>collection</td>
+<td>Is the name of the collection which you would like to give access to.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="restrict-documents.html" class="btn btn-neutral float-right" title="Make documents restricted"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="export-xml.html" class="btn btn-neutral" title="Export data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
