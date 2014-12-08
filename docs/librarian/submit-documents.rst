@@ -20,7 +20,7 @@
 Submit Documents
 ================
 
-FIXME
+Fixme
 
 1. Introduction
 ---------------
