@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Manage User Rights &mdash; tind-doc 1.0.0 documentation</title>
+  <title>Submit Documents &mdash; tind-doc 1.0.0 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
     <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Guide for Librarians" href="index.html"/>
-        <link rel="next" title="Make documents restricted" href="restrict-documents.html"/>
-        <link rel="prev" title="Export data" href="export-xml.html"/> 
+        <link rel="next" title="Guide for System Administrators" href="../admin/index.html"/>
+        <link rel="prev" title="Make documents restricted" href="restrict-documents.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -62,8 +62,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Manage User Rights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Make documents restricted</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Submit Documents</a></li>
 </ul>
 </li>
 </ul>
@@ -103,10 +104,10 @@
       
           <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
       
-    <li>Manage User Rights</li>
+    <li>Submit Documents</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../_sources/librarian/manage-user-rights.txt" rel="nofollow"> View page source</a>
+          <a href="../_sources/librarian/submit-documents.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -114,50 +115,18 @@
 </div>
           <div role="main">
             
-  <div class="section" id="manage-user-rights">
-<span id="id1"></span><h1>Manage User Rights<a class="headerlink" href="#manage-user-rights" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="submit-documents">
+<span id="id1"></span><h1>Submit Documents<a class="headerlink" href="#submit-documents" title="Permalink to this headline">¶</a></h1>
+<p>FIXME</p>
 <div class="section" id="introduction">
 <h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>There are three important terms regarding user rights in Invenio:</p>
-<blockquote>
-<div><ul class="simple">
-<li><strong>Users</strong> are the physical persons having access to Invenio.</li>
-<li><strong>Actions</strong> identifies tasks a user can perform.</li>
-<li><strong>Roles</strong> works as an intermediate between the users and actions, allowing several users to perform several actions.</li>
-</ul>
-</div></blockquote>
-<p><img alt="tag-cloud for document mng-user/001" src="../_images/manage-user-rights1.png" /></p>
+<p>asd</p>
 </div>
-<div class="section" id="connect-roles-to-actions">
-<h2>2. Connect roles to actions<a class="headerlink" href="#connect-roles-to-actions" title="Permalink to this headline">¶</a></h2>
-<p>An action . It can be defined to take any number of</p>
-<dl class="docutils">
-<dt>arguments in order to more clearly describe what you are allowing</dt>
-<dd><p class="first">connected users to do.</p>
-<p>For example the system librarian can be allowed to run bibindex on
-the different indexes. To allow system librarians to run the
-bibindex indexing on the field author we connect role system
-librarian with action runbibindex using the argument
-index=&#8217;author&#8217;.</p>
-<p>Additionally, roles could have firewall-like role
-definitions. A definition is a formal description of which
-users are entitled to belong to the role. So you have two ways for
-connecting users to roles. Either linking explicitly a user with the
-role or describing the characteristics that makes users belong to
-the role.</p>
-<p class="last">WebAccess is based on allowing users to perform actions. This means
-that only allowed actions are stored in the access control engine&#8217;s
-database.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="connect-users-to-roles">
-<h2>3. Connect users to roles<a class="headerlink" href="#connect-users-to-roles" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>Users are connected to roles that cover different areas of access. I.e administrator of the photo</dt>
-<dd>collection or system librarian. Users can be active in
-different areas and of course connected to as many roles as needed.</dd>
-</dl>
+<div class="section" id="meaning-of-doctype-categ-act">
+<h2>2. Meaning of doctype categ act<a class="headerlink" href="#meaning-of-doctype-categ-act" title="Permalink to this headline">¶</a></h2>
+<p>First click on the &#8220;Role Area&#8221; on the front page of the WebAcces</p>
+<p>In this example, the &#8220;doctype&#8221; is the first parameter to choose and should be equal to the name of the submission workflow. Check the name of the document types used at your institution in the documentation hand over by TIND.</p>
+<p>The second paramter is the categoryID, which are used to distinguish</p>
 </div>
 </div>
 
@@ -167,10 +136,10 @@ different areas and of course connected to as many roles as needed.</dd>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="restrict-documents.html" class="btn btn-neutral float-right" title="Make documents restricted"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../admin/index.html" class="btn btn-neutral float-right" title="Guide for System Administrators"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="export-xml.html" class="btn btn-neutral" title="Export data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="restrict-documents.html" class="btn btn-neutral" title="Make documents restricted"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
