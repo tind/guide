@@ -17,8 +17,8 @@
 
 .. _restrict-documents:
 
-Make documents restricted
-=========================
+Restrict documents
+==================
 
 There are several ways to restrict documents in Invenio. Three of the procedures are shown below. The examples below assume a bibliographic record already exists. 
 
@@ -85,7 +85,7 @@ The command ``sudo -u www-data /opt/invenio/bin/bibdocfile -r 310 --set-restrict
 will set restriction for all the files attached to the given record.
 
 The command ``sudo -u www-data /opt/invenio/bin/bibdocfile -c Preprints --set-restriction=Private``
-will make all the files attached to records which are in the collection Preprint restricted. 
+will do all the files attached to records in the collection Preprint restricted. 
 
 This procedure is recommended if you would like to give several records the same restriction status. Contact your system administrator to do this for you.
 

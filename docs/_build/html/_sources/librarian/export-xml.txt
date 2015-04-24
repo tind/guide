@@ -18,8 +18,7 @@
 .. _export-xml:
 
 Export data
-=================
-
+===========
 
 1. Overview
 -----------
@@ -54,7 +53,14 @@ The url will look similar to this:
     https://yoursite.com/search?sf=&so=d&rg=10&sc=1&c=Article&c=&of=xm&ln=en&cc=Article&p=980%3A%22ARTICLE%22+AND+962__r%3A%002%22&f=``
 
 
-``rg=10``  means number of records displayed in the search results at ones. This number can be set to be equal to the numbers of records in the search result. Afterwords, save the page as an xml.-file.
+``rg=10``  means number of records displayed in the search results at ones. 
+This number can be set to be equal to the numbers of records in the search result. 
+
+The url can be further modified to export the exact data-fields that is wanted:
+by adding ``ot=001,245,260`` only data-field 001, 245 and 260 will be export exported.
+
+
+Afterwords, save the page as an xml.-file.
 
  
 
@@ -94,4 +100,16 @@ Default folder for storing is:
 .. code-block:: console
 
     /opt/invenio/var/www/export/marcxml
+
+
+2. Export records in Excel
+--------------------------
+It is possible to export the data in Excel. Follow the instruction from section 2.1 and 
+as the last step, change out ``of=xm`` with ``of=excel``
+
+.. code-block:: console
+
+    https://yoursite.com/search?sf=&so=d&rg=10&sc=1&c=Article&c=&of=excel&ln=en&cc=Article&p=980%3A%22ARTICLE%22+AND+962__r%3A%002%22&f=``
+
+
 

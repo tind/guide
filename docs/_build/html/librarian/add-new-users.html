@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Submit Documents &mdash; tind-doc 1.0.0 documentation</title>
+  <title>Add New Users &mdash; tind-doc 1.0.0 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
     <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Guide for Librarians" href="index.html"/>
-        <link rel="next" title="Approve Documents" href="approve-documents.html"/>
-        <link rel="prev" title="Restrict documents" href="restrict-documents.html"/> 
+        <link rel="next" title="Create Collections" href="create-collection.html"/>
+        <link rel="prev" title="Guide for Librarians" href="index.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -60,12 +60,12 @@
         
             <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="add-new-users.html">Add New Users</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Add New Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Restrict documents</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Submit Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit Documents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="approve-documents.html">Approve Documents</a></li>
 </ul>
 </li>
@@ -106,10 +106,10 @@
       
           <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
       
-    <li>Submit Documents</li>
+    <li>Add New Users</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../_sources/librarian/submit-documents.txt" rel="nofollow"> View page source</a>
+          <a href="../_sources/librarian/add-new-users.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -117,30 +117,58 @@
 </div>
           <div role="main">
             
-  <div class="section" id="submit-documents">
-<span id="id1"></span><h1>Submit Documents<a class="headerlink" href="#submit-documents" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="add-new-users">
+<span id="id1"></span><h1>Add New Users<a class="headerlink" href="#add-new-users" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Invenio supports multiple submission workflows. One submission workflow can be made for a specific document type or it can be shared by several similar document types. For example, the document type &#8220;Author Works&#8221; is often used for both articles and preprints, which becomes sub-categories of the &#8220;Author Work&#8221;- submission workflow. This is possible when the different document types store the same metadata fields. Check the documentation for the specific setup for your repository.  The following guide takes the user perspective in how to submit a document.</p>
+<p>This guide is meant for organizations that do not use a single log in method and would like
+to create local accounts.</p>
+<p>There are different ways of creating new users, dependent of your configuration settings
+of who are allowed to create users.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># CFG_ACCESS_CONTROL_LEVEL_ACCOUNTS -- account registration and</span>
+    <span class="c"># activation policy.  When 0, users can register and accounts are</span>
+    <span class="c"># automatically activated.  When 1, users can register but admin must</span>
+    <span class="c"># activate the accounts.  When 2, users cannot register nor update</span>
+    <span class="c"># their email address, only admin can register accounts.  When 3,</span>
+    <span class="c"># users cannot register nor update email address nor password, only</span>
+    <span class="c"># admin can register accounts.  When 4, the same as 3 applies, nor</span>
+    <span class="c"># user cannot change his login method.  When 5, then the same as 4</span>
+    <span class="c"># applies, plus info about how to get an account is hidden from the</span>
+    <span class="c"># login page.</span>
+</pre></div>
 </div>
-<div class="section" id="choosing-submission-workflow">
-<h2>2. Choosing submission workflow<a class="headerlink" href="#choosing-submission-workflow" title="Permalink to this headline">¶</a></h2>
-<p>The user will only see those workflows which he/she is authorized to submit to. The frequently used submission workflows are: Author Works, Conference Material, Theses, Journals and Multimedia. Go to <a class="reference internal" href="restrict-documents.html#restrict-documents"><em>Restrict documents</em></a> to learn more about setting user rights.</p>
-<p>User 1</p>
-<p><img alt="tag-cloud for document sub-doc/001" src="../_images/sub-doc1.png" /></p>
-<p>User 2
-<img alt="tag-cloud for document sub-doc/002" src="../_images/sub-doc2.png" /></p>
 </div>
-<div class="section" id="choosing-sub-category">
-<h2>3. Choosing sub-category<a class="headerlink" href="#choosing-sub-category" title="Permalink to this headline">¶</a></h2>
-<p>The user will only see sub-categories he/she is authorized to submit, in the same way as
-for submission workflows.</p>
+<div class="section" id="create-new-users-in-webaccess">
+<h2>2. Create new users in WebAccess<a class="headerlink" href="#create-new-users-in-webaccess" title="Permalink to this headline">¶</a></h2>
+<p>First select &#8220;Manage Accounts Area&#8221; on the front page of the WebAccess admin panel.
+Select point three from the menu bar &#8220;Create Account&#8221;.</p>
+<p>A new box appear where you can add the username and password for the person.</p>
+<p><img alt="tag-cloud for document add-user/001" src="../_images/add-new-user1.png" /></p>
+<p>Upon creation, an email are sent to the person to inform that a new user is created.
+The password are not displayed in the email. We therefore recommend to have the person to
+change his/her own password, see section 3.</p>
+<p><img alt="tag-cloud for document add-user/002" src="../_images/add-new-user2.png" /></p>
 </div>
-<div class="section" id="meaning-of-doctype-categ-act">
-<h2>6. Meaning of doctype categ act<a class="headerlink" href="#meaning-of-doctype-categ-act" title="Permalink to this headline">¶</a></h2>
-<p>First click on the &#8220;Role Area&#8221; on the front page of the WebAcces</p>
-<p>In this example, the &#8220;doctype&#8221; is the first parameter to choose and should be equal to the name of the submission workflow. Check the name of the document types used at your institution in the documentation hand over by TIND.</p>
-<p>The second paramter is the categoryID, which are used to distinguish</p>
+<div class="section" id="change-password-for-new-users">
+<h2>3. Change password for new users<a class="headerlink" href="#change-password-for-new-users" title="Permalink to this headline">¶</a></h2>
+<p>New users will be notified by email as in the example below.</p>
+<p><img alt="tag-cloud for document add-user/003" src="../_images/add-new-user3.png" /></p>
+<p>The password is not shown for security reasons and we therefore recommend that the user
+go to the website and request a new password.</p>
+<ol class="arabic simple">
+<li>Select &#8220;Forgot password?&#8221;.</li>
+</ol>
+<p><img alt="tag-cloud for document add-user/004" src="../_images/add-new-user4.png" /></p>
+<ol class="arabic simple" start="2">
+<li>Enter your email address.</li>
+</ol>
+<p><img alt="tag-cloud for document add-user/005" src="../_images/add-new-user5.png" /></p>
+<ol class="arabic simple" start="3">
+<li>A new email are sent with a link to change the password</li>
+</ol>
+<p>4. Set a new password. We recommend to use a password manager or to create
+&#8220;a passphrase&#8221; for creating strong passwords.</p>
+<p><img alt="tag-cloud for document add-user/006" src="../_images/add-new-user6.png" /></p>
 </div>
 </div>
 
@@ -150,10 +178,10 @@ for submission workflows.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="approve-documents.html" class="btn btn-neutral float-right" title="Approve Documents"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="create-collection.html" class="btn btn-neutral float-right" title="Create Collections"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="restrict-documents.html" class="btn btn-neutral" title="Restrict documents"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Guide for Librarians"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

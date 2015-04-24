@@ -20,14 +20,37 @@
 Submit Documents
 ================
 
-Fixme
-
 1. Introduction
 ---------------
 
-asd
+Invenio supports multiple submission workflows. One submission workflow can be made for a specific document type or it can be shared by several similar document types. For example, the document type "Author Works" is often used for both articles and preprints, which becomes sub-categories of the "Author Work"- submission workflow. This is possible when the different document types store the same metadata fields. Check the documentation for the specific setup for your repository.  The following guide takes the user perspective in how to submit a document.
 
-2. Meaning of doctype categ act
+
+2. Choosing submission workflow
+-------------------------------
+
+The user will only see those workflows which he/she is authorized to submit to. The frequently used submission workflows are: Author Works, Conference Material, Theses, Journals and Multimedia. Go to :ref:`restrict-documents` to learn more about setting user rights. 
+
+User 1
+
+|tag-cloud for document sub-doc/001|
+
+.. |tag-cloud for document sub-doc/001| image:: /_static/librarian/sub-doc1.png
+
+
+User 2
+|tag-cloud for document sub-doc/002|
+
+.. |tag-cloud for document sub-doc/002| image:: /_static/librarian/sub-doc2.png
+
+3. Choosing sub-category 
+------------------------
+
+The user will only see sub-categories he/she is authorized to submit, in the same way as 
+for submission workflows.
+
+
+6. Meaning of doctype categ act
 -------------------------------
 
 First click on the "Role Area" on the front page of the WebAcces

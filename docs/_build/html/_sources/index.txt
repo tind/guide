@@ -5,7 +5,7 @@
 
 
 TIND Technologies` Administration Guide
-###################################################
+#######################################
 
 Welcome to TIND Technologies’ documentation on Invenio. This documentation is divided into three different parts:
 

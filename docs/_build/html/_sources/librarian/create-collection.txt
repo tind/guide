@@ -18,10 +18,10 @@
 .. _create-collection:
 
 Create Collections
-=======================
+==================
 
 1. Introduction
------------------------
+---------------
 
 Metadata corpus in Invenio is organized into collections. The
 collections are organized in a tree. The collection tree is what the
@@ -101,7 +101,7 @@ particular "focus-on" relationship, provided that this "virtual" point
 of view on A interests her.
 
 3 Modify existing tree
--------------------------
+----------------------
 
 To modify existing tree by WebSearch Admin Interface, click on icons
 displayed next to collections. The meaning of icons is as follows:
