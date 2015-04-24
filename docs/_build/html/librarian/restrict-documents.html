@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Make documents restricted &mdash; tind-doc 1.0.0 documentation</title>
+  <title>Restrict documents &mdash; tind-doc 1.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
     <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Guide for Librarians" href="index.html"/>
-        <link rel="next" title="Guide for System Administrators" href="../admin/index.html"/>
+        <link rel="next" title="Submit Documents" href="submit-documents.html"/>
         <link rel="prev" title="Manage User Rights" href="manage-user-rights.html"/> 
 
   
@@ -63,7 +63,8 @@
 <li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Make documents restricted</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Restrict documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit Documents</a></li>
 </ul>
 </li>
 </ul>
@@ -103,7 +104,7 @@
       
           <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
       
-    <li>Make documents restricted</li>
+    <li>Restrict documents</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="../_sources/librarian/restrict-documents.txt" rel="nofollow"> View page source</a>
@@ -114,8 +115,8 @@
 </div>
           <div role="main">
             
-  <div class="section" id="make-documents-restricted">
-<span id="restrict-documents"></span><h1>Make documents restricted<a class="headerlink" href="#make-documents-restricted" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="restrict-documents">
+<span id="id1"></span><h1>Restrict documents<a class="headerlink" href="#restrict-documents" title="Permalink to this headline">¶</a></h1>
 <p>There are several ways to restrict documents in Invenio. Three of the procedures are shown below. The examples below assume a bibliographic record already exists.</p>
 <p>Note: Documents becomes restricted if they have a restriction status in marc field 856__r, example <tt class="docutils literal"><span class="pre">856__r</span> <span class="pre">=</span> <span class="pre">Private</span></tt>. The restriction status is selectable, but it is important that it matches the restriction status defined in WebAccess for the specific role.</p>
 <div class="section" id="change-the-restriction-status-in-document-file-manager">
@@ -160,7 +161,7 @@
 <p>The command <tt class="docutils literal"><span class="pre">sudo</span> <span class="pre">-u</span> <span class="pre">www-data</span> <span class="pre">/opt/invenio/bin/bibdocfile</span> <span class="pre">-r</span> <span class="pre">310</span> <span class="pre">--set-restriction=Private</span></tt>
 will set restriction for all the files attached to the given record.</p>
 <p>The command <tt class="docutils literal"><span class="pre">sudo</span> <span class="pre">-u</span> <span class="pre">www-data</span> <span class="pre">/opt/invenio/bin/bibdocfile</span> <span class="pre">-c</span> <span class="pre">Preprints</span> <span class="pre">--set-restriction=Private</span></tt>
-will make all the files attached to records which are in the collection Preprint restricted.</p>
+will do all the files attached to records in the collection Preprint restricted.</p>
 <p>This procedure is recommended if you would like to give several records the same restriction status. Contact your system administrator to do this for you.</p>
 </div>
 </div>
@@ -171,7 +172,7 @@ will make all the files attached to records which are in the collection Preprint
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../admin/index.html" class="btn btn-neutral float-right" title="Guide for System Administrators"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="submit-documents.html" class="btn btn-neutral float-right" title="Submit Documents"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="manage-user-rights.html" class="btn btn-neutral" title="Manage User Rights"><span class="fa fa-arrow-circle-left"></span> Previous</a>
