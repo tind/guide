@@ -60,11 +60,13 @@
         
             <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-new-users.html">Add New Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Export data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
-<li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Make documents restricted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Restrict documents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="approve-documents.html">Approve Documents</a></li>
 </ul>
 </li>
 </ul>
@@ -142,7 +144,11 @@ Then choose export format MARCXML.</p>
 <div class="highlight-console"><div class="highlight"><pre><span class="gp">https://yoursite.com/search?sf=&amp;so=d&amp;rg=10&amp;sc=1&amp;c=Article&amp;c=&amp;of=xm&amp;ln=en&amp;cc=Article&amp;p=980%3A%22ARTICLE%22+AND+962__r%3A%002%</span>22&amp;f<span class="o">=</span><span class="sb">``</span>
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">rg=10</span></tt>  means number of records displayed in the search results at ones. This number can be set to be equal to the numbers of records in the search result. Afterwords, save the page as an xml.-file.</p>
+<p><tt class="docutils literal"><span class="pre">rg=10</span></tt>  means number of records displayed in the search results at ones.
+This number can be set to be equal to the numbers of records in the search result.</p>
+<p>The url can be further modified to export the exact data-fields that is wanted:
+by adding <tt class="docutils literal"><span class="pre">ot=001,245,260</span></tt> only data-field 001, 245 and 260 will be export exported.</p>
+<p>Afterwords, save the page as an xml.-file.</p>
 </div>
 <div class="section" id="by-bibexport">
 <h3>2.2 By BibExport<a class="headerlink" href="#by-bibexport" title="Permalink to this headline">¶</a></h3>
@@ -169,6 +175,14 @@ polyakov_articles = 980__a:ARTICLE and author:&quot;Polyakov, A M&quot;
 <div class="highlight-console"><div class="highlight"><pre><span class="go">/opt/invenio/var/www/export/marcxml</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="export-records-in-excel">
+<h2>2. Export records in Excel<a class="headerlink" href="#export-records-in-excel" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to export the data in Excel. Follow the instruction from section 2.1 and
+as the last step, change out <tt class="docutils literal"><span class="pre">of=xm</span></tt> with <tt class="docutils literal"><span class="pre">of=excel</span></tt></p>
+<div class="highlight-console"><div class="highlight"><pre><span class="gp">https://yoursite.com/search?sf=&amp;so=d&amp;rg=10&amp;sc=1&amp;c=Article&amp;c=&amp;of=excel&amp;ln=en&amp;cc=Article&amp;p=980%3A%22ARTICLE%22+AND+962__r%3A%002%</span>22&amp;f<span class="o">=</span><span class="sb">``</span>
+</pre></div>
 </div>
 </div>
 </div>
