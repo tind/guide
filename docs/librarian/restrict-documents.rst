@@ -20,9 +20,12 @@
 Restrict documents
 ==================
 
-There are several ways to restrict documents in Invenio. Three of the procedures are shown below. The examples below assume a bibliographic record already exists. 
+There are several ways to restrict documents in Invenio. Three of the procedures are shown below. 
+The examples below assume a bibliographic record already exists. 
 
-Note: Documents becomes restricted if they have a restriction status in marc field 856__r, example ``856__r = Private``. The restriction status is selectable, but it is important that it matches the restriction status defined in WebAccess for the specific role.
+Note: Documents becomes restricted if they have a restriction status in FFT tag, subfield r.
+The restriction status is selectable, but it is important that it matches the restriction 
+status defined in WebAccess for the specific role.
 
 1. Change the restriction status in Document File Manager
 ---------------------------------------------------------

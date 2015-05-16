@@ -23,13 +23,22 @@ Submit Documents
 1. Introduction
 ---------------
 
-Invenio supports multiple submission workflows. One submission workflow can be made for a specific document type or it can be shared by several similar document types. For example, the document type "Author Works" is often used for both articles and preprints, which becomes sub-categories of the "Author Work"- submission workflow. This is possible when the different document types store the same metadata fields. Check the documentation for the specific setup for your repository.  The following guide takes the user perspective in how to submit a document.
+Invenio supports multiple submission workflows. One submission workflow can be made for a 
+specific document type or it can be shared by several similar document types. For example, 
+the document type "Author Works" is often used for both articles and preprints, which 
+becomes sub-categories of the "Author Work"- submission workflow. This is possible when 
+the different document types store the same metadata fields. Check the documentation for 
+the specific setup for your repository.  The following guide takes the user perspective in 
+how to submit a document.
 
 
 2. Choosing submission workflow
 -------------------------------
 
-The user will only see those workflows which he/she is authorized to submit to. The frequently used submission workflows are: Author Works, Conference Material, Theses, Journals and Multimedia. Go to :ref:`restrict-documents` to learn more about setting user rights. 
+The user will only see those workflows which he/she is authorized to submit to. The 
+frequently used submission workflows are: Author Works, Conference Material, Theses, 
+Journals and Multimedia. Go to :ref:`restrict-documents` to learn more about setting user 
+rights. 
 
 User 1
 
@@ -56,7 +65,9 @@ for submission workflows.
 First click on the "Role Area" on the front page of the WebAcces
 
 
-In this example, the "doctype" is the first parameter to choose and should be equal to the name of the submission workflow. Check the name of the document types used at your institution in the documentation hand over by TIND.
+In this example, the "doctype" is the first parameter to choose and should be equal to the 
+name of the submission workflow. Check the name of the document types used at your 
+institution in the documentation hand over by TIND.
 
 The second paramter is the categoryID, which are used to distinguish
 

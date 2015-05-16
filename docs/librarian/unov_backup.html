@@ -1,0 +1,475 @@
+<!-- <BFE_TOPBANNER
+prefix='<div>'
+suffix='</div>'/> --!>
+<h2 class='record-title'>
+<BFE_MARC_245 prefix="" suffix="" default="" escape="" highlight="no" separator="<br /><br />"/>
+</h2>
+
+<BFE_AUTHORS prefix="<div class='record-detail-meta record-authors'>" suffix="</div>" limit="25" interactive="yes" print_affiliations="yes"/>
+<BFE_CORPORATION />
+
+<BFE_ABSTRACT prefix="<p class='record-abstract'>" suffix="</p>" default="" escape="" prefix_en="" separator_fr="<br/>" print_lang="en,fr" suffix_fr="" latex_to_html="no" extension_fr="[...] " max_chars="" suffix_en="" limit="" separator_en="<br/>" prefix_fr="" escape="3" highlight="no" extension_en="[...] " contextual="no"/>
+<br>
+
+<!-- Keywords -->
+<BFE_KEYWORDS prefix="<div class='record-meta-key'><lang>
+<en>Keywords:</en>
+<fr>Mots-clés:</fr>
+<es>Palabras Clave:</es>
+<ru>Ключевые слова:</ru>
+<ar>كلمات البحث:</ar>
+<zh_CN>关键词:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div>" separator=" ; " />
+
+<!-- Meeting Name -->
+<BFE_FIELD tag="111%%%" instances_separator="<br>" escape="0" prefix="<div class='record-meta-key'><lang>
+<en>Meeting name:</en>
+<fr>Nom de la réunion:</fr>
+<es>Nombre de reuniones:</es>
+<ru>Название собрания:</ru>
+<ar>اسم الاجتماع:</ar>
+<zh_CN>会议名称:</zh_CN>
+</lang> </div><div class='record-meta-value'>" suffix="</div>" output_pattern="%(a)s %(d)s %(c)s" />
+
+<!-- Uniform Title -->
+<BFE_FIELD tag="730%%a" prefix="<div class='record-meta-key'><lang>
+<en>Uniform title:</en>
+<fr>Titre uniforme:</fr>
+<es>Título uniforme:</es>
+<ru>Универсальный заголовок:</ru>
+<ar>العنوان الموحد:</ar>
+<zh_CN>统一题名:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div>" />
+
+<!-- Variant Name -->
+<BFE_FIELD tag="246%%" instances_separator="<br>" prefix="<div class='record-meta-key'><lang>
+<en>Variant title:</en>
+<fr>Variante du titre:</fr>
+<es>Variante título:</es>
+<ru>Вариант заголовка:</ru>
+<ar>العنوان البديل:</ar>
+<zh_CN>变异题名:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div>" escape="0" />
+
+ <!-- Meeting Name- Secondary -->
+<BFE_FIELD tag="711%%a" instances_separator="<br>" prefix="<div class='record-meta-key'><lang>
+<en>Meeting name:</en>
+<fr>Nom de la réunion:</fr>
+<es>Nom de la réunion:</es>
+<ru>Название собрания:</ru>
+<ar>اسم الاجتماع:</ar>
+<zh_CN>会议名称:</zh_CN>
+</lang> </div><div class='record-meta-value'>" suffix="</div>" escape="0">
+
+<!-- Edition -->
+<BFE_FIELD tag="250__a" prefix="<div class='record-meta-key'><lang>
+<en>Edition:</en>
+<fr>Mention d'édition:</fr>
+<es>Mención de edición:</es>
+<ru>Издание:</ru>
+<ar>الطبعة:</ar>
+<zh_CN>版本:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div>" />
+
+<!-- Imprint -->
+<BFE_IMPRINT prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Imprint:</en>
+<fr>Mention d'impression:</fr>
+<es>Publicació:</es>
+<ru>Издательство:</ru>
+<ar>الناشر:</ar>
+<zh_CN>版本项:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" default="" escape="" publisher_label="" date_format="" separator="" place_label=" " date_label=" "/>
+
+<!-- Languages -->
+<BFE_FIELD tag="546__a" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'>
+<lang>
+<en>Language(s):</en>
+<fr>Langue:</fr>
+<es>Llengua:</es>
+<ru>Язык(и):</ru>
+<ar>اللغة(لغات):</ar>
+<zh_CN>语言:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<!-- Pagination -->
+<BFE_FIELD tag="300%%%" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Description:</en>
+<fr>Description:</fr>
+<es>Descripció:</es>
+<ru>Описание:</ru>
+<ar>الوصف:</ar>
+<zh_CN>描述:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" output_pattern="%(a)s %(b)s %(c)s %(e)s" />
+
+<!-- Frequency -->
+<BFE_FIELD tag="310%%%" instances_separator="<br>" escape="0" prefix="<div class='record-meta-key'><lang>
+<en>Frequency:</en>
+<fr>Fréquence::</fr>
+<es>Frecuencia:</es>
+<ru>Частота:</ru>
+<ar>التردد:</ar>
+<zh_CN>频率:</zh_CN>
+</lang> </div><div class='record-meta-value'>" suffix="</div>" output_pattern="%(a)s %(b)s %(c)s %(e)s" />
+
+<!-- ISBN -->
+<BFE_FIELD tag="020" prefix="<div class='record-meta-key'><lang>
+<en>ISBN:</en>
+<fr>ISSB:</fr>
+<es>ISBN:</es>
+<ru>ISBN:</ru>
+<ar>الرقم الدولي المعياري للكتاب:</ar>
+<zh_CN>国际图书编号:</zh_CN>
+</lang> </div><div class='record-meta-value'>" suffix="</div>" instances_separator="<br/> " escape="0" subfields_separator=" " />
+
+<!-- ISSN -->
+<BFE_FIELD tag="022" prefix="<div class='record-meta-key'><lang>
+<en>ISSN:</en>
+<fr>ISSN:</fr>
+<es>ISSN:</es>
+<ru>ISSN:</ru>
+<ar>الرقم الدولي المعياري المسلسل:</ar>
+<zh_CN>国际标准期刊编号:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div>" instances_separator="<br/> " escape="0" subfields_separator=" " />
+
+<!-- UDC -->
+<BFE_FIELD tag="080" prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>UDC:</en>
+<fr>UDC:</fr>
+<es>UDC:</es>
+<ru>Определитель Универсальной десятичной классификации :</ru>
+<ar>رقم التصنيف العشرى العالمى:</ar>
+<zh_CN>国际十进分类法:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" instances_separator="<br/> " escape="0" subfields_separator=" " />
+
+<!-- DOI -->
+<BFE_DOI prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>DOI:</en>
+<fr>DOI:</fr>
+<es>DOI:</es>
+<ru>DOI:</ru>
+<ar>معرف الوثيقة الرقمية:</ar>
+<zh_CN>数字对象唯一标识符:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" default="" escape="" separator="<br/> " tag="0247_" description_location="front" label=""/>
+
+<!-- SUBJECT -->
+<BFE_SUBJECTS prefix="<div class='clearfix'>" default="" escape="" key_class="record-meta-key" separator="<br>" value_class="record-meta-value" title="<lang>
+<en>Subject(s):</en>
+<fr>Sujet(s):</fr>
+<es>Materia:</es>
+<ru>Тема(ы):</ru>
+<ar>الموضوع(الموضوعات):</ar>
+<zh_CN>标题:</zh_CN>
+</lang>" suffix="</div>" />
+
+<!-- Serial Statement -->
+<BFE_FIELD tag="490%%" prefix="<div class='record-meta-key'><lang>
+<en>Series:</en>
+<fr>Série:</fr>
+<es>Serie:</es>
+<ru>Серии:</ru>
+<ar>السلسلة:</ar>
+<zh_CN>丛编:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div>" instances_separator="<br/>" subfields_separator=" vol ">
+
+<BFE_MARC_440 prefix="" suffix="" default="" escape="" key_class="record-meta-key" separator="<br>" value_class="record-meta-value" title="<lang>
+<en>Series:</en>
+<fr>Série:</fr>
+<es>Serie:</es>
+<ru>Серии:</ru>
+<ar>السلسلة:</ar>
+<zh_CN>丛编:</zh_CN>
+</lang>"/>
+
+<!-- Document Number -->
+<BFE_FIELD tag="084" prefix="<div class='record-meta-key'><lang>
+<en>Document number:</en>
+<fr>Numéro de document:</fr>
+<es>Numero de documento:</es>
+<ru>Номер документа:</ru>
+<ar>رقم الوثيقة:</ar>
+<zh_CN>文献号:</zh_CN>
+</lang> </div><div class='record-meta-value'>" suffix="</div>" escape="0">
+
+<BFE_FIELD tag="500%%a" instances_separator="<br>" escape="0" filter_tags='yes' prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Note:</en>
+<fr>Note:</fr>
+<es>Nota:</es>
+<ru>Примечание:</ru>
+<ar>ملاحظة:</ar>
+<zh_CN>附注:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="501%%a" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>With notes:</en>
+<fr>Avec remarque:</fr>
+<es>Con Nota::</es>
+<ru>С примечанием::</ru>
+<ar>مع ملاحظة:</ar>
+<zh_CN>合订附注:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="502%%a" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Dissertation note:</en>
+<fr>Remarque de thèse:</fr>
+<es>Nota Disertación:</es>
+<ru>Запись о диссертации::</ru>
+<ar>ملاحظة الأطروحة:</ar>
+<zh_CN>学位论文附注:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="504%%a" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Bibliography, etc. note:</en>
+<fr>Bibliographie, remarque:</fr>
+<es>Bibliografía, etc. Nota:</es>
+<ru>Библиографическая и др. запись:</ru>
+<ar>ملاحظة الفهرس, إلخ:</ar>
+<zh_CN>书目等附注:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="505%%a" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'>
+<lang>
+<en>Formatted contents note:</en>
+<fr>Remarque du contenu formatté::</fr>
+<es>Contenido con formato Nota:</es>
+<ru>Запись форматированного содержания:</ru>
+<ar>ملاحظة المحتويات المنسقة:</ar>
+<zh_CN>格式化内容附注:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="506%%a" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Access note:</en>
+<fr>Remarque d'accés:</fr>
+<es>Acceso nota:</es>
+<ru>Запись доступа:</ru>
+<ar>ملاحظة الدخول:</ar>
+<zh_CN>检索附注:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="510%%a" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Indexed in:</en>
+<fr>Indexé dans:</fr>
+<es>Indexadas en:</es>
+<ru>Индекс в:</ru>
+<ar>TBT:</ar>
+<zh_CN>TBT:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="516%%a" instances_separator="<br>" escape="0"  prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Type of file:</en>
+<fr>Type de fichier:</fr>
+<es>Tipo de archivo:</es>
+<ru>Формат файла:</ru>
+<ar>نوع الملف:</ar>
+<zh_CN>字段类型:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="518%%a" instances_separator="<br>" escape="0"  prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Time and place of event:</en>
+<fr>Date et lieu de l'événement:</fr>
+<es>Hora y lugar del evento:</es>
+<ru>Время и место события:</ru>
+<ar>وقت ومكان الحدث:</ar>
+<zh_CN>事件发生的时间和地点:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="530%%a" instances_separator="<br>" escape="0"  prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Available note:</en>
+<fr>Remarque de disponibilité:</fr>
+<es>Disponible Nota:</es>
+<ru>Запись о наличии:</ru>
+<ar>الملاحظة المتاحة:</ar>
+<zh_CN>可用附注:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="538%%a" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>System details note:</en>
+<fr>Remarque sur les details du système.:</fr>
+<es>Detalles del sistema Nota:</es>
+<ru>Запись о системных данных:</ru>
+<ar>ملاحظة تفاصيل النظام:</ar>
+<zh_CN>系统细节附注:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" />
+
+<BFE_FIELD tag="580__a"  instances_separator="<br>" prefix="<div class='record-meta-key'>
+<lang>
+<en>Linking note:</en>
+<fr>Remarque sur les liens:</fr>
+<es>Vinculación de Nota:</es>
+<ru>Примечание(я) о взаимосвязанных записях:</ru>
+<ar>ملاحظة(ملاحظات) الوصل:</ar>
+<zh_CN>连接附注:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div>" escape="0">
+
+<!-- Call Number -->
+<BFE_FIELD tag="852%%%" instances_separator="<br>" escape="0" prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Call number:</en>
+<fr>Cote:</fr>
+<es>Número de llamada:</es>
+<ru>Шифр:</ru>
+<ar>رقم الاستدعاء:</ar>
+<zh_CN>书目编号:</zh_CN>
+</lang> </div><div class='record-meta-value'>" suffix="</div></div>" output_pattern="%(k)s %(h)s %(i)s" />
+
+<!-- Linked Records -->
+<BFE_TRANSLATIONS prefix="<div class='clearfix'>" suffix="</div>" title="<lang>
+<en>Translated as</en>
+<fr>Traduction</fr>
+<es>Traducción</es>
+<ru>Перевод::</ru>
+<ar>الترجمة:</ar>
+<zh_CN>译作:</zh_CN>
+</lang>" />
+
+<!-- Preceding Entry -->
+<BFE_MARC_780 prefix="<div class='clearfix'>" suffix="</div>" default="" escape="" key_class="record-meta-key" separator="<br>" value_class="record-meta-value" title="<lang>
+<en>Continues</en>
+<fr>Continue</fr>
+<es>Continúa</es>
+<ru>Следует за</ru>
+<ar>يتابع</ar>
+<zh_CN>继续</zh_CN>
+</lang>"/>
+
+<BFE_MARC_785 prefix="<div class='clearfix'>" suffix="</div>" default="" escape="" key_class="record-meta-key" separator="<br>" value_class="record-meta-value" title="<lang>
+<en>Continued by</en>
+<fr>Remplacé par</fr>
+<es>Continuada por</es>
+<ru>Предшествует:</ru>
+<ar>مستأنف بواسطة:</ar>
+<zh_CN>改名:</zh_CN>
+</lang>"/>
+
+<BFE_MARC_773 prefix="<div class='clearfix'>" suffix="</div>" default="" escape="" key_class="record-meta-key" separator="<br>" value_class="record-meta-value" title="<lang>
+<en>Journal citation</en>
+<fr>Document hôte</fr>
+<es>En</es>
+<ru>Цитата в журнале</ru>
+<ar>فى</ar>
+<zh_CN>发表于:</zh_CN>
+</lang>"/>
+
+<BFE_FIELD tag="915%%%"  instances_separator="<br>" prefix="<div class='record-meta-key'>
+<lang>
+<en>Journal citation:</en>
+<fr>TBT:</fr>
+<es>TBT:</es>
+<ru>TBT:</ru>
+<ar>TBT:</ar>
+<zh_CN>TBT:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div>" output_pattern="%(a)s %(b)s %(c)s" escape="0">
+
+
+<BFE_MARC_776 prefix="<div class='clearfix'>" default="" escape="" key_class="record-meta-key" separator="<br>" value_class="record-meta-value" title="<lang>
+<en>Available in other form</en>
+<fr>Disponible sous une autre forme</fr>
+<es>Disponible en otra forma</es>
+<ru>Наличие в другой форме:</ru>
+<ar>متاح بشكل آخر:</ar>
+<zh_CN>其他可用形式:</zh_CN>
+</lang>" suffix="</div>" />
+
+<!-- Linked Resources -->
+<BFE_MARC_856 prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Linked resources:</en>
+<fr>Ressources liées:</fr>
+<es>Recursos relacionados:</es>
+<ru>Взаимосвязанные ресурсы:</ru>
+<ar>الموارد المرتبطة:</ar>
+<zh_CN>连续资源:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>" default="" escape="" show_subformat_icons="no" focus_on_main_file="no" separator="<br> " style="" show_icons="no" new_tab="yes" />
+
+<br/>
+<BFE_APPEARS_IN_COLLECTIONS prefix="<div class='clearfix'><div class='record-meta-key'><lang>
+<en>Record appears in:</en>
+<fr>Le document apparaît dans:</fr>
+<es>El registre apareix a les colleccions:</es>
+<ru>Запись имеется в:</ru>
+<ar>السجل يظهر فى:</ar>
+<zh_CN>记录出处:</zh_CN>
+</lang></div><div class='record-meta-value'>" suffix="</div></div>"  separator="<br/> " />
+<br>
+
+<!-- List -->
+
+<ul class="improved-record-actions-2">
+
+
+<BFE_SUGGEST_HOLDING prefix="<li><i class='fa fa-book'></i>" suffix="</li>"/>
+<li>
+<i class="fa fa-file-text-o"></i> 
+<lang>
+<en>Export as:</en>
+<fr>Exporter au format:</fr>
+<es>Exportar como:</es>
+<ru>Экспортировать:</ru>
+<ar>أصدر بشكل:</ar>
+<zh_CN>导出类型:</zh_CN>
+</lang>
+<a href="/record/<BFE_RECORD_ID />/export/hx" download="record.bib">BibTeX</a> |
+<a href="/record/<BFE_RECORD_ID />/export/hm" download="record.mrc">MARC</a> |
+<a href="/record/<BFE_RECORD_ID />/export/xm" download="record.xml">MARCXML</a> |
+<a href="/record/<BFE_RECORD_ID />/export/xd" download="record.dc">DC</a> |
+<a href="/record/<BFE_RECORD_ID />/export/xe" download="endnote.xml">EndNote</a> |
+<a href="/record/<BFE_RECORD_ID />/export/xn" download="nlm.xml">NLM</a> |
+<a href="/record/<BFE_RECORD_ID />/export/xw" download="refworks.xml">RefWorks</a>
+</li>
+<li>
+<i class="fa fa-list-alt"></i> 
+<lang>
+<en>View as:</en>
+<fr>Afficher au format:</fr>
+<es>Mostrar como:</es>
+<ru>Просмотреть:</ru>
+<ar>أعرض بشكل:</ar>
+<zh_CN>浏览类型:</zh_CN>
+</lang>
+<a href="/record/<BFE_RECORD_ID />/export/hm">MARC</a> |
+<a href="/record/<BFE_RECORD_ID />/export/xm">MARCXML</a> |
+<a href="/record/<BFE_RECORD_ID />/export/xd">DC</a>
+</li>
+<BFE_EDIT_RECORD prefix="<li><i class='fa fa-file-text-o'></i> " suffix="</li>" default="" escape="" style=""/>
+<BFE_EDIT_FILES prefix="<li><i class='fa fa-files-o'></i> " suffix="</li>" default="" escape="" style=""/>
+<li>
+<i class="fa fa-shopping-cart"></i> <a href="/yourbaskets/add?recid=<BFE_RECORD_ID />">
+<lang>
+<en>Add to your basket:</en>
+<fr>Ajouter à votre panier:</fr>
+<es>Añadir a la cesta:</es>
+<ru>Добавить в корзину:</ru>
+<ar>أضف إلى سلتك:</ar>
+<zh_CN>添加到书签:</zh_CN>
+</lang>
+</a>
+</li>
+</ul>
+<div style="clear: both;"></div>
+
+
+<BFE_PLOTS width="200px" caption="no"/>
+
+
+BRIEF
+
+
+<div class="result-row">
+<BFE_FULLTEXT prefix="<div class='result-downloads collapsible collapsed'><i class='fa fa-download'></i><div class='popup'>" show_icons="no" separator="" suffix="</div></div>" />
+<div style="overflow:hidden">
+
+<div class="result-title"><a href="#"><BFE_TITLE_BRIEF highlight="no" c_separator=" " /></a> </div>
+<BFE_LANG_VOY prefix="<div style='font-size: 0.8em'>" suffix="</div>" default="" escape="" />
+
+
+<BFE_AUTHORS_OR_CORPORATION limit="4" prefix="<div class='authors'>" suffix="</div>" extension=" et al" highlight="no" separator="; "/>
+
+<div class="result-abstract">
+<BFE_IMPRINT separator=""/>
+<div class="brief-options">
+<BFE_FIELD tag="546__a" prefix="<i class='fa fa-globe'></i>" suffix="<span class='separator'> | </span>" default="" escape="" />
+<BFE_FIELD tag="852%%%" prefix="<i class='fa fa-book'></i>" suffix="<span class='separator'> | </span>" output_pattern="%(b)s %(k)s %(h)s %(i)s" instances_separator="|" escape="0"/>
+</div>
+</div>
+
+<div style="clear: both"></div>
+</div>
+</div>

@@ -8,7 +8,9 @@ Guide for Librarians
 
    add-new-users
    create-collection
+   create-rss-feed
    export-xml
+   manage-baskets
    manage-user-rights
    restrict-documents
    submit-documents
