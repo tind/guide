@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manage baskets &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for Librarians" href="index.html"/>
+        <link rel="next" title="Manage User Rights" href="manage-user-rights.html"/>
+        <link rel="prev" title="Export data" href="export-xml.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-new-users.html">Add New Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-rss-feed.html">Create RSS feed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Manage baskets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Restrict documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="approve-documents.html">Approve Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Guide for System Administrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/xml-manipulation.html">XML Manipulation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
+      
+    <li>Manage baskets</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/librarian/manage-baskets.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="manage-baskets">
+<span id="id1"></span><h1>Manage baskets<a class="headerlink" href="#manage-baskets" title="Permalink to this headline">¶</a></h1>
+<p>Invenio features a function which allows users to store content of interest in a personal
+basket. A user can export the content from the basket in the regular
+export formats, create RSS feeds, or share the content by sharing the basket in a group or
+by making the basket publicly available for all users.</p>
+<div class="section" id="create-a-personal-basket">
+<h2>1. Create a personal basket<a class="headerlink" href="#create-a-personal-basket" title="Permalink to this headline">¶</a></h2>
+<p>A user&#8217;s personal basket is found in the menu &#8220;Personalize&#8221;.</p>
+<p><img alt="tag-cloud for document man-bas/001" src="../_images/manage-baskets1.png" /></p>
+<p>New users have no baskets, and they have to start by creating a new one.</p>
+<p><img alt="tag-cloud for document man-bas/002" src="../_images/manage-baskets2.png" /></p>
+<p>The user is asked to create a topic and a basket. Topic and baskets follow a mother-child
+hierarchy, where there can be several baskets in one topic.</p>
+<p><img alt="tag-cloud for document man-bas/003" src="../_images/manage-baskets3.png" /></p>
+<p>In this example, two baskets
+have been added to the topic &#8220;Physics&#8221;, - &#8220;Favorite Articles&#8221; and &#8220;Preprints&#8221;.</p>
+<p><img alt="tag-cloud for document man-bas/004" src="../_images/manage-baskets4.png" /></p>
+<div class="section" id="add-content-to-basket">
+<h3>2. Add content to basket<a class="headerlink" href="#add-content-to-basket" title="Permalink to this headline">¶</a></h3>
+<p>New content is added from the search interface by selecting the records of interests and
+click the &#8220;Add to basket&#8221; button.</p>
+<p><img alt="tag-cloud for document man-bas/005" src="../_images/manage-baskets5.png" /></p>
+<p>The user selects which basket the content should be stored in, and write an optional note.
+The note can be personal or public, dependent on the status of the basket.</p>
+<p><img alt="tag-cloud for document man-bas/006" src="../_images/manage-baskets6.png" /></p>
+<p>The user will now see the three records in his/ her basket.</p>
+<p><img alt="tag-cloud for document man-bas/007" src="../_images/manage-baskets7.png" /></p>
+</div>
+</div>
+<div class="section" id="make-your-basket-public-available">
+<h2>3. Make your basket public available<a class="headerlink" href="#make-your-basket-public-available" title="Permalink to this headline">¶</a></h2>
+<p>By selecting the button &#8220;edit basket&#8221; you are able to change the name, topic and manage
+group or public sharing rights.</p>
+<p><img alt="tag-cloud for document man-bas/008" src="../_images/manage-baskets8.png" /></p>
+<p>The user makes the basket public by changing the global sharing rights from &#8220;No rights&#8221; to
+&#8220;View record&#8221;. Selecting the sub-choices &#8220;view comments&#8221; or &#8220;view comments and
+add comments&#8221; gives the public additional rights accordingly.</p>
+<p>When the basket is made publicly accesible, a link to the url is found in the
+bottom left corner. This url is persistent and can be shared with friends and colleagues.</p>
+<p><img alt="tag-cloud for document man-bas/009" src="../_images/manage-baskets9.png" /></p>
+</div>
+<div class="section" id="subscribe-for-other-users-public-baskets">
+<h2>4. Subscribe for other users&#8217; public baskets<a class="headerlink" href="#subscribe-for-other-users-public-baskets" title="Permalink to this headline">¶</a></h2>
+<p>A person can get access to another users public basket by either been handed the url, or
+by searching in the search interface of the basket module. The user will then search in
+the metadata of the content.</p>
+<p><img alt="tag-cloud for document man-bas/010" src="../_images/manage-baskets10.png" /></p>
+<p>By clicking on the name of the basket, the user are sent to the public site for that basket.</p>
+<p>The user can now choose to subscribe for the basket itself, or set up a RSS feed based
+on the content in the basket.</p>
+<p><img alt="tag-cloud for document man-bas/011" src="../_images/manage-baskets11.png" /></p>
+<p>If the user select to subscribe for the basket, the user have access to it through basket,
+under the tab &#8220;Public baskets&#8221;.</p>
+<p><img alt="tag-cloud for document man-bas/012" src="../_images/manage-baskets12.png" /></p>
+</div>
+<div class="section" id="share-the-basket-in-a-group">
+<h2>5. Share the basket in a group<a class="headerlink" href="#share-the-basket-in-a-group" title="Permalink to this headline">¶</a></h2>
+<p>As described in section 3, the user can manage the sharing rights by clicking the
+button &#8220;edit basket&#8221;.</p>
+<p><img alt="tag-cloud for document man-bas/008" src="../_images/manage-baskets8.png" /></p>
+<p>Select &#8220;Add group&#8221; and select the group your want to share the basket with.</p>
+<p><img alt="tag-cloud for document man-bas/013" src="../_images/manage-baskets13.png" /></p>
+<p>After selecting the group, the user can select the group members sharing rights for the
+basket.</p>
+<p><img alt="tag-cloud for document man-bas/014" src="../_images/manage-baskets14.png" /></p>
+<p>The basket is now moved from the &#8220;Personal basket&#8221; tab to the &#8220;Group Basket&#8221; Tab</p>
+<p><img alt="tag-cloud for document man-bas/015" src="../_images/manage-baskets15.png" /></p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="manage-user-rights.html" class="btn btn-neutral float-right" title="Manage User Rights"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="export-xml.html" class="btn btn-neutral" title="Export data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

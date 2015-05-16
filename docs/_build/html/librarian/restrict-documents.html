@@ -60,11 +60,15 @@
         
             <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-new-users.html">Add New Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-rss-feed.html">Create RSS feed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-baskets.html">Manage baskets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Restrict documents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="approve-documents.html">Approve Documents</a></li>
 </ul>
 </li>
 </ul>
@@ -117,8 +121,11 @@
             
   <div class="section" id="restrict-documents">
 <span id="id1"></span><h1>Restrict documents<a class="headerlink" href="#restrict-documents" title="Permalink to this headline">¶</a></h1>
-<p>There are several ways to restrict documents in Invenio. Three of the procedures are shown below. The examples below assume a bibliographic record already exists.</p>
-<p>Note: Documents becomes restricted if they have a restriction status in marc field 856__r, example <tt class="docutils literal"><span class="pre">856__r</span> <span class="pre">=</span> <span class="pre">Private</span></tt>. The restriction status is selectable, but it is important that it matches the restriction status defined in WebAccess for the specific role.</p>
+<p>There are several ways to restrict documents in Invenio. Three of the procedures are shown below.
+The examples below assume a bibliographic record already exists.</p>
+<p>Note: Documents becomes restricted if they have a restriction status in FFT tag, subfield r.
+The restriction status is selectable, but it is important that it matches the restriction
+status defined in WebAccess for the specific role.</p>
 <div class="section" id="change-the-restriction-status-in-document-file-manager">
 <h2>1. Change the restriction status in Document File Manager<a class="headerlink" href="#change-the-restriction-status-in-document-file-manager" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to add restriction to a file through &#8220;Document File Manager&#8221;.  This can be done for new and existing files. The default restriction status is &#8220;Private&#8221; and cannot be changed.</p>
