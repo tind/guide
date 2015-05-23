@@ -11,6 +11,7 @@ Guide for Librarians
    create-rss-feed
    export-xml
    manage-baskets
+   manage-circulation
    manage-user-rights
    restrict-documents
    submit-documents

@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manage Circulation &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for Librarians" href="index.html"/>
+        <link rel="next" title="Manage User Rights" href="manage-user-rights.html"/>
+        <link rel="prev" title="Manage baskets" href="manage-baskets.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-new-users.html">Add New Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-rss-feed.html">Create RSS feed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-baskets.html">Manage baskets</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Manage Circulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Restrict documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="approve-documents.html">Approve Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Guide for System Administrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/xml-manipulation.html">XML Manipulation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
+      
+    <li>Manage Circulation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/librarian/manage-circulation.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="manage-circulation">
+<span id="id1"></span><h1>Manage Circulation<a class="headerlink" href="#manage-circulation" title="Permalink to this headline">¶</a></h1>
+<p>Invenio features a circulation module which allow the library to manage their physical
+items, manage patron loans- and borrower information, and keep track of interlibrary loans-
+and new purchases. The module can handle multiple internal and external libraries.</p>
+<p>Librarians who have access will find it in the administration menu.</p>
+<p><img alt="tag-cloud for document man-cir/001" src="../_images/manage-circulation1.png" /></p>
+<p>It is presented in an intuitive user interface whit different workflows for the different
+tasks. This guide will lead you though the different tasks and explain some of the optional
+configuration settings.</p>
+<p><img alt="tag-cloud for document man-cir/002" src="../_images/manage-circulation2.png" /></p>
+<p>Circulation statistics are found in a the statistic module of Invenio.</p>
+<div class="section" id="managing-items">
+<h2>1. Managing items<a class="headerlink" href="#managing-items" title="Permalink to this headline">¶</a></h2>
+<p>The items is the core of the circulation module. An item is attached to a bibliographic
+record and may contain multiple physical copies. The bibliographic data on top left side
+is extracted from the bibliographic metadata, while additional information, such as barcode,
+location, document type, and which library it belongs to, is added to each single copy.</p>
+<p>The item site gives an overview over current and historical overviews (hold requests, loans,
+purchases), allow for updating and adding new copies, as well as creating loans and hold
+requests for specific copies.</p>
+<p><img alt="tag-cloud for document man-cir/003" src="../_images/manage-circulation3.png" /></p>
+<div class="section" id="add-new-copies">
+<h3>1.1 Add new copies<a class="headerlink" href="#add-new-copies" title="Permalink to this headline">¶</a></h3>
+<p id="table-section-one">The &#8220;Add new copy&#8221; button opens a form to fill out information for your new copy. The barcode
+field is mandatory while the open text fields are optional. All internal libraries will be
+displayed in the library list, while all document types are shown in the collection menu.
+The document type list and status alternatives are configurable, see
+<a class="reference internal" href="#table-configuration-settings"><em>section five</em></a>.</p>
+<p><img alt="tag-cloud for document man-cir/004" src="../_images/manage-circulation4.png" /></p>
+</div>
+<div class="section" id="edit-bibliographic-record">
+<h3>1.2 Edit bibliographic record<a class="headerlink" href="#edit-bibliographic-record" title="Permalink to this headline">¶</a></h3>
+<p>The &#8220;Edit this record&#8221; button send the administrator directly to the cataloging module of
+Invenio. Documentation about the editor is found <strong>here</strong>, while a sneak peek is given under.
+One function to notice is the link directly back to the item in circulation.</p>
+<p><img alt="tag-cloud for document man-cir/005" src="../_images/manage-circulation5.png" /></p>
+</div>
+<div class="section" id="copy-specific-actions">
+<h3>1.3 Copy specific actions<a class="headerlink" href="#copy-specific-actions" title="Permalink to this headline">¶</a></h3>
+<p>The select list under the action column allow the administrator to conduct different tasks
+related to the specific copy.</p>
+<p><img alt="tag-cloud for document man-cir/006" src="../_images/manage-circulation6.png" /></p>
+<ul class="simple">
+<li><strong>Update:</strong> Opens a form similar to the one presented in
+<a class="reference internal" href="#table-section-one"><em>section one</em></a>. Allows the administrator to update
+information about the copy.</li>
+<li><strong>Add similar copy</strong>: Adds a new copy to the items. Differentiated from the &#8220;Add copy&#8221;
+button by pre-fill all fields without barcode.</li>
+<li><strong>New request:</strong> Allow the administrator to create a request with the copy as the first
+step in the workflow. See <a class="reference internal" href="#table-create-request"><em>section three</em></a> for a complete
+guide of how to register new requests.</li>
+<li><strong>New loan:</strong> Allow the administrator to create a loan with the copy as the first step
+in the workflow. See <a class="reference internal" href="#table-create-loan"><em>section two</em></a> for a complete
+guide of how to register new loans.</li>
+<li><strong>Delete copy:</strong> Deletes the copy. The administrator has to confirm before the copy is
+deleted.</li>
+</ul>
+</div>
+<div class="section" id="current-status">
+<h3>1.4 Current status<a class="headerlink" href="#current-status" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="historical-overview">
+<h3>1.5 Historical overview<a class="headerlink" href="#historical-overview" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="search-for-items">
+<h3>1.6. Search for items<a class="headerlink" href="#search-for-items" title="Permalink to this headline">¶</a></h3>
+<p>here are two ways of searching for an item:</p>
+</div>
+</div>
+<div class="section" id="create-loan">
+<h2>2. Create loan<a class="headerlink" href="#create-loan" title="Permalink to this headline">¶</a></h2>
+<p id="table-create-loan">By selecting the button &#8220;edit basket&#8221; you are able to change the name, topic and manage
+group or public sharing rights.</p>
+<p>The user makes the basket public by changing the global sharing rights from &#8220;No rights&#8221; to
+&#8220;View record&#8221;. Selecting the sub-choices &#8220;view comments&#8221; or &#8220;view comments and
+add comments&#8221; gives the public additional rights accordingly.</p>
+<p>When the basket is made publicly accesible, a link to the url is found in the
+bottom left corner. This url is persistent and can be shared with friends and colleagues.</p>
+</div>
+<div class="section" id="create-request">
+<h2>4. Create request<a class="headerlink" href="#create-request" title="Permalink to this headline">¶</a></h2>
+<p id="table-create-request">A person can get access to another users public basket by either been handed the url, or
+by searching in the search interface of the basket module. The user will then search in
+the metadata of the content.</p>
+<p>By clicking on the name of the basket, the user are sent to the public site for that basket.</p>
+<p>The user can now choose to subscribe for the basket itself, or set up a RSS feed based
+on the content in the basket.</p>
+<p>If the user select to subscribe for the basket, the user have access to it through basket,
+under the tab &#8220;Public baskets&#8221;.</p>
+</div>
+<div class="section" id="configuration-settings">
+<h2>5. Configuration settings<a class="headerlink" href="#configuration-settings" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="table-configuration-settings"></span></div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="manage-user-rights.html" class="btn btn-neutral float-right" title="Manage User Rights"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="manage-baskets.html" class="btn btn-neutral" title="Manage baskets"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

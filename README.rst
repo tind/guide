@@ -2,4 +2,4 @@ Invenio is a free software suite enabling you to run your own digital library or
 
 Invenio has been originally developed at CERN to run the CERN document server, managing over 1,000,000 bibliographic records in high-energy physics since 2002, covering articles, books, journals, photos, videos, and more. Invenio is nowadays co-developed by an international collaboration comprising institutes such as CERN, DESY, EPFL, FNAL, SLAC and is being used by many more scientific institutions worldwide.
 
-This guide is meant for customers of TIND Technologies, a CERN spinn-off company providing Invenio as a hosted solution. 
+This guide is meant for customers of TIND Technologies, a CERN spin-off company providing Invenio as a hosted solution. 
