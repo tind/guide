@@ -30,7 +30,8 @@ status defined in WebAccess for the specific role.
 1. Change the restriction status in Document File Manager
 ---------------------------------------------------------
 
-It is possible to add restriction to a file through "Document File Manager".  This can be done for new and existing files. The default restriction status is "Private" and cannot be changed.
+It is possible to add restriction to a file through "Document File Manager".  This can be done 
+for new and existing files. The default restriction status is "Private" and cannot be changed.
 
 
 |tag-cloud for document restr-cod/001|

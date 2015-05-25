@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manage Circulation &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for Librarians" href="index.html"/>
+        <link rel="next" title="Manage User Rights" href="manage-user-rights.html"/>
+        <link rel="prev" title="Manage baskets" href="manage-baskets.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-new-users.html">Add New Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-rss-feed.html">Create RSS feed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-baskets.html">Manage baskets</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Manage Circulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage User Rights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Restrict documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="approve-documents.html">Approve Documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Guide for System Administrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/xml-manipulation.html">XML Manipulation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
+      
+    <li>Manage Circulation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/librarian/manage-circulation.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="manage-circulation">
+<span id="id1"></span><h1>Manage Circulation<a class="headerlink" href="#manage-circulation" title="Permalink to this headline">¶</a></h1>
+<p>Invenio features a circulation module which allow the library to manage their physical
+items, manage patron loans- and borrower information, and keep track of interlibrary loans-
+and new purchases. The module can handle multiple internal and external libraries.</p>
+<p>Librarians who have access will find it in the administration menu.</p>
+<p><img alt="tag-cloud for document man-cir/001" src="../_images/manage-circulation1.png" /></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Circulation statistics are found in a the statistic module of Invenio.</p>
+</div>
+<div class="section" id="managing-items">
+<h2>1. Managing items<a class="headerlink" href="#managing-items" title="Permalink to this headline">¶</a></h2>
+<p>The items is the core of the circulation module. An item is attached to a bibliographic
+record and may contain multiple physical copies. The bibliographic data on top left side
+is extracted from the bibliographic metadata, while additional information, such as barcode,
+location, document type, and which library it belongs to, is added to each single copy.</p>
+<p>The item site gives an overview over current and historical hold requests, loans and
+purchases, allow for updating and adding new copies, as well as creating loans and hold
+requests for specific copies.</p>
+<p><img alt="tag-cloud for document man-cir/002" src="../_images/manage-circulation2.png" /></p>
+<div class="section" id="add-new-copies">
+<span id="table-section-1-1"></span><h3>1.1 Add new copies<a class="headerlink" href="#add-new-copies" title="Permalink to this headline">¶</a></h3>
+<p>The &#8220;Add new copy&#8221; button opens a form to fill out information for your new copy. The barcode
+field is mandatory while the open text fields are optional. All internal libraries will be
+displayed in the library list, while all document types are shown in the collection menu.
+The document type list and status alternatives are configurable.</p>
+<p><img alt="tag-cloud for document man-cir/003" src="../_images/manage-circulation3.png" /></p>
+</div>
+<div class="section" id="edit-bibliographic-record">
+<h3>1.2 Edit bibliographic record<a class="headerlink" href="#edit-bibliographic-record" title="Permalink to this headline">¶</a></h3>
+<p>The &#8220;Edit this record&#8221; button send the administrator directly to the cataloging module of
+Invenio. Documentation about the editor is found <strong>here</strong>, while a sneak peek is given below.
+One function to notice is the link directly back to the item in circulation.</p>
+<p><img alt="tag-cloud for document man-cir/004" src="../_images/manage-circulation4.png" /></p>
+</div>
+<div class="section" id="copy-specific-actions">
+<h3>1.3 Copy specific actions<a class="headerlink" href="#copy-specific-actions" title="Permalink to this headline">¶</a></h3>
+<p>The select list under the action column allow the administrator to conduct different tasks
+related to the specific copy.</p>
+<p><img alt="tag-cloud for document man-cir/005" src="../_images/manage-circulation5.png" /></p>
+<ul class="simple">
+<li><strong>Update:</strong> Opens a form similar to the one presented in
+<a class="reference internal" href="#table-section-1-1"><em>section one</em></a>. Allows the administrator to update
+information about the copy.</li>
+<li><strong>Add similar copy</strong>: Adds a new copy to the items. Differentiated from the &#8220;Add copy&#8221;
+button by pre-fill all fields without barcode.</li>
+<li><strong>New request:</strong> Allow the administrator to create a request with the copy as the first
+step in the workflow. See <a class="reference internal" href="#table-create-request"><em>section five</em></a> for a complete
+guide of how to register new requests.</li>
+<li><strong>New loan:</strong> Allow the administrator to create a loan with the copy as the first step
+in the workflow. See <a class="reference internal" href="#table-create-loan"><em>section three</em></a> for a complete
+guide of how to register new loans.</li>
+<li><strong>Delete copy:</strong> Deletes the copy. The administrator has to confirm before the copy is
+deleted.</li>
+</ul>
+</div>
+<div class="section" id="current-status-historical-overviews">
+<span id="table-section-1-4"></span><h3>1.4 Current status &amp; historical overviews<a class="headerlink" href="#current-status-historical-overviews" title="Permalink to this headline">¶</a></h3>
+<p>The &#8220;current status&#8221; and &#8220;historical overview&#8221; list gives an overview over current
+and historical hold requests, loans and purchase requests.</p>
+<p><img alt="tag-cloud for document man-cir/006" src="../_images/manage-circulation6.png" /></p>
+<p>Selecting more details will give detailed information in addition to perform the following
+tasks:</p>
+<ul class="simple">
+<li><strong>Hold request:</strong> Create loan from todays date or cancel the hold request.</li>
+<li><strong>Loans</strong>: Renew, return, change due date or send recall messages.</li>
+<li><strong>Purchases:</strong> Put the book on order as the first step of the the acquisition workflow.
+This feature patron driven acquisition and requires that the bibliographic metadata is
+already available for the user.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The administrator can also get access to the hold requests and loans though the
+different loan lists.</p>
+</div>
+</div>
+<div class="section" id="find-items">
+<span id="table-section-1-6"></span><h3>1.6. Find items<a class="headerlink" href="#find-items" title="Permalink to this headline">¶</a></h3>
+<p>The administrator can access an item through three different paths, by:</p>
+<ul class="simple">
+<li>searching directly in the circulation management module</li>
+<li>browsing the items in the loan lists</li>
+<li>searching in the OPAC</li>
+</ul>
+<div class="section" id="searching-in-circulation">
+<h4>Searching in circulation<a class="headerlink" href="#searching-in-circulation" title="Permalink to this headline">¶</a></h4>
+<p>By selecting &#8220;Items&#8221; in the left side menu, the administrator is sent to the search interface
+as shown below. The administrator can search on record ID, barcode and items details. Item
+details queries the bibliographic metadata.</p>
+<p><img alt="tag-cloud for document man-cir/007" src="../_images/manage-circulation7.png" /></p>
+<p>The results are displayed in a single list and the titles link to the item details
+page.</p>
+<p><img alt="tag-cloud for document man-cir/008" src="../_images/manage-circulation8.png" /></p>
+</div>
+<div class="section" id="browsing-the-loan-lists">
+<h4>Browsing the loan lists<a class="headerlink" href="#browsing-the-loan-lists" title="Permalink to this headline">¶</a></h4>
+<p>The administrator can browse through the items in the respective lists. All the titles link
+to the item details page.</p>
+<p><img alt="tag-cloud for document man-cir/009" src="../_images/manage-circulation9.png" /></p>
+</div>
+<div class="section" id="searching-in-the-opac">
+<h4>Searching in the OPAC<a class="headerlink" href="#searching-in-the-opac" title="Permalink to this headline">¶</a></h4>
+<p>To make items more accessible, administrators who is logged in will find a link
+&#8220;View library record&#8221; in the search result for every record. The link redirects
+directly to the items details page.</p>
+<p><img alt="tag-cloud for document man-cir/010" src="../_images/manage-circulation10.png" /></p>
+</div>
+</div>
+</div>
+<div class="section" id="manage-borrowers">
+<span id="table-manage-borrowers"></span><h2>2. Manage borrowers<a class="headerlink" href="#manage-borrowers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="find-existing-borrower">
+<h3>2.1. Find existing borrower<a class="headerlink" href="#find-existing-borrower" title="Permalink to this headline">¶</a></h3>
+<p>The administrator can find borrowers by selecting &#8220;Borrowers&#8221; in the left hand menu and
+search on either borrower ID, name or email.</p>
+<p><img alt="tag-cloud for document man-cir/011" src="../_images/manage-circulation11.png" /></p>
+<p>A list will be displayed if multiple borrowers are found in the database. If only
+one borrower is found, the administrator will be sent directly to Borrower details page.</p>
+<p><img alt="tag-cloud for document man-cir/012" src="../_images/manage-circulation12.png" /></p>
+<p>The borrower detail page allow the administrator to create new loan, register new loan- and
+ILL requests, send notifications and update personal information. The borrower details page
+gives in addition an overview over current and historical requests, loans, ILL and proposals
+in a similar manner as described in <a class="reference internal" href="#table-section-1-4"><em>section 1.4</em></a>.</p>
+<p>See <a class="reference internal" href="#table-create-loan"><em>section three</em></a> and <a class="reference internal" href="#table-create-request"><em>section five</em></a>
+for a complete guide of how to register new loans and new requests.</p>
+</div>
+<div class="section" id="register-new-borrower">
+<h3>2.2. Register new borrower<a class="headerlink" href="#register-new-borrower" title="Permalink to this headline">¶</a></h3>
+<p>The circulation module has a borrower database which is separated from the regular Invenio
+user database. The borrower database store more detailed information about the patron.</p>
+<p>Traditionally, new borrowers have been registered from the borrower search site.</p>
+<p><img alt="tag-cloud for document man-cir/013" src="../_images/manage-circulation13.png" /></p>
+<p>Now, it is possible to create borrower account while register a regular Invenio account
+trough WebAccess. The borrower account is only created if a name is registered.</p>
+<p><img alt="tag-cloud for document man-cir/014" src="../_images/manage-circulation14.png" /></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A borrower in the circulation database is registered when a user is created though
+WebAccess. A WebAccess account is not created when a borrower is registered though
+the circulation module.</p>
+</div>
+</div>
+</div>
+<div class="section" id="create-loan">
+<span id="table-create-loan"></span><h2>3. Create loan<a class="headerlink" href="#create-loan" title="Permalink to this headline">¶</a></h2>
+<p>There are multiple entry points for creating a new loan.</p>
+<div class="section" id="new-loan-the-easiest-procedure">
+<h3>3.1. &#8220;New loan&#8221; - The easiest procedure!<a class="headerlink" href="#new-loan-the-easiest-procedure" title="Permalink to this headline">¶</a></h3>
+<p>If you have the book on your desk, this is your workflow! Simply search for the user and
+enter the barcode. The loan is created. Enter multiple barcodes to create multiple loans
+for the same user.</p>
+<p>Step 1
+<img alt="tag-cloud for document man-cir/015" src="../_images/manage-circulation15.png" /></p>
+<p>Step 2
+<img alt="tag-cloud for document man-cir/016" src="../_images/manage-circulation16.png" /></p>
+<p>Step 3
+<img alt="tag-cloud for document man-cir/017" src="../_images/manage-circulation17.png" /></p>
+</div>
+<div class="section" id="create-a-new-loan-with-the-item-as-the-entry-point">
+<h3>3.2. Create a new loan with the item as the entry point<a class="headerlink" href="#create-a-new-loan-with-the-item-as-the-entry-point" title="Permalink to this headline">¶</a></h3>
+<p>If no barcode is not known, the administrator can create a loan from the item details page.</p>
+<p><img alt="tag-cloud for document man-cir/018" src="../_images/manage-circulation18.png" /></p>
+<p>After selecting &#8220;New loan&#8221; from the action list, the administrator is asked to search and
+select the borrower. Afterwards, the loan is automatically created.</p>
+<p><img alt="tag-cloud for document man-cir/019" src="../_images/manage-circulation19.png" /></p>
+</div>
+<div class="section" id="create-a-new-loan-with-the-borrower-as-the-entry-point">
+<h3>3.3. Create a new loan with the borrower as the entry point<a class="headerlink" href="#create-a-new-loan-with-the-borrower-as-the-entry-point" title="Permalink to this headline">¶</a></h3>
+<p>The administrator can choose to create a new loan from the borrower details page. See
+<a class="reference internal" href="#table-manage-borrowers"><em>section two</em></a> for more information about the borrower detail
+page. After selecting &#8220;New loan&#8221;, the administrator are asked to enter the barcode as in section 3.1</p>
+<p><img alt="tag-cloud for document man-cir/020" src="../_images/manage-circulation20.png" /></p>
+</div>
+<div class="section" id="create-a-new-loan-from-the-request-lists">
+<h3>3.4. Create a new loan from the request lists<a class="headerlink" href="#create-a-new-loan-from-the-request-lists" title="Permalink to this headline">¶</a></h3>
+<p>The circulation module have three lists for requested items. They are found under loan
+lists in the left hand menu.</p>
+<ul class="simple">
+<li>Overdue loans with hold</li>
+<li>Items on shelf with hold</li>
+<li>Items on loan with hold</li>
+</ul>
+<p>Only the &#8220;items on shelf with hold list&#8221; allow the administrator to create a new loan.</p>
+<p><img alt="tag-cloud for document man-cir/021" src="../_images/manage-circulation21.png" /></p>
+<p>From the items on shelf with holds list, the administrator can select to create loan or
+delete the request.</p>
+<p><img alt="tag-cloud for document man-cir/022" src="../_images/manage-circulation22.png" /></p>
+<p>By selecting &#8220;Create loan&#8221;, the administrator is asked to enter the barcode before the loan
+is created.</p>
+</div>
+</div>
+<div class="section" id="return-loan">
+<span id="table-create-request"></span><h2>4. Return loan<a class="headerlink" href="#return-loan" title="Permalink to this headline">¶</a></h2>
+<p>In a simliar way as creating a loan, returning a loan can be conducted though different workflows.</p>
+<div class="section" id="return-loan-the-easiest-procedure">
+<h3>4.1. &#8220;Return loan&#8221; - The easiest procedure!<a class="headerlink" href="#return-loan-the-easiest-procedure" title="Permalink to this headline">¶</a></h3>
+<p>The loan can be returned by selecting &#8220;Return loan&#8221; in the circulation menu. The return is
+registered with once the barcode is entered.</p>
+<p><img alt="tag-cloud for document man-cir/023" src="../_images/manage-circulation23.png" /></p>
+<p>A new return can be registered by entering a new barcode.</p>
+<p><img alt="tag-cloud for document man-cir/024" src="../_images/manage-circulation24.png" /></p>
+</div>
+<div class="section" id="return-loan-with-the-item-as-the-entry-point">
+<h3>4.2. Return loan with the item as the entry point<a class="headerlink" href="#return-loan-with-the-item-as-the-entry-point" title="Permalink to this headline">¶</a></h3>
+<p>Selecting &#8220;More details&#8221; for current loans opens a new page with loan details.</p>
+<p><img alt="tag-cloud for document man-cir/025" src="../_images/manage-circulation25.png" /></p>
+<p>The copy is atomically returned by selecting &#8220;Return&#8221; from the loan options column.</p>
+<p><img alt="tag-cloud for document man-cir/026" src="../_images/manage-circulation26.png" /></p>
+</div>
+<div class="section" id="return-loan-with-the-borrower-as-the-entry-point">
+<h3>4.3. Return loan with the borrower as the entry point<a class="headerlink" href="#return-loan-with-the-borrower-as-the-entry-point" title="Permalink to this headline">¶</a></h3>
+<p>The administrator have access to the the loan details list from the borrower interface.</p>
+<p><img alt="tag-cloud for document man-cir/027" src="../_images/manage-circulation27.png" /></p>
+<p>The copy is atomically returned by selecting &#8220;Return&#8221; from the loan options column.</p>
+<p><img alt="tag-cloud for document man-cir/028" src="../_images/manage-circulation28.png" /></p>
+</div>
+</div>
+<div class="section" id="create-request">
+<h2>5. Create request<a class="headerlink" href="#create-request" title="Permalink to this headline">¶</a></h2>
+<p>New loan requests can be registered by the administrator or by the patron. The administrator
+can use two different methods: the built in workflow starting from &#8220;New request&#8221; in the left
+hand menu, or from the item details page. The patron will receive an email notification when
+a request is created.</p>
+<div class="section" id="by-the-administrator">
+<h3>5.1. By the administrator<a class="headerlink" href="#by-the-administrator" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="new-request">
+<h4>&#8220;New request&#8221;<a class="headerlink" href="#new-request" title="Permalink to this headline">¶</a></h4>
+<p>Step 1: The administrator first search for the borrower.</p>
+<p><img alt="tag-cloud for document man-cir/029" src="../_images/manage-circulation29.png" /></p>
+<p>Step 2: Search and select the correct item.</p>
+<p><img alt="tag-cloud for document man-cir/030" src="../_images/manage-circulation30.png" /></p>
+<p>Step 3: As an item may have multiple copies, the administrator is asked to select the
+desired copy.</p>
+<p><img alt="tag-cloud for document man-cir/031" src="../_images/manage-circulation31.png" /></p>
+<p>Step 4: As a final step, the administrator is asked to enter the period of interest.</p>
+<p><img alt="tag-cloud for document man-cir/032" src="../_images/manage-circulation32.png" /></p>
+</div>
+<div class="section" id="item-details-page">
+<h4>Item details page<a class="headerlink" href="#item-details-page" title="Permalink to this headline">¶</a></h4>
+<p>From the item details page, the administrator can create request for the specific copy.
+Please have a look at <a class="reference internal" href="#table-section-1-6"><em>section 1.6</em></a> for how to find an item.</p>
+<p>Step 1: Select &#8220;New request&#8221; in the action list for the desired copy.</p>
+<p><img alt="tag-cloud for document man-cir/033" src="../_images/manage-circulation33.png" /></p>
+<p>Step 2: Search for the borrower who has requested the loan.</p>
+<p><img alt="tag-cloud for document man-cir/034" src="../_images/manage-circulation34.png" /></p>
+<p>Step 3: Enter the desired period of interest and click &#8220;Continue&#8221;. The loan request is now created.</p>
+<p><img alt="tag-cloud for document man-cir/035" src="../_images/manage-circulation35.png" /></p>
+</div>
+</div>
+<div class="section" id="by-the-patron">
+<h3>5.2. By the patron<a class="headerlink" href="#by-the-patron" title="Permalink to this headline">¶</a></h3>
+<p>The patron can register new loan requests from the detailed view under the &#8220;Holdings&#8221; tab.</p>
+<p><img alt="tag-cloud for document man-cir/036" src="../_images/manage-circulation36.png" /></p>
+<p>Click &#8220;Request&#8221; for the desired copy.</p>
+<p><img alt="tag-cloud for document man-cir/037" src="../_images/manage-circulation37.png" /></p>
+<p>Enter the desired period of interest and click &#8220;Continue&#8221;. The loan request is now created.</p>
+<p><img alt="tag-cloud for document man-cir/038" src="../_images/manage-circulation38.png" /></p>
+<p>The patron has also a link to the holding tab from the search record.</p>
+<p><img alt="tag-cloud for document man-cir/039" src="../_images/manage-circulation39.png" /></p>
+</div>
+</div>
+<div class="section" id="manage-interlibrary-loans">
+<h2>6. Manage interlibrary loans<a class="headerlink" href="#manage-interlibrary-loans" title="Permalink to this headline">¶</a></h2>
+<p>The circulation module includes a ILL workflow, which allow libraries to register request and
+keep track of the interlibrary loans. The following section goes though all the steps in the
+workflow.</p>
+<p><img alt="tag-cloud for document man-cir/040" src="../_images/manage-circulation40.png" /></p>
+<div class="section" id="register-new-loan-request">
+<h3>6.1. Register new loan request<a class="headerlink" href="#register-new-loan-request" title="Permalink to this headline">¶</a></h3>
+<p>The administrator is first asked to check if the item exists in the library system to avoid
+requesting an ILL for items that the library has.</p>
+<p><img alt="tag-cloud for document man-cir/041" src="../_images/manage-circulation41.png" /></p>
+<p>If the item is not found, the administrator is sent directly to the request form.</p>
+<p><img alt="tag-cloud for document man-cir/042" src="../_images/manage-circulation42.png" /></p>
+<p>First fill in the bibliographic data and then search and select the patron. The request is
+created upon confirmation.</p>
+<p><img alt="tag-cloud for document man-cir/043" src="../_images/manage-circulation43.png" /></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Two different forms exists: one for books and one for articles. The different forms contain
+different textfields, while the workflow remains the same.</p>
+</div>
+</div>
+<div class="section" id="request-loan-from-external-library">
+<h3>6.2. Request loan from external library<a class="headerlink" href="#request-loan-from-external-library" title="Permalink to this headline">¶</a></h3>
+<p>New loan requests are found in &#8220;ILL list: New&#8221;</p>
+<p><img alt="tag-cloud for document man-cir/044" src="../_images/manage-circulation44.png" /></p>
+<p>Selecting the specific item sends the administrator to the ILL form where the status can be
+updated.</p>
+<p><img alt="tag-cloud for document man-cir/045" src="../_images/manage-circulation45.png" /></p>
+<p>When the status is changed from &#8220;new&#8221; to &#8220;requested&#8221;, the form changes to accomodate for
+additional information. The item is moved to the list &#8220;ILL list: Requested&#8221; when selecting
+&#8220;Continue&#8221;.</p>
+<p><img alt="tag-cloud for document man-cir/046" src="../_images/manage-circulation46.png" /></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The list of libraries/ suppliers is generated from the list of external libraries
+added under the &#8220;Libraries&#8221; tab in the circulation menu.</p>
+</div>
+</div>
+<div class="section" id="receive-book-and-create-loan">
+<h3>6.3. Receive book and create loan<a class="headerlink" href="#receive-book-and-create-loan" title="Permalink to this headline">¶</a></h3>
+<p>When the library has received the book and is ready to create a loan, the item should be moved
+from the &#8220;ILL list: Requested&#8221; to &#8220;ILL list: On loan&#8221;. This is done by changing the status from
+&#8220;requested&#8221; to &#8220;on loan&#8221;. Once more, the form changes to accomodate necessary information.</p>
+<p><img alt="tag-cloud for document man-cir/047" src="../_images/manage-circulation47.png" /></p>
+<p>The loan is created when selecting &#8220;Continue&#8221;. The administrator is asked to notify the patron
+by email. The administrator can ignore this message if he/ she does not want to send an email.
+The loan is already registered.</p>
+<p><img alt="tag-cloud for document man-cir/048" src="../_images/manage-circulation48.png" /></p>
+</div>
+<div class="section" id="id2">
+<h3>6.4. Return loan<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Due date was set when the loan was created and the user will receive notification letters if
+the book is not returned prior to the due date. The administrator can also send recall messages
+manually by selecting &#8220;Send recall&#8221; from the &#8220;ILL list: On loan&#8221;.</p>
+<p><img alt="tag-cloud for document man-cir/049" src="../_images/manage-circulation49.png" /></p>
+<p>When the patron has delivered the book and the library is ready to return it, change the
+status from &#8220;on loan&#8221; to &#8220;returned&#8221;. Once more, the form changes to accomodate necessary
+information.</p>
+<p><img alt="tag-cloud for document man-cir/050" src="../_images/manage-circulation50.png" /></p>
+</div>
+<div class="section" id="ill-history">
+<h3>6.5. ILL history<a class="headerlink" href="#ill-history" title="Permalink to this headline">¶</a></h3>
+<p>The administrators can also search on previous loans by selecting &#8220;Search: ILL history&#8221;.</p>
+<p><img alt="tag-cloud for document man-cir/051" src="../_images/manage-circulation51.png" /></p>
+</div>
+</div>
+<div class="section" id="patron-over-view">
+<h2>7. Patron over view<a class="headerlink" href="#patron-over-view" title="Permalink to this headline">¶</a></h2>
+<p>The patron will find an overview over his/ her loans and loan requests under &#8220;Your loans&#8221; in the
+&#8220;Personalize&#8221; menu.</p>
+<p><img alt="tag-cloud for document man-cir/052" src="../_images/manage-circulation52.png" /></p>
+<p>The patron can choose to renew loans, cancel requests, in addition to see historical overviews.</p>
+<p><img alt="tag-cloud for document man-cir/053" src="../_images/manage-circulation53.png" /></p>
+<span class="target" id="table-configuration-settings"></span></div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="manage-user-rights.html" class="btn btn-neutral float-right" title="Manage User Rights"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="manage-baskets.html" class="btn btn-neutral" title="Manage baskets"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
