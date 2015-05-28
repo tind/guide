@@ -66,14 +66,14 @@ For public baskets the user should first go to the address for the public basket
 creating the RSS feed.
 
 Step 1:
-|tag-cloud for document cre-rss/003.1|
+|tag-cloud for document cre-rss/003a|
 
-.. |tag-cloud for document cre-rss/003.1| image:: /_static/librarian/create-rss-feed3.1.png
+.. |tag-cloud for document cre-rss/003a| image:: /_static/librarian/create-rss-feed3a.png
 
 Step 2:
-|tag-cloud for document cre-rss/003.2|
+|tag-cloud for document cre-rss/003b|
 
-.. |tag-cloud for document cre-rss/003.2| image:: /_static/librarian/create-rss-feed3.2.png
+.. |tag-cloud for document cre-rss/003b| image:: /_static/librarian/create-rss-feed3b.png
 
 
 .. note::
