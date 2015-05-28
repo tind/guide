@@ -29,7 +29,7 @@ query itself, or the content added to your personal or public baskets.
 
 Please check out :ref:`manage-baskets` for how to add content to a basket.
 
-For both personal and public basket, a new RSS feed is created by selecting "RSS" in the 
+For personal basket, a new RSS feed is created by selecting "RSS" in the 
 menu for export formats. 
 
 |tag-cloud for document cre-rss/001|
@@ -51,14 +51,30 @@ Dependent of your browser either a text based site, or a html friendly site is d
 
 .. |tag-cloud for document cre-rss/003| image:: /_static/librarian/create-rss-feed3.png
 
+
 Copy the URL and past it into your favorite RSS reader.
+
 
 .. note::
 
-    A RSS feed created from a private basket is only updated while the user is logged in. 
-    A public basket is necessary if the RSS feed will be shared. A public basket
-    is also recommended if the user uses an external application (not a plug-in 
-    to the browser) which does not have the functionality to authenticate the user.
+    A public basket is necessary if the RSS feed will be shared. A RSS feed created from a 
+    private basket is only updated while the user is logged in. Some readers creates a 
+    general url https://yoursite.tind.io/rss if it cannot get access to the private basket.
+    
+
+For public baskets the user should first go to the address for the public basket before
+creating the RSS feed.
+
+Step 1:
+|tag-cloud for document cre-rss/003.1|
+
+.. |tag-cloud for document cre-rss/003.1| image:: /_static/librarian/create-rss-feed3.1.png
+
+Step 2:
+|tag-cloud for document cre-rss/003.2|
+
+.. |tag-cloud for document cre-rss/003.2| image:: /_static/librarian/create-rss-feed3.2.png
+
 
 .. note::
 

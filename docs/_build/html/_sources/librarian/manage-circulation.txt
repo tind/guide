@@ -251,14 +251,14 @@ trough WebAccess. The borrower account is only created if a name is registered.
 3. Create loan
 --------------
 
-There are multiple entry points for creating a new loan. 
+There are multiple procedures for creating a new loan. 
 
-3.1. "New loan" - The easiest procedure!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3.1. "New loan" workflow
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you have the book on your desk, this is your workflow! Simply search for the user and
-enter the barcode. The loan is created. Enter multiple barcodes to create multiple loans
-for the same user.
+The loan can be created by selecting "New loan" in the circulation menu. Simply search for 
+the user and enter the barcode to create the loan. Enter multiple barcodes to create 
+multiple loans for the same user.
 
 Step 1
 |tag-cloud for document man-cir/015|
@@ -340,8 +340,8 @@ is created.
 
 In a simliar way as creating a loan, returning a loan can be conducted though different workflows.
 
-4.1. "Return loan" - The easiest procedure!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.1. "Return loan" workflow
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The loan can be returned by selecting "Return loan" in the circulation menu. The return is 
 registered with once the barcode is entered.
