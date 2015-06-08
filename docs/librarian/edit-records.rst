@@ -164,8 +164,8 @@ Removing single subfields are done by clicking on the select box next to the sub
 .. |tag-cloud for document ed-red/015| image:: /_static/librarian/edit-records15.png
 
 
-3.3 Auto-suggestion of author name and subjects
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3.3 Auto-suggest author name and subjects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Invenio support auto-suggestion of author name and subjects.
 
