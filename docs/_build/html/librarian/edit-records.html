@@ -30,8 +30,8 @@
   
     <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Guide for Librarians" href="index.html"/>
-        <link rel="next" title="Manage baskets" href="manage-baskets.html"/>
-        <link rel="prev" title="Export data" href="export-xml.html"/> 
+        <link rel="next" title="Approve documents" href="approve-documents.html"/>
+        <link rel="prev" title="Submit documents" href="submit-documents.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -64,12 +64,12 @@
 <li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create collections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create-rss-feed.html">Create RSS feed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Use record editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manage-baskets.html">Manage baskets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manage-circulation.html">Manage circulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage user rights</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Restrict documents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit documents</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Use record editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="approve-documents.html">Approve documents</a></li>
 </ul>
 </li>
@@ -207,8 +207,8 @@ subfield.</p>
 <p>Removing single subfields are done by clicking on the select box next to the subfield.</p>
 <p><img alt="tag-cloud for document ed-red/015" src="../_images/edit-records15.png" /></p>
 </div>
-<div class="section" id="auto-suggestion-of-author-name-and-subjects">
-<h3>3.3 Auto-suggestion of author name and subjects<a class="headerlink" href="#auto-suggestion-of-author-name-and-subjects" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="auto-suggest-author-name-and-subjects">
+<h3>3.4 Auto-suggest author name and subjects<a class="headerlink" href="#auto-suggest-author-name-and-subjects" title="Permalink to this headline">¶</a></h3>
 <p>Invenio support auto-suggestion of author name and subjects.</p>
 <p>Start to write the name of the author or the subject. Click <cite>ctrl shift A</cite> to get suggestions.</p>
 <blockquote>
@@ -217,6 +217,18 @@ subfield.</p>
 comes with suggestions of correct names.</p>
 <p>The &#8220;Authorities&#8221; knowledge base is static and queries all authority records and displays
 the closest matches.</p>
+</div>
+<div class="section" id="modify-leader-and-control-fields">
+<h3>3.5 Modify leader and control fields<a class="headerlink" href="#modify-leader-and-control-fields" title="Permalink to this headline">¶</a></h3>
+<p>By clicking on the leader (marked 000) or 008 opens a new window which allow for easy
+modification. The &#8220;Record length&#8221; and &#8220;Base address for data&#8221; is calculated automatically
+for the leader. A backslash is used in Invenio to mark a whitespace and will be populates
+automatically if a field remains empty.</p>
+<blockquote>
+<div><img alt="tag-cloud for document ed-red/016a" src="../_images/edit-records16a.png" /></div></blockquote>
+<p>Control field 008 uses information from the leader and need to be modified after the leader.</p>
+<blockquote>
+<div><img alt="tag-cloud for document ed-red/016ab" src="../_images/edit-records16ab.png" /></div></blockquote>
 </div>
 <div class="section" id="use-keyboard-shortcuts">
 <h3>3.6 Use keyboard shortcuts<a class="headerlink" href="#use-keyboard-shortcuts" title="Permalink to this headline">¶</a></h3>
@@ -288,10 +300,10 @@ circulation module for editing the circulation items.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="manage-baskets.html" class="btn btn-neutral float-right" title="Manage baskets"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="approve-documents.html" class="btn btn-neutral float-right" title="Approve documents"/>Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="export-xml.html" class="btn btn-neutral" title="Export data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="submit-documents.html" class="btn btn-neutral" title="Submit documents"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

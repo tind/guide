@@ -164,7 +164,7 @@ Removing single subfields are done by clicking on the select box next to the sub
 .. |tag-cloud for document ed-red/015| image:: /_static/librarian/edit-records15.png
 
 
-3.3 Auto-suggest author name and subjects
+3.4 Auto-suggest author name and subjects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Invenio support auto-suggestion of author name and subjects.
@@ -182,6 +182,25 @@ comes with suggestions of correct names.
 The "Authorities" knowledge base is static and queries all authority records and displays 
 the closest matches. 
 
+3.5 Modify leader and control fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By clicking on the leader (marked 000) or 008 opens a new window which allow for easy 
+modification. The "Record length" and "Base address for data" is calculated automatically 
+for the leader. A backslash is used in Invenio to mark a whitespace and will be populates
+automatically if a field remains empty.
+
+ |tag-cloud for document ed-red/016a|
+
+.. |tag-cloud for document ed-red/016a| image:: /_static/librarian/edit-records16a.png
+
+Control field 008 uses information from the leader and need to be modified after the leader.
+
+ |tag-cloud for document ed-red/016ab|
+
+.. |tag-cloud for document ed-red/016ab| image:: /_static/librarian/edit-records16ab.png
+
+
 3.6 Use keyboard shortcuts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -194,7 +213,7 @@ are given by selecting "Help" from the record editor.
 .. |tag-cloud for document ed-red/016b| image:: /_static/librarian/edit-records16b.png
 
 
-3.5 Submit changes
+3.7 Submit changes
 ~~~~~~~~~~~~~~~~~~
 
 To save the changes, press "Submit". The administrator is requested to confirm
