@@ -17,7 +17,7 @@
 
 .. _add-new-users:
 
-Add New Users
+Add new users
 =============
 
 1. Introduction

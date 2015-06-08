@@ -15,4 +15,5 @@ Guide for Librarians
    manage-user-rights
    restrict-documents
    submit-documents
+   edit-records
    approve-documents

@@ -17,7 +17,7 @@
 
 .. _manage-circulation:
 
-Manage Circulation
+Manage circulation
 ==================
 
 Invenio features a circulation module which allow the library to manage their physical 
