@@ -213,7 +213,7 @@ are given by selecting "Help" from the record editor.
 .. |tag-cloud for document ed-red/016b| image:: /_static/librarian/edit-records16b.png
 
 
-3.5 Submit changes
+3.7 Submit changes
 ~~~~~~~~~~~~~~~~~~
 
 To save the changes, press "Submit". The administrator is requested to confirm
