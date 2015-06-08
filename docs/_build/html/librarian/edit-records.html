@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Use record editor &mdash; tind-doc 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="tind-doc 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="Guide for Librarians" href="index.html"/>
+        <link rel="next" title="Manage baskets" href="manage-baskets.html"/>
+        <link rel="prev" title="Export data" href="export-xml.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> tind-doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Guide for Librarians</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="add-new-users.html">Add new users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-collection.html">Create collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-rss-feed.html">Create RSS feed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export-xml.html">Export data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Use record editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-baskets.html">Manage baskets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-circulation.html">Manage circulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-user-rights.html">Manage user rights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restrict-documents.html">Restrict documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submit-documents.html">Submit documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="approve-documents.html">Approve documents</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Guide for System Administrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/bibsort-admin-guide.html">BibSort Admin Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Guide for tools.tind.io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/xml-manipulation.html">XML Manipulation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">tind-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Guide for Librarians</a> &raquo;</li>
+      
+    <li>Use record editor</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/librarian/edit-records.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="use-record-editor">
+<span id="edit-records"></span><h1>Use record editor<a class="headerlink" href="#use-record-editor" title="Permalink to this headline">¶</a></h1>
+<p>The record editor allow for creation and modification of bibliographic and authority records.</p>
+<p>Administrators who have access will find it in the administration menu.</p>
+<div class="section" id="create-new-record">
+<h2>1. Create new record<a class="headerlink" href="#create-new-record" title="Permalink to this headline">¶</a></h2>
+<p>Select the &#8220;New record&#8221; button on the top of the left hand menu.</p>
+<p><img alt="tag-cloud for document ed-red/001" src="../_images/edit-records1.png" /></p>
+<p>Invenio has three different alternatives for creating new records:</p>
+<ul class="simple">
+<li>Empty records</li>
+<li>From record templates</li>
+<li>Import data from cross-ref</li>
+</ul>
+<p><img alt="tag-cloud for document ed-red/002" src="../_images/edit-records2.png" /></p>
+<div class="section" id="empty-records">
+<h3>1.1 Empty records<a class="headerlink" href="#empty-records" title="Permalink to this headline">¶</a></h3>
+<p>Selecting empty records opens a complete empty record where only the record ID is stored.</p>
+<p><img alt="tag-cloud for document ed-red/003" src="../_images/edit-records3.png" /></p>
+<p>With this option, the administrator has to build the whole record him/ herself, by adding
+new fields (included control fields).</p>
+<p><img alt="tag-cloud for document ed-red/004" src="../_images/edit-records4.png" /></p>
+<p>See section 3 for how to adding, modifying and deleting fields and subfields.</p>
+</div>
+<div class="section" id="record-templates">
+<h3>1.2 Record templates<a class="headerlink" href="#record-templates" title="Permalink to this headline">¶</a></h3>
+<p>Invenio support multiple record templates and TIND provides customized templates for the
+different collections and standard authority record templates.</p>
+<p>By selecting the name of a template, the template opens with a set of pre-filled fields.
+Shaded text are ment to be replaced while regular text is pre-filled.</p>
+<p><img alt="tag-cloud for document ed-red/005" src="../_images/edit-records5.png" /></p>
+</div>
+<div class="section" id="import-data-from-cross-ref">
+<h3>1.3 Import data from cross-ref<a class="headerlink" href="#import-data-from-cross-ref" title="Permalink to this headline">¶</a></h3>
+<p>Libraries having a cross-ref account can retrieve metadata by searching on a doi.</p>
+</div>
+</div>
+<div class="section" id="clone-record">
+<h2>2. Clone record<a class="headerlink" href="#clone-record" title="Permalink to this headline">¶</a></h2>
+<p>In a similar way as the administrator can create a record from the record template, it is
+possible to clone a record and use it as a template.</p>
+<p>First, open the record that you want to clone. Select the &#8220;Clone record&#8221; button next to
+the &#8220;New record&#8221; button.</p>
+<p><img alt="tag-cloud for document ed-red/006" src="../_images/edit-records6.png" /></p>
+<p>A similar record with a new record ID is created. In this example, the old record has record
+ID 23 while the new has 151.</p>
+<p><img alt="tag-cloud for document ed-red/007" src="../_images/edit-records7.png" /></p>
+<p>Select &#8220;Submit&#8221; to save your changes.</p>
+</div>
+<div class="section" id="modify-record">
+<h2>3. Modify record<a class="headerlink" href="#modify-record" title="Permalink to this headline">¶</a></h2>
+<p>A cloned record is used in the examples below.</p>
+<div class="section" id="add-new-field">
+<h3>3.1 Add new field<a class="headerlink" href="#add-new-field" title="Permalink to this headline">¶</a></h3>
+<p>A new field is added by selecting &#8220;Add&#8221;.</p>
+<p><img alt="tag-cloud for document ed-red/008" src="../_images/edit-records8.png" /></p>
+<p>Select from the list the type of field to add.</p>
+<p><img alt="tag-cloud for document ed-red/009" src="../_images/edit-records9.png" /></p>
+<ul class="simple">
+<li><strong>Empty field</strong> creates an regular empty field, and allows the administrator to
+add the desired marc fields.</li>
+<li><strong>Empty control field</strong> creates an empty control field. If your records does not have
+a control field from before, always start with the leader as other control field might
+need information from the leader to be calculated correctly.</li>
+<li><strong>The other fields</strong> are pre-defined fields, which fills out the correct marc fields.</li>
+</ul>
+<p>It is possible to create identical fields by typing the number of fields to create.</p>
+<p><img alt="tag-cloud for document ed-red/010" src="../_images/edit-records10.png" /></p>
+<p>The &#8220;similar&#8221; button creates the number of additional fields.</p>
+<p><img alt="tag-cloud for document ed-red/011" src="../_images/edit-records11.png" /></p>
+</div>
+<div class="section" id="add-new-subfield">
+<h3>3.2 Add new subfield<a class="headerlink" href="#add-new-subfield" title="Permalink to this headline">¶</a></h3>
+<p>Press the green plus-icon on the right hand side of the desired marc field to create a new
+subfield.</p>
+<p><img alt="tag-cloud for document ed-red/012" src="../_images/edit-records12.png" /></p>
+<p>Clicking multiple times creates multiple subfields.</p>
+<p><img alt="tag-cloud for document ed-red/013" src="../_images/edit-records13.png" /></p>
+</div>
+<div class="section" id="remove-fields-and-subfields">
+<h3>3.3 Remove fields and subfields<a class="headerlink" href="#remove-fields-and-subfields" title="Permalink to this headline">¶</a></h3>
+<p>Removing complete fields are done by clicking on the select box next to the marc field.</p>
+<p><img alt="tag-cloud for document ed-red/014" src="../_images/edit-records14.png" /></p>
+<p>Removing single subfields are done by clicking on the select box next to the subfield.</p>
+<p><img alt="tag-cloud for document ed-red/015" src="../_images/edit-records15.png" /></p>
+</div>
+<div class="section" id="auto-suggestion-of-author-name-and-subjects">
+<h3>3.3 Auto-suggestion of author name and subjects<a class="headerlink" href="#auto-suggestion-of-author-name-and-subjects" title="Permalink to this headline">¶</a></h3>
+<p>Invenio support auto-suggestion of author name and subjects.</p>
+<p>Start to write the name of the author or the subject. Click <cite>ctrl shift A</cite> to get suggestions.</p>
+<blockquote>
+<div><img alt="tag-cloud for document ed-red/016" src="../_images/edit-records16.png" /></div></blockquote>
+<p>The &#8220;Knowledge base&#8221; is dynamic and queries all records in the database and
+comes with suggestions of correct names.</p>
+<p>The &#8220;Authorities&#8221; knowledge base is static and queries all authority records and displays
+the closest matches.</p>
+</div>
+<div class="section" id="use-keyboard-shortcuts">
+<h3>3.6 Use keyboard shortcuts<a class="headerlink" href="#use-keyboard-shortcuts" title="Permalink to this headline">¶</a></h3>
+<p>Multiple shortcuts are available to increase the efficiency. An overview of the shortcuts
+are given by selecting &#8220;Help&#8221; from the record editor.</p>
+<blockquote>
+<div><img alt="tag-cloud for document ed-red/016b" src="../_images/edit-records16b.png" /></div></blockquote>
+</div>
+<div class="section" id="submit-changes">
+<h3>3.5 Submit changes<a class="headerlink" href="#submit-changes" title="Permalink to this headline">¶</a></h3>
+<p>To save the changes, press &#8220;Submit&#8221;. The administrator is requested to confirm
+before the changes are submitted.</p>
+<blockquote>
+<div><img alt="tag-cloud for document ed-red/017" src="../_images/edit-records17.png" /></div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only one administrator can make changes to a record at the same time. Therefore, the
+other administrator has to either submit or cancel before leaving the Record Editor.
+The record will be opened for other editors after sixty minutes.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Modifications to a record has a high priority in the task queue and the changes should
+therefore be available during some few minutes, sometimes in some few seconds.
+The record should be indexed and become searchable during five minutes.
+However, larger tasks runs periodically and can place the task in a queue. It can
+therefore take up to 1-2 hours before it becomes available. Please contact
+<a class="reference external" href="mailto:support&#37;&#52;&#48;tind&#46;io">support<span>&#64;</span>tind<span>&#46;</span>io</a> if the record has not become available in a reasonable time.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is important that the record has a correct 980 tag to be added to the correct collection.
+Contact <a class="reference external" href="mailto:support&#37;&#52;&#48;tind&#46;io">support<span>&#64;</span>tind<span>&#46;</span>io</a> if you submitted a record without a 980 tag.</p>
+</div>
+</div>
+</div>
+<div class="section" id="delete-record">
+<h2>4. Delete record<a class="headerlink" href="#delete-record" title="Permalink to this headline">¶</a></h2>
+<p>The delete button is hided for additional security. The administrator need to first
+click on the small grey plus icon to the left of the &#8220;new record&#8221; button.</p>
+<blockquote>
+<div><img alt="tag-cloud for document ed-red/018" src="../_images/edit-records18.png" /></div></blockquote>
+<p>This makes the delete button visible. Press &#8220;Delete&#8221; and confirm to deleted the record.</p>
+<blockquote>
+<div><img alt="tag-cloud for document ed-red/019" src="../_images/edit-records19.png" /></div></blockquote>
+<p>The record will go into &#8220;read only&#8221; mode after it has been deleted. The administrator can
+therefore look at historical changes to the record, but never do additional changes.</p>
+</div>
+<div class="section" id="view-historical-changes">
+<h2>5. View historical changes<a class="headerlink" href="#view-historical-changes" title="Permalink to this headline">¶</a></h2>
+<p>The record editor features a revision function which allow the administrators to display,
+compare, and revert to previous changes.</p>
+<blockquote>
+<div><img alt="tag-cloud for document ed-red/020" src="../_images/edit-records20.png" /></div></blockquote>
+</div>
+<div class="section" id="go-to-circulation-item">
+<h2>6. Go to circulation item<a class="headerlink" href="#go-to-circulation-item" title="Permalink to this headline">¶</a></h2>
+<p>The administrator can see how many physical copies that are linked to the bibliographic
+record in the tab &#8220;Physical Copies&#8221;.  Select &#8220;Edit physical copies&#8221; to be sent to the
+circulation module for editing the circulation items.</p>
+<blockquote>
+<div><img alt="tag-cloud for document ed-red/021" src="../_images/edit-records21.png" /></div></blockquote>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="manage-baskets.html" class="btn btn-neutral float-right" title="Manage baskets"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="export-xml.html" class="btn btn-neutral" title="Export data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kenneth Hole.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

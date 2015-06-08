@@ -17,7 +17,7 @@
 
 .. _submit-documents:
 
-Submit Documents
+Submit documents
 ================
 
 1. Introduction

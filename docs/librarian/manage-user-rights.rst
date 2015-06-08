@@ -17,7 +17,7 @@
 
 .. _manage-user-rights:
 
-Manage User Rights
+Manage user rights
 ==================
 
 1. Introduction

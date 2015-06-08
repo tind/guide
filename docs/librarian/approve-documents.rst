@@ -17,7 +17,7 @@
 
 .. approve-documents:
 
-Approve Documents
+Approve documents
 =================
 
 1. Introduction

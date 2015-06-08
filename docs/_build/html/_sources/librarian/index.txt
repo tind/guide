@@ -10,6 +10,7 @@ Guide for Librarians
    create-collection
    create-rss-feed
    export-xml
+   edit-records
    manage-baskets
    manage-circulation
    manage-user-rights
